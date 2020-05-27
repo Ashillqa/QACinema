@@ -230,7 +230,7 @@ ul {
   align-items: center;
   height: 70px;
   padding: 0 15px;
-  background-color: #28282d;
+  background-color: #2b2b31;;
   width: 140px;
 }
 .header__logo img {
@@ -239,7 +239,7 @@ ul {
   display: block;
 }
 .header__logo:hover {
-  background-color: #2b2b31;
+  background-color: #28282d;
 }
 .header__nav {
   display: flex;
