@@ -8,7 +8,7 @@
   <artifactId>QA Cinema</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>SpringNotes</name>
+  <name>QA Cinema</name>
   <packaging>jar</packaging>
 
   <properties>
