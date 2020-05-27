@@ -2,6 +2,7 @@ package com.qa.service;
 
 import java.util.List;
 
+import com.qa.domain.Booking;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,7 @@ public class BookingService {
 		this.repo = repo;
 	}
 
-	public List<Booking> readAllBookings() {
+	public List<Booking> readBookings(){
 		return this.repo.findAll();
 	}
 

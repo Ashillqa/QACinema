@@ -57,39 +57,38 @@ public class BookingControllerIntegrationTest {
         mockRequest.contentType(MediaType.APPLICATION_JSON);
         mockRequest.content(testBookingWithID.toString());
         mockRequest.accept(MediaType.APPLICATION_JSON);
-        ResultMatcher matchStatus = MockMvcResultMatchers.status().isOk();
+        ResultMatcher matchStatus = MockMvcResultMatchers.status().isCreated();
         ResultMatcher matchContent = MockMvcResultMatchers.content().json(testBookingWithID.toString());
         this.mock.perform(mockRequest).andExpect(matchStatus).andExpect(matchContent);
     }
 
-//    @Test
-//    public void testDeleteBooking() throws Exception {
-//        this.mock.perform(request(HttpMethod.DELETE, "/deleteBooking/" + this.id)).andExpect(status().isNoContent());
-//    }
-//
-//    @Test
-//    public void testGetAllBookings() throws Exception {
-//        List<Booking> bookingList = new ArrayList<>();
-//        bookingList.add(this.testBookingWithID);
-//
-//        String content = this.mock.perform(request(HttpMethod.GET, "/getAllBookings").accept(MediaType.APPLICATION_JSON))
-//                .andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
-//
-//        assertEquals(testBookingWithID.listToJsonString(bookingList), content);
-//    }
-//
-//    @Test
-//    public void testUpdateBooking() throws Exception {
-//        Booking newBooking = new Booking("Tester Two", 2L, "It was worse than he said");
-//        newBooking.setId(testBookingWithID.getId());
-//        Booking updatedBooking = new Booking(newBooking.getId(), newBooking.getUserName(), newBooking.getRating(), newBooking.getBooking());
-//
-//        String result = this.mock
-//                .perform(request(HttpMethod.PUT, "/updateBooking/" + this.id).accept(MediaType.APPLICATION_JSON)
-//                        .contentType(MediaType.APPLICATION_JSON).content(newBooking.toString()))
-//                .andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
-//
-//        assertEquals(updatedBooking.toString(), result);
-//    }
+    @Test
+    public void testDeleteBooking() throws Exception {
+        this.mock.perform(request(HttpMethod.DELETE, "/deleteBooking/" + this.id)).andExpect(status().isNoContent());
+    }
+
+    @Test
+    public void testGetAllBookings() throws Exception {
+        List<Booking> bookingList = new ArrayList<>();
+        bookingList.add(this.testBookingWithID);
+
+        String content = this.mock.perform(request(HttpMethod.GET, "/getAllBookings").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
+
+        assertEquals(testBookingWithID.listToJsonString(bookingList), content);
+    }
+
+    @Test
+    public void testUpdateBooking() throws Exception {
+        Booking newBooking = new Booking(testBookingWithID.getId(), "Shrek 3", "28/05/2020 15:30", BigDecimal.valueOf(11.99),"email@email.com","0044 134512312","Jeff Tester",1,2,0);
+        newBooking.setId(testBookingWithID.getId());
+
+        String result = this.mock
+                .perform(request(HttpMethod.PUT, "/updateBooking/" + this.id).accept(MediaType.APPLICATION_JSON)
+                        .contentType(MediaType.APPLICATION_JSON).content(newBooking.toString()))
+                .andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
+
+        assertEquals(newBooking.toString(), result);
+    }
 
 }
