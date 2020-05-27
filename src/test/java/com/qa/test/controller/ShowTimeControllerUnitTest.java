@@ -55,9 +55,9 @@ public class ShowTimeControllerUnitTest {
     @Before
     public void init() {
         this.showTimeList = new ArrayList<>();
-        this.testShowTime = new ShowTime("ShowTimetor Doom", "Grey", "Latveria");
+        this.testShowTime = new ShowTime("27/04/2020 14:30");
         this.showTimeList.add(testShowTime);
-        this.testShowTimeWithID = new ShowTime(testShowTime.getName(), testShowTime.getColour(), testShowTime.getHabitat());
+        this.testShowTimeWithID = new ShowTime(testShowTime.getTime());
         this.testShowTimeWithID.setId(id);
         this.showTimeDTO = this.mapToDTO(testShowTimeWithID);
     }
@@ -100,8 +100,8 @@ public class ShowTimeControllerUnitTest {
     @Test
     public void updateShowTimesTest() {
         // given
-        ShowTime newShowTime = new ShowTime("Sir ShowTimeington esq.", "Blue", "ShowTimeington Manor");
-        ShowTime updatedShowTime = new ShowTime(newShowTime.getName(), newShowTime.getColour(), newShowTime.getHabitat());
+        ShowTime newShowTime = new ShowTime("27/04/2020 14:50");
+        ShowTime updatedShowTime = new ShowTime(newShowTime.getTime());
         updatedShowTime.setId(this.id);
 
         when(this.service.updateShowTime(newShowTime, this.id)).thenReturn(this.mapToDTO(updatedShowTime));

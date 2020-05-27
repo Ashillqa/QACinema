@@ -7,12 +7,12 @@ public class MovieDTO {
 
     private Long id;
 
-    private String name;
+    private String status;
 
     private List<ShowTimeDTO> showTimes = new ArrayList<>();
 
-    public MovieDTO(String name) {
-        this.name = name;
+    public MovieDTO(String status) {
+        this.status = status;
     }
 
     public MovieDTO() {
@@ -26,12 +26,12 @@ public class MovieDTO {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getStatus() {
+        return status;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public List<ShowTimeDTO> getShowTimes() {
@@ -48,7 +48,7 @@ public class MovieDTO {
         int result = 1;
         result = prime * result + ((showTimes == null) ? 0 : showTimes.hashCode());
         result = prime * result + ((id == null) ? 0 : id.hashCode());
-        result = prime * result + ((name == null) ? 0 : name.hashCode());
+        result = prime * result + ((status == null) ? 0 : status.hashCode());
         return result;
     }
 
@@ -71,12 +71,9 @@ public class MovieDTO {
                 return false;
         } else if (!id.equals(other.id))
             return false;
-        if (name == null) {
-            if (other.name != null)
-                return false;
-        } else if (!name.equals(other.name))
-            return false;
-        return true;
+        if (status == null) {
+            return other.status == null;
+        } else return status.equals(other.status);
     }
 
 }

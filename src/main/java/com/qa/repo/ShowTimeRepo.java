@@ -10,5 +10,4 @@ import com.qa.domain.ShowTime;
 @Repository
 public interface ShowTimeRepo extends JpaRepository<ShowTime, Long> {
 
-    List<ShowTime> findByColour(String colour);
 }

@@ -53,7 +53,7 @@ public class MovieService {
 
     public MovieDTO updateMovie(Movie showTime, Long id) {
         Movie toUpdate = this.repo.findById(id).orElseThrow(() -> new MovieNotFoundException());
-        toUpdate.setName(showTime.getName());
+        toUpdate.setStatus(showTime.getStatus());
         return this.mapper.mapToDTO(this.repo.save(toUpdate));
     }
 

@@ -57,7 +57,7 @@ public class MovieControllerUnitTest {
         this.movieList = new ArrayList<>();
         this.testMovie = new Movie("Movietor Doom");
         this.movieList.add(testMovie);
-        this.testMovieWithID = new Movie(testMovie.getName());
+        this.testMovieWithID = new Movie(testMovie.getStatus());
         this.testMovieWithID.setId(id);
         this.movieDTO = this.mapToDTO(testMovieWithID);
     }
@@ -101,7 +101,7 @@ public class MovieControllerUnitTest {
     public void updateMoviesTest() {
         // given
         Movie newMovie = new Movie("Sir Movieington esq.");
-        Movie updatedMovie = new Movie(newMovie.getName());
+        Movie updatedMovie = new Movie(newMovie.getStatus());
         updatedMovie.setId(this.id);
 
         when(this.service.updateMovie(newMovie, this.id)).thenReturn(this.mapToDTO(updatedMovie));

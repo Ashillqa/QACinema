@@ -88,7 +88,7 @@ public class MovieControllerIntegrationTest {
     @Test
     public void testUpdateMovie() throws Exception {
         Movie newMovie = new Movie("Amy");
-        Movie updatedMovie = new Movie(newMovie.getName());
+        Movie updatedMovie = new Movie(newMovie.getStatus());
         updatedMovie.setId(this.id);
 
         String result = this.mock

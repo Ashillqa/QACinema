@@ -61,7 +61,7 @@ public class ShowTimeControllerIntegrationTest {
     @Before
     public void init() {
         this.repo.deleteAll();
-        this.testShowTime = new ShowTime("Barry", "blue", "pub");
+        this.testShowTime = new ShowTime("27/04/2020 14:30");
         this.testShowTimeWithID = this.repo.save(this.testShowTime);
         this.id = this.testShowTimeWithID.getId();
         this.showTimeDTO = this.mapToDTO(testShowTimeWithID);
@@ -99,8 +99,8 @@ public class ShowTimeControllerIntegrationTest {
 
     @Test
     public void testUpdateShowTime() throws Exception {
-        ShowTime newShowTime = new ShowTime("Sir ShowTimeington esq.", "Blue", "ShowTimeington Manor");
-        ShowTime updatedShowTime = new ShowTime(newShowTime.getName(), newShowTime.getColour(), newShowTime.getHabitat());
+        ShowTime newShowTime = new ShowTime("27/04/2020 14:50");
+        ShowTime updatedShowTime = new ShowTime(newShowTime.getTime());
         updatedShowTime.setId(this.id);
 
         String result = this.mock

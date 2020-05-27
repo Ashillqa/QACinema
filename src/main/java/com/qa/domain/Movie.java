@@ -15,13 +15,13 @@ public class Movie {
     @GeneratedValue
     private Long id;
 
-    private String name;
+    private String status;
 
     @OneToMany(mappedBy = "movie")
     private List<ShowTime> showTimes = new ArrayList<>();
 
-    public Movie(String name) {
-        this.name = name;
+    public Movie(String status) {
+        this.status = status;
     }
 
     public Movie() {
@@ -35,12 +35,12 @@ public class Movie {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getStatus() {
+        return status;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setStatus(String name) {
+        this.status = name;
     }
 
     public List<ShowTime> getShowTimes() {
