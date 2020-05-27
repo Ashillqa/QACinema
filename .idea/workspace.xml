@@ -2,97 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b9cd553-4786-42ea-b8b0-dc671f3e133b" name="Default Changelist" comment="Added all of the front end website template to the static folder">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/QACinema.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/catalog1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/catalog2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/default-skin-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/default-skin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/default-skin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/ionicons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/jquery.mCustomScrollbar.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/mCSB_buttons.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/nouislider.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/owl.video.play.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/photoswipe.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plyr.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/preloader.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/details1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/details2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/faq.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/ioniconse0a5.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/ioniconse0a5.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/ioniconse0a5.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/ioniconse0a5.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/ioniconse0a5.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/icon/apple-touch-icon-114x114.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/icon/apple-touch-icon-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/icon/apple-touch-icon-72x72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/icon/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/Download_on_the_App_Store_Badge.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/covers/cover.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/covers/cover2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/covers/cover3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/covers/cover4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/covers/cover5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/covers/cover6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery/project-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery/project-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery/project-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery/project-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery/project-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery/project-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/google-play-badge.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/home/home__bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/home/home__bg2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/home/home__bg3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/home/home__bg4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/partners/3docean-light-background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/partners/activeden-light-background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/partners/audiojungle-light-background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/partners/codecanyon-light-background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/partners/photodune-light-background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/partners/themeforest-light-background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/section/section.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/index2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.mCustomScrollbar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.morelines.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.mousewheel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/nouislider.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/owl.carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/photoswipe-ui-default.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/photoswipe.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plyr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/wNumb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/pricing.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/signin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/classifications.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/repo/commentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/repo/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/html/greetingPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/html/homepage.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="korby" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -103,6 +31,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -161,6 +90,7 @@
       <workItem from="1590571759188" duration="39000" />
       <workItem from="1590571822120" duration="650000" />
       <workItem from="1590572489105" duration="9000" />
+      <workItem from="1590575310105" duration="4125000" />
     </task>
     <task id="LOCAL-00001" summary="new start">
       <created>1590571881826</created>
@@ -214,44 +144,52 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="203" y="65" key="DiffContextDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574056912" />
-    <state width="1493" height="195" key="GridCell.Tab.0.bottom" timestamp="1590574147625">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1458" height="240" key="GridCell.Tab.0.bottom" timestamp="1590575374068">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
+    <state width="1458" height="240" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1590575374068" />
     <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147625" />
     <state width="1880" height="202" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
-    <state width="1493" height="195" key="GridCell.Tab.0.center" timestamp="1590574147625">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1458" height="240" key="GridCell.Tab.0.center" timestamp="1590575374068">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
+    <state width="1458" height="240" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1590575374068" />
     <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147625" />
     <state width="1880" height="202" key="GridCell.Tab.0.center/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472387" />
-    <state width="1493" height="195" key="GridCell.Tab.0.left" timestamp="1590574147623">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1458" height="240" key="GridCell.Tab.0.left" timestamp="1590575374068">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
+    <state width="1458" height="240" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1590575374068" />
     <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147623" />
     <state width="1880" height="202" key="GridCell.Tab.0.left/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472387" />
-    <state width="1493" height="195" key="GridCell.Tab.0.right" timestamp="1590574147625">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1458" height="240" key="GridCell.Tab.0.right" timestamp="1590575374068">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
+    <state width="1458" height="240" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1590575374068" />
     <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147625" />
     <state width="1880" height="202" key="GridCell.Tab.0.right/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
-    <state width="1493" height="195" key="GridCell.Tab.1.bottom" timestamp="1590574147625">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1458" height="240" key="GridCell.Tab.1.bottom" timestamp="1590575374068">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
+    <state width="1458" height="240" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1590575374068" />
     <state width="1493" height="195" key="GridCell.Tab.1.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147625" />
     <state width="1880" height="202" key="GridCell.Tab.1.bottom/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
-    <state width="1493" height="195" key="GridCell.Tab.1.center" timestamp="1590574147625">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1458" height="240" key="GridCell.Tab.1.center" timestamp="1590575374068">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
+    <state width="1458" height="240" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1590575374068" />
     <state width="1493" height="195" key="GridCell.Tab.1.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147625" />
     <state width="1880" height="202" key="GridCell.Tab.1.center/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
-    <state width="1493" height="195" key="GridCell.Tab.1.left" timestamp="1590574147625">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1458" height="240" key="GridCell.Tab.1.left" timestamp="1590575374068">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
+    <state width="1458" height="240" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1590575374068" />
     <state width="1493" height="195" key="GridCell.Tab.1.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147625" />
     <state width="1880" height="202" key="GridCell.Tab.1.left/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
-    <state width="1493" height="195" key="GridCell.Tab.1.right" timestamp="1590574147625">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1458" height="240" key="GridCell.Tab.1.right" timestamp="1590575374068">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
+    <state width="1458" height="240" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1590575374068" />
     <state width="1493" height="195" key="GridCell.Tab.1.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147625" />
     <state width="1880" height="202" key="GridCell.Tab.1.right/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
     <state x="4393" y="249" key="Vcs.Push.Dialog.v2" timestamp="1590571903803">
