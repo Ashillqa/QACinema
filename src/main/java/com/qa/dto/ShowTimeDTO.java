@@ -28,6 +28,9 @@ public class ShowTimeDTO {
         this.time = time;
     }
 
+    public ShowTimeDTO() {
+    }
+
     public ShowTimeDTO(Long id, String time) {
         this.id = id;
         this.time = time;

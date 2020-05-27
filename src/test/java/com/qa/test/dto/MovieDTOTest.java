@@ -1,14 +1,10 @@
 package com.qa.test.dto;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-
 import com.qa.dto.MovieDTO;
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class MovieDTOTest {
 
@@ -35,12 +31,12 @@ public class MovieDTOTest {
 
     @Test
     public void equalsWithNull() {
-        assertFalse(movieDTO.equals(null));
+        assertNotEquals(null, movieDTO);
     }
 
     @Test
     public void equalsWithDifferentObject() {
-        assertFalse(movieDTO.equals(new Object()));
+        assertNotEquals(movieDTO, new Object());
     }
 
     @Test
@@ -51,50 +47,50 @@ public class MovieDTOTest {
 
     @Test
     public void checkEquality() {
-        assertTrue(movieDTO.equals(movieDTO));
+        assertEquals(movieDTO, movieDTO);
     }
 
     @Test
     public void checkEqualityBetweenDifferentObjects() {
-        assertTrue(movieDTO.equals(other));
+        assertEquals(movieDTO, other);
     }
 
     @Test
     public void movieDTONameNullButOtherNameNotNull() {
         movieDTO.setStatus(null);
-        assertFalse(movieDTO.equals(other));
+        assertNotEquals(movieDTO, other);
     }
 
     @Test
     public void movieDTONamesNotEqual() {
         other.setStatus("featured");
-        assertFalse(movieDTO.equals(other));
+        assertNotEquals(movieDTO, other);
     }
 
     @Test
     public void checkEqualityBetweenDifferentObjectsNullName() {
         movieDTO.setStatus(null);
         other.setStatus(null);
-        assertTrue(movieDTO.equals(other));
+        assertEquals(movieDTO, other);
     }
 
     @Test
     public void nullId() {
         movieDTO.setId(null);
-        assertFalse(movieDTO.equals(other));
+        assertNotEquals(movieDTO, other);
     }
 
     @Test
     public void nullIdOnBoth() {
         movieDTO.setId(null);
         other.setId(null);
-        assertTrue(movieDTO.equals(other));
+        assertEquals(movieDTO, other);
     }
 
     @Test
     public void otherIdDifferent() {
         other.setId(2L);
-        assertFalse(movieDTO.equals(other));
+        assertNotEquals(movieDTO, other);
     }
 
     @Test

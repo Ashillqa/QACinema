@@ -1,14 +1,10 @@
 package com.qa.test.dto;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-
 import com.qa.dto.ShowTimeDTO;
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class ShowTimeDTOTest {
 
@@ -35,12 +31,12 @@ public class ShowTimeDTOTest {
 
     @Test
     public void equalsWithNull() {
-        assertFalse(showTimeDTO.equals(null));
+        assertNotEquals(null, showTimeDTO);
     }
 
     @Test
     public void equalsWithDifferentObject() {
-        assertFalse(showTimeDTO.equals(new Object()));
+        assertNotEquals(showTimeDTO, new Object());
     }
 
     @Test
@@ -51,50 +47,50 @@ public class ShowTimeDTOTest {
 
     @Test
     public void checkEquality() {
-        assertTrue(showTimeDTO.equals(showTimeDTO));
+        assertEquals(showTimeDTO, showTimeDTO);
     }
 
     @Test
     public void checkEqualityBetweenDifferentObjects() {
-        assertTrue(showTimeDTO.equals(other));
+        assertEquals(showTimeDTO, other);
     }
 
     @Test
     public void showTimeDTOTimeNullButOtherNameNotNull() {
         showTimeDTO.setTime(null);
-        assertFalse(showTimeDTO.equals(other));
+        assertNotEquals(showTimeDTO, other);
     }
 
     @Test
     public void showTimeDTOTimesNotEqual() {
         other.setTime("27/04/2020 14:30");
-        assertFalse(showTimeDTO.equals(other));
+        assertNotEquals(showTimeDTO, other);
     }
 
     @Test
     public void checkEqualityBetweenDifferentObjectsNullTimes() {
         showTimeDTO.setTime(null);
         other.setTime(null);
-        assertTrue(showTimeDTO.equals(other));
+        assertEquals(showTimeDTO, other);
     }
 
     @Test
     public void nullId() {
         showTimeDTO.setId(null);
-        assertFalse(showTimeDTO.equals(other));
+        assertNotEquals(showTimeDTO, other);
     }
 
     @Test
     public void nullIdOnBoth() {
         showTimeDTO.setId(null);
         other.setId(null);
-        assertTrue(showTimeDTO.equals(other));
+        assertEquals(showTimeDTO, other);
     }
 
     @Test
     public void otherIdDifferent() {
         other.setId(2L);
-        assertFalse(showTimeDTO.equals(other));
+        assertNotEquals(showTimeDTO, other);
     }
 
     @Test
