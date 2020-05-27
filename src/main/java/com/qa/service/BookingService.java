@@ -6,7 +6,6 @@ import com.qa.domain.Booking;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.qa.domain.Booking;
 import com.qa.exceptions.BookingNotFoundException;
 import com.qa.repo.BookingRepository;
 
