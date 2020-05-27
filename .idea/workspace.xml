@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b9cd553-4786-42ea-b8b0-dc671f3e133b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/rest/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/controller/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/rest/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/controller/CommentController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +70,7 @@
       <workItem from="1590571759188" duration="39000" />
       <workItem from="1590571822120" duration="650000" />
       <workItem from="1590572489105" duration="9000" />
+      <workItem from="1590573084614" duration="169000" />
     </task>
     <task id="LOCAL-00001" summary="new start">
       <created>1590571881826</created>

@@ -1,4 +1,4 @@
-package com.qa.rest;
+package com.qa.controller;
 
 import com.qa.domain.Bookings;
 import com.qa.service.BookingService;
