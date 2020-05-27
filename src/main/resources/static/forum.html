@@ -28,12 +28,60 @@
     <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-touch-icon-144x144.png">
 
     <style>
-        #ratings{
+        #comm{
+            color: rgba(255,255,255,0.7);
             margin-left: 250px
         }
         h3{
             text-align: center;
         }
+
+        input::-webkit-input-placeholder {
+            color: #000000;
+        }
+        textarea::-webkit-input-placeholder {
+            color: #000000;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .rate {
+            float: left;
+            height: 46px;
+            padding: 0 10px;
+        }
+        .rate:not(:checked) > input {
+            position:absolute;
+            top:-9999px;
+        }
+        .rate:not(:checked) > label {
+            float:right;
+            width:1em;
+            overflow:hidden;
+            white-space:nowrap;
+            cursor:pointer;
+            font-size:30px;
+            color:#ccc;
+        }
+        .rate:not(:checked) > label:before {
+            content: '★ ';
+        }
+        .rate > input:checked ~ label {
+            color: #ffc700;
+        }
+        .rate:not(:checked) > label:hover,
+        .rate:not(:checked) > label:hover ~ label {
+            color: #deb217;
+        }
+        .rate > input:checked + label:hover,
+        .rate > input:checked + label:hover ~ label,
+        .rate > input:checked ~ label:hover,
+        .rate > input:checked ~ label:hover ~ label,
+        .rate > label:hover ~ input:checked ~ label {
+            color: #c59b08;
+        }
+
     </style>
 
     <meta name="description" content="">
@@ -130,143 +178,63 @@
             <div class="col-12">
                 <div class="section__wrap">
                     <!-- section title -->
-                    <h2 class="section__title">Classifications</h2>
+                    <h2 class="section__title" style="text-align: center">Discussion Forum</h2>
                     <!-- end section title -->
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<section>
-    <p></p>
-</section>
-
-
-
-<div id="ratings">
-<!-- card -->
-<div class="col-6 col-sm-12 col-lg-6">
-    <div class="card card--list">
+<div id="comm">
+    <form id="commentForm">
+    <div class="col-6 col-sm-12 col-lg-6">
         <div class="row">
-            <div class="col-12 col-sm-4">
-                <div class="card__cover">
-                    <img src="img/ratings/universal.png" alt="">
-                    <a href="#" class="card__play">
-                        <i class="icon ion-ios-play"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-8">
-                <div class="card__content">
-                    <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/u" target="_blank">Universal</a> </h3>
-                    <div class="card__description">
-                        <p>Universal, suitable for audiences aged 4 years and over. Check with consumer advice before allowing under 4's to view this film.</p>
-                    </div>
-                </div>
-            </div>
+        <label for="comment_author">Name</label>
         </div>
     </div>
-</div>
-<!-- end card -->
-<!-- card -->
-<div class="col-6 col-sm-12 col-lg-6">
-    <div class="card card--list">
-        <div class="row">
-            <div class="col-12 col-sm-4">
-                <div class="card__cover">
-                    <img src="img/ratings/parental.png" alt="">
-                    <a href="#" class="card__play">
-                        <i class="icon ion-ios-play"></i>
-                    </a>
-                </div>
+        <div class="col-6 col-sm-12 col-lg-6">
+            <div class="row">
+                <input type="text" name="comment_author" id="comment_author" placeholder="name.." pattern="[a-zA-Z][a-zA-Z ]{2,}" required>
             </div>
+        </div>
+        <div class="col-6 col-sm-12 col-lg-6">
+                <div class="row">
+                    <div class="rate">
+                        <input type="radio" id="star5" name="rate" value="5" />
+                        <label for="star5" title="text">5 stars</label>
+                        <input type="radio" id="star4" name="rate" value="4" />
+                        <label for="star4" title="text">4 stars</label>
+                        <input type="radio" id="star3" name="rate" value="3" />
+                        <label for="star3" title="text">3 stars</label>
+                        <input type="radio" id="star2" name="rate" value="2" />
+                        <label for="star2" title="text">2 stars</label>
+                        <input type="radio" id="star1" name="rate" value="1" />
+                        <label for="star1" title="text">1 star</label>
+                    </div>
+                </div>
+        </div>
+        <div class="col-6 col-sm-12 col-lg-6">
+                <div class="row">
+                    <label for="comment">Leave Your Comment Below</label>
+                </div>
+        </div>
+        <div class="col-6 col-sm-12 col-lg-6">
+            <div class="row">
+                <textarea placeholder="Enter Message " name="comment" id="comment" rows="3" tabindex="4" required></textarea>
+            </div>
+        </div>
 
-            <div class="col-12 col-sm-8">
-                <div class="card__content">
-                    <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/pg" target="_blank">Parental Guidance</a></h3>
-                    <div class="card__description">
-                        <p>Parental Guidance - General Viewing, but some scenes may be unsuitable for young children.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end card -->
-<!-- card -->
-<div class="col-6 col-sm-12 col-lg-6">
-    <div class="card card--list">
-        <div class="row">
-            <div class="col-12 col-sm-4">
-                <div class="card__cover">
-                    <img src="img/ratings/rated12A.png" alt="">
-                    <a href="#" class="card__play">
-                        <i class="icon ion-ios-play"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-12 col-sm-8">
-                <div class="card__content">
-                    <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/12a-and-12" target="_blank">Rated 12A</a></h3>
-                    <div class="card__description">
-                        <p>With Parental Guidance - 12A means that the BBFC have classified the film unsuitable for children under 12. However, they may still watch the film, as long as they are accompanied by someone over 18 at all times during the showing.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end card -->
-<!-- card -->
-<div class="col-6 col-sm-12 col-lg-6">
-    <div class="card card--list">
-        <div class="row">
-            <div class="col-12 col-sm-4">
-                <div class="card__cover">
-                    <img src="img/ratings/15.png" alt="">
-                    <a href="#" class="card__play">
-                        <i class="icon ion-ios-play"></i>
-                    </a>
-                </div>
-            </div>
+        <input name="submit" type="submit" value="Submit comment" />
 
-            <div class="col-12 col-sm-8">
-                <div class="card__content">
-                    <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/15" target="_blank">Rated 15</a></h3>
-                    <div class="card__description">
-                        <p>Suitable only for persons of 15 years and older. Please note: proof of age may be required.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </form>
 </div>
-<!-- end card -->
-<!-- card -->
-<div class="col-6 col-sm-12 col-lg-6">
-    <div class="card card--list">
-        <div class="row">
-            <div class="col-12 col-sm-4">
-                <div class="card__cover">
-                    <img src="img/ratings/18.png" alt="">
-                </div>
-            </div>
 
-            <div class="col-12 col-sm-8">
-                <div class="card__content">
-                    <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/18" target="_blank">Rated 18</a></h3>
-                    <div class="card__description">
-                        <p>Suitable only for persons of 18 years and older. Please note: proof of age may be required</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end card -->
-</div>
+
+
+
+
+
+
 
 
 
@@ -293,7 +261,7 @@
                 </ul>
             </div>
             <!-- end footer list -->
-<p class="section__text"></p>
+
             <!-- footer list -->
             <div class="col-6 col-sm-4 col-md-3">
                 <h6 class="footer__title">Legal</h6>
