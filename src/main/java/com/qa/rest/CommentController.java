@@ -1,13 +1,17 @@
 package com.qa.rest;
 
-import com.qa.domain.Comments;
+import com.qa.domain.Comment;
 import com.qa.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @RestController
 public class CommentController {
+
     private final CommentService service;
 
     @Autowired
@@ -16,28 +20,35 @@ public class CommentController {
     }
 
     @GetMapping("/getAllComments")
-    public List<Comments> getAllComments(){
-        return this.service.readAllComments();
+    public ResponseEntity<List<Comment>> getAllComments(){
+        return ResponseEntity.ok(this.service.readComments());
     }
 
     @PostMapping("/createComment")
-    public Comments createComment(@RequestBody Comments comment){
-        return this.service.createComment(comment);
+    public ResponseEntity<Comment> createComment(@RequestBody Comment comment){
+        return new ResponseEntity<Comment>(this.service.createComment(comment), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/deleteComment/{id}")
-    public boolean deleteComment(@PathVariable Long id){
-        return this.service.deleteComment(id);
+    public ResponseEntity<?> deleteComment(@PathVariable Long id){
+        return this.service.deleteComment(id)
+            ? ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build()
+            : ResponseEntity.noContent().build();
     }
 
-    @GetMapping("/getCommentBy/{id}")
-    public Comments getCommentById(@PathVariable Long id){
-        return this.service.findCommentById(id);
+    @GetMapping("/getCommentById/{id}")
+    public ResponseEntity<Comment> getCommentById(@PathVariable Long id){
+        return ResponseEntity.ok(this.service.findCommentById(id));
     }
 
-    @PutMapping("/updateComment/{id}")
-    public Comments updateNote(@PathVariable Long id, @RequestBody Comments comment){
-        return this.service.updateComment(id, comment);
-    }
+//    @PutMapping("/updateComment/{id}")
+//    public ResponseEntity<Comment> updateComment(@PathVariable Long id, @RequestBody Comment comment){
+//        return ResponseEntity.ok(this.service.updateComment(id, comment));
+//    }
+//
+//    @PutMapping("/updateComment2")
+//    public ResponseEntity<Comment> updateComment2(@PathParam("id") Long id, @RequestBody Comment comment){
+//        return ResponseEntity.ok(this.service.updateComment(id, comment));
+//    }
 
 }
