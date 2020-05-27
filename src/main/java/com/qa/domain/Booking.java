@@ -2,11 +2,12 @@ package com.qa.domain;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Objects;
 
 
 @Entity
-public class Bookings {
+public class Booking {
 
     @Id
     @GeneratedValue
@@ -17,13 +18,13 @@ public class Bookings {
     private String dateTime;
     private BigDecimal totalPrice;
     private String emailAddress;
-    private Long phoneNumber;
+    private String phoneNumber;
     private String customerName;
     private Integer adultNr;
     private Integer childNr;
     private Integer studentNr;
 
-    public Bookings(Long movieId, String movieName, String dateTime, BigDecimal totalPrice, String emailAddress, Long phoneNumber, String customerName, Integer adultNr, Integer childNr, Integer studentNr) {
+    public Booking(Long movieId, String movieName, String dateTime, BigDecimal totalPrice, String emailAddress, String phoneNumber, String customerName, Integer adultNr, Integer childNr, Integer studentNr) {
         this.movieId = movieId;
         this.movieName = movieName;
         this.dateTime = dateTime;
@@ -36,7 +37,7 @@ public class Bookings {
         this.studentNr = studentNr;
     }
 
-    public Bookings(Long id, Long movieId, String movieName, String dateTime, BigDecimal totalPrice, String emailAddress, Long phoneNumber, String customerName, Integer adultNr, Integer childNr, Integer studentNr) {
+    public Booking(Long id, Long movieId, String movieName, String dateTime, BigDecimal totalPrice, String emailAddress, String phoneNumber, String customerName, Integer adultNr, Integer childNr, Integer studentNr) {
         this.id = id;
         this.movieId = movieId;
         this.movieName = movieName;
@@ -50,7 +51,7 @@ public class Bookings {
         this.studentNr = studentNr;
     }
 
-    public Bookings() {
+    public Booking() {
     }
 
     public Long getMovieId() {
@@ -93,11 +94,11 @@ public class Bookings {
         this.emailAddress = emailAddress;
     }
 
-    public Long getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -145,7 +146,7 @@ public class Bookings {
         if (this == object) return true;
         if (object == null || getClass() != object.getClass()) return false;
         if (!super.equals(object)) return false;
-        Bookings bookings = (Bookings) object;
+        Booking bookings = (Booking) object;
         return id.equals(bookings.id) &&
                 java.util.Objects.equals(movieId, bookings.movieId) &&
                 java.util.Objects.equals(movieName, bookings.movieName) &&
@@ -161,5 +162,32 @@ public class Bookings {
 
     public int hashCode() {
         return Objects.hash(super.hashCode(), id, movieId, movieName, dateTime, totalPrice, emailAddress, phoneNumber, customerName, adultNr, childNr, studentNr);
+    }
+
+    @Override
+    public String toString() {
+        return "{\"id\":" + id + "," +
+                "\"movieId\":" + movieId + "," +
+                "\"movieName\":\"" + movieName + "\"," +
+                "\"dateTime\":\"" + dateTime + "\"," +
+                "\"totalPrice\":" + totalPrice + "," +
+                "\"emailAddress\":\"" + emailAddress + "\"," +
+                "\"phoneNumber\":\"" + phoneNumber + "\"," +
+                "\"customerName\":\"" + customerName + "\"," +
+                "\"adultNr\":" + adultNr + "," +
+                "\"childNr\":" + childNr + "," +
+                "\"studentNr\":" + studentNr + "}";
+    }
+
+    public String listToJsonString(List<Booking> bookingList) {
+        StringBuilder stringBuilder = new StringBuilder("[");
+
+        for (Booking value : bookingList) {
+            stringBuilder.append(value.toString());
+        }
+
+        stringBuilder.append("]");
+
+        return stringBuilder.toString();
     }
 }

@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.qa.domain.Bookings;
+import com.qa.domain.Booking;
 import com.qa.exceptions.BookingNotFoundException;
 import com.qa.repo.BookingRepository;
 
@@ -18,21 +18,21 @@ public class BookingService {
 		this.repo = repo;
 	}
 
-	public List<Bookings> readAllBookings() {
+	public List<Booking> readAllBookings() {
 		return this.repo.findAll();
 	}
 
-	public Bookings createBooking(Bookings booking) {
+	public Booking createBooking(Booking booking) {
 		return this.repo.save(booking);
 	}
 
-	public Bookings findBookingById(Long id) {
+	public Booking findBookingById(Long id) {
 		return this.repo.findById(id).orElseThrow(BookingNotFoundException::new);
 	}
 
-	public Bookings updateBooking(Long id, Bookings booking) {
+	public Booking updateBooking(Long id, Booking booking) {
 
-		Bookings update = findBookingById(id);
+		Booking update = findBookingById(id);
 
 		update.setMovieId(booking.getMovieId());
 		update.setAdultNr(booking.getAdultNr());

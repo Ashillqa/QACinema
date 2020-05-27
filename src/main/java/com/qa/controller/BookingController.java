@@ -1,6 +1,6 @@
 package com.qa.controller;
 
-import com.qa.domain.Bookings;
+import com.qa.domain.Booking;
 import com.qa.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,12 +16,12 @@ public class BookingController {
     }
 
     @GetMapping("/getAllBookings")
-    public List<Bookings> getAllBookings(){
+    public List<Booking> getAllBookings(){
         return this.service.readAllBookings();
     }
 
     @PostMapping("/createBooking")
-    public Bookings createBooking(@RequestBody Bookings booking){
+    public Booking createBooking(@RequestBody Booking booking){
         return this.service.createBooking(booking);
     }
 
@@ -31,12 +31,12 @@ public class BookingController {
     }
 
     @GetMapping("/getBookingBy/{id}")
-    public Bookings getBookingById(@PathVariable Long id){
+    public Booking getBookingById(@PathVariable Long id){
         return this.service.findBookingById(id);
     }
 
     @PutMapping("/updateBooking/{id}")
-    public Bookings updateNote(@PathVariable Long id, @RequestBody Bookings booking){
+    public Booking updateNote(@PathVariable Long id, @RequestBody Booking booking){
         return this.service.updateBooking(id, booking);
     }
 
