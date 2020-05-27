@@ -1,6 +1,7 @@
 package com.qa.domain;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -15,6 +16,13 @@ public class Comment {
     private String comment;
 
     public Comment(String userName, Long rating, String comment) {
+        this.userName = userName;
+        this.rating = rating;
+        this.comment = comment;
+    }
+
+    public Comment(Long id, String userName, Long rating, String comment) {
+        this.id = id;
         this.userName = userName;
         this.rating = rating;
         this.comment = comment;
@@ -70,5 +78,25 @@ public class Comment {
     @Override
     public int hashCode() {
         return Objects.hash(id, userName, rating, comment);
+    }
+
+    @Override
+    public String toString() {
+        return "{\"id\":" + id + "," +
+                "\"userName\":\"" + userName + "\"," +
+                "\"rating\":" + rating + "," +
+                "\"comment\":\"" + comment + "\"}";
+    }
+
+    public String listToJsonString(List<Comment> commentList) {
+        StringBuilder stringBuilder = new StringBuilder("[");
+
+        for (Comment value : commentList) {
+            stringBuilder.append(value.toString());
+        }
+
+        stringBuilder.append("]");
+
+        return stringBuilder.toString();
     }
 }
