@@ -81,7 +81,7 @@
       <recent name="C:\Users\KMRRi\OneDrive\Desktop\Projects\latestTadas\src\main\java\com\qa\exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BookingServiceIntegrationTest">
+  <component name="RunManager" selected="JUnit.BookingServiceUnitTest">
     <configuration name="All in QA Cinema Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA Cinema Project" />
       <option name="PACKAGE_NAME" value="" />
@@ -119,16 +119,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookingServiceUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA Cinema Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qa.test.domain.*" />
+          <option name="PATTERN" value="com.qa.test.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.qa.test.domain" />
-      <option name="MAIN_CLASS_NAME" value="com.qa.test.domain.BookingTest" />
+      <option name="PACKAGE_NAME" value="com.qa.test.service" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.test.service.BookingServiceUnitTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -165,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BookingServiceUnitTest" />
         <item itemvalue="JUnit.BookingServiceIntegrationTest" />
         <item itemvalue="JUnit.CommentServiceIntegrationTest" />
         <item itemvalue="JUnit.BookingServiceIntegrationTest,testCreateBooking and 4 more" />
         <item itemvalue="JUnit.All in QA Cinema Project" />
-        <item itemvalue="JUnit.BookingTest" />
       </list>
     </recent_temporary>
   </component>
