@@ -142,28 +142,6 @@ public class Booking {
         this.studentNr = studentNr;
     }
 
-    public boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        if (!super.equals(object)) return false;
-        Booking bookings = (Booking) object;
-        return id.equals(bookings.id) &&
-                java.util.Objects.equals(movieId, bookings.movieId) &&
-                java.util.Objects.equals(movieName, bookings.movieName) &&
-                java.util.Objects.equals(dateTime, bookings.dateTime) &&
-                java.util.Objects.equals(totalPrice, bookings.totalPrice) &&
-                java.util.Objects.equals(emailAddress, bookings.emailAddress) &&
-                java.util.Objects.equals(phoneNumber, bookings.phoneNumber) &&
-                java.util.Objects.equals(customerName, bookings.customerName) &&
-                java.util.Objects.equals(adultNr, bookings.adultNr) &&
-                java.util.Objects.equals(childNr, bookings.childNr) &&
-                java.util.Objects.equals(studentNr, bookings.studentNr);
-    }
-
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), id, movieId, movieName, dateTime, totalPrice, emailAddress, phoneNumber, customerName, adultNr, childNr, studentNr);
-    }
-
     @Override
     public String toString() {
         return "{\"id\":" + id + "," +
@@ -189,5 +167,28 @@ public class Booking {
         stringBuilder.append("]");
 
         return stringBuilder.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Booking booking = (Booking) o;
+        return Objects.equals(id, booking.id) &&
+                Objects.equals(movieId, booking.movieId) &&
+                Objects.equals(movieName, booking.movieName) &&
+                Objects.equals(dateTime, booking.dateTime) &&
+                Objects.equals(totalPrice, booking.totalPrice) &&
+                Objects.equals(emailAddress, booking.emailAddress) &&
+                Objects.equals(phoneNumber, booking.phoneNumber) &&
+                Objects.equals(customerName, booking.customerName) &&
+                Objects.equals(adultNr, booking.adultNr) &&
+                Objects.equals(childNr, booking.childNr) &&
+                Objects.equals(studentNr, booking.studentNr);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, movieId, movieName, dateTime, totalPrice, emailAddress, phoneNumber, customerName, adultNr, childNr, studentNr);
     }
 }
