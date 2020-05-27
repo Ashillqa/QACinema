@@ -2,6 +2,7 @@ package com.qa.dto;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class MovieDTO {
 
@@ -48,37 +49,19 @@ public class MovieDTO {
     }
 
     @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((showTimes == null) ? 0 : showTimes.hashCode());
-        result = prime * result + ((id == null) ? 0 : id.hashCode());
-        result = prime * result + ((status == null) ? 0 : status.hashCode());
-        return result;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MovieDTO movieDTO = (MovieDTO) o;
+        return Objects.equals(id, movieDTO.id) &&
+                Objects.equals(status, movieDTO.status) &&
+                Objects.equals(showTimes, movieDTO.showTimes);
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        MovieDTO other = (MovieDTO) obj;
-        if (showTimes == null) {
-            if (other.showTimes != null)
-                return false;
-        } else if (!showTimes.equals(other.showTimes))
-            return false;
-        if (id == null) {
-            if (other.id != null)
-                return false;
-        } else if (!id.equals(other.id))
-            return false;
-        if (status == null) {
-            return other.status == null;
-        } else return status.equals(other.status);
+    public int hashCode() {
+        return Objects.hash(id, status, showTimes);
     }
+
 
 }

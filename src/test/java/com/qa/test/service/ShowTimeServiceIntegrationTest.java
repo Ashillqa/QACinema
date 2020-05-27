@@ -45,7 +45,7 @@ public class ShowTimeServiceIntegrationTest {
         this.testShowTime = new ShowTime("27/04/2020 14:30");
 
         this.repo.deleteAll();
-        //getting around auto-generated id's
+
         this.testShowTimeWithID = this.repo.save(this.testShowTime);
     }
 
