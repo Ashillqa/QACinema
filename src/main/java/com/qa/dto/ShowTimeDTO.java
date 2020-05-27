@@ -1,16 +1,18 @@
 package com.qa.dto;
 
+import java.util.Objects;
+
 public class ShowTimeDTO {
 
-    private long id;
+    private Long id;
 
     private String time;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -22,6 +24,14 @@ public class ShowTimeDTO {
         this.time = time;
     }
 
+    public ShowTimeDTO(String time) {
+        this.time = time;
+    }
+
+    public ShowTimeDTO(Long id, String time) {
+        this.id = id;
+        this.time = time;
+    }
 
     @Override
     public String toString() {
@@ -29,31 +39,16 @@ public class ShowTimeDTO {
     }
 
     @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + (int) (id ^ (id >>> 32));
-        result = prime * result + ((time == null) ? 0 : time.hashCode());
-        return result;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ShowTimeDTO that = (ShowTimeDTO) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(time, that.time);
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        ShowTimeDTO other = (ShowTimeDTO) obj;
-        if (id != other.id)
-            return false;
-        if (time == null) {
-            if (other.time != null)
-                return false;
-        } else if (!time.equals(other.time))
-            return false;
-        return true;
+    public int hashCode() {
+        return Objects.hash(id, time);
     }
-
 }

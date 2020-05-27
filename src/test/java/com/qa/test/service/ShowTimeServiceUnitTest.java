@@ -97,8 +97,7 @@ public class ShowTimeServiceUnitTest {
     }
 
     @Test
-    public void updateShowTimesTest() {
-        // given
+    public void updateShowTimesTest(){
         ShowTime newShowTime = new ShowTime("27/04/2020 13:30");
 
         ShowTime updatedShowTime = new ShowTime(newShowTime.getTime());
@@ -110,7 +109,6 @@ public class ShowTimeServiceUnitTest {
         when(this.repo.findById(this.id)).thenReturn(Optional.of(this.testShowTimeWithID));
         when(this.mapper.map(updatedShowTime, ShowTimeDTO.class)).thenReturn(updatedDTO);
 
-        // You NEED to configure a .equals() method in ShowTime.java for this to work
         when(this.repo.save(updatedShowTime)).thenReturn(updatedShowTime);
 
         assertEquals(updatedDTO, this.service.updateShowTime(newShowTime, this.id));

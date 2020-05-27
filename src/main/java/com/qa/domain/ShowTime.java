@@ -31,6 +31,12 @@ public class ShowTime {
         this.time = time;
     }
 
+    public ShowTime(Long id, String time) {
+        super();
+        this.id = id;
+        this.time = time;
+    }
+
     public ShowTime() {
     }
 

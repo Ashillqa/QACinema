@@ -2,6 +2,7 @@ package com.qa.domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,6 +22,11 @@ public class Movie {
     private List<ShowTime> showTimes = new ArrayList<>();
 
     public Movie(String status) {
+        this.status = status;
+    }
+
+    public Movie(Long id, String status) {
+        this.id = id;
         this.status = status;
     }
 
@@ -51,4 +57,18 @@ public class Movie {
         this.showTimes = showTimes;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Movie movie = (Movie) o;
+        return Objects.equals(id, movie.id) &&
+                Objects.equals(status, movie.status) &&
+                Objects.equals(showTimes, movie.showTimes);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, status, showTimes);
+    }
 }

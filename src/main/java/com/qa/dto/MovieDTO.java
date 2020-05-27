@@ -15,6 +15,11 @@ public class MovieDTO {
         this.status = status;
     }
 
+    public MovieDTO(Long id, String status) {
+        this.id = id;
+        this.status = status;
+    }
+
     public MovieDTO() {
     }
 
