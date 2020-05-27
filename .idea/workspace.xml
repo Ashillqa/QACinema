@@ -20,8 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b9cd553-4786-42ea-b8b0-dc671f3e133b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/test/service/CommentServiceIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/test/service/CommentServiceUnitTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/service/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/service/CommentService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +71,7 @@
       <recent name="C:\Users\KMRRi\OneDrive\Desktop\QA Cinema\QACinema\src\test\java\com\qa\test" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qa.test.service" />
       <recent name="com.qa.test.controller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -79,7 +82,15 @@
       <recent name="C:\Users\KMRRi\OneDrive\Desktop\Projects\latestTadas\src\main\java\com\qa\exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.com.qa.test in QA Cinema Project">
+  <component name="RunManager" selected="JUnit.All in QA Cinema Project">
+    <configuration name="All in QA Cinema Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QA Cinema Project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CommentServiceIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA Cinema Project" />
       <extension name="coverage">
@@ -91,22 +102,6 @@
       <option name="PACKAGE_NAME" value="com.qa.test.service" />
       <option name="MAIN_CLASS_NAME" value="com.qa.test.service.CommentServiceIntegrationTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommentServiceIntegrationTest.testDeleteComment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QA Cinema Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.qa.test.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.qa.test.service" />
-      <option name="MAIN_CLASS_NAME" value="com.qa.test.service.CommentServiceIntegrationTest" />
-      <option name="METHOD_NAME" value="testDeleteComment" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,7 +121,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommentServiceUnitTest.createCommentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommentServiceUnitTest.readCommentsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA Cinema Project" />
       <extension name="coverage">
         <pattern>
@@ -136,7 +131,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.qa.test.service" />
       <option name="MAIN_CLASS_NAME" value="com.qa.test.service.CommentServiceUnitTest" />
-      <option name="METHOD_NAME" value="createCommentTest" />
+      <option name="METHOD_NAME" value="readCommentsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -172,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.com.qa.test in QA Cinema Project" />
-        <item itemvalue="JUnit.CommentServiceIntegrationTest" />
-        <item itemvalue="JUnit.CommentServiceIntegrationTest.testDeleteComment" />
-        <item itemvalue="JUnit.CommentServiceUnitTest.createCommentTest" />
+        <item itemvalue="JUnit.All in QA Cinema Project" />
         <item itemvalue="JUnit.CommentServiceUnitTest" />
+        <item itemvalue="JUnit.CommentServiceUnitTest.readCommentsTest" />
+        <item itemvalue="JUnit.CommentServiceIntegrationTest" />
+        <item itemvalue="JUnit.com.qa.test in QA Cinema Project" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590583136203</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Service Integration tests for Comment done">
+      <created>1590584796642</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1590584796642</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +237,8 @@
     <MESSAGE value="new start" />
     <MESSAGE value="Added all of the front end website template to the static folder" />
     <MESSAGE value="Added domain and controller integration tests for Comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added domain and controller integration tests for Comment" />
+    <MESSAGE value="Service Integration tests for Comment done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Service Integration tests for Comment done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="424" y="0" width="702" height="824" key="#App" timestamp="1590572323011">
@@ -266,35 +269,35 @@
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state x="4531" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590570799797" />
-    <state x="4353" y="4" key="CommitChangelistDialog2" timestamp="1590583131939">
+    <state x="4353" y="4" key="CommitChangelistDialog2" timestamp="1590584792838">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state x="410" y="0" key="CommitChangelistDialog2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147548" />
-    <state x="4353" y="4" key="CommitChangelistDialog2/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590583131939" />
+    <state x="4353" y="4" key="CommitChangelistDialog2/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590584792838" />
     <state x="203" y="65" key="DiffContextDialog" timestamp="1590574056913">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="203" y="65" key="DiffContextDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574056912" />
-    <state width="1880" height="343" key="GridCell.Tab.0.bottom" timestamp="1590584524983">
+    <state width="1880" height="216" key="GridCell.Tab.0.bottom" timestamp="1590586646770">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147625" />
-    <state width="1880" height="343" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590584524983" />
-    <state width="1880" height="343" key="GridCell.Tab.0.center" timestamp="1590584524983">
+    <state width="1880" height="216" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590586646770" />
+    <state width="1880" height="216" key="GridCell.Tab.0.center" timestamp="1590586646769">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147625" />
-    <state width="1880" height="343" key="GridCell.Tab.0.center/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590584524983" />
-    <state width="1880" height="343" key="GridCell.Tab.0.left" timestamp="1590584524983">
+    <state width="1880" height="216" key="GridCell.Tab.0.center/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590586646769" />
+    <state width="1880" height="216" key="GridCell.Tab.0.left" timestamp="1590586646769">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147623" />
-    <state width="1880" height="343" key="GridCell.Tab.0.left/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590584524983" />
-    <state width="1880" height="343" key="GridCell.Tab.0.right" timestamp="1590584524983">
+    <state width="1880" height="216" key="GridCell.Tab.0.left/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590586646769" />
+    <state width="1880" height="216" key="GridCell.Tab.0.right" timestamp="1590586646769">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147625" />
-    <state width="1880" height="343" key="GridCell.Tab.0.right/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590584524983" />
+    <state width="1880" height="216" key="GridCell.Tab.0.right/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590586646769" />
     <state width="1880" height="356" key="GridCell.Tab.1.bottom" timestamp="1590577636168">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>

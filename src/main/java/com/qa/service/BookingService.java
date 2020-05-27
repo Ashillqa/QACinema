@@ -31,7 +31,9 @@ public class BookingService {
 	}
 
 	public Bookings updateBooking(Long id, Bookings booking) {
+
 		Bookings update = findBookingById(id);
+
 		update.setMovieId(booking.getMovieId());
 		update.setAdultNr(booking.getAdultNr());
 		update.setChildNr(booking.getChildNr());
