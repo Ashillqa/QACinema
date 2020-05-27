@@ -27,6 +27,15 @@
     <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-touch-icon-144x144.png">
 
+    <style>
+        .col-6{
+            margin-left: 250px
+        }
+        h3{
+            text-align: center;
+        }
+    </style>
+
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Dmitry Volkov">
@@ -44,53 +53,50 @@
                     <div class="header__content">
                         <!-- header logo -->
                         <a href="index.html" class="header__logo">
-                            <img src="img/logo.svg" alt="">
+                            <img src="img/QA-cinema-logo2.png" alt="">
                         </a>
                         <!-- end header logo -->
 
                         <!-- header nav -->
                         <ul class="header__nav">
-                            <!-- dropdown -->
-                            <li class="header__nav-item">
-                                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
 
-                                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
-                                    <li><a href="index.html">Home slideshow bg</a></li>
-                                    <li><a href="index2.html">Home static bg</a></li>
-                                </ul>
+                            <li class="header__nav-item">
+                                <a href="index.html" class="header__nav-link">Home</a>
                             </li>
-                            <!-- end dropdown -->
 
                             <!-- dropdown -->
                             <li class="header__nav-item">
-                                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
+                                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
 
                                 <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
-                                    <li><a href="catalog1.html">Catalog Grid</a></li>
-                                    <li><a href="catalog2.html">Catalog List</a></li>
-                                    <li><a href="details1.html">Details Movie</a></li>
-                                    <li><a href="details2.html">Details TV Series</a></li>
+                                    <li><a href="#">Showing</a></li>
+                                    <li><a href="#">Coming Soon</a></li>
                                 </ul>
                             </li>
                             <!-- end dropdown -->
 
                             <li class="header__nav-item">
-                                <a href="pricing.html" class="header__nav-link">Pricing Plan</a>
+                                <a href="pricing.html" class="header__nav-link">Screens</a>
                             </li>
 
+                            <!--dropdown-->
                             <li class="header__nav-item">
-                                <a href="faq.html" class="header__nav-link">Help</a>
+                                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planning Your Trip</a>
+
+                                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog1">
+                                    <li><a href="#">Getting Here</a></li>
+                                    <li><a href="#">What To Do</a></li>
+                                </ul>
                             </li>
+                            <!-- end dropdown -->
 
                             <!-- dropdown -->
                             <li class="dropdown header__nav-item">
                                 <a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
 
                                 <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="signin.html">Sign In</a></li>
-                                    <li><a href="signup.html">Sign Up</a></li>
-                                    <li><a href="404.html">404 Page</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Forum</a></li>
                                 </ul>
                             </li>
                             <!-- end dropdown -->
@@ -102,11 +108,6 @@
                             <button class="header__search-btn" type="button">
                                 <i class="icon ion-ios-search"></i>
                             </button>
-
-                            <a href="signin.html" class="header__sign-in">
-                                <i class="icon ion-ios-log-in"></i>
-                                <span>sign in</span>
-                            </a>
                         </div>
                         <!-- end header auth -->
 
@@ -136,17 +137,138 @@
         </div>
     </div>
 </section>
-<section class="section">
-    <div class="container">
-        <p class="section__text">To be confirmed - In some instances films had not been certified before the website was uploaded.
-            Child and Family tickets purchased before a film is certified as 15 or over can be refunded</p>
-        <p class="section__text">Universal, suitable for audiences aged 4 years and over. Check with consumer advice before allowing under 4's to view this film.</p>
-        <p class="section__text">Parental Guidance - General Viewing, but some scenes may be unsuitable for young children.</p>
-        <p class="section__text">12A with Parental Guidance - 12A means that the BBFC have classified the film unsuitable for children under 12. However, they may still watch the film, as long as they are accompanied by someone over 18 at all times during the showing.</p>
-        <p class="section__text">15 - Suitable only for persons of 15 years and older. Please note: proof of age may be required.</p>
-        <p class="section__text">18 - Suitable only for persons of 18 years and older. Please note: proof of age may be required</p>
-    </div>
+<section>
+    <p></p>
 </section>
+
+
+
+
+<!-- card -->
+<div class="col-6 col-sm-12 col-lg-6">
+    <div class="card card--list">
+        <div class="row">
+            <div class="col-12 col-sm-4">
+                <div class="card__cover">
+                    <img src="img/ratings/universal.png" alt="">
+                    <a href="#" class="card__play">
+                        <i class="icon ion-ios-play"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-8">
+                <div class="card__content">
+                    <h3 class="card__title">Universal</h3>
+                    <div class="card__description">
+                        <p>Universal, suitable for audiences aged 4 years and over. Check with consumer advice before allowing under 4's to view this film.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end card -->
+<!-- card -->
+<div class="col-6 col-sm-12 col-lg-6">
+    <div class="card card--list">
+        <div class="row">
+            <div class="col-12 col-sm-4">
+                <div class="card__cover">
+                    <img src="img/ratings/parental.png" alt="">
+                    <a href="#" class="card__play">
+                        <i class="icon ion-ios-play"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-8">
+                <div class="card__content">
+                    <h3 class="card__title">Parental Guidance</h3>
+                    <div class="card__description">
+                        <p>Parental Guidance - General Viewing, but some scenes may be unsuitable for young children.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end card -->
+<!-- card -->
+<div class="col-6 col-sm-12 col-lg-6">
+    <div class="card card--list">
+        <div class="row">
+            <div class="col-12 col-sm-4">
+                <div class="card__cover">
+                    <img src="img/ratings/rated12A.png" alt="">
+                    <a href="#" class="card__play">
+                        <i class="icon ion-ios-play"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-sm-8">
+                <div class="card__content">
+                    <h3 class="card__title">Rated 12A</h3>
+                    <div class="card__description">
+                        <p>With Parental Guidance - 12A means that the BBFC have classified the film unsuitable for children under 12. However, they may still watch the film, as long as they are accompanied by someone over 18 at all times during the showing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end card -->
+<!-- card -->
+<div class="col-6 col-sm-12 col-lg-6">
+    <div class="card card--list">
+        <div class="row">
+            <div class="col-12 col-sm-4">
+                <div class="card__cover">
+                    <img src="img/ratings/15.png" alt="">
+                    <a href="#" class="card__play">
+                        <i class="icon ion-ios-play"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-8">
+                <div class="card__content">
+                    <h3 class="card__title">Rated 15</h3>
+                    <div class="card__description">
+                        <p>Suitable only for persons of 15 years and older. Please note: proof of age may be required.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end card -->
+<!-- card -->
+<div class="col-6 col-sm-12 col-lg-6">
+    <div class="card card--list">
+        <div class="row">
+            <div class="col-12 col-sm-4">
+                <div class="card__cover">
+                    <img src="img/ratings/18.png" alt="">
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-8">
+                <div class="card__content">
+                    <h3 class="card__title">Rated 18</h3>
+                    <div class="card__description">
+                        <p>Suitable only for persons of 18 years and older. Please note: proof of age may be required</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end card -->
+
+
+
+
 <footer class="footer">
     <div class="container">
         <div class="row">
@@ -228,5 +350,6 @@
 <script src="js/photoswipe.min.js"></script>
 <script src="js/photoswipe-ui-default.min.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>
