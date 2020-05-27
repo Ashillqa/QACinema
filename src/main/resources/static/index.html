@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="css/main.css">
 
 	<!-- Favicons -->
-	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/QA-cinema-logo2.png" sizes="32x32">
 	<link rel="apple-touch-icon" href="icon/favicon-32x32.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-touch-icon-114x114.png">
@@ -148,7 +148,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h1 class="home__title"><b>NEW ITEMS</b> OF THIS SEASON</h1>
+					<h1 class="home__title"><b>FEATURED MOVIES</b></h1>
 
 					<button class="home__nav home__nav--prev" type="button">
 						<i class="icon ion-ios-arrow-round-back"></i>
@@ -163,19 +163,14 @@
 						<div class="item">
 							<!-- card -->
 							<div class="card card--big">
-								<div class="card__cover">
-									<img src="img/covers/cover.jpg" alt="">
-									<a href="#" class="card__play">
-										<i class="icon ion-ios-play"></i>
-									</a>
+								<div class="card__cover" id="firstMovieImage">
+
 								</div>
-								<div class="card__content">
-									<h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
-									<span class="card__category">
-										<a href="#">Action</a>
-										<a href="#">Triler</a>
+								<div class="card__content" id="firstMovieInfoDiv">
+									<h3 class="card__title" id="firstMovieTitle"></h3>
+									<span class="card__category" id="firstGenres">
 									</span>
-									<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i></span>
 								</div>
 							</div>
 							<!-- end card -->
@@ -184,18 +179,14 @@
 						<div class="item">
 							<!-- card -->
 							<div class="card card--big">
-								<div class="card__cover">
-									<img src="img/covers/cover2.jpg" alt="">
-									<a href="#" class="card__play">
-										<i class="icon ion-ios-play"></i>
-									</a>
+								<div class="card__cover" id="secondMovieImage">
+
 								</div>
-								<div class="card__content">
-									<h3 class="card__title"><a href="#">Benched</a></h3>
-									<span class="card__category">
-										<a href="#">Comedy</a>
+								<div class="card__content" id="secondMovieInfoDiv">
+									<h3 class="card__title" id="secondMovieTitle"></h3>
+									<span class="card__category" id="secondGenres">
 									</span>
-									<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i></span>
 								</div>
 							</div>
 							<!-- end card -->
@@ -1606,6 +1597,7 @@
 	<!-- end footer -->
 
 	<!-- JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
@@ -1618,6 +1610,8 @@
 	<script src="js/photoswipe.min.js"></script>
 	<script src="js/photoswipe-ui-default.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/featuredMovieLoading1.js"></script>
+	<script src="js/featuredMovieLoading2.js"></script>
 </body>
 
 </html>

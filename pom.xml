@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.qa</groupId>
-  <artifactId>SpringNotes</artifactId>
+  <artifactId>QACinema</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>SpringNotes</name>
+  <name>QACinema</name>
   <packaging>jar</packaging>
 
   <properties>
