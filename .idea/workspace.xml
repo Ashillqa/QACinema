@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b9cd553-4786-42ea-b8b0-dc671f3e133b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/test/domain/BookingTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/qa/test/service/BookingServiceIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,9 +69,9 @@
       <recent name="C:\Users\KMRRi\OneDrive\Desktop\QA Cinema\QACinema\src\test\java\com\qa\test" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qa.test.service" />
       <recent name="com.qa.test.domain" />
       <recent name="com.qa.test.controller" />
-      <recent name="com.qa.test.service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\KMRRi\OneDrive\Desktop\Projects\latestTadas\src\main\java\com\qa\repo" />
@@ -80,7 +81,7 @@
       <recent name="C:\Users\KMRRi\OneDrive\Desktop\Projects\latestTadas\src\main\java\com\qa\exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in QA Cinema Project">
+  <component name="RunManager" selected="JUnit.BookingServiceIntegrationTest">
     <configuration name="All in QA Cinema Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA Cinema Project" />
       <option name="PACKAGE_NAME" value="" />
@@ -89,48 +90,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookingControllerIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookingServiceIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA Cinema Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qa.test.controller.*" />
+          <option name="PATTERN" value="com.qa.test.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.qa.test.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.qa.test.controller.BookingControllerIntegrationTest" />
+      <option name="PACKAGE_NAME" value="com.qa.test.service" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.test.service.BookingServiceIntegrationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookingControllerIntegrationTest.testUpdateBooking" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookingServiceIntegrationTest,testCreateBooking and 4 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA Cinema Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.qa.test.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.qa.test.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.qa.test.controller.BookingControllerIntegrationTest" />
-      <option name="METHOD_NAME" value="testUpdateBooking" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BookingControllerUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QA Cinema Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.qa.test.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.qa.test.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.qa.test.controller.BookingControllerUnitTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="com.qa.test.service.BookingServiceIntegrationTest,testCreateBooking" />
+        <pattern testClass="com.qa.test.service.BookingServiceIntegrationTest,testDeleteBooking" />
+        <pattern testClass="com.qa.test.service.BookingServiceIntegrationTest,testFindBookingByID" />
+        <pattern testClass="com.qa.test.service.BookingServiceIntegrationTest,testReadBookings" />
+        <pattern testClass="com.qa.test.service.BookingServiceIntegrationTest,testUpdateBooking" />
+      </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,6 +129,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.qa.test.domain" />
       <option name="MAIN_CLASS_NAME" value="com.qa.test.domain.BookingTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommentServiceIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QA Cinema Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.test.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.test.service" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.test.service.CommentServiceIntegrationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -166,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BookingServiceIntegrationTest" />
+        <item itemvalue="JUnit.CommentServiceIntegrationTest" />
+        <item itemvalue="JUnit.BookingServiceIntegrationTest,testCreateBooking and 4 more" />
         <item itemvalue="JUnit.All in QA Cinema Project" />
         <item itemvalue="JUnit.BookingTest" />
-        <item itemvalue="JUnit.BookingControllerUnitTest" />
-        <item itemvalue="JUnit.BookingControllerIntegrationTest" />
-        <item itemvalue="JUnit.BookingControllerIntegrationTest.testUpdateBooking" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590589535378</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Booking Domain tested">
+      <created>1590590288253</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1590590288253</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,13 +275,18 @@
     <MESSAGE value="booking controller integration create finished" />
     <MESSAGE value="booking controller integration finished" />
     <MESSAGE value="BookingController tests done" />
-    <option name="LAST_COMMIT_MESSAGE" value="BookingController tests done" />
+    <MESSAGE value="Booking Domain tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="Booking Domain tested" />
   </component>
   <component name="WindowStateProjectService">
     <state x="424" y="0" width="702" height="824" key="#App" timestamp="1590572323011">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="424" y="0" width="702" height="824" key="#App/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590572323011" />
+    <state x="4531" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1590590317528">
+      <screen x="3840" y="0" width="1920" height="1040" />
+    </state>
+    <state x="4531" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590590317528" />
     <state x="3933" y="93" width="1733" height="853" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1590582712108">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
@@ -300,35 +311,35 @@
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state x="4531" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590570799797" />
-    <state x="4353" y="4" key="CommitChangelistDialog2" timestamp="1590589531700">
+    <state x="4353" y="4" key="CommitChangelistDialog2" timestamp="1590590284453">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state x="410" y="0" key="CommitChangelistDialog2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147548" />
-    <state x="4353" y="4" key="CommitChangelistDialog2/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590589531700" />
+    <state x="4353" y="4" key="CommitChangelistDialog2/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590590284453" />
     <state x="203" y="65" key="DiffContextDialog" timestamp="1590574056913">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="203" y="65" key="DiffContextDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574056912" />
-    <state width="1880" height="171" key="GridCell.Tab.0.bottom" timestamp="1590589514949">
+    <state width="1880" height="346" key="GridCell.Tab.0.bottom" timestamp="1590590889010">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147625" />
-    <state width="1880" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590589514949" />
-    <state width="1880" height="171" key="GridCell.Tab.0.center" timestamp="1590589514949">
+    <state width="1880" height="346" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590590889010" />
+    <state width="1880" height="346" key="GridCell.Tab.0.center" timestamp="1590590889010">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147625" />
-    <state width="1880" height="171" key="GridCell.Tab.0.center/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590589514949" />
-    <state width="1880" height="171" key="GridCell.Tab.0.left" timestamp="1590589514949">
+    <state width="1880" height="346" key="GridCell.Tab.0.center/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590590889010" />
+    <state width="1880" height="346" key="GridCell.Tab.0.left" timestamp="1590590889010">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147623" />
-    <state width="1880" height="171" key="GridCell.Tab.0.left/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590589514949" />
-    <state width="1880" height="171" key="GridCell.Tab.0.right" timestamp="1590589514949">
+    <state width="1880" height="346" key="GridCell.Tab.0.left/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590590889010" />
+    <state width="1880" height="346" key="GridCell.Tab.0.right" timestamp="1590590889010">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574147625" />
-    <state width="1880" height="171" key="GridCell.Tab.0.right/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590589514949" />
+    <state width="1880" height="346" key="GridCell.Tab.0.right/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590590889010" />
     <state width="1880" height="356" key="GridCell.Tab.1.bottom" timestamp="1590577636168">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
