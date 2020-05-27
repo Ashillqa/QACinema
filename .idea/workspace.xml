@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b9cd553-4786-42ea-b8b0-dc671f3e133b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/rest/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/controller/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/rest/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/exceptions/BookingNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/exceptions/BookingNotFoundException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,7 @@
       <workItem from="1590571759188" duration="39000" />
       <workItem from="1590571822120" duration="650000" />
       <workItem from="1590572489105" duration="9000" />
-      <workItem from="1590573084614" duration="169000" />
+      <workItem from="1590573084614" duration="505000" />
     </task>
     <task id="LOCAL-00001" summary="new start">
       <created>1590571881826</created>
@@ -79,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590571881826</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed name">
+      <created>1590573290566</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590573290566</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,7 +93,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new start" />
-    <option name="LAST_COMMIT_MESSAGE" value="new start" />
+    <MESSAGE value="fixed name" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed name" />
   </component>
   <component name="WindowStateProjectService">
     <state x="4606" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1590570901028">
@@ -106,10 +113,10 @@
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state x="4531" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590570799797" />
-    <state x="4353" y="4" key="CommitChangelistDialog2" timestamp="1590571876043">
+    <state x="4714" y="-1" width="889" height="1030" key="CommitChangelistDialog2" timestamp="1590573285727">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
-    <state x="4353" y="4" key="CommitChangelistDialog2/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590571876043" />
+    <state x="4714" y="-1" width="889" height="1030" key="CommitChangelistDialog2/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590573285727" />
     <state width="1880" height="202" key="GridCell.Tab.0.bottom" timestamp="1590572472388">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
@@ -142,9 +149,9 @@
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state width="1880" height="202" key="GridCell.Tab.1.right/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
-    <state x="4393" y="249" key="Vcs.Push.Dialog.v2" timestamp="1590571903803">
+    <state x="4393" y="249" key="Vcs.Push.Dialog.v2" timestamp="1590573294012">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
-    <state x="4393" y="249" key="Vcs.Push.Dialog.v2/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590571903803" />
+    <state x="4393" y="249" key="Vcs.Push.Dialog.v2/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590573294012" />
   </component>
 </project>

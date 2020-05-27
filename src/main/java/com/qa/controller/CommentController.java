@@ -41,14 +41,9 @@ public class CommentController {
         return ResponseEntity.ok(this.service.findCommentById(id));
     }
 
-//    @PutMapping("/updateComment/{id}")
-//    public ResponseEntity<Comment> updateComment(@PathVariable Long id, @RequestBody Comment comment){
-//        return ResponseEntity.ok(this.service.updateComment(id, comment));
-//    }
-//
-//    @PutMapping("/updateComment2")
-//    public ResponseEntity<Comment> updateComment2(@PathParam("id") Long id, @RequestBody Comment comment){
-//        return ResponseEntity.ok(this.service.updateComment(id, comment));
-//    }
+    @PutMapping("/updateComment/{id}")
+    public ResponseEntity<Comment> updateComment(@PathVariable Long id, @RequestBody Comment comment){
+        return ResponseEntity.ok(this.service.updateComment(id, comment));
+    }
 
 }
