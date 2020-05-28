@@ -15,14 +15,25 @@ public class Movie {
 
     private String status;
 
+    private Long apiID;
+
     @OneToMany(mappedBy = "movie", fetch = FetchType.EAGER)
     private List<ShowTime> showTimes = new ArrayList<>();
 
-    public Movie(String status) {
-        this.status = status;
+    public Movie(Long apiID, String status) {
+        this.apiID = apiID; this.status = status;
     }
 
-    public Movie(Long id, String status) {
+    public Long getApiID() {
+        return apiID;
+    }
+
+    public void setApiID(Long apiID) {
+        this.apiID = apiID;
+    }
+
+    public Movie(Long id, Long apiID, String status) {
+        this.apiID = apiID;
         this.id = id;
         this.status = status;
     }
@@ -61,11 +72,12 @@ public class Movie {
         Movie movie = (Movie) o;
         return Objects.equals(id, movie.id) &&
                 Objects.equals(status, movie.status) &&
+                Objects.equals(apiID, movie.apiID) &&
                 Objects.equals(showTimes, movie.showTimes);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, status, showTimes);
+        return Objects.hash(id, status, apiID, showTimes);
     }
 }

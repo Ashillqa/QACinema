@@ -41,7 +41,7 @@ public class MovieServiceIntegrationTest {
 
     @Before
     public void init() {
-        this.testMovie = new Movie("showing");
+        this.testMovie = new Movie(24928L,"showing");
 
         this.repo.deleteAll();
 
@@ -70,8 +70,8 @@ public class MovieServiceIntegrationTest {
 
     @Test
     public void testUpdateMovie() {
-        Movie newMovie = new Movie("showing");
-        Movie updatedMovie = new Movie(newMovie.getStatus());
+        Movie newMovie = new Movie(154085L,"showing");
+        Movie updatedMovie = new Movie(newMovie.getApiID(),newMovie.getStatus());
         updatedMovie.setId(this.testMovieWithID.getId());
 
         assertThat(this.service.updateMovie(newMovie, this.testMovieWithID.getId())).isEqualTo(this.mapToDTO(updatedMovie));

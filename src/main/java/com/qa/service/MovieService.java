@@ -51,9 +51,11 @@ public class MovieService {
         return this.repo.findAll().stream().map(this.mapper::mapToDTO).collect(Collectors.toList());
     }
 
-    public MovieDTO updateMovie(Movie showTime, Long id) {
+    public MovieDTO updateMovie(Movie movie, Long id) {
         Movie toUpdate = this.repo.findById(id).orElseThrow(() -> new MovieNotFoundException());
-        toUpdate.setStatus(showTime.getStatus());
+        toUpdate.setStatus(movie.getStatus());
+        toUpdate.setApiID(movie.getApiID());
+        toUpdate.setShowTimes(movie.getShowTimes());
         return this.mapper.mapToDTO(this.repo.save(toUpdate));
     }
 

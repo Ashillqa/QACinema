@@ -49,8 +49,8 @@ public class MovieServiceUnitTest {
     public void init() {
         this.movieList = new ArrayList<>();
         this.movieList.add(testMovie);
-        this.testMovie = new Movie("featured");
-        this.testMovieWithID = new Movie(testMovie.getStatus());
+        this.testMovie = new Movie(24425L,"featured");
+        this.testMovieWithID = new Movie(testMovie.getApiID(), testMovie.getStatus());
         this.testMovieWithID.setId(id);
         this.movieDTO = new ModelMapper().map(testMovieWithID, MovieDTO.class);
     }
@@ -98,9 +98,9 @@ public class MovieServiceUnitTest {
 
     @Test
     public void updateMoviesTest(){
-        Movie newMovie = new Movie("upcoming");
+        Movie newMovie = new Movie(923482L,"upcoming");
 
-        Movie updatedMovie = new Movie(newMovie.getStatus());
+        Movie updatedMovie = new Movie(newMovie.getApiID(),newMovie.getStatus());
         updatedMovie.setId(this.id);
 
         MovieDTO updatedDTO = new ModelMapper().map(updatedMovie, MovieDTO.class);

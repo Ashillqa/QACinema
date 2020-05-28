@@ -13,8 +13,8 @@ public class MovieDTOTest {
 
     @Before
     public void setUp() {
-        movieDTO = new MovieDTO(1L, "Showing");
-        other = new MovieDTO(1L, "Showing");
+        movieDTO = new MovieDTO(1L,"Showing", 1123413L);
+        other = new MovieDTO(1L,"Showing", 1123413L);
     }
 
     @Test
@@ -95,9 +95,10 @@ public class MovieDTOTest {
 
     @Test
     public void constructorWithoutId() {
-        MovieDTO movieDTO = new MovieDTO("Showing");
+        MovieDTO movieDTO = new MovieDTO("Showing", 1213413L);
         assertNull(movieDTO.getId());
         assertNotNull(movieDTO.getStatus());
+        assertNotNull(movieDTO.getApiID());
     }
 
     @Test
@@ -107,8 +108,8 @@ public class MovieDTOTest {
 
     @Test
     public void hashCodeTestWithNull() {
-        MovieDTO movieDTO = new MovieDTO(null);
-        MovieDTO other = new MovieDTO(null);
+        MovieDTO movieDTO = new MovieDTO(null,null);
+        MovieDTO other = new MovieDTO(null,null);
         assertEquals(movieDTO.hashCode(), other.hashCode());
     }
 

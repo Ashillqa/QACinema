@@ -46,7 +46,7 @@ public class MovieControllerIntegrationTest {
     @Before
     public void init() {
         this.repo.deleteAll();
-        this.testMovie = new Movie("ShowTimeinghamshire");
+        this.testMovie = new Movie(129341L,"ShowTimeinghamshire");
         this.testMovieWithID = this.repo.save(this.testMovie);
         this.id = this.testMovieWithID.getId();
     }
@@ -87,8 +87,8 @@ public class MovieControllerIntegrationTest {
 
     @Test
     public void testUpdateMovie() throws Exception {
-        Movie newMovie = new Movie("Amy");
-        Movie updatedMovie = new Movie(newMovie.getStatus());
+        Movie newMovie = new Movie(129341L,"Amy");
+        Movie updatedMovie = new Movie(newMovie.getApiID(), newMovie.getStatus());
         updatedMovie.setId(this.id);
 
         String result = this.mock

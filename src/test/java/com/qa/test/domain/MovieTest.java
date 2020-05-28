@@ -17,8 +17,8 @@ public class MovieTest {
 
     @Before
     public void setUp() {
-        movie = new Movie(1L, "Showing");
-        other = new Movie(1L, "Showing");
+        movie = new Movie(1L,1123413L, "Showing");
+        other = new Movie(1L,1123413L, "Showing");
     }
 
     @Test
@@ -99,7 +99,7 @@ public class MovieTest {
 
     @Test
     public void constructorWithoutId() {
-        Movie movie = new Movie("Showing");
+        Movie movie = new Movie(129838L,"Showing");
         assertNull(movie.getId());
         assertNotNull(movie.getStatus());
     }
@@ -111,8 +111,8 @@ public class MovieTest {
 
     @Test
     public void hashCodeTestWithNull() {
-        Movie movie = new Movie(null);
-        Movie other = new Movie(null);
+        Movie movie = new Movie(null,null);
+        Movie other = new Movie(null,null);
         assertEquals(movie.hashCode(), other.hashCode());
     }
 
