@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Font -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet"> 
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="css/main.css">
 
 	<!-- Favicons -->
-	<link rel="icon" type="image/png" href="img/QA-cinema-logo2.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
 	<link rel="apple-touch-icon" href="icon/favicon-32x32.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-touch-icon-114x114.png">
@@ -30,7 +30,7 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="Dmitry Volkov">
-	<title>QA Cinema - Team Jobs Productions</title>
+	<title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
 
 </head>
 <body class="body">
@@ -44,50 +44,53 @@
 						<div class="header__content">
 							<!-- header logo -->
 							<a href="index.html" class="header__logo">
-								<img src="img/QA-cinema-logo2.png" alt="">
+								<img src="img/logo.svg" alt="">
 							</a>
 							<!-- end header logo -->
 
 							<!-- header nav -->
 							<ul class="header__nav">
-
+								<!-- dropdown -->
 								<li class="header__nav-item">
-									<a href="index.html" class="header__nav-link">Home</a>
+									<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+
+									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
+										<li><a href="index.html">Home slideshow bg</a></li>
+										<li><a href="index2.html">Home static bg</a></li>
+									</ul>
 								</li>
+								<!-- end dropdown -->
 
 								<!-- dropdown -->
 								<li class="header__nav-item">
-									<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
+									<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
 
 									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
-										<li><a href="#">Showing</a></li>
-										<li><a href="#">Coming Soon</a></li>
+										<li><a href="catalog1.html">Catalog Grid</a></li>
+										<li><a href="catalog2.html">Catalog List</a></li>
+										<li><a href="details1.html">Details Movie</a></li>
+										<li><a href="details2.html">Details TV Series</a></li>
 									</ul>
 								</li>
 								<!-- end dropdown -->
 
 								<li class="header__nav-item">
-									<a href="screens.html" class="header__nav-link">Screens</a>
+									<a href="pricing.html" class="header__nav-link">Pricing Plan</a>
 								</li>
 
-								<!--dropdown-->
 								<li class="header__nav-item">
-									<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planning Your Trip</a>
-
-									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog1">
-										<li><a href="#">Getting Here</a></li>
-										<li><a href="#">What To Do</a></li>
-									</ul>
+									<a href="faq.html" class="header__nav-link">Help</a>
 								</li>
-								<!-- end dropdown -->
 
 								<!-- dropdown -->
 								<li class="dropdown header__nav-item">
 									<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
 
 									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-										<li><a href="#">About</a></li>
-										<li><a href="#">Forum</a></li>
+										<li><a href="about.html">About</a></li>
+										<li><a href="signin.html">Sign In</a></li>
+										<li><a href="signup.html">Sign Up</a></li>
+										<li><a href="404.html">404 Page</a></li>
 									</ul>
 								</li>
 								<!-- end dropdown -->
@@ -99,6 +102,11 @@
 								<button class="header__search-btn" type="button">
 									<i class="icon ion-ios-search"></i>
 								</button>
+
+								<a href="signin.html" class="header__sign-in">
+									<i class="icon ion-ios-log-in"></i>
+									<span>sign in</span>
+								</a>
 							</div>
 							<!-- end header auth -->
 
@@ -121,8 +129,7 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="header__search-content">
-							<label for="searchBox"></label>
-							<input type="text" placeholder="Search for a movie, TV Series that you are looking for" id="searchBox">
+							<input type="text" placeholder="Search for a movie, TV Series that you are looking for">
 
 							<button type="button">search</button>
 						</div>
@@ -134,67 +141,66 @@
 	</header>
 	<!-- end header -->
 
-	<!-- home -->
-	<section class="home">
+	<!-- page title -->
+	<section class="section section--first section--bg" data-bg="img/section/section.jpg">
 		<div class="container">
-			<div class="row" id="primeDiv">
+			<div class="row">
 				<div class="col-12">
-					<h1 class="home__title"><b>FEATURED MOVIES</b></h1>
+					<div class="section__wrap">
+						<!-- section title -->
+						<h2 class="section__title">Coming soon to QA Cinemas</h2>
+						<!-- end section title -->
 
-				</div>
-
-
-
-				</div>
-			</div>
-
-	</section>
-	<!-- end home -->
-
-	<!-- content -->
-	<section class="content">
-		<div class="content__head">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<!-- content title -->
-						<h2 class="content__title">Come experience the magic of cinema...</h2>
-						<!-- end content title -->
-
+						<!-- breadcrumb -->
+						<ul class="breadcrumb">
+							<li class="breadcrumb__item"><a href="#">Home</a></li>
+							<li class="breadcrumb__item breadcrumb__item--active">Catalog list</li>
+						</ul>
+						<!-- end breadcrumb -->
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="container">
-			
-
-		</div>
 	</section>
-	<!-- end content -->
+	<!-- end page title -->
 
-	<!-- expected premiere -->
-	<section class="section section--bg" data-bg="img/section/section.jpg">
+	<!-- filter -->
+	<div class="filter">
 		<div class="container">
-			<div class="row" id="soonComeDiv">
-				<!-- section title -->
+			<div class="row">
 				<div class="col-12">
-					<h2 class="section__title"><b>COMING SOON</b></h2>
+					
 				</div>
-				<!-- end section title -->
-
 			</div>
 		</div>
-	</section>
-	<!-- end expected premiere -->
+	</div>
+	<!-- end filter -->
 
-	
+	<!-- catalog -->
+	<div class="catalog">
+		<div class="container">
+			<div class="row" id="comingSoon">
+				
+			</div>
+		</div>
+	</div>
+	<!-- end catalog -->
+
+
 
 	<!-- footer -->
 	<footer class="footer">
 		<div class="container">
 			<div class="row">
-				
+				<!-- footer list -->
+				<div class="col-12 col-md-3">
+					<h6 class="footer__title">Download Our App</h6>
+					<ul class="footer__app">
+						<li><a href="#"><img src="img/Download_on_the_App_Store_Badge.svg" alt=""></a></li>
+						<li><a href="#"><img src="img/google-play-badge.png" alt=""></a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
 
 				<!-- footer list -->
 				<div class="col-6 col-sm-4 col-md-3">
@@ -222,7 +228,7 @@
 				<div class="col-12 col-sm-4 col-md-3">
 					<h6 class="footer__title">Contact</h6>
 					<ul class="footer__list">
-						<li><a href="tel:+18002345678">+44</a></li>
+						<li><a href="tel:+18002345678">+1 (800) 234-5678</a></li>
 						<li><a href="mailto:support@moviego.com">support@flixgo.com</a></li>
 					</ul>
 					<ul class="footer__social">
@@ -265,7 +271,7 @@
 	<script src="js/photoswipe.min.js"></script>
 	<script src="js/photoswipe-ui-default.min.js"></script>
 	<script src="js/main.js"></script>
-	<script src="js/movieListDisplay.js"></script>
+	<script src="js/comingSoon.js"></script>
 </body>
 
 </html>
