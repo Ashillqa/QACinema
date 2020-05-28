@@ -59,12 +59,13 @@ function writeContent(apiID) {
         }
     )
 }
+dateSelect(dates);
 
 function dateSelect(dates) {
     let templist = [];
-    let bigParent = document.getElementById("mCSB_1_container");
-
-    for (i=0;i<dates.length;){
+    let bigParent = document.getElementById("accordion");
+    let counter = 0;
+    for (let i=0;i<dates.length;counter++){
         let day = document.createElement("div")
         day.className="accordion__card"
         let insert ="";
@@ -82,22 +83,22 @@ function dateSelect(dates) {
             insert+=`<tbody><tr><th>${templist[j].split(" ")[1]}</th></tr></tbody>`
         }
 
-        day.innerHTML= `<div class="card-header" id="headingOne">
-      <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <span>Season: 1</span>
-        <span>${templist[0].split(" ")[0]}</span>
-      </button>
-    </div>
+        day.innerHTML=
+            `<div class="card-header" id="heading${counter}">
+                    <button type="button" data-toggle="collapse" data-target="#collapse${counter}" aria-expanded="true" aria-controls="collapse${counter}">
+                        <span>${templist[0].split(" ")[0]}</span>
+                    </button>
+                </div>
+        
+                   <div id="collapse${counter}" class="collapse show" aria-labelledby="heading${counter}" data-parent="#accordion">
+                    <div class="card-body">
+                           <table class="accordion__list">`+
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-      <div class="card-body">
-        <table class="accordion__list">`+
+                            insert+
 
-            insert+
-
-            `</table>
-      </div>
-    </div>`;
+                        `</table>
+                    </div>
+                </div>`;
 
         bigParent.appendChild(day);
 
@@ -112,7 +113,6 @@ axios.get(`http://localhost:8080/movie/get/${params.get('id')}`).then(
         console.log(write.data);
         writeContent(write.data.apiID);
         videoSource(write.data.apiID);
-        dateSelect(dates);
     }
 )
 
