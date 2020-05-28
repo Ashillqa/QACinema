@@ -38,7 +38,6 @@ public class CommentServiceUnitTest {
 
     private final long id = 1L;
 
-
     @Before
     public void init() {
         this.commentList = new ArrayList<>();
