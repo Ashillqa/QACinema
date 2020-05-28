@@ -1,9 +1,8 @@
 let a = [419704,338762,495764,454626,38700,475557];
-let b = [400160,514847,556678,696007,635237,524047];
+let b = [400160,514847,556678,696007,524047,572751];
 
 let div = document.getElementById("primeDiv");
 let div2 = document.getElementById("soonComeDiv");
-
 
 for(let i of a){
         console.log(i);
