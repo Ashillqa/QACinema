@@ -6,7 +6,6 @@ let dates = ["28/05/2020 14:30","28/05/2020 16:30","29/05/2020 14:30","28/05/202
 function writeContent(apiID) {
     axios.get(`https://api.themoviedb.org/3/movie/${apiID}?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-US`).then(
         fill => {
-            console.log(fill.data);
             let parent=document.getElementById("movieInfo");
 
             let detailsChild=document.createElement("div");
@@ -59,7 +58,7 @@ function writeContent(apiID) {
         }
     )
 }
-dateSelect(dates);
+
 
 function dateSelect(dates) {
     let templist = [];
@@ -102,17 +101,20 @@ function dateSelect(dates) {
 
         bigParent.appendChild(day);
 
-
-        console.log(templist);
         templist = [];
     }
 }
 
 axios.get(`http://localhost:8080/movie/get/${params.get('id')}`).then(
     write => {
-        console.log(write.data);
+        let showTimes = [];
         writeContent(write.data.apiID);
         videoSource(write.data.apiID);
+
+        for (let i =0; i< write.data.showTimes.length; i++){
+            showTimes.push(write.data.showTimes[i].time);
+        }
+        dateSelect(showTimes.sort());
     }
 )
 
@@ -120,7 +122,6 @@ function videoSource(apiID) {
     axios.get(`https://api.themoviedb.org/3/movie/${apiID}/videos?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-US
 `).then(
         write => {
-            console.log(write.data);
             document.getElementById("video").src=`https://www.youtube.com/embed/${write.data.results[0].key}`;
         }
     )
