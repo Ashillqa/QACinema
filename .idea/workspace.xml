@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3a98e523-2b36-416b-88c6-0d385108c43c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/QACinema.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QACinema.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="development" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1brMkyBdlMdZ3OwtH8p62Z9Wk3Y" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.qa.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\david\IdeaProjects\QACinema\src\main\resources\static" />
+      <recent name="C:\Users\david\IdeaProjects\QACinema\src\main\resources\static\js" />
+      <recent name="C:\Users\david\IdeaProjects\QACinema\src\main\resources\static\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KMRRi\OneDrive\Desktop\Projects\latestTadas\src\main\java\com\qa\repo" />
+      <recent name="C:\Users\KMRRi\OneDrive\Desktop\Projects\latestTadas\src\main\java\com\qa\rest" />
+      <recent name="C:\Users\KMRRi\OneDrive\Desktop\Projects\latestTadas\src\main\java\com\qa\domain" />
+      <recent name="C:\Users\KMRRi\OneDrive\Desktop\Projects\latestTadas\src\main\java\com\qa\service" />
+      <recent name="C:\Users\KMRRi\OneDrive\Desktop\Projects\latestTadas\src\main\java\com\qa\exceptions" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.App (2)">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qa.App" />
+      <module name="QACinema" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qa.App" />
+      <option name="ENABLE_JMX_AGENT" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="QACinema" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qa.App" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com/qa/App" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.App (2)" />
+        <item itemvalue="Application.App" />
+        <item itemvalue="Spring Boot.App (2)" />
+        <item itemvalue="Spring Boot.App (2)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3a98e523-2b36-416b-88c6-0d385108c43c" name="Default Changelist" comment="" />
+      <created>1589385905082</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589385905082</updated>
+      <workItem from="1589385908493" duration="224000" />
+      <workItem from="1589386144020" duration="83000" />
+      <workItem from="1589388048292" duration="1479000" />
+      <workItem from="1589390056512" duration="123000" />
+      <workItem from="1589390238884" duration="834000" />
+      <workItem from="1590570777381" duration="933000" />
+      <workItem from="1590571759188" duration="39000" />
+      <workItem from="1590571822120" duration="650000" />
+      <workItem from="1590572489105" duration="9000" />
+      <workItem from="1590587496799" duration="1807000" />
+      <workItem from="1590589397169" duration="3919000" />
+      <workItem from="1590658097696" duration="28000" />
+      <workItem from="1590658156110" duration="642000" />
+      <workItem from="1590660165534" duration="15042000" />
+    </task>
+    <task id="LOCAL-00001" summary="new start">
+      <created>1590571881826</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590571881826</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added all of the front end website template to the static folder">
+      <created>1590574256051</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590574256051</updated>
+    </task>
+    <task id="LOCAL-00003" summary="changed the navigation bar for the home index page and added the first qa cinema logo made&#10;deleted the sign in button">
+      <created>1590577715352</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1590577715352</updated>
+    </task>
+    <task id="LOCAL-00004" summary="changed the navigation bar for the home index page and added the second qa cinema logo made&#10;deleted the sign in html&#10;deleted the index2 html&#10;changed the CSS  a bit">
+      <created>1590579147539</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590579147539</updated>
+    </task>
+    <task id="LOCAL-00005" summary="commit">
+      <created>1590657141710</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1590657141710</updated>
+    </task>
+    <task id="LOCAL-00006" summary="edited the index">
+      <created>1590661938407</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1590661938407</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ws able to make the bookings page and currently trying to implement the drop down function changing the number of tickets to match the total">
+      <created>1590681897191</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590681897191</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new start" />
+    <MESSAGE value="Added all of the front end website template to the static folder" />
+    <MESSAGE value="changed the navigation bar for the home index page and added the first qa cinema logo made" />
+    <MESSAGE value="changed the navigation bar for the home index page and added the first qa cinema logo made&#10;deleted the sign in button" />
+    <MESSAGE value="changed the navigation bar for the home index page and added the second qa cinema logo made&#10;deleted the sign in html&#10;deleted the index2 html&#10;changed the CSS  a bit" />
+    <MESSAGE value="commit" />
+    <MESSAGE value="edited the index" />
+    <MESSAGE value="ws able to make the bookings page and currently trying to implement the drop down function changing the number of tickets to match the total" />
+    <option name="LAST_COMMIT_MESSAGE" value="ws able to make the bookings page and currently trying to implement the drop down function changing the number of tickets to match the total" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="424" y="0" width="702" height="824" key="#App" timestamp="1590572323011">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="424" y="0" width="702" height="824" key="#App/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590572323011" />
+    <state x="424" y="0" width="702" height="824" key="#App_(1)" timestamp="1590599765075">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="424" y="0" width="702" height="824" key="#App_(1)/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590599765075" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590599809493">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590599809493" />
+    <state x="4606" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1590570901028">
+      <screen x="3840" y="0" width="1920" height="1040" />
+    </state>
+    <state x="4606" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590570901028" />
+    <state x="505" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1590599579607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="505" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590599579607" />
+    <state x="4569" y="376" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1590571168699">
+      <screen x="3840" y="0" width="1920" height="1040" />
+    </state>
+    <state x="4569" y="376" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590571168699" />
+    <state x="4308" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1589389169186">
+      <screen x="3840" y="0" width="1920" height="1040" />
+    </state>
+    <state x="4308" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1589389169186" />
+    <state x="553" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590579055502">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="553" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590579055502" />
+    <state x="4531" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590570799797" />
+    <state x="149" y="0" key="CommitChangelistDialog2" timestamp="1590681895496">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="149" y="0" key="CommitChangelistDialog2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590681895496" />
+    <state x="4353" y="4" key="CommitChangelistDialog2/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590571876043" />
+    <state x="203" y="65" key="DiffContextDialog" timestamp="1590574056913">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="203" y="65" key="DiffContextDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590574056912" />
+    <state width="738" height="195" key="GridCell.Tab.0.bottom" timestamp="1590658088093">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="738" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590658088093" />
+    <state width="1880" height="202" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590589319244" />
+    <state width="738" height="195" key="GridCell.Tab.0.center" timestamp="1590658088092">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="738" height="195" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590658088092" />
+    <state width="1880" height="202" key="GridCell.Tab.0.center/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472387" />
+    <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590589319243" />
+    <state width="738" height="195" key="GridCell.Tab.0.left" timestamp="1590658088092">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="738" height="195" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590658088092" />
+    <state width="1880" height="202" key="GridCell.Tab.0.left/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472387" />
+    <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590589319243" />
+    <state width="738" height="195" key="GridCell.Tab.0.right" timestamp="1590658088093">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="738" height="195" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590658088093" />
+    <state width="1880" height="202" key="GridCell.Tab.0.right/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
+    <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590589319243" />
+    <state width="738" height="195" key="GridCell.Tab.1.bottom" timestamp="1590658088093">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="738" height="195" key="GridCell.Tab.1.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590658088093" />
+    <state width="1880" height="202" key="GridCell.Tab.1.bottom/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
+    <state width="1493" height="195" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590589319246" />
+    <state width="738" height="195" key="GridCell.Tab.1.center" timestamp="1590658088093">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="738" height="195" key="GridCell.Tab.1.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590658088093" />
+    <state width="1880" height="202" key="GridCell.Tab.1.center/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
+    <state width="1493" height="195" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590589319245" />
+    <state width="738" height="195" key="GridCell.Tab.1.left" timestamp="1590658088093">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="738" height="195" key="GridCell.Tab.1.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590658088093" />
+    <state width="1880" height="202" key="GridCell.Tab.1.left/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
+    <state width="1493" height="195" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590589319245" />
+    <state width="738" height="195" key="GridCell.Tab.1.right" timestamp="1590658088093">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="738" height="195" key="GridCell.Tab.1.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590658088093" />
+    <state width="1880" height="202" key="GridCell.Tab.1.right/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
+    <state width="1493" height="195" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590589319245" />
+    <state x="442" y="197" key="Vcs.Push.Dialog.v2" timestamp="1590661943641">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="442" y="197" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590661943641" />
+    <state x="4393" y="249" key="Vcs.Push.Dialog.v2/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590571903803" />
+    <state x="410" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590587973013">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="410" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590587973013" />
+    <state x="577" y="322" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590662024821">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="577" y="322" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590662024821" />
+    <state x="536" y="43" key="git4idea.branch.GitSmartOperationDialog" timestamp="1590659477178">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="536" y="43" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590659477178" />
+  </component>
+</project>
