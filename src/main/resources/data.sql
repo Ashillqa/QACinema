@@ -1,4 +1,4 @@
-insert into movie (id, apiid, status) values (118,22428,'showing');
+insert into movie (id, apiid, status) values (118,11423,'showing');
 insert into movie (id, apiid, status) values (119,429422,'showing');
 insert into movie (id, apiid, status) values (120,110415,'showing');
 insert into movie (id, apiid, status) values (121,16257,'showing');
