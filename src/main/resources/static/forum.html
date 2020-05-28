@@ -1,52 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet">
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet"> 
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="css/nouislider.min.css">
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="css/plyr.css">
-    <link rel="stylesheet" href="css/photoswipe.css">
-    <link rel="stylesheet" href="css/default-skin.css">
-    <link rel="stylesheet" href="css/main.css">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="css/nouislider.min.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/plyr.css">
+	<link rel="stylesheet" href="css/photoswipe.css">
+	<link rel="stylesheet" href="css/default-skin.css">
+	<link rel="stylesheet" href="css/main.css">
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
-    <link rel="apple-touch-icon" href="icon/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-touch-icon-144x144.png">
-
-    <style>
-        #comm{
-            color: rgba(255,255,255,0.7);
-            margin-left: 250px
-        }
-        h3{
-            text-align: center;
-        }
-
-        input::-webkit-input-placeholder {
-            color: #000000;
-        }
-        textarea::-webkit-input-placeholder {
-            color: #000000;
-        }
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .rate {
+	<!-- Favicons -->
+	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
+	<link rel="apple-touch-icon" href="icon/favicon-32x32.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="icon/apple-touch-icon-144x144.png">
+	
+	<style>
+	.rate {
             float: left;
             height: 46px;
             padding: 0 10px;
@@ -81,17 +62,15 @@
         .rate > label:hover ~ input:checked ~ label {
             color: #c59b08;
         }
+	
+	</style>
 
-    </style>
-
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="Dmitry Volkov">
-    <title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
-
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Dmitry Volkov">
+	<title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
 </head>
-<body class="body">
-
+<body onload="seeComms()">
 <!-- header -->
 <header class="header">
     <div class="header__wrap">
@@ -185,21 +164,24 @@
         </div>
     </div>
 </section>
-<div id="comm">
-    <form id="commentForm">
-    <div class="col-6 col-sm-12 col-lg-6">
-        <div class="row">
-        <label for="comment_author">Name</label>
-        </div>
-    </div>
-        <div class="col-6 col-sm-12 col-lg-6">
-            <div class="row">
-                <input type="text" name="comment_author" id="comment_author" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>
-            </div>
-        </div>
-        <div class="col-6 col-sm-12 col-lg-6">
-                <div class="row">
-                    <div class="rate">
+
+
+
+
+
+<div class="sign section--bg" data-bg="img/section/section.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="sign__content">
+						<!-- registration form -->
+						<form id="comForm" class="sign__form">
+							<div class="sign__group">
+								<input id="username" type="text" class="sign__input" placeholder="Name" required>
+							</div>
+
+							<div class="sign__group">
+							<div class="rate">
                         <input type="radio" id="star5" name="rate" value="5" />
                         <label for="star5" title="text">5 stars</label>
                         <input type="radio" id="star4" name="rate" value="4" />
@@ -210,35 +192,35 @@
                         <label for="star2" title="text">2 stars</label>
                         <input type="radio" id="star1" name="rate" value="1" />
                         <label for="star1" title="text">1 star</label>
-                    </div>
-                </div>
-        </div>
-        <div class="col-6 col-sm-12 col-lg-6">
-                <div class="row">
-                    <label for="comment">Leave Your Comment Below</label>
-                </div>
-        </div>
-        <div class="col-6 col-sm-12 col-lg-6">
-            <div class="row">
-                <textarea placeholder="Enter Message " name="comment" id="comment" rows="3" tabindex="4" required></textarea>
-            </div>
-        </div>
+                        </div>
+						</div>
+						<div class="sign__group">
+								<textarea name="comment" id="comment" rows="3" tabindex="4"  required="required"></textarea>
+							</div>
+							
+							<button class="sign__btn" type="submit">comment</button>
 
-        <input name="submit" type="submit" value="Submit comment" />
+						</form>
+						<!-- registration form -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+<div class="section">
+	<div class="container">
+		<div id="others" class="row">
+		
+		</div>
+	</div>
+</div>	
 
-    </form>
-</div>
-
-
-
-
-
-
-
-
-
-
-<footer class="footer">
+	
+	
+	
+	<footer class="footer">
     <div class="container">
         <div class="row">
             <!-- footer list -->
@@ -305,20 +287,21 @@
     </div>
 </footer>
 <!-- end footer -->
+	<!-- JS -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.min.js"></script>
+	<script src="js/wNumb.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="js/plyr.min.js"></script>
+	<script src="js/jquery.morelines.min.js"></script>
+	<script src="js/photoswipe.min.js"></script>
+	<script src="js/photoswipe-ui-default.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/postComment.js"></script>
 
-<!-- JS -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.mousewheel.min.js"></script>
-<script src="js/jquery.mCustomScrollbar.min.js"></script>
-<script src="js/wNumb.js"></script>
-<script src="js/nouislider.min.js"></script>
-<script src="js/plyr.min.js"></script>
-<script src="js/jquery.morelines.min.js"></script>
-<script src="js/photoswipe.min.js"></script>
-<script src="js/photoswipe-ui-default.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/postComment.js"></script>
+
 </body>
 </html>
