@@ -20,9 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a98e523-2b36-416b-88c6-0d385108c43c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/QACinema.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QACinema.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bookings2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bookings2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/ticketCalculation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/ticketCalculation.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +79,7 @@
       <recent name="C:\Users\KMRRi\OneDrive\Desktop\Projects\latestTadas\src\main\java\com\qa\exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Spring Boot.App (2)">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.qa.App" />
       <module name="QACinema" />
@@ -124,6 +123,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.App (2)" />
         <item itemvalue="Application.App" />
         <item itemvalue="Spring Boot.App (2)" />
         <item itemvalue="Spring Boot.App (2)" />
@@ -220,6 +220,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new start" />
