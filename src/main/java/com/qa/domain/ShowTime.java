@@ -1,14 +1,12 @@
 package com.qa.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -18,13 +16,10 @@ public class ShowTime {
     @GeneratedValue
     private Long id;
 
-    @Column(unique = true)
-    @NotNull
-    @Size(min = 0, max = 55)
     private String time;
 
-    @ManyToOne(targetEntity = Movie.class)
-    private Movie movie;
+    @ManyToMany(mappedBy = "showTimes",fetch = FetchType.EAGER)
+    private final List<Movie> movie = new ArrayList<>();
 
     public ShowTime(String time) {
         super();
@@ -56,12 +51,8 @@ public class ShowTime {
         this.time = name;
     }
 
-    public Movie getMovie() {
+    public List<Movie> getMovie() {
         return movie;
-    }
-
-    public void setMovie(Movie movie) {
-        this.movie = movie;
     }
 
     @Override

@@ -17,11 +17,19 @@ public class Movie {
 
     private Long apiID;
 
-    @OneToMany(mappedBy = "movie", fetch = FetchType.EAGER)
-    private List<ShowTime> showTimes = new ArrayList<>();
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "movie_line", joinColumns = {
+            @JoinColumn(name = "movie_id", referencedColumnName = "id",
+                    nullable = false, updatable = false)},
+            inverseJoinColumns = {
+                    @JoinColumn(name = "showtime_id", referencedColumnName = "id",
+                            nullable = false,updatable = false)
+            })
+    private final List<ShowTime> showTimes = new ArrayList<>();
 
     public Movie(Long apiID, String status) {
-        this.apiID = apiID; this.status = status;
+        this.apiID = apiID;
+        this.status = status;
     }
 
     public Long getApiID() {
@@ -59,10 +67,6 @@ public class Movie {
 
     public List<ShowTime> getShowTimes() {
         return showTimes;
-    }
-
-    public void setShowTimes(List<ShowTime> showTimes) {
-        this.showTimes = showTimes;
     }
 
     @Override

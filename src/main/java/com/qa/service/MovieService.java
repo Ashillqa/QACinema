@@ -55,7 +55,6 @@ public class MovieService {
         Movie toUpdate = this.repo.findById(id).orElseThrow(() -> new MovieNotFoundException());
         toUpdate.setStatus(movie.getStatus());
         toUpdate.setApiID(movie.getApiID());
-        toUpdate.setShowTimes(movie.getShowTimes());
         return this.mapper.mapToDTO(this.repo.save(toUpdate));
     }
 
