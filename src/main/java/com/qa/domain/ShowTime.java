@@ -18,7 +18,7 @@ public class ShowTime {
 
     private String time;
 
-    @ManyToMany(mappedBy = "showTimes",fetch = FetchType.EAGER)
+    @ManyToMany(mappedBy = "showTimes",fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     private final List<Movie> movie = new ArrayList<>();
 
     public ShowTime(String time) {
