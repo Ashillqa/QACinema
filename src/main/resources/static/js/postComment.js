@@ -30,15 +30,80 @@ function seeComms(){
     .then(function (data) {
         data.forEach((com) => {
             const {userName,rating,comment} = com;
-	entryTag.innerHTML += `
-		<div class="col-12 col-md-6 col-lg-4">
-			<div class="price">
-			<div class="price__item price__item--first">${userName}</div>
-			<div class="price__item"><span>${rating} stars</span></div>
-			<div class="price__item"><span>${comment}</span></div>	
-			</div>
-		</div>
-`;
+            if(`${rating}`<2){
+            	entryTag.innerHTML += `
+            		<div class="col-12 col-md-6 col-lg-4">
+            			<div class="price">
+            			<div class="price__item price__item--first">${userName}
+            			</div>
+            			<div class="fa fa-star" style="color:#FFD700">
+            			</div>
+            			<div class="price__item"><span>${comment}</span></div>	
+            			</div>
+            		</div>`;
+            	
+            }else if(`${rating}`<3){
+            	entryTag.innerHTML += `
+            		<div class="col-12 col-md-6 col-lg-4">
+            			<div class="price">
+            			<div class="price__item price__item--first">${userName}
+            			</div>
+            			<div class="fa fa-star" style="color:#FFD700">
+            			<span class="fa fa-star" style="color:#FFD700"></span>
+            			</div>
+            			<div class="price__item"><span>${comment}</span></div>	
+            			</div>
+            		</div>`;
+            	
+            }else if(`${rating}`<4){
+            	
+            	entryTag.innerHTML += `
+            		<div class="col-12 col-md-6 col-lg-4">
+            			<div class="price">
+            			<div class="price__item price__item--first">${userName}
+            			</div>
+            			<div class="fa fa-star" style="color:#FFD700">
+            			<span class="fa fa-star" style="color:#FFD700"></span>
+            			<span class="fa fa-star" style="color:#FFD700"></span>
+            			</div>
+            			<div class="price__item"><span>${comment}</span></div>	
+            			</div>
+            		</div>`;
+            	
+            }else if(`${rating}`<5){
+            	
+            	entryTag.innerHTML += `
+            		<div class="col-12 col-md-6 col-lg-4">
+            			<div class="price">
+            			<div class="price__item price__item--first">${userName}
+            			</div>
+            			<div class="fa fa-star" style="color:#FFD700">
+            			<span class="fa fa-star" style="color:#FFD700"></span>
+            			<span class="fa fa-star" style="color:#FFD700"></span>
+            			<span class="fa fa-star" style="color:#FFD700"></span>
+            			</div>
+            			<div class="price__item"><span>${comment}</span></div>	
+            			</div>
+            		</div>`;
+            	
+            }else{
+            	entryTag.innerHTML += `
+            		<div class="col-12 col-md-6 col-lg-4">
+            			<div class="price">
+            			<div class="price__item price__item--first">${userName}
+            			</div>
+            			<div class="fa fa-star" style="color:#FFD700">
+            			<span class="fa fa-star" style="color:#FFD700"></span>
+            			<span class="fa fa-star" style="color:#FFD700"></span>
+            			<span class="fa fa-star" style="color:#FFD700"></span>
+            			<span class="fa fa-star" style="color:#FFD700"></span>
+            			</div>
+            			
+            			<div class="price__item"><span>${comment}</span></div>	
+            			</div>
+            		</div>`;
+            }
+	
         });
     })
 }
@@ -46,4 +111,6 @@ function seeComms(){
 function relo(){
 	location.reload();
 }
+
+
 
