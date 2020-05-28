@@ -1,4 +1,8 @@
 target
 *.iml
+<<<<<<< HEAD
 .idea 
+=======
+.idea
+>>>>>>> branch 'ash' of https://github.com/Ashillqa/QACinema.git
 .settings
