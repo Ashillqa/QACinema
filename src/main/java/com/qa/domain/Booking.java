@@ -13,6 +13,7 @@ public class Booking {
     @GeneratedValue
     private Long id;
 
+
     private Long movieId;
     private String movieName;
     private String dateTime;
