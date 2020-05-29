@@ -1,8 +1,5 @@
 const params = new URLSearchParams(window.location.search)
 
-let dates = ["28/05/2020 14:30","28/05/2020 16:30","29/05/2020 14:30","28/05/2020 20:30","29/05/2020 18:30","27/05/2020 14:30"];
-
-
 function writeContent(apiID) {
     axios.get(`https://api.themoviedb.org/3/movie/${apiID}?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-US`).then(
         fill => {
@@ -28,17 +25,19 @@ function writeContent(apiID) {
 
                               <ul class="card__list">
                                  <li>HD</li>
-                                 <li>16+</li>
+                                 <li id="ageRating"></li>
                               </ul>
                            </div>
 
                            <ul class="card__meta">
                               <li><span>Genre:</span> 
-                              <a href="#">${fill.data.genres[0].name}</a>
-                              <a href="#">${fill.data.genres[1].name}</a></li>
+                              <a href="#" id="Genres"></a>
                               <li><span>Release date:</span> ${fill.data.release_date}</li>
                               <li><span>Running time:</span> ${fill.data.runtime} min</li>
-                              <li><span>Country:</span> <a href="#">USA</a> </li>
+                              <li><span>Country:</span> <a href="#" id="Country"></a> </li>
+                              <br>
+                              <li><span>Director:</span> <a href="#" id="Director"></a> </li>
+                              <li><span>Leading actors:</span> <a href="#" id="Actors"></a> </li>
                            </ul>
 
                            <div class="b-description_readmore_wrapper js-description_readmore_wrapper" style="max-width: 682.5px;"><div class="card__description card__description--details b-description_readmore_ellipsis" style="min-height: 150px; max-height: 150px; overflow: hidden;">
@@ -55,10 +54,10 @@ function writeContent(apiID) {
             titleChild.className="col-12";
             titleChild.innerHTML=`<h1 class="details__title">${fill.data.title}</h1>`
             parent.prepend(titleChild);
+            actorsRatingCountryDirector(fill.data.title);
         }
     )
 }
-
 
 function dateSelect(dates) {
     let templist = [];
@@ -105,6 +104,28 @@ function dateSelect(dates) {
     }
 }
 
+function actorsRatingCountryDirector(title) {
+    axios.get(`http://www.omdbapi.com/?apikey=367564e0&t=${title}`).then(
+        write => {
+            document.getElementById("ageRating").innerHTML=` ${write.data.Rated}`
+            document.getElementById("Country").innerHTML=` ${write.data.Country}`
+            document.getElementById("Director").innerHTML=` ${write.data.Director}`
+            document.getElementById("Actors").innerHTML=` ${write.data.Actors}`
+            document.getElementById("Genres").innerHTML=` ${write.data.Genre}`
+            console.log(write);
+        }
+    )
+}
+
+function videoSource(apiID) {
+    axios.get(`https://api.themoviedb.org/3/movie/${apiID}/videos?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-US
+`).then(
+        write => {
+            document.getElementById("video").src=`https://www.youtube.com/embed/${write.data.results[0].key}`;
+        }
+    )
+}
+
 axios.get(`http://localhost:8080/movie/get/${params.get('id')}`).then(
     write => {
         let showTimes = [];
@@ -118,11 +139,4 @@ axios.get(`http://localhost:8080/movie/get/${params.get('id')}`).then(
     }
 )
 
-function videoSource(apiID) {
-    axios.get(`https://api.themoviedb.org/3/movie/${apiID}/videos?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-US
-`).then(
-        write => {
-            document.getElementById("video").src=`https://www.youtube.com/embed/${write.data.results[0].key}`;
-        }
-    )
-}
+
