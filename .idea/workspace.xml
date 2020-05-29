@@ -85,7 +85,7 @@
       <recent name="C:\Users\KMRRi\OneDrive\Desktop\Projects\latestTadas\src\main\java\com\qa\exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in QACinema">
+  <component name="RunManager" selected="Spring Boot.App (3)">
     <configuration name="All in QACinema" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QACinema" />
       <option name="PACKAGE_NAME" value="" />
@@ -168,10 +168,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.App (3)" />
         <item itemvalue="JUnit.All in QACinema" />
         <item itemvalue="JUnit.BookingDTOTest" />
         <item itemvalue="JUnit.BookingServiceUnitTest" />
-        <item itemvalue="Spring Boot.App (3)" />
         <item itemvalue="JUnit.BookingControllerIntegrationTest" />
       </list>
     </recent_temporary>
