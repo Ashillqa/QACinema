@@ -7,7 +7,7 @@ let entryCom = document.getElementById('enterPointCom')
 function postCom(event){
 	let name = document.getElementById('username').value;
 	let stars = document.querySelector('input[type="radio"]:checked').value
-	let msg = document.getElementById('comment').value;
+	let msg = document.getElementById('text').value;
 	event.preventDefault();
 	fetch('http://localhost:8080/createComment', {
 	    method: 'POST',
@@ -33,9 +33,7 @@ function seeComms(){
             		<div class="comments__autor">
             		<span class="comments__name">${userName}</span>
             		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
-            		</div>
-            		<div class="comments__autor">
-            		<span class="comments__text">${comment}</span>
+            		<span class="comments__name">${comment}</span>
             		</div>
             		</li>
             		`;
@@ -47,8 +45,8 @@ function seeComms(){
             		<span class="comments__name">${userName}</span>
             		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
             		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		<span class="comments__name">${comment}</span>
             		</div>
-            		<p class="comments__text">${comment}</p>
             		</li>
             		`;
             	
@@ -61,8 +59,8 @@ function seeComms(){
             		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
             		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
             		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		<span class="comments__name">${comment}</span>
             		</div>
-            		<p class="comments__text">${comment}</p>
             		</li>
             		`;
             	
@@ -76,8 +74,8 @@ function seeComms(){
             		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
             		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
             		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		<span class="comments__name">${comment}</span>
             		</div>
-            		<p class="comments__text">${comment}</p>
             		</li>
             		`;
             	
@@ -91,8 +89,8 @@ function seeComms(){
             		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
             		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
             		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		<span class="comments__name">${comment}</span>
             		</div>
-            		<p class="comments__text">${comment}</p>
             		</li>
             		`;
             }
