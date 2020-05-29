@@ -140,3 +140,4 @@ axios.get(`http://localhost:8080/movie/get/${params.get('id')}`).then(
 )
 
 
+
