@@ -29,7 +29,6 @@ public class BookingTest {
         assertNotNull(booking.getDateTime());
         assertNotNull(booking.getEmailAddress());
         assertNotNull(booking.getMovieName());
-        assertNotNull(booking.getMovie());
         assertNotNull(booking.getPhoneNumber());
         assertNotNull(booking.getStudentNr());
         assertNotNull(booking.getTotalPrice());
@@ -77,7 +76,6 @@ public class BookingTest {
         assertEquals("Shrek 3", booking.getMovieName());
         assertEquals("0044 771234123", booking.getPhoneNumber());
         assertEquals(1, booking.getChildNr(), 0);
-        assertEquals(movie, booking.getMovie());
         assertEquals(0, booking.getStudentNr(),0);
         assertEquals(BigDecimal.valueOf(13.99), booking.getTotalPrice());
     }
@@ -124,7 +122,6 @@ public class BookingTest {
         assertEquals("Shrek 3", booking.getMovieName());
         assertEquals("0044 771234123", booking.getPhoneNumber());
         assertEquals(1, booking.getChildNr(), 0);
-        assertEquals(movie, booking.getMovie());
         assertEquals(0, booking.getStudentNr(),0);
         assertEquals(BigDecimal.valueOf(13.99), booking.getTotalPrice());
     }
