@@ -78,7 +78,12 @@ function dateSelect(dates) {
         }
 
         for(let j=0; j<templist.length;j++){
-            insert+=`<tbody><tr><th>${templist[j].split(" ")[1]}</th></tr></tbody>`
+            insert+=
+                `<tbody>
+                    <tr>
+                        <th>${templist[j].split(" ")[1]}<a class="sign__btn1" href="bookings2.html?id=${params.get('id')}&time="${templist[j]}">Book now</a></th>
+                    </tr>
+                </tbody>`
         }
 
         day.innerHTML=
@@ -99,7 +104,6 @@ function dateSelect(dates) {
                 </div>`;
 
         bigParent.appendChild(day);
-
         templist = [];
     }
 }
