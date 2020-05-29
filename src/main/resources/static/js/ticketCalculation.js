@@ -1,3 +1,4 @@
+
 let adultNumber = 0;
     let childNumber = 0;
     let studentNumber = 0;
@@ -35,18 +36,4 @@ function updateTotal(type){
     
 }
 
-
-
-
-let adult = document.getElementById("adult");
-let child = document.getElementById("child");
-let student = document.getElementById("student");
-
-    let adultChoice = adult.options[adult.selectedIndex].value;
-    let childChoice = child.options[child.selectedIndex].value;
-    let studentChoice = student.options[student.selectedIndex].value;
-
-    console.log(adultChoice);
-    console.log(childChoice);
-console.log(studentChoice);
 
