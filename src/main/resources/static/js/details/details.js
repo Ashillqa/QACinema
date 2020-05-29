@@ -81,7 +81,7 @@ function dateSelect(dates) {
             insert+=
                 `<tbody>
                     <tr>
-                        <th>${templist[j].split(" ")[1]}<a class="sign__btn1" href="bookings2.html?id=${params.get('id')}&time=${templist[j]}">Book now</a></th>
+                        <th>${templist[j].split(" ")[1]}<a class="sign__btn1" href="bookings2.html?id=${params.get('id')}&time=${templist[j]}&title=$${params.get('title')}">Book now</a></th>
                     </tr>
                 </tbody>`
         }
