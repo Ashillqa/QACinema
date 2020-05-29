@@ -1,6 +1,3 @@
-/**
- * 
- */
 
 let form1 = document.getElementById('comForm').addEventListener("submit",postCom)
 let entryCom = document.getElementById('enterPointCom')
