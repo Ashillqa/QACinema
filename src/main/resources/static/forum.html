@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Font -->
@@ -19,6 +20,7 @@
 	<link rel="stylesheet" href="css/default-skin.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
 
 	<!-- Favicons -->
 	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
@@ -70,10 +72,12 @@
 	<meta name="keywords" content="">
 	<meta name="author" content="Dmitry Volkov">
 	<title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
+
 </head>
-<body onload="seeComms()">
+<body class="body" onload="seeComms()">
+	
 <!-- header -->
-<header class="header">
+	<header class="header">
     <div class="header__wrap">
         <div class="container">
             <div class="row">
@@ -152,75 +156,100 @@
         </div>
     </div>
 </header>
-<section class="section section--first section--bg" data-bg="img/section/section.jpg">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="section__wrap">
-                    <!-- section title -->
-                    <h2 class="section__title" style="text-align: center">Discussion Forum</h2>
-                    <!-- end section title -->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+		
+	<!-- end header -->
 
+	<!-- content -->
+	<section class="content">
+		<div class="content__head">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<!-- content title -->
+						<h2 class="content__title">Discover</h2>
+						<!-- end content title -->
 
+						<!-- content tabs nav -->
+						<ul class="nav nav-tabs content__tabs" id="content__tabs" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link active" data-toggle="tab" role="tab" aria-controls="tab-1" aria-selected="true">Comments</a>
+							</li>
+						</ul>
+						<!-- end content tabs nav -->
 
-
-
-<div class="sign section--bg" data-bg="img/section/section.jpg">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="sign__content">
-						<!-- registration form -->
-						<form id="comForm" class="sign__form">
-							<div class="sign__group">
-								<input id="username" type="text" class="sign__input" placeholder="Name" required>
+						<!-- content mobile tabs nav -->
+						<div class="content__mobile-tabs" id="content__mobile-tabs">
+							<div class="content__mobile-tabs-btn dropdown-toggle" role="navigation" id="mobile-tabs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<input type="button" value="Comments">
+								<span></span>
 							</div>
 
-							<div class="sign__group">
-							<div class="rate">
-                        <input type="radio" id="star5" name="rate" value="5" />
-                        <label for="star5" title="text">5 stars</label>
-                        <input type="radio" id="star4" name="rate" value="4" />
-                        <label for="star4" title="text">4 stars</label>
-                        <input type="radio" id="star3" name="rate" value="3" />
-                        <label for="star3" title="text">3 stars</label>
-                        <input type="radio" id="star2" name="rate" value="2" />
-                        <label for="star2" title="text">2 stars</label>
-                        <input type="radio" id="star1" name="rate" value="1" />
-                        <label for="star1" title="text">1 star</label>
-                        </div>
+							<div class="content__mobile-tabs-menu dropdown-menu" aria-labelledby="mobile-tabs">
+								<ul class="nav nav-tabs" role="tablist">
+									<li class="nav-item"><a class="nav-link active" id="1-tab" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">Comments</a></li>
+
+									<li class="nav-item"><a class="nav-link" id="2-tab" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">Reviews</a></li>
+
+									<li class="nav-item"><a class="nav-link" id="3-tab" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">Photos</a></li>
+								</ul>
+							</div>
 						</div>
-						<div class="sign__group">
-								<textarea name="comment" id="comment" rows="3" tabindex="4"  required="required"></textarea>
-							</div>
-							
-							<button class="sign__btn" type="submit">comment</button>
-
-						</form>
-						<!-- registration form -->
+						<!-- end content mobile tabs nav -->
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	
-	
-<div class="section">
-	<div class="container">
-		<div id="others" class="row">
-		
-		</div>
-	</div>
-</div>	
 
-	
-	
-	
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-lg-8 col-xl-8">
+					<!-- content tabs -->
+					<div class="tab-content" id="myTabContent">
+						<div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="1-tab">
+							<div class="row">
+								<!-- comments -->
+								<div class="col-12">
+									<div class="comments">
+										<ul id="enterPointCom" class="comments__list">
+											
+										</ul>
+										
+										<div class="sign__input">
+										<p>Leave a Comment Below</p>
+										</div>
+
+										<form id="comForm" class="form">
+											<input id="username" type="text" class="sign__input" placeholder="Name" required>
+											<div class="sign__group">
+											<div class="rate">
+                       						<input type="radio" id="star5" name="rate" value="5" />
+                        					<label for="star5" title="text">5 stars</label>
+                        					<input type="radio" id="star4" name="rate" value="4" />
+                        					<label for="star4" title="text">4 stars</label>
+                        					<input type="radio" id="star3" name="rate" value="3" />
+                        					<label for="star3" title="text">3 stars</label>
+                        					<input type="radio" id="star2" name="rate" value="2" />
+                        					<label for="star2" title="text">2 stars</label>
+                        					<input type="radio" id="star1" name="rate" value="1" />
+                       						<label for="star1" title="text">1 star</label>
+                        					</div>
+                        					</div>
+											<textarea id="text" name="text" class="form__textarea" placeholder="Add comment" required></textarea>
+											<button type="submit" class="form__btn">Send</button>
+										</form>
+									</div>
+								</div>
+								<!-- end comments -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end content -->
+
+	<!-- footer -->
 	<footer class="footer">
     <div class="container">
         <div class="row">
@@ -287,7 +316,13 @@
         </div>
     </div>
 </footer>
-<!-- end footer -->
+
+			
+
+	<!-- end footer -->
+
+	<!-- Root element of PhotoSwipe. Must have class pswp. -->
+
 	<!-- JS -->
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
@@ -302,7 +337,6 @@
 	<script src="js/photoswipe-ui-default.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/postComment.js"></script>
-
-
 </body>
+
 </html>

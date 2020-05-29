@@ -3,7 +3,7 @@
  */
 
 let form1 = document.getElementById('comForm').addEventListener("submit",postCom)
-let entryTag = document.getElementById('others')
+let entryCom = document.getElementById('enterPointCom')
 
 
 
@@ -31,78 +31,75 @@ function seeComms(){
         data.forEach((com) => {
             const {userName,rating,comment} = com;
             if(`${rating}`<2){
-            	entryTag.innerHTML += `
-            		<div class="col-12 col-md-6 col-lg-4">
-            			<div class="price">
-            			<div class="price__item price__item--first">${userName}
-            			</div>
-            			<div class="fa fa-star" style="color:#FFD700">
-            			</div>
-            			<div class="price__item"><span>${comment}</span></div>	
-            			</div>
-            		</div>`;
+            	entryCom.innerHTML += `
+            		<li class="comments__item">
+            		<div class="comments__autor">
+            		<span class="comments__name">${userName}</span>
+            		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		</div>
+            		<div class="comments__autor">
+            		<span class="comments__text">${comment}</span>
+            		</div>
+            		</li>
+            		`;
             	
             }else if(`${rating}`<3){
-            	entryTag.innerHTML += `
-            		<div class="col-12 col-md-6 col-lg-4">
-            			<div class="price">
-            			<div class="price__item price__item--first">${userName}
-            			</div>
-            			<div class="fa fa-star" style="color:#FFD700">
-            			<span class="fa fa-star" style="color:#FFD700"></span>
-            			</div>
-            			<div class="price__item"><span>${comment}</span></div>	
-            			</div>
-            		</div>`;
+            	entryCom.innerHTML += `
+            		<li class="comments__item">
+            		<div class="comments__autor">
+            		<span class="comments__name">${userName}</span>
+            		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		</div>
+            		<p class="comments__text">${comment}</p>
+            		</li>
+            		`;
             	
             }else if(`${rating}`<4){
             	
-            	entryTag.innerHTML += `
-            		<div class="col-12 col-md-6 col-lg-4">
-            			<div class="price">
-            			<div class="price__item price__item--first">${userName}
-            			</div>
-            			<div class="fa fa-star" style="color:#FFD700">
-            			<span class="fa fa-star" style="color:#FFD700"></span>
-            			<span class="fa fa-star" style="color:#FFD700"></span>
-            			</div>
-            			<div class="price__item"><span>${comment}</span></div>	
-            			</div>
-            		</div>`;
+            	entryCom.innerHTML += `
+            		<li class="comments__item">
+            		<div class="comments__autor">
+            		<span class="comments__name">${userName}</span>
+            		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		</div>
+            		<p class="comments__text">${comment}</p>
+            		</li>
+            		`;
             	
             }else if(`${rating}`<5){
             	
-            	entryTag.innerHTML += `
-            		<div class="col-12 col-md-6 col-lg-4">
-            			<div class="price">
-            			<div class="price__item price__item--first">${userName}
-            			</div>
-            			<div class="fa fa-star" style="color:#FFD700">
-            			<span class="fa fa-star" style="color:#FFD700"></span>
-            			<span class="fa fa-star" style="color:#FFD700"></span>
-            			<span class="fa fa-star" style="color:#FFD700"></span>
-            			</div>
-            			<div class="price__item"><span>${comment}</span></div>	
-            			</div>
-            		</div>`;
+            	entryCom.innerHTML += `
+            		<li class="comments__item">
+            		<div class="comments__autor">
+            		<span class="comments__name">${userName}</span>
+            		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		</div>
+            		<p class="comments__text">${comment}</p>
+            		</li>
+            		`;
             	
             }else{
-            	entryTag.innerHTML += `
-            		<div class="col-12 col-md-6 col-lg-4">
-            			<div class="price">
-            			<div class="price__item price__item--first">${userName}
-            			</div>
-            			<div class="fa fa-star" style="color:#FFD700">
-            			<span class="fa fa-star" style="color:#FFD700"></span>
-            			<span class="fa fa-star" style="color:#FFD700"></span>
-            			<span class="fa fa-star" style="color:#FFD700"></span>
-            			<span class="fa fa-star" style="color:#FFD700"></span>
-            			</div>
-            			
-            			<div class="price__item"><span>${comment}</span></div>	
-            			</div>
-            		</div>`;
+            	entryCom.innerHTML += `
+            		<li class="comments__item">
+            		<div class="comments__autor">
+            		<span class="comments__name">${userName}</span>
+            		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		<span class="comments__name fa fa-star" style="color:#FFD700"></span>
+            		</div>
+            		<p class="comments__text">${comment}</p>
+            		</li>
+            		`;
             }
+	
 	
         });
     })
