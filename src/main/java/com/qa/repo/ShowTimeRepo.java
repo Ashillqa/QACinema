@@ -1,9 +1,13 @@
 package com.qa.repo;
 
-import com.qa.domain.Booking;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import com.qa.domain.ShowTime;
+
 @Repository
-public interface BookingRepository extends JpaRepository<Booking, Long> {
+public interface ShowTimeRepo extends JpaRepository<ShowTime, Long> {
+
 }

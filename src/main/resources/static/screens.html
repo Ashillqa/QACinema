@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="css/main.css">
 
 	<!-- Favicons -->
-	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/QA-cinema-logo2.png">
 	<link rel="apple-touch-icon" href="icon/favicon-32x32.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-touch-icon-114x114.png">
@@ -30,7 +30,7 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="Dmitry Volkov">
-	<title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
+	<title>QA Cinemas | Cinema Listings & Latest Movies | Screens</title>
 
 </head>
 <body class="body">
@@ -44,7 +44,7 @@
 						<div class="header__content">
 							<!-- header logo -->
 							<a href="index.html" class="header__logo">
-								<img src="img/logo.svg" alt="">
+								<img src="img/QA-cinema-logo2.png" alt="">
 							</a>
 							<!-- end header logo -->
 
@@ -56,7 +56,6 @@
 
 									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
 										<li><a href="index.html">Home slideshow bg</a></li>
-										<li><a href="index2.html">Home static bg</a></li>
 									</ul>
 								</li>
 								<!-- end dropdown -->
@@ -75,7 +74,7 @@
 								<!-- end dropdown -->
 
 								<li class="header__nav-item">
-									<a href="pricing.html" class="header__nav-link">Pricing Plan</a>
+									<a href="screens.html" class="header__nav-link header__nav-link--active">Screens</a>
 								</li>
 
 								<li class="header__nav-item">
@@ -148,13 +147,13 @@
 				<div class="col-12">
 					<div class="section__wrap">
 						<!-- section title -->
-						<h2 class="section__title">Coming soon to QA Cinemas</h2>
+						<h2 class="section__title">Screens</h2>
 						<!-- end section title -->
 
 						<!-- breadcrumb -->
 						<ul class="breadcrumb">
 							<li class="breadcrumb__item"><a href="#">Home</a></li>
-							<li class="breadcrumb__item breadcrumb__item--active">Catalog list</li>
+							<li class="breadcrumb__item breadcrumb__item--active">Screens</li>
 						</ul>
 						<!-- end breadcrumb -->
 					</div>
@@ -164,29 +163,138 @@
 	</section>
 	<!-- end page title -->
 
-	<!-- filter -->
-	<div class="filter">
+	<!-- pricing -->
+	<div class="section">
 		<div class="container">
 			<div class="row">
-				<div class="col-12">
-					
-				</div>
+				<div class="col">
+					<img class="resize" src="img/screens/Standard Seat 2.png" height="100%" width="100%"/></div>
+				<div class="col">
+					<img  class="rezise" src="img/screens/Deluxe Seat.png" height="100%" width="100%"/></div>
 			</div>
 		</div>
 	</div>
-	<!-- end filter -->
+	<!-- end pricing -->
 
-	<!-- catalog -->
-	<div class="catalog">
+	<!-- features -->
+	<section class="section section--dark">
 		<div class="container">
-			<div class="row"id="movieDisplay">
-				
+			<div id="chart"></div>
+			<script src="https://cdn.seatsio.net/chart.js"></script>
+			<script>
+				new seatsio.SeatingChart({
+					divId: 'chart',
+					workspaceKey: '8a84d781-237d-46ed-aecb-860387b9287a',
+					event: '9b14fa0e-d626-406a-84a7-b04b0e4ae7cd',
+					onObjectSelected: function(object){
+						console.dir(object);
+					},
+					pricing: [
+						{'category': 1, 'ticketTypes': [
+								{'ticketType': 'Adult', 'price': 30},
+								{'ticketType': 'Child', 'price': 15}
+							]},
+						{'category': 2, 'ticketTypes': [
+								{'ticketType': 'Adult', 'price': 30},
+								{'ticketType': 'Child', 'price': 15}
+							]},
+						{'category': 3, 'ticketTypes': [
+								{'ticketType': 'Adult', 'price': 30},
+								{'ticketType': 'Child', 'price': 15}
+							]},
+						{'category': 4,'ticketTypes': [
+								{'ticketType': 'Adult/Child', 'price': 50}]}
+					],
+					priceFormatter: function(price) {
+						return '£' + price;
+					},
+					showLegend: true,
+					legend: {
+						hidePricing: true
+					},
+					enabled: true,
+					multiSelect: true,
+					zoomOnSelect: true,
+					showMinimap: true,
+					categoryFilter: {
+						enabled: true,
+						multiSelect: true,
+						zoomOnSelect: false,
+					},
+					showViewFromYourSeatOnDesktop: false,
+				}).render();
+			</script>
+		</div>
+	</section>
+	<!-- end features -->
+
+	<!-- partners -->
+	<section class="section">
+		<div class="container">
+			<div class="row">
+				<!-- section title -->
+				<div class="col-12">
+					<h2 class="section__title section__title--no-margin">Our Partners</h2>
+				</div>
+				<!-- end section title -->
+
+				<!-- section text -->
+				<div class="col-12">
+					<p class="section__text section__text--last-with-margin">It is a long <b>established</b> fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.</p>
+				</div>
+				<!-- end section text -->
+
+				<!-- partner -->
+				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+					<a href="#" class="partner">
+						<img src="img/partners/themeforest-light-background.png" alt="" class="partner__img">
+					</a>
+				</div>
+				<!-- end partner -->
+
+				<!-- partner -->
+				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+					<a href="#" class="partner">
+						<img src="img/partners/audiojungle-light-background.png" alt="" class="partner__img">
+					</a>
+				</div>
+				<!-- end partner -->
+
+				<!-- partner -->
+				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+					<a href="#" class="partner">
+						<img src="img/partners/codecanyon-light-background.png" alt="" class="partner__img">
+					</a>
+				</div>
+				<!-- end partner -->
+
+				<!-- partner -->
+				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+					<a href="#" class="partner">
+						<img src="img/partners/photodune-light-background.png" alt="" class="partner__img">
+					</a>
+				</div>
+				<!-- end partner -->
+
+				<!-- partner -->
+				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+					<a href="#" class="partner">
+						<img src="img/partners/activeden-light-background.png" alt="" class="partner__img">
+					</a>
+				</div>
+				<!-- end partner -->
+
+				<!-- partner -->
+				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+					<a href="#" class="partner">
+						<img src="img/partners/3docean-light-background.png" alt="" class="partner__img">
+					</a>
+				</div>
+				<!-- end partner -->
 			</div>
 		</div>
-	</div>
-	<!-- end catalog -->
-
-
+	</section>
+	<!-- end partners -->
 
 	<!-- footer -->
 	<footer class="footer">
@@ -258,7 +366,6 @@
 	<!-- end footer -->
 
 	<!-- JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
@@ -271,7 +378,6 @@
 	<script src="js/photoswipe.min.js"></script>
 	<script src="js/photoswipe-ui-default.min.js"></script>
 	<script src="js/main.js"></script>
-	<script src="js/comingSoon/comingSoon.js"></script>
 </body>
 
 </html>
