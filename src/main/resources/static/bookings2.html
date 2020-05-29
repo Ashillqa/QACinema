@@ -55,154 +55,104 @@
     <title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
   </head>
   <body class="body">
-    <!-- header -->
-    <header class="header">
-      <div class="header__wrap">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="header__content">
-                <!-- header logo -->
-                <a href="index.html" class="header__logo">
-                  <img src="img/logo.svg" alt="" />
-                </a>
-                <!-- end header logo -->
+  <!-- header -->
+  <header class="header">
+    <div class="header__wrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="header__content">
+              <!-- header logo -->
+              <a href="index.html" class="header__logo">
+                <img src="img/QA-cinema-logo2.png" alt="">
+              </a>
+              <!-- end header logo -->
 
-                <!-- header nav -->
-                <ul class="header__nav">
-                  <!-- dropdown -->
-                  <li class="header__nav-item">
-                    <a
-                      class="dropdown-toggle header__nav-link"
-                      href="#"
-                      role="button"
-                      id="dropdownMenuHome"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                      >Home</a
-                    >
+              <!-- header nav -->
+              <ul class="header__nav">
 
-                    <ul
-                      class="dropdown-menu header__dropdown-menu"
-                      aria-labelledby="dropdownMenuHome"
-                    >
-                      <li><a href="index.html">Home slideshow bg</a></li>
-                      <li><a href="index2.html">Home static bg</a></li>
-                    </ul>
-                  </li>
-                  <!-- end dropdown -->
+                <li class="header__nav-item">
+                  <a href="index.html" class="header__nav-link">Home</a>
+                </li>
 
-                  <!-- dropdown -->
-                  <li class="header__nav-item">
-                    <a
-                      class="dropdown-toggle header__nav-link"
-                      href="#"
-                      role="button"
-                      id="dropdownMenuCatalog"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                      >Catalog</a
-                    >
+                <!-- dropdown -->
+                <li class="header__nav-item">
+                  <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
 
-                    <ul
-                      class="dropdown-menu header__dropdown-menu"
-                      aria-labelledby="dropdownMenuCatalog"
-                    >
-                      <li><a href="catalog1.html">Catalog Grid</a></li>
-                      <li><a href="gallery.html">Catalog List</a></li>
-                      <li><a href="details1.html">Details Movie</a></li>
-                      <li><a href="details2.html">Details TV Series</a></li>
-                    </ul>
-                  </li>
-                  <!-- end dropdown -->
+                  <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
+                    <li><a href="gallery.html">Showing</a></li>
+                    <li><a href="comingSoon.html">Coming Soon</a></li>
+                  </ul>
+                </li>
+                <!-- end dropdown -->
 
-                  <li class="header__nav-item">
-                    <a
-                      href="pricing.html"
-                      class="header__nav-link header__nav-link--active"
-                      >Pricing Plan</a
-                    >
-                  </li>
+                <li class="header__nav-item">
+                  <a href="screens.html" class="header__nav-link">Screens</a>
+                </li>
 
-                  <li class="header__nav-item">
-                    <a href="faq.html" class="header__nav-link">Help</a>
-                  </li>
+                <!--dropdown-->
+                <li class="header__nav-item">
+                  <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planning Your Trip</a>
 
-                  <!-- dropdown -->
-                  <li class="dropdown header__nav-item">
-                    <a
-                      class="dropdown-toggle header__nav-link header__nav-link--more"
-                      href="#"
-                      role="button"
-                      id="dropdownMenuMore"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                      ><i class="icon ion-ios-more"></i
-                    ></a>
+                  <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog1">
+                    <li><a href="gettingHere.html">Getting Here</a></li>
+                    <li><a href="#">What To Do</a></li>
+                  </ul>
+                </li>
+                <!-- end dropdown -->
 
-                    <ul
-                      class="dropdown-menu header__dropdown-menu"
-                      aria-labelledby="dropdownMenuMore"
-                    >
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="signin.html">Sign In</a></li>
-                      <li><a href="signup.html">Sign Up</a></li>
-                      <li><a href="404.html">404 Page</a></li>
-                    </ul>
-                  </li>
-                  <!-- end dropdown -->
-                </ul>
-                <!-- end header nav -->
+                <!-- dropdown -->
+                <li class="dropdown header__nav-item">
+                  <a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
 
-                <!-- header auth -->
-                <div class="header__auth">
-                  <button class="header__search-btn" type="button">
-                    <i class="icon ion-ios-search"></i>
-                  </button>
+                  <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                  </ul>
+                </li>
+                <!-- end dropdown -->
+              </ul>
+              <!-- end header nav -->
 
-                  <a href="signin.html" class="header__sign-in">
-                    <i class="icon ion-ios-log-in"></i>
-                    <span>sign in</span>
-                  </a>
-                </div>
-                <!-- end header auth -->
-
-                <!-- header menu btn -->
-                <button class="header__btn" type="button">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+              <!-- header auth -->
+              <div class="header__auth">
+                <button class="header__search-btn" type="button">
+                  <i class="icon ion-ios-search"></i>
                 </button>
-                <!-- end header menu btn -->
               </div>
+              <!-- end header auth -->
+
+              <!-- header menu btn -->
+              <button class="header__btn" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <!-- end header menu btn -->
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- header search -->
-      <form action="#" class="header__search">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="header__search-content">
-                <input
-                  type="text"
-                  placeholder="Search for a movie, TV Series that you are looking for"
-                />
+    <!-- header search -->
+    <form action="#" class="header__search">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="header__search-content">
+              <label for="searchBox"></label>
+              <input type="text" placeholder="Search for a movie, TV Series that you are looking for" id="searchBox">
 
-                <button type="button">search</button>
-              </div>
+              <button type="button">search</button>
             </div>
           </div>
         </div>
-      </form>
-      <!-- end header search -->
-    </header>
-    <!-- end header -->
+      </div>
+    </form>
+    <!-- end header search -->
+  </header>
+  <!-- end header -->
 
     <!-- page title -->
     <section
