@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Font -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet"> 
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
@@ -29,9 +29,18 @@
 
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-	<meta name="author" content="Dmitry Volkov">
-	<title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
-
+	<meta name="author" content="Matthew Burt (Matteo Bartolomeo Sforza)">
+	<title>QACinema - How to get here</title>
+    
+    <style>
+    
+        #over img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        }  
+        
+    </style>
 </head>
 <body class="body">
 	
@@ -79,7 +88,7 @@
 								</li>
 
 								<li class="header__nav-item">
-									<a href="faq.html" class="header__nav-link">Help</a>
+									<a href="faq.html" class="header__nav-link header__nav-link--active">Help</a>
 								</li>
 
 								<!-- dropdown -->
@@ -141,49 +150,98 @@
 	</header>
 	<!-- end header -->
 
-	<!-- details -->
-	<section class="section details">
-		<!-- details background -->
-		<div class="details__bg" data-bg="img/home/home__bg.jpg"></div>
-		<!-- end details background -->
-
-		<!-- details content -->
+	<!-- page title -->
+	<section class="section section--first section--bg" data-bg="img/section/section.jpg">
 		<div class="container">
-			<div class="row" id="movieInfo">
+			<div class="row">
+				<div class="col-12">
+					<div class="section__wrap">
+						<!-- section title -->
+						<h2 class="section__title">Locating us</h2>
+						<!-- end section title -->
 
-				<!-- player -->
-				<div class="col-12 col-xl-6">
-					<iframe width="100%" height="100%" id="video"
-							src="">
-					</iframe>
-				</div>
-				<!-- end player -->
-
-
-
-				<!-- accordion -->
-				<div class="col-12 col-xl-6">
-
-
-					<div class="accordion" id="accordion">
-
-
-
+						<!-- breadcrumb -->
+						<ul class="breadcrumb">
+							<li class="breadcrumb__item"><a href="#">Home</a></li>
+							<li class="breadcrumb__item breadcrumb__item--active">FAQ</li>
+						</ul>
+						<!-- end breadcrumb -->
 					</div>
-
-					<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-					<script src="js/details/details.js"></script>
-
-
-
 				</div>
-				<!-- end accordion -->
-
 			</div>
 		</div>
-		<!-- end details content -->
 	</section>
-	<!-- end details -->
+	<!-- end page title -->
+
+    <!-- left side -->
+	<section class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-6">
+					<div class="faq">
+						<h3 class="faq__title">Where are we?</h3>
+						<p class="faq__text">Currently we have one location open! you can find us at this location currently.</p>
+                      
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.140220305424!2d-0.10740898395720985!3d51.49229427963265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876049820df25c9%3A0xd83e10d4fdd092d7!2sCinema%20Museum!5e0!3m2!1sen!2suk!4v1590660730527!5m2!1sen!2suk" width="450" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        
+						<p class="faq__text">Currently the cinema that we have open is in the Salford keys area! The map shows the location of the building, but your journey may be a little more complex than walking. If you have need for navigation, continue reading this page!</p>
+					</div>
+
+					<div class="faq">
+						<h3 class="faq__title">Getting here by tube</h3>
+						<p class="faq__text">If you wish to access our location by tube, use this handy tool for plotting your route</p>
+                        <div style="width:450px"><script language="JavaScript" src="https://www.tfl.gov.uk/tfl/syndication/widgets/tubemap/tubemap-iframe-stretchy.js"></script></div>
+                        <p class="faq__text">Please remember to give adequate time to travel to our cinema, as no one enjoys being late to a movie, or someone turning up in the middle of an important scene! It is advised to plan your route in advance if taking the tube!</p>
+					</div>
+				</div>
+                
+                <!-- right side --> 
+
+				<div class="col-12 col-md-6">
+					<div class="faq">
+						<h3 class="faq__title">Travelling by car?</h3>
+						<p class="faq__text">Due to the nature of the city of London, there are congestion charge zones in certain parts of the city. This handy map should help visualize where these congestion charges apply!</p>
+                        <iframe src="https://www.google.com/maps/d/embed?mid=1sVykjrC54hdZ9ccqrabPliIlDaI&hl=en" width="450" height="450"></iframe>
+					</div>
+                    
+			 <div class="faq">
+						<h3 class="faq__title">Transport for London Twitter</h3>
+						<p class="faq__text">Whatever your transport method, it's good to see any updates via the transport twitter!</p>
+                       
+                  <a class="twitter-timeline" href="https://twitter.com/TfL?ref_src=twsrc%5Etfw" data-width="600" data-height="600">Tweets by TfL</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        
+                        <p class="faq__text"><i>*Disclaimer: Transport for London is not in any way assosciated with QACinemas. We are not to be held responsible for any content they may or may not choose to post.</i></p>
+					</div>
+    
+			</div>
+                
+                <div class="col-12">
+					<h2 class="section__title section__title--no-margin">Our Parking</h2>
+				</div>
+                
+                <div class="col-12">
+					<p class="section__text section__text--last-with-margin">If you have decided to travel with us, you will find parking at the cinema itself, but we understand that sometimes our popular services lead to car parks being full! This map shows you how to get from the cinema, to the nearest car park! Now you can worry less about parking and more about what you see on the big screen at our wonderful QACinema!</p>
+                    <div id="over">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1242.0751597254605!2d-0.10686494166055005!3d51.49210894490824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x4876049820df25c9%3A0xd83e10d4fdd092d7!2sCinema%20Museum%2C%202%20Dugard%20Way%2C%20Prince&#39;s%2C%20London%20SE11%204TH!3m2!1d51.4922943!2d-0.10522029999999999!4m5!1s0x487605e3f54b935d%3A0xd9e88883b09eb6e0!2sKnights%20Walk%20Estate%20SE11%204NW!3m2!1d51.492072799999995!2d-0.10632649999999999!5e0!3m2!1sen!2suk!4v1590743595186!5m2!1sen!2suk" width="450" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe>
+                    </div>
+				</div>
+                
+                 
+                <div class="col-12">
+					<h2 class="section__title section__title--no-margin">The building</h2>
+				</div>
+                
+                   <div class="col-12">
+					<p class="section__text section__text--last-with-margin">The building we are in currently is a modern masterpeice of architechture, which is only fitting of the modern masterpeices of cinematography we display on all of our premium HD screens!</p>
+                       <div id="over">
+                       	    <img src="img/frontOfCinema.jpg" alt="Our wonderful cinema">
+                       </div>
+				
+                </div>
+                
+		</div>
+    </div>
+	</section>
 
 	<!-- footer -->
 	<footer class="footer">
@@ -254,60 +312,7 @@
 	</footer>
 	<!-- end footer -->
 
-	<!-- Root element of PhotoSwipe. Must have class pswp. -->
-	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-		<!-- Background of PhotoSwipe. 
-		It's a separate element, as animating opacity is faster than rgba(). -->
-		<div class="pswp__bg"></div>
-
-		<!-- Slides wrapper with overflow:hidden. -->
-		<div class="pswp__scroll-wrap">
-
-			<!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
-			<!-- don't modify these 3 pswp__item elements, data is added later on. -->
-			<div class="pswp__container">
-				<div class="pswp__item"></div>
-				<div class="pswp__item"></div>
-				<div class="pswp__item"></div>
-			</div>
-
-			<!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-			<div class="pswp__ui pswp__ui--hidden">
-
-				<div class="pswp__top-bar">
-
-					<!--  Controls are self-explanatory. Order can be changed. -->
-
-					<div class="pswp__counter"></div>
-
-					<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-					<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-					<!-- Preloader -->
-					<div class="pswp__preloader">
-						<div class="pswp__preloader__icn">
-							<div class="pswp__preloader__cut">
-								<div class="pswp__preloader__donut"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-
-				<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-
-				<div class="pswp__caption">
-					<div class="pswp__caption__center"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<!-- JS -->
-
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
@@ -320,8 +325,6 @@
 	<script src="js/photoswipe.min.js"></script>
 	<script src="js/photoswipe-ui-default.min.js"></script>
 	<script src="js/main.js"></script>
-
-
 </body>
 
 </html>
