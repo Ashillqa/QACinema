@@ -13,7 +13,6 @@ public class BookingTest {
 
     private Booking booking;
     private Booking other;
-    private Movie movie = new Movie();
 
     @Before
     public void setUp() {

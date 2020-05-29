@@ -19,6 +19,34 @@ public class BookingDTO {
     private Integer childNr;
     private Integer studentNr;
 
+    public BookingDTO(Long id, String movieName, String dateTime, BigDecimal totalPrice, String emailAddress, String phoneNumber, String customerName, Integer adultNr, Integer childNr, Integer studentNr) {
+        this.id = id;
+        this.movieName = movieName;
+        this.dateTime = dateTime;
+        this.totalPrice = totalPrice;
+        this.emailAddress = emailAddress;
+        this.phoneNumber = phoneNumber;
+        this.customerName = customerName;
+        this.adultNr = adultNr;
+        this.childNr = childNr;
+        this.studentNr = studentNr;
+    }
+
+    public BookingDTO(String movieName, String dateTime, BigDecimal totalPrice, String emailAddress, String phoneNumber, String customerName, Integer adultNr, Integer childNr, Integer studentNr) {
+        this.movieName = movieName;
+        this.dateTime = dateTime;
+        this.totalPrice = totalPrice;
+        this.emailAddress = emailAddress;
+        this.phoneNumber = phoneNumber;
+        this.customerName = customerName;
+        this.adultNr = adultNr;
+        this.childNr = childNr;
+        this.studentNr = studentNr;
+    }
+
+    public BookingDTO(){
+    }
+
     public Movie getMovie() {
         return movie;
     }
