@@ -149,36 +149,334 @@
 
 		<!-- details content -->
 		<div class="container">
-			<div class="row" id="movieInfo">
+			<div class="row">
+				<!-- title -->
+				<div class="col-12">
+					<h1 class="details__title">I Dream in Another Language</h1>
+				</div>
+				<!-- end title -->
+
+				<!-- content -->
+				<div class="col-10">
+					<div class="card card--details card--series">
+						<div class="row">
+							<!-- card cover -->
+							<div class="col-12 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+								<div class="card__cover">
+									<img src="img/covers/cover.jpg" alt="">
+								</div>
+							</div>
+							<!-- end card cover -->
+
+							<!-- card content -->
+							<div class="col-12 col-sm-8 col-md-8 col-lg-9 col-xl-9">
+								<div class="card__content">
+									<div class="card__wrap">
+										<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+
+										<ul class="card__list">
+											<li>HD</li>
+											<li>16+</li>
+										</ul>
+									</div>
+
+									<ul class="card__meta">
+										<li><span>Genre:</span> <a href="#">Action</a>
+										<a href="#">Triler</a></li>
+										<li><span>Release year:</span> 2017</li>
+										<li><span>Running time:</span> 120 min</li>
+										<li><span>Country:</span> <a href="#">USA</a> </li>
+									</ul>
+
+									<div class="card__description card__description--details">
+										It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+									</div>
+								</div>
+							</div>
+							<!-- end card content -->
+						</div>
+					</div>
+				</div>
+				<!-- end content -->
 
 				<!-- player -->
 				<div class="col-12 col-xl-6">
-					<iframe width="100%" height="100%" id="video"
-							src="">
-					</iframe>
+					<video controls crossorigin playsinline poster="../../../cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" id="player">
+						<!-- Video files -->
+						<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+						<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+						<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+						<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
+
+						<!-- Caption files -->
+						<track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
+						    default>
+						<track kind="captions" label="Français" srclang="fr" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
+
+						<!-- Fallback for browsers that don't support the <video> element -->
+						<a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+					</video>
 				</div>
 				<!-- end player -->
 
-
-
 				<!-- accordion -->
 				<div class="col-12 col-xl-6">
-
-
 					<div class="accordion" id="accordion">
+						<div class="accordion__card">
+							<div class="card-header" id="headingOne">
+								<button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									<span>Season: 1</span>
+									<span>22 Episodes from Nov, 2004 until May, 2005</span>
+								</button>
+							</div>
 
+							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+								<div class="card-body">
+									<table class="accordion__list">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>Title</th>
+												<th>Air Date</th>
+											</tr>
+										</thead>
 
+										<tbody>
+											<tr>
+												<th>1</th>
+												<td>Pilot</td>
+												<td>Tuesday, November 16th, 2004</td>
+											</tr>
+											<tr>
+												<th>2</th>
+												<td>Paternity</td>
+												<td>Tuesday, November 23rd, 2004</td>
+											</tr>
+											<tr>
+												<th>3</th>
+												<td>Occam's Razor</td>
+												<td>Tuesday, November 30th, 2004</td>
+											</tr>
+											<tr>
+												<th>4</th>
+												<td>Maternity</td>
+												<td>Tuesday, December 7th, 2004</td>
+											</tr>
+											<tr>
+												<th>5</th>
+												<td>Damned If You Do</td>
+												<td>Tuesday, December 14th, 2004</td>
+											</tr>
+											<tr>
+												<th>6</th>
+												<td>The Socratic Method</td>
+												<td>Tuesday, December 21st, 2004</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
 
+						<div class="accordion__card">
+							<div class="card-header" id="headingTwo">
+								<button class="collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									<span>Season: 2</span>
+									<span>24 Episodes from Sep, 2005 until May, 2006</span>
+								</button>
+							</div>
+
+							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+								<div class="card-body">
+									<table class="accordion__list">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>Title</th>
+												<th>Air Date</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<th>1</th>
+												<td>Pilot</td>
+												<td>Tuesday, November 16th, 2004</td>
+											</tr>
+											<tr>
+												<th>2</th>
+												<td>Paternity</td>
+												<td>Tuesday, November 23rd, 2004</td>
+											</tr>
+											<tr>
+												<th>3</th>
+												<td>Occam's Razor</td>
+												<td>Tuesday, November 30th, 2004</td>
+											</tr>
+											<tr>
+												<th>4</th>
+												<td>Maternity</td>
+												<td>Tuesday, December 7th, 2004</td>
+											</tr>
+											<tr>
+												<th>5</th>
+												<td>Damned If You Do</td>
+												<td>Tuesday, December 14th, 2004</td>
+											</tr>
+											<tr>
+												<th>6</th>
+												<td>The Socratic Method</td>
+												<td>Tuesday, December 21st, 2004</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion__card">
+							<div class="card-header" id="headingThree">
+								<button class="collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+									<span>Season: 3</span>
+									<span>24 Episodes from Sep, 2006 until May, 2007</span>
+								</button>
+							</div>
+
+							<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+								<div class="card-body">
+									<table class="accordion__list">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>Title</th>
+												<th>Air Date</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<th>1</th>
+												<td>Pilot</td>
+												<td>Tuesday, November 16th, 2004</td>
+											</tr>
+											<tr>
+												<th>2</th>
+												<td>Paternity</td>
+												<td>Tuesday, November 23rd, 2004</td>
+											</tr>
+											<tr>
+												<th>3</th>
+												<td>Occam's Razor</td>
+												<td>Tuesday, November 30th, 2004</td>
+											</tr>
+											<tr>
+												<th>4</th>
+												<td>Maternity</td>
+												<td>Tuesday, December 7th, 2004</td>
+											</tr>
+											<tr>
+												<th>5</th>
+												<td>Damned If You Do</td>
+												<td>Tuesday, December 14th, 2004</td>
+											</tr>
+											<tr>
+												<th>6</th>
+												<td>The Socratic Method</td>
+												<td>Tuesday, December 21st, 2004</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion__card">
+							<div class="card-header" id="headingFour">
+								<button class="collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+									<span>Season: 4</span>
+									<span>16 Episodes from Sep, 2007 until May, 2008</span>
+								</button>
+							</div>
+
+							<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+								<div class="card-body">
+									<table class="accordion__list">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>Title</th>
+												<th>Air Date</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<th>1</th>
+												<td>Pilot</td>
+												<td>Tuesday, November 16th, 2004</td>
+											</tr>
+											<tr>
+												<th>2</th>
+												<td>Paternity</td>
+												<td>Tuesday, November 23rd, 2004</td>
+											</tr>
+											<tr>
+												<th>3</th>
+												<td>Occam's Razor</td>
+												<td>Tuesday, November 30th, 2004</td>
+											</tr>
+											<tr>
+												<th>4</th>
+												<td>Maternity</td>
+												<td>Tuesday, December 7th, 2004</td>
+											</tr>
+											<tr>
+												<th>5</th>
+												<td>Damned If You Do</td>
+												<td>Tuesday, December 14th, 2004</td>
+											</tr>
+											<tr>
+												<th>6</th>
+												<td>The Socratic Method</td>
+												<td>Tuesday, December 21st, 2004</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
 					</div>
-
-					<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-					<script src="js/details/details.js"></script>
-
-
-
 				</div>
 				<!-- end accordion -->
 
+				<div class="col-12">
+					<div class="details__wrap">
+						<!-- availables -->
+						<div class="details__devices">
+							<span class="details__devices-title">Available on devices:</span>
+							<ul class="details__devices-list">
+								<li><i class="icon ion-logo-apple"></i><span>IOS</span></li>
+								<li><i class="icon ion-logo-android"></i><span>Android</span></li>
+								<li><i class="icon ion-logo-windows"></i><span>Windows</span></li>
+								<li><i class="icon ion-md-tv"></i><span>Smart TV</span></li>
+							</ul>
+						</div>
+						<!-- end availables -->
+
+						<!-- share -->
+						<div class="details__share">
+							<span class="details__share-title">Share with friends:</span>
+
+							<ul class="details__share-list">
+								<li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
+								<li class="instagram"><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
+								<li class="twitter"><a href="#"><i class="icon ion-logo-twitter"></i></a></li>
+								<li class="vk"><a href="#"><i class="icon ion-logo-vk"></i></a></li>
+							</ul>
+						</div>
+						<!-- end share -->
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- end details content -->
@@ -734,7 +1032,6 @@
 	</div>
 
 	<!-- JS -->
-
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
@@ -747,8 +1044,6 @@
 	<script src="js/photoswipe.min.js"></script>
 	<script src="js/photoswipe-ui-default.min.js"></script>
 	<script src="js/main.js"></script>
-
-
 </body>
 
 </html>

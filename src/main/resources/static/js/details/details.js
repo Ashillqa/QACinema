@@ -1,16 +1,25 @@
-const params = new URLSearchParams(window.location.search)
+const params = new URLSearchParams(window.location.search);
 
-let dates = ["28/05/2020 14:30","28/05/2020 16:30","29/05/2020 14:30","28/05/2020 20:30","29/05/2020 18:30","27/05/2020 14:30"];
-
+let dates = [
+  "28/05/2020 14:30",
+  "28/05/2020 16:30",
+  "29/05/2020 14:30",
+  "28/05/2020 20:30",
+  "29/05/2020 18:30",
+  "27/05/2020 14:30",
+];
 
 function writeContent(apiID) {
-    axios.get(`https://api.themoviedb.org/3/movie/${apiID}?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-US`).then(
-        fill => {
-            let parent=document.getElementById("movieInfo");
+  axios
+    .get(
+      `https://api.themoviedb.org/3/movie/${apiID}?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-US`
+    )
+    .then((fill) => {
+      let parent = document.getElementById("movieInfo");
 
-            let detailsChild=document.createElement("div");
-            detailsChild.className="col-10";
-            detailsChild.innerHTML=`<div class="card card--details card--series">
+      let detailsChild = document.createElement("div");
+      detailsChild.className = "col-10";
+      detailsChild.innerHTML = `<div class="card card--details card--series">
                   <div class="row">
                      <!-- card cover -->
                      <div class="col-12 col-sm-4 col-md-4 col-lg-3 col-xl-3">
@@ -49,41 +58,39 @@ function writeContent(apiID) {
                      <!-- end card content -->
                   </div>
                </div>`;
-            parent.prepend(detailsChild);
+      parent.prepend(detailsChild);
 
-            let titleChild=document.createElement("div");
-            titleChild.className="col-12";
-            titleChild.innerHTML=`<h1 class="details__title">${fill.data.title}</h1>`
-            parent.prepend(titleChild);
-        }
-    )
+      let titleChild = document.createElement("div");
+      titleChild.className = "col-12";
+      titleChild.innerHTML = `<h1 class="details__title">${fill.data.title}</h1>`;
+      parent.prepend(titleChild);
+    });
 }
 
-
 function dateSelect(dates) {
-    let templist = [];
-    let bigParent = document.getElementById("accordion");
-    let counter = 0;
-    for (let i=0;i<dates.length;counter++){
-        let day = document.createElement("div")
-        day.className="accordion__card"
-        let insert ="";
-        templist.push(dates[0]);
-        dates.splice(0,1);
+  let templist = [];
+  let bigParent = document.getElementById("accordion");
+  let counter = 0;
+  for (let i = 0; i < dates.length; counter++) {
+    let day = document.createElement("div");
+    day.className = "accordion__card";
+    let insert = "";
+    templist.push(dates[0]);
+    dates.splice(0, 1);
 
-        for(let j=0; j<dates.length;j++){
-            if(dates[j].split(" ")[0]===templist[0].split(" ")[0]){
-                templist.push(dates[j]);
-                dates.splice(j,1)
-            }
-        }
+    for (let j = 0; j < dates.length; j++) {
+      if (dates[j].split(" ")[0] === templist[0].split(" ")[0]) {
+        templist.push(dates[j]);
+        dates.splice(j, 1);
+      }
+    }
 
-        for(let j=0; j<templist.length;j++){
-            insert+=`<tbody><tr><th>${templist[j].split(" ")[1]}</th></tr></tbody>`
-        }
+    for (let j = 0; j < templist.length; j++) {
+      insert += `<tbody><tr><th>${templist[j].split(" ")[1]}</th></tr></tbody>`;
+    }
 
-        day.innerHTML=
-            `<div class="card-header" id="heading${counter}">
+    day.innerHTML =
+      `<div class="card-header" id="heading${counter}">
                     <button type="button" data-toggle="collapse" data-target="#collapse${counter}" aria-expanded="true" aria-controls="collapse${counter}">
                         <span>${templist[0].split(" ")[0]}</span>
                     </button>
@@ -91,38 +98,40 @@ function dateSelect(dates) {
         
                    <div id="collapse${counter}" class="collapse show" aria-labelledby="heading${counter}" data-parent="#accordion">
                     <div class="card-body">
-                           <table class="accordion__list">`+
-
-                            insert+
-
-                        `</table>
+                           <table class="accordion__list">` +
+      insert +
+      `</table>
                     </div>
                 </div>`;
 
-        bigParent.appendChild(day);
+    bigParent.appendChild(day);
 
-        templist = [];
-    }
+    templist = [];
+  }
 }
 
-axios.get(`http://localhost:8080/movie/get/${params.get('id')}`).then(
-    write => {
-        let showTimes = [];
-        writeContent(write.data.apiID);
-        videoSource(write.data.apiID);
+axios
+  .get(`http://localhost:8080/movie/get/${params.get("id")}`)
+  .then((write) => {
+    let showTimes = [];
+    writeContent(write.data.apiID);
+    videoSource(write.data.apiID);
 
-        for (let i =0; i< write.data.showTimes.length; i++){
-            showTimes.push(write.data.showTimes[i].time);
-        }
-        dateSelect(showTimes.sort());
+    for (let i = 0; i < write.data.showTimes.length; i++) {
+      showTimes.push(write.data.showTimes[i].time);
     }
-)
+    dateSelect(showTimes.sort());
+  });
 
 function videoSource(apiID) {
-    axios.get(`https://api.themoviedb.org/3/movie/${apiID}/videos?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-US
-`).then(
-        write => {
-            document.getElementById("video").src=`https://www.youtube.com/embed/${write.data.results[0].key}`;
-        }
+  axios
+    .get(
+      `https://api.themoviedb.org/3/movie/${apiID}/videos?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-US
+`
     )
+    .then((write) => {
+      document.getElementById(
+        "video"
+      ).src = `https://www.youtube.com/embed/${write.data.results[0].key}`;
+    });
 }
