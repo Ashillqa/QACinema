@@ -10,19 +10,22 @@ public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+    
+    private String movieTitle;
     private String userName;
     private Long rating;
     private String comment;
 
-    public Comment(String userName, Long rating, String comment) {
-        this.userName = userName;
+    public Comment(String movieTitle,String userName, Long rating, String comment) {
+        this.movieTitle = movieTitle;
+    	this.userName = userName;
         this.rating = rating;
         this.comment = comment;
     }
 
-    public Comment(Long id, String userName, Long rating, String comment) {
+    public Comment(Long id,String movieTitle, String userName, Long rating, String comment) {
         this.id = id;
+        this.movieTitle = movieTitle;
         this.userName = userName;
         this.rating = rating;
         this.comment = comment;
@@ -38,6 +41,14 @@ public class Comment {
 
     public void setId(Long id) {
         this.id = id;
+    }
+    
+    public String getMovieTitle() {
+    	return movieTitle;
+    }
+    
+    public void setMovieTitle(String movieTitle) {
+    	this.movieTitle = movieTitle;
     }
 
     public String getUserName() {
@@ -70,6 +81,7 @@ public class Comment {
         if (o == null || getClass() != o.getClass()) return false;
         Comment comment1 = (Comment) o;
         return Objects.equals(id, comment1.id) &&
+        		Objects.equals(movieTitle, comment1.movieTitle) &&
                 Objects.equals(userName, comment1.userName) &&
                 Objects.equals(rating, comment1.rating) &&
                 Objects.equals(comment, comment1.comment);
@@ -77,12 +89,13 @@ public class Comment {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, userName, rating, comment);
+        return Objects.hash(id, movieTitle, userName, rating, comment);
     }
 
     @Override
     public String toString() {
         return "{\"id\":" + id + "," +
+        		"\"movieTitle\":\"" + movieTitle + "\"," +
                 "\"userName\":\"" + userName + "\"," +
                 "\"rating\":" + rating + "," +
                 "\"comment\":\"" + comment + "\"}";

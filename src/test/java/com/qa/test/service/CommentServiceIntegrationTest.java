@@ -32,7 +32,7 @@ public class CommentServiceIntegrationTest {
 
     @Before
     public void init() {
-        this.testComment = new Comment("Tester One", 3L, "It was alright");
+        this.testComment = new Comment("FilmOne","Tester One", 3L, "It was alright");
         this.repo.deleteAll();
         this.testComment = this.repo.save(this.testComment);
     }
@@ -59,7 +59,7 @@ public class CommentServiceIntegrationTest {
 
     @Test
     public void testUpdateComment() {
-        Comment newComment = new Comment(testComment.getId(),"Tester Two", 2L, "It was worse than he said");
+        Comment newComment = new Comment(testComment.getId(),"FilmTwo","Tester Two", 2L, "It was worse than he said");
 
         assertThat(this.service.updateComment(this.testComment.getId(), newComment)).isEqualTo((newComment));
     }

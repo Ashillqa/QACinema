@@ -33,7 +33,8 @@ public class CommentService {
 
     public Comment updateComment(Long id, Comment comment){
         Comment update = this.repo.findById(id).orElseThrow(CommentNotFoundException::new);
-
+        
+        update.setMovieTitle(comment.getMovieTitle());
         update.setUserName(comment.getUserName());
         update.setComment(comment.getComment());
         update.setRating(comment.getRating());
