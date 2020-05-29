@@ -1,6 +1,7 @@
 package com.qa.test.domain;
 
 import com.qa.domain.Booking;
+import com.qa.domain.Movie;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,11 +13,12 @@ public class BookingTest {
 
     private Booking booking;
     private Booking other;
+    private Movie movie = new Movie();
 
     @Before
     public void setUp() {
-        booking = new Booking(1L,1L, "Shrek 3", "27/05/2020 15:30", BigDecimal.valueOf(13.99),"email@email.com","0044 771234123","Jeff Tester",1,1,0);
-        other = new Booking(1L,1L, "Shrek 3", "27/05/2020 15:30", BigDecimal.valueOf(13.99),"email@email.com","0044 771234123","Jeff Tester",1,1,0);
+        booking = new Booking(1L, "Shrek 3", "27/05/2020 15:30", BigDecimal.valueOf(13.99),"email@email.com","0044 771234123","Jeff Tester",1,1,0);
+        other = new Booking(1L, "Shrek 3", "27/05/2020 15:30", BigDecimal.valueOf(13.99),"email@email.com","0044 771234123","Jeff Tester",1,1,0);
     }
 
     @Test
@@ -27,7 +29,7 @@ public class BookingTest {
         assertNotNull(booking.getDateTime());
         assertNotNull(booking.getEmailAddress());
         assertNotNull(booking.getMovieName());
-        assertNotNull(booking.getMovieId());
+        assertNotNull(booking.getMovie());
         assertNotNull(booking.getPhoneNumber());
         assertNotNull(booking.getStudentNr());
         assertNotNull(booking.getTotalPrice());
@@ -44,8 +46,8 @@ public class BookingTest {
         assertNull(booking.getEmailAddress());
         booking.setMovieName(null);
         assertNull(booking.getMovieName());
-        booking.setMovieId(null);
-        assertNull(booking.getMovieId());
+        booking.setMovie(null);
+        assertNull(booking.getMovie());
         booking.setPhoneNumber(null);
         assertNull(booking.getPhoneNumber());
         booking.setStudentNr(null);
@@ -75,7 +77,7 @@ public class BookingTest {
         assertEquals("Shrek 3", booking.getMovieName());
         assertEquals("0044 771234123", booking.getPhoneNumber());
         assertEquals(1, booking.getChildNr(), 0);
-        assertEquals(1L, booking.getMovieId(), 0);
+        assertEquals(movie, booking.getMovie());
         assertEquals(0, booking.getStudentNr(),0);
         assertEquals(BigDecimal.valueOf(13.99), booking.getTotalPrice());
     }
@@ -113,7 +115,7 @@ public class BookingTest {
 
     @Test
     public void constructorWithoutId() {
-        Booking booking = new Booking(1L, "Shrek 3", "27/05/2020 15:30", BigDecimal.valueOf(13.99),"email@email.com","0044 771234123","Jeff Tester",1,1,0);
+        Booking booking = new Booking("Shrek 3", "27/05/2020 15:30", BigDecimal.valueOf(13.99),"email@email.com","0044 771234123","Jeff Tester",1,1,0);
         assertNull(booking.getId());
         assertEquals("Jeff Tester", booking.getCustomerName());
         assertEquals(1, booking.getAdultNr(), 0);
@@ -122,7 +124,7 @@ public class BookingTest {
         assertEquals("Shrek 3", booking.getMovieName());
         assertEquals("0044 771234123", booking.getPhoneNumber());
         assertEquals(1, booking.getChildNr(), 0);
-        assertEquals(1L, booking.getMovieId(), 0);
+        assertEquals(movie, booking.getMovie());
         assertEquals(0, booking.getStudentNr(),0);
         assertEquals(BigDecimal.valueOf(13.99), booking.getTotalPrice());
     }
