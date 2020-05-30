@@ -1,21 +1,14 @@
-package com.qa.domain;
+package com.qa.dto;
 
-import javax.persistence.*;
+import com.qa.domain.Movie;
+
 import java.math.BigDecimal;
-import java.util.List;
 import java.util.Objects;
 
+public class BookingDTO {
 
-@Entity
-public class Booking {
-
-    @Id
-    @GeneratedValue
     private Long id;
-
-    @ManyToOne(targetEntity = Movie.class, fetch = FetchType.EAGER)
     private Movie movie;
-
     private String movieName;
     private String dateTime;
     private BigDecimal totalPrice;
@@ -26,19 +19,7 @@ public class Booking {
     private Integer childNr;
     private Integer studentNr;
 
-    public Booking(String movieName, String dateTime, BigDecimal totalPrice, String emailAddress, String phoneNumber, String customerName, Integer adultNr, Integer childNr, Integer studentNr) {
-        this.movieName = movieName;
-        this.dateTime = dateTime;
-        this.totalPrice = totalPrice;
-        this.emailAddress = emailAddress;
-        this.phoneNumber = phoneNumber;
-        this.customerName = customerName;
-        this.adultNr = adultNr;
-        this.childNr = childNr;
-        this.studentNr = studentNr;
-    }
-
-    public Booking(Long id, String movieName, String dateTime, BigDecimal totalPrice, String emailAddress, String phoneNumber, String customerName, Integer adultNr, Integer childNr, Integer studentNr) {
+    public BookingDTO(Long id, String movieName, String dateTime, BigDecimal totalPrice, String emailAddress, String phoneNumber, String customerName, Integer adultNr, Integer childNr, Integer studentNr) {
         this.id = id;
         this.movieName = movieName;
         this.dateTime = dateTime;
@@ -51,15 +32,27 @@ public class Booking {
         this.studentNr = studentNr;
     }
 
-    public Booking() {
+    public BookingDTO(String movieName, String dateTime, BigDecimal totalPrice, String emailAddress, String phoneNumber, String customerName, Integer adultNr, Integer childNr, Integer studentNr) {
+        this.movieName = movieName;
+        this.dateTime = dateTime;
+        this.totalPrice = totalPrice;
+        this.emailAddress = emailAddress;
+        this.phoneNumber = phoneNumber;
+        this.customerName = customerName;
+        this.adultNr = adultNr;
+        this.childNr = childNr;
+        this.studentNr = studentNr;
+    }
+
+    public BookingDTO(){
     }
 
     public Movie getMovie() {
         return movie;
     }
 
-    public void setMovie(Movie movieId) {
-        this.movie = movieId;
+    public void setMovie(Movie movie) {
+        this.movie = movie;
     }
 
     public String getMovieName() {
@@ -143,21 +136,38 @@ public class Booking {
     }
 
     @Override
+    public String toString() {
+        return "BookingDTO{" +
+                "id=" + id +
+                ", movie=" + movie +
+                ", movieName='" + movieName + '\'' +
+                ", dateTime='" + dateTime + '\'' +
+                ", totalPrice=" + totalPrice +
+                ", emailAddress='" + emailAddress + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", customerName='" + customerName + '\'' +
+                ", adultNr=" + adultNr +
+                ", childNr=" + childNr +
+                ", studentNr=" + studentNr +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Booking booking = (Booking) o;
-        return Objects.equals(id, booking.id) &&
-                Objects.equals(movie, booking.movie) &&
-                Objects.equals(movieName, booking.movieName) &&
-                Objects.equals(dateTime, booking.dateTime) &&
-                Objects.equals(totalPrice, booking.totalPrice) &&
-                Objects.equals(emailAddress, booking.emailAddress) &&
-                Objects.equals(phoneNumber, booking.phoneNumber) &&
-                Objects.equals(customerName, booking.customerName) &&
-                Objects.equals(adultNr, booking.adultNr) &&
-                Objects.equals(childNr, booking.childNr) &&
-                Objects.equals(studentNr, booking.studentNr);
+        BookingDTO that = (BookingDTO) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(movie, that.movie) &&
+                Objects.equals(movieName, that.movieName) &&
+                Objects.equals(dateTime, that.dateTime) &&
+                Objects.equals(totalPrice, that.totalPrice) &&
+                Objects.equals(emailAddress, that.emailAddress) &&
+                Objects.equals(phoneNumber, that.phoneNumber) &&
+                Objects.equals(customerName, that.customerName) &&
+                Objects.equals(adultNr, that.adultNr) &&
+                Objects.equals(childNr, that.childNr) &&
+                Objects.equals(studentNr, that.studentNr);
     }
 
     @Override
