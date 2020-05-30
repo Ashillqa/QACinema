@@ -1,16 +1,12 @@
 let params = new URLSearchParams(window.location.search);
 
-
 let adultNumber = 0;
     let childNumber = 0;
     let studentNumber = 0;
 
 function updateTotal(type){
-
     var id = "totalPrice";
-
-    console.log(type);
-    
+    document.getElementById(id).className = "section__title";
 
     if(type === 'adult'){
         let adult = document.getElementById(type);
@@ -25,24 +21,34 @@ function updateTotal(type){
         studentNumber = student.options[student.selectedIndex].value;
     }
 
-    let total = (adultNumber * 10) + (childNumber * 5) + (studentNumber * 7.5);
+    let subTotal = (adultNumber * 8) + (childNumber * 4) + (studentNumber * 6);
 
+    let timeFactor = params.get('time').split(' ');
+    console.log(timeFactor);
 
-    console.log(total);
+    let total;
 
-    document.getElementById(id).className = "section__title";
-
-   
+    if((timeFactor[1] === "12:30") || (timeFactor[1]) === "15:00"){
+        total = subTotal * 0.75;
+    }
+    else if((timeFactor[1] === "17:30") || (timeFactor[1] === "20:00")){
+        total = subTotal * 1;
+    }
+    else if((timeFactor[1] === "22:30")){
+        total = subTotal * 0.75;
+    }
 
     document.getElementById(id).textContent = "£"+ total;
-    
+
+    sessionStorage.setItem("adult", adultNumber);
+    sessionStorage.setItem("child", childNumber);
+    sessionStorage.setItem("student", studentNumber);
 }
 
 document.getElementById("movieName").textContent = params.get('title');
 console.log(params.get('title'));
 
 document.getElementById("movieTime").textContent = params.get('time');
-
 
 function dateSelect(dates) {
     let templist = [];
