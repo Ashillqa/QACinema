@@ -1,8 +1,9 @@
 let params = new URLSearchParams(window.location.search);
 
-let adultNumber = 0;
+    let adultNumber = 0;
     let childNumber = 0;
     let studentNumber = 0;
+    let total = 0;
 
 function updateTotal(type){
     var id = "totalPrice";
@@ -24,9 +25,6 @@ function updateTotal(type){
     let subTotal = (adultNumber * 8) + (childNumber * 4) + (studentNumber * 6);
 
     let timeFactor = params.get('time').split(' ');
-    console.log(timeFactor);
-
-    let total;
 
     if((timeFactor[1] === "12:30") || (timeFactor[1]) === "15:00"){
         total = subTotal * 0.75;
@@ -40,15 +38,14 @@ function updateTotal(type){
 
     document.getElementById(id).textContent = "£"+ total;
 
-    sessionStorage.setItem("adult", adultNumber);
-    sessionStorage.setItem("child", childNumber);
-    sessionStorage.setItem("student", studentNumber);
+   
 }
 
 document.getElementById("movieName").textContent = params.get('title');
-console.log(params.get('title'));
 
 document.getElementById("movieTime").textContent = params.get('time');
+
+
 
 function dateSelect(dates) {
     let templist = [];
@@ -109,4 +106,22 @@ axios.get(`http://localhost:8080/movie/get/${params.get('id')}`).then(
         dateSelect(showTimes.sort());
     }
 )
+
+function saveStorage(){
+    sessionStorage.clear();
+
+    console.log("the storage has been called")
+
+    sessionStorage.setItem("adult", adultNumber);
+    sessionStorage.setItem("child", childNumber);
+    sessionStorage.setItem("student", studentNumber);
+
+    sessionStorage.setItem("name", document.getElementById("customerName").value);
+    sessionStorage.setItem("phone", document.getElementById("customerPhone").value);
+    sessionStorage.setItem("email", document.getElementById("customerEmail").value);
+
+    sessionStorage.setItem("movieName", params.get('title'));
+    sessionStorage.setItem("movieTime", params.get('time'));
+}
+
 
