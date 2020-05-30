@@ -23,3 +23,6 @@ document.getElementById("ticketNumber").innerHTML =
   sessionStorage.getItem("child") +
   ", Student:" +
   sessionStorage.getItem("student");
+
+document.getElementById("totalPrice").innerHTML = "Total: £" + sessionStorage.getItem("total");
+

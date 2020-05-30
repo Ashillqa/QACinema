@@ -30,7 +30,7 @@ function updateTotal(type){
         total = subTotal * 0.75;
     }
     else if((timeFactor[1] === "17:30") || (timeFactor[1] === "20:00")){
-        total = subTotal * 1;
+        total = subTotal;
     }
     else if((timeFactor[1] === "22:30")){
         total = subTotal * 0.75;
@@ -115,6 +115,7 @@ function saveStorage(){
     sessionStorage.setItem("adult", adultNumber);
     sessionStorage.setItem("child", childNumber);
     sessionStorage.setItem("student", studentNumber);
+    sessionStorage.setItem("total", total);
 
     sessionStorage.setItem("name", document.getElementById("customerName").value);
     sessionStorage.setItem("phone", document.getElementById("customerPhone").value);

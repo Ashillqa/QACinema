@@ -270,100 +270,14 @@
           <!-- end movie title -->
         </div>
 
-        <form action="" class="sign__form2">
-          <div class="row">
-            <!-- price -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="sign__group">
-                <label for="adult" id="ticketTypes" class="sign__text"
-                  >Adult</label
-                >
-                <select
-                  name="adult"
-                  id="adult"
-                  onchange="updateTotal('adult')"
-                  class="sign__input"
-                >
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-              </div>
+        <div class="section__wrap">
+          <!-- movie title -->
+          <h5 class="section__text" id="totalPrice"></h5>
 
-              <div class="sign__group">
-                <label for="child" id="ticketTypes" class="sign__text"
-                  >Children</label
-                >
-                <select
-                  name="child"
-                  id="child"
-                  onchange="updateTotal('child')"
-                  class="sign__input"
-                >
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-              </div>
+          <!-- end movie title -->
+        </div>
 
-              <div class="sign__group">
-                <label for="student" id="ticketTypes" class="sign__text"
-                  >Student</label
-                >
-                <select
-                  name="student"
-                  id="student"
-                  onchange="updateTotal('student')"
-                  class="sign__input"
-                >
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-              </div>
 
-              <div class="sign__group" id="totalPrice">
-                <label type="text" class="section__title" id="totalPrice"
-                  >Total:
-                </label>
-              </div>
-            </div>
-            <!-- end price -->
-
-            <button
-              type="submit"
-              class="sign__btn"
-              value="Submit"
-              id="paymentButton"
-            >
-              Take me to payment
-            </button>
-          </div>
-        </form>
       </div>
     </div>
     <!-- end pricing -->
