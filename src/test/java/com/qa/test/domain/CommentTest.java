@@ -17,19 +17,22 @@ public class CommentTest {
 
     @Before
     public void setUp() {
-        comment = new Comment(1L, "Tester One", 3L, "was Alright");
-        other = new Comment(1L, "Tester One", 3L, "was Alright");
+        comment = new Comment(1L,"FilmOne", "Tester One", 3L, "was Alright");
+        other = new Comment(1L, "FilmOne", "Tester One", 3L, "was Alright");
     }
 
     @Test
     public void settersTest() {
         assertNotNull(comment.getId());
+        assertNotNull(comment.getMovieTitle());
         assertNotNull(comment.getUserName());
         assertNotNull(comment.getComment());
         assertNotNull(comment.getRating());
 
         comment.setId(null);
         assertNull(comment.getId());
+        comment.setMovieTitle(null);
+        assertNull(comment.getMovieTitle());
         comment.setUserName(null);
         assertNull(comment.getUserName());
         comment.setRating(null);
@@ -52,6 +55,7 @@ public class CommentTest {
     @Test
     public void createCommentWithId() {
         assertEquals(1L, comment.getId(), 0);
+        assertEquals("FilmOne", comment.getMovieTitle());
         assertEquals("Tester One", comment.getUserName());
         assertEquals(3L, comment.getRating(), 0);
         assertEquals("was Alright", comment.getComment());
@@ -123,6 +127,25 @@ public class CommentTest {
         other.setComment("I have a different opinion");
         assertFalse(comment.equals(other));
     }
+    
+    @Test
+    public void nullMovieTitle() {
+    	comment.setMovieTitle(null);
+    	assertFalse(comment.equals(other));
+    }
+    
+    @Test
+    public void nullMovieTitleOnBoth() {
+    	comment.setMovieTitle(null);
+    	other.setMovieTitle(null);
+    	assertTrue(comment.equals(other));
+    }
+    
+    @Test
+    public void otherMovieTitleDifferent() {
+    	other.setMovieTitle("FilmTwo");
+    	assertFalse(comment.equals(other));
+    }
 
     @Test
     public void nullRating() {
@@ -145,8 +168,9 @@ public class CommentTest {
 
     @Test
     public void constructorWithoutId() {
-        Comment comment = new Comment("Tester One", 3L, "was Alright");
+        Comment comment = new Comment("FilmOne","Tester One", 3L, "was Alright");
         assertNull(comment.getId());
+        assertNotNull(comment.getMovieTitle());
         assertNotNull(comment.getComment());
         assertNotNull(comment.getRating());
         assertNotNull(comment.getUserName());
@@ -159,8 +183,8 @@ public class CommentTest {
 
     @Test
     public void hashCodeTestWithNull() {
-        Comment comment = new Comment(null, null,null,null);
-        Comment other = new Comment(null, null,null,null);
+        Comment comment = new Comment(null,null, null,null,null);
+        Comment other = new Comment(null,null, null,null,null);
         assertEquals(comment.hashCode(), other.hashCode());
     }
 

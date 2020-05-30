@@ -46,9 +46,9 @@ public class CommentControllerUnitTest {
     @Before
     public void init() {
         this.commentList = new ArrayList<>();
-        this.testComment = new Comment("Test Commenter", 3L, "Was alright");
+        this.testComment = new Comment("Terminator","Test Commenter", 3L, "Was alright");
         this.commentList.add(testComment);
-        this.testCommentWithID = new Comment(testComment.getUserName(), testComment.getRating(), testComment.getComment());
+        this.testCommentWithID = new Comment(testComment.getMovieTitle(),testComment.getUserName(), testComment.getRating(), testComment.getComment());
         this.testCommentWithID.setId(id);
     }
 
@@ -90,8 +90,8 @@ public class CommentControllerUnitTest {
     @Test
     public void updateCommentsTest() {
         // given
-        Comment newComment = new Comment("Tester Two", 1L, "I disliked it");
-        Comment updatedComment = new Comment(newComment.getUserName(), newComment.getRating(), newComment.getComment());
+        Comment newComment = new Comment("Street fighter","Tester Two", 1L, "I disliked it");
+        Comment updatedComment = new Comment(newComment.getMovieTitle(),newComment.getUserName(), newComment.getRating(), newComment.getComment());
         updatedComment.setId(this.id);
 
         when(this.service.updateComment(this.id, newComment)).thenReturn(updatedComment);

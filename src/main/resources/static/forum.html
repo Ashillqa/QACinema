@@ -52,18 +52,18 @@
             content: '★ ';
         }
         .rate > input:checked ~ label {
-            color: #ffc700;
+            color:#E00F67;
         }
         .rate:not(:checked) > label:hover,
         .rate:not(:checked) > label:hover ~ label {
-            color: #deb217;
+            color:#E00F67;
         }
         .rate > input:checked + label:hover,
         .rate > input:checked + label:hover ~ label,
         .rate > input:checked ~ label:hover,
         .rate > input:checked ~ label:hover ~ label,
         .rate > label:hover ~ input:checked ~ label {
-            color: #c59b08;
+            color:#E00F67;
         }
 	
 	</style>
@@ -233,6 +233,12 @@
 										
 
 										<form id="comForm" class="form">
+										<div class="sign__group">
+											<label for="movieTitle" id="filmLabel"></label>
+											<select name="movieTitle" id="movieTitle" class="sign__input">
+											
+											</select>
+											</div>
 											<input id="username" type="text" class="sign__input" placeholder="Name" required>
 											<div class="sign__group">
 											<div class="rate">
@@ -338,6 +344,8 @@
 	<!-- Root element of PhotoSwipe. Must have class pswp. -->
 
 	<!-- JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+	
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
@@ -351,6 +359,7 @@
 	<script src="js/photoswipe-ui-default.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/Comment.js"></script>
+	<script src="js/filmInsert.js"></script>
 </body>
 
 </html>
