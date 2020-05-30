@@ -6,7 +6,7 @@ let params = new URLSearchParams(window.location.search);
     let total = 0;
 
 function updateTotal(type){
-    var id = "totalPrice";
+    let id = "totalPrice";
     document.getElementById(id).className = "section__title";
 
     if(type === 'adult'){
