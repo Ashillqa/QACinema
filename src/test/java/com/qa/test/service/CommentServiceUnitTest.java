@@ -42,8 +42,8 @@ public class CommentServiceUnitTest {
     public void init() {
         this.commentList = new ArrayList<>();
         this.commentList.add(testComment);
-        this.testComment = new Comment("Tester One", 3L, "It was alright");
-        this.testCommentWithID = new Comment(this.id,"Tester One", 3L, "It was alright");
+        this.testComment = new Comment("FilmOne","Tester One", 3L, "It was alright");
+        this.testCommentWithID = new Comment(this.id,"FilmOne","Tester One", 3L, "It was alright");
     }
 
     @Test
@@ -78,8 +78,8 @@ public class CommentServiceUnitTest {
 
     @Test
     public void updateCommentsTest() {
-        Comment newComment = new Comment("Updated Commenter", 1L, "I disliked it");
-        Comment updatedComment = new Comment(newComment.getUserName(), newComment.getRating(), newComment.getComment());
+        Comment newComment = new Comment("BadFilm","Updated Commenter", 1L, "I disliked it");
+        Comment updatedComment = new Comment(newComment.getMovieTitle(), newComment.getUserName(), newComment.getRating(), newComment.getComment());
         updatedComment.setId(this.id);
         when(this.repo.findById(this.id)).thenReturn(Optional.of(this.testCommentWithID));
         when(this.repo.save(updatedComment)).thenReturn(updatedComment);

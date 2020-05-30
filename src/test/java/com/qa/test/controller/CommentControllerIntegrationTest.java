@@ -47,7 +47,7 @@ public class CommentControllerIntegrationTest {
     @Before
     public void init() {
         this.repo.deleteAll();
-        this.testComment = new Comment("Tester One", 3L, "It was alright");
+        this.testComment = new Comment("Terminator","Tester One", 3L, "It was alright");
         this.testCommentWithID = this.repo.save(this.testComment);
         this.id = this.testCommentWithID.getId();
     }
@@ -81,9 +81,9 @@ public class CommentControllerIntegrationTest {
 
     @Test
     public void testUpdateComment() throws Exception {
-        Comment newComment = new Comment("Tester Two", 2L, "It was worse than he said");
+        Comment newComment = new Comment("Street fighter","Tester Two", 2L, "It was worse than he said");
         newComment.setId(testCommentWithID.getId());
-        Comment updatedComment = new Comment(newComment.getId(), newComment.getUserName(), newComment.getRating(), newComment.getComment());
+        Comment updatedComment = new Comment(newComment.getId(),newComment.getMovieTitle(), newComment.getUserName(), newComment.getRating(), newComment.getComment());
 
         String result = this.mock
                 .perform(request(HttpMethod.PUT, "/updateComment/" + this.id).accept(MediaType.APPLICATION_JSON)
