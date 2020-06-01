@@ -3,7 +3,6 @@ searchBar.addEventListener('keyup',filterNames)
 
 
 
-
 function filterNames(){
 	let filterValue = document.getElementById('searchBox2').value.toLowerCase();
 	let movies = document.getElementById('movieDisplay')

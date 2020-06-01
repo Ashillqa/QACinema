@@ -1,7 +1,7 @@
 let list = [];
 let ids = [];
 let ratings = [];
-let tile = document.getElementById('movieDisplay')
+const params = new URLSearchParams(window.location.search)
 
 axios.get(`http://localhost:8080/movie/getAll`).then(
     data => {
@@ -20,11 +20,16 @@ axios.get(`http://localhost:8080/movie/getAll`).then(
 )
 
 function showOnPage(list, ids, ratings){
+    let tile = document.getElementById('movieDisplay')
     for(let i=0;i<list.length;i++){
+
         let movieTile = document.createElement('div');
         movieTile.className="col-6 col-sm-12 col-lg-6";
         axios.get(`https://api.themoviedb.org/3/movie/${list[i]}?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-UK`).then(
             append => {
+                if (params.get("term")!==null && !append.data.title.toLowerCase().includes(params.get("term").toLowerCase())){
+                    return;
+                }
                 movieTile.innerHTML =
                     '<div class="card card--list">'+
                     '<div class="row">'+
@@ -61,16 +66,23 @@ function showOnPage(list, ids, ratings){
     }
 }
 
-function filterNames(){
-    let filterValue = document.getElementById('searchBox').value.toLowerCase();
+function filterNames(startup){
+    let filterValue;
+
+    if (startup==="yes"){
+        console.log(params.get("term").toLowerCase())
+        filterValue = params.get("term");
+    } else {
+        filterValue = document.getElementById('searchBox2').value.toLowerCase();
+    }
+
+    let movies = document.getElementById('movieDisplay')
     let li = movies.getElementsByClassName('card__title')
     let ld = movies.getElementsByClassName('col-6 col-sm-12 col-lg-6')
-    console.log(li.length)
-    console.log(ld.length)
 
     for(let i=0;i<li.length;i++){
-        let test = li[i].getElementsByTagName('a')[0];
-        if(test.innerHTML.toLowerCase().indexOf(filterValue)>-1){
+        if((li[i].getElementsByTagName('a')[0].innerHTML.toLowerCase().indexOf(filterValue)>-1 ||
+            ld[i].getElementsByTagName('p')[0].innerHTML.toLowerCase().indexOf(filterValue)>-1)){
             li[i].style.display='';
             ld[i].style.display=''
         }else{
@@ -79,6 +91,12 @@ function filterNames(){
         }
     }
 }
+
+
+document.getElementById("resetButton").addEventListener("click",function(){window.location = window.location.href.split("?")[0];})
+document.getElementById('searchBox2').addEventListener('keyup',function(){filterNames("no")});
+
+
 
 
 
