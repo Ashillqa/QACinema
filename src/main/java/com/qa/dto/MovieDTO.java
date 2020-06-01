@@ -12,20 +12,32 @@ public class MovieDTO {
 
     private Long apiID;
 
+    private String rating;
+
     private List<ShowTimeDTO> showTimes = new ArrayList<>();
 
-    public MovieDTO(String status, Long apiID) {
+    public MovieDTO(Long id, String status, Long apiID, String rating) {
+        this.id = id;
         this.status = status;
         this.apiID = apiID;
+        this.rating = rating;
     }
 
-    public MovieDTO(Long id, String status, Long apiID) {
-        this.id = id;
-        this.apiID = apiID;
+    public MovieDTO(String status, Long apiID, String rating) {
         this.status = status;
+        this.apiID = apiID;
+        this.rating = rating;
     }
 
     public MovieDTO() {
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
     }
 
     public Long getApiID() {
@@ -68,11 +80,12 @@ public class MovieDTO {
         return Objects.equals(id, movieDTO.id) &&
                 Objects.equals(status, movieDTO.status) &&
                 Objects.equals(apiID, movieDTO.apiID) &&
-                Objects.equals(showTimes, movieDTO.showTimes);
+                Objects.equals(showTimes, movieDTO.showTimes) &&
+                Objects.equals(rating, movieDTO.rating);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, status, apiID, showTimes);
+        return Objects.hash(id, status, apiID, showTimes, rating);
     }
 }
