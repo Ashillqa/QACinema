@@ -45,8 +45,8 @@ $(function () {
                     "/create-charge",
                     {email: email, token: token},
                     function (data) {
-                        // alert(data.details);
-                        // location.replace("paymentComplete.html");
+                        alert(data.details);
+                        location.replace("paymentComplete.html");
                     }, 'json');
             }
         });
@@ -59,7 +59,6 @@ function postBookingDetails() {
         "totalPrice": ${sessionStorage.getItem('total')}, "emailAddress": "${sessionStorage.getItem('email')}", "phoneNumber": "${sessionStorage.getItem('phone')}", "customerName":"${sessionStorage.getItem('name')}",
     "adultNr": ${sessionStorage.getItem('adult')}, "childNr": ${sessionStorage.getItem('child')}, "studentNr": ${sessionStorage.getItem('student')}}`;
 
-    console.log(bookingDetails);
 
     axios.post(`http://localhost:8080/booking/createBooking`, JSON.parse(bookingDetails)).then(
         res =>{

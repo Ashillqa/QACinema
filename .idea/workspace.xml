@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b9cd553-4786-42ea-b8b0-dc671f3e133b" name="Default Changelist" comment="">
+    <list default="true" id="6b9cd553-4786-42ea-b8b0-dc671f3e133b" name="Default Changelist" comment="completed the post method for posting the booking to the backend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/bookingTimes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/bookingTimes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/payment/payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/payment/payment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/payment.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +74,20 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.App (2)">
+    <configuration name="com in QA-Cinema" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QA-Cinema" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="App (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="QA Cinema Project" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.qa.App" />
@@ -119,6 +131,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.App (2)" />
+        <item itemvalue="JUnit.com in QA-Cinema" />
         <item itemvalue="Spring Boot.App (3)" />
       </list>
     </recent_temporary>
@@ -148,7 +161,7 @@
       <workItem from="1590838608805" duration="16368000" />
       <workItem from="1590871905256" duration="9109000" />
       <workItem from="1590881505936" duration="1721000" />
-      <workItem from="1590931033164" duration="17415000" />
+      <workItem from="1590931033164" duration="18041000" />
     </task>
     <task id="LOCAL-00001" summary="new start">
       <created>1590571881826</created>
@@ -241,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591010392373</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Started working with the api call to make a booking">
+      <created>1591013327936</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1591013327937</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +281,8 @@
     <MESSAGE value="implemented the payment system on the payment page with all the services and controllers." />
     <MESSAGE value="added the payment complete page so that the customer is redirected to this page when they have completed their payment" />
     <MESSAGE value="made sure the error to show the card details are incorrect is shown properly and in bold red" />
-    <option name="LAST_COMMIT_MESSAGE" value="made sure the error to show the card details are incorrect is shown properly and in bold red" />
+    <MESSAGE value="Started working with the api call to make a booking" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started working with the api call to make a booking" />
   </component>
   <component name="WindowStateProjectService">
     <state x="424" y="0" width="702" height="824" key="#App" timestamp="1590572323011">
@@ -288,10 +309,10 @@
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state x="4531" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590570799797" />
-    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1591010386872">
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1591013805696">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591010386872" />
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591013805696" />
     <state x="4353" y="4" key="CommitChangelistDialog2/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590571876043" />
     <state x="265" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590872084381" />
     <state x="203" y="65" key="DiffContextDialog" timestamp="1590574056913">
@@ -302,52 +323,52 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="114" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590874996271" />
-    <state width="1493" height="196" key="GridCell.Tab.0.bottom" timestamp="1591012958744">
+    <state width="1493" height="196" key="GridCell.Tab.0.bottom" timestamp="1591013837170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="196" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591012958744" />
+    <state width="1493" height="196" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591013837170" />
     <state width="1880" height="202" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
     <state width="1493" height="196" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590870416572" />
-    <state width="1493" height="196" key="GridCell.Tab.0.center" timestamp="1591012958743">
+    <state width="1493" height="196" key="GridCell.Tab.0.center" timestamp="1591013837170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="196" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591012958743" />
+    <state width="1493" height="196" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591013837170" />
     <state width="1880" height="202" key="GridCell.Tab.0.center/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472387" />
     <state width="1493" height="196" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590870416571" />
-    <state width="1493" height="196" key="GridCell.Tab.0.left" timestamp="1591012958742">
+    <state width="1493" height="196" key="GridCell.Tab.0.left" timestamp="1591013837170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="196" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591012958742" />
+    <state width="1493" height="196" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591013837170" />
     <state width="1880" height="202" key="GridCell.Tab.0.left/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472387" />
     <state width="1493" height="196" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590870416571" />
-    <state width="1493" height="196" key="GridCell.Tab.0.right" timestamp="1591012958744">
+    <state width="1493" height="196" key="GridCell.Tab.0.right" timestamp="1591013837170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="196" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591012958744" />
+    <state width="1493" height="196" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591013837170" />
     <state width="1880" height="202" key="GridCell.Tab.0.right/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
     <state width="1493" height="196" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590870416571" />
-    <state width="1493" height="196" key="GridCell.Tab.1.bottom" timestamp="1591012958745">
+    <state width="1493" height="196" key="GridCell.Tab.1.bottom" timestamp="1591013837153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="196" key="GridCell.Tab.1.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591012958745" />
+    <state width="1493" height="196" key="GridCell.Tab.1.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591013837153" />
     <state width="1880" height="202" key="GridCell.Tab.1.bottom/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
     <state width="1493" height="196" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590870416573" />
-    <state width="1493" height="196" key="GridCell.Tab.1.center" timestamp="1591012958744">
+    <state width="1493" height="196" key="GridCell.Tab.1.center" timestamp="1591013837152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="196" key="GridCell.Tab.1.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591012958744" />
+    <state width="1493" height="196" key="GridCell.Tab.1.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591013837152" />
     <state width="1880" height="202" key="GridCell.Tab.1.center/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
     <state width="1493" height="196" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590870416572" />
-    <state width="1493" height="196" key="GridCell.Tab.1.left" timestamp="1591012958744">
+    <state width="1493" height="196" key="GridCell.Tab.1.left" timestamp="1591013837152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="196" key="GridCell.Tab.1.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591012958744" />
+    <state width="1493" height="196" key="GridCell.Tab.1.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591013837152" />
     <state width="1880" height="202" key="GridCell.Tab.1.left/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
     <state width="1493" height="196" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590870416572" />
-    <state width="1493" height="196" key="GridCell.Tab.1.right" timestamp="1591012958745">
+    <state width="1493" height="196" key="GridCell.Tab.1.right" timestamp="1591013837152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="196" key="GridCell.Tab.1.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591012958745" />
+    <state width="1493" height="196" key="GridCell.Tab.1.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591013837152" />
     <state width="1880" height="202" key="GridCell.Tab.1.right/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1590572472388" />
     <state width="1493" height="196" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590870416573" />
     <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1590952247595">
@@ -355,10 +376,10 @@
     </state>
     <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590952247595" />
     <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1590867935593" />
-    <state x="262" y="146" width="1258" height="398" key="MultipleFileMergeDialog" timestamp="1590872151821">
+    <state x="262" y="146" width="1258" height="398" key="MultipleFileMergeDialog" timestamp="1591013370316">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="262" y="146" width="1258" height="398" key="MultipleFileMergeDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590872151821" />
+    <state x="262" y="146" width="1258" height="398" key="MultipleFileMergeDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591013370316" />
     <state x="439" y="31" key="NewModule_or_Project.wizard" timestamp="1590874999467">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -381,9 +402,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="557" y="43" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591013289038" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1590751844366">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1591013698145">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1590751844366" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1591013698145" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/QACinema$com_in_QA_Cinema.ic" NAME="com in QA-Cinema Coverage Results" MODIFIED="1591013601065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.*</FILTER>
+    </SUITE>
   </component>
 </project>
