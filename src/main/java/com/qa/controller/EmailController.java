@@ -1,34 +1,30 @@
 package com.qa.controller;
 
+import com.qa.domain.Email;
+import com.qa.dto.BookingDTO;
+import com.qa.dto.EmailDTO;
 import com.qa.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import javax.mail.*;
-import javax.mail.internet.*;
 import java.io.IOException;
-import java.util.Date;
-import java.util.Properties;
 
-@Controller
+@RestController
 public class EmailController {
 
     private final EmailService emailService;
 
     @Autowired
-    public EmailController(EmailService emailService){this.emailService = emailService;}
+    public EmailController(EmailService emailService) {
+        this.emailService = emailService;
+    }
 
-    @GetMapping(value = "/sendemail")
-    public String sendEmail() throws IOException, MessagingException {
-        emailService.sendmail();
-        return "Email sent successfully";
+    @PostMapping("/sendEmail")
+    public ResponseEntity<EmailDTO> sendEmail(@RequestBody Email email) throws IOException, MessagingException {
+        return new ResponseEntity<EmailDTO>(this.emailService.sendmail(email), HttpStatus.CREATED);
     }
 
 

@@ -2,6 +2,7 @@ package com.qa.controller;
 
 import com.qa.commons.Response;
 import com.qa.service.StripeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +16,7 @@ public class PaymentController {
 
     private StripeService stripeService;
 
+    @Autowired
     public PaymentController(StripeService stripeService) {
         this.stripeService = stripeService;
     }
