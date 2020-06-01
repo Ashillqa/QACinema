@@ -123,6 +123,7 @@ function saveStorage(){
 
     sessionStorage.setItem("movieName", params.get('title'));
     sessionStorage.setItem("movieTime", params.get('time'));
+    sessionStorage.setItem("movieId", params.get('id'));
 }
 
 
