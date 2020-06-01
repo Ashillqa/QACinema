@@ -1,6 +1,7 @@
 let list = [];
 let ids = [];
 let ratings = [];
+let tile = document.getElementById('movieDisplay')
 
 axios.get(`http://localhost:8080/movie/getAll`).then(
     data => {
@@ -19,7 +20,6 @@ axios.get(`http://localhost:8080/movie/getAll`).then(
 )
 
 function showOnPage(list, ids, ratings){
-    let tile = document.getElementById('movieDisplay')
     for(let i=0;i<list.length;i++){
         let movieTile = document.createElement('div');
         movieTile.className="col-6 col-sm-12 col-lg-6";
@@ -61,6 +61,24 @@ function showOnPage(list, ids, ratings){
     }
 }
 
+function filterNames(){
+    let filterValue = document.getElementById('searchBox').value.toLowerCase();
+    let li = movies.getElementsByClassName('card__title')
+    let ld = movies.getElementsByClassName('col-6 col-sm-12 col-lg-6')
+    console.log(li.length)
+    console.log(ld.length)
+
+    for(let i=0;i<li.length;i++){
+        let test = li[i].getElementsByTagName('a')[0];
+        if(test.innerHTML.toLowerCase().indexOf(filterValue)>-1){
+            li[i].style.display='';
+            ld[i].style.display=''
+        }else{
+            li[i].style.display = 'none';
+            ld[i].style.display= 'none';
+        }
+    }
+}
 
 
 
