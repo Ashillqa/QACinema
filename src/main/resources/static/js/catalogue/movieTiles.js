@@ -15,6 +15,15 @@ axios.get(`http://localhost:8080/movie/getAll`).then(
         )
 
 
+function rating(title,i) {
+    axios.get(`http://www.omdbapi.com/?apikey=367564e0&t=${title}`).then(
+        write => {
+            document.getElementById(`ageRestriction-${i}`).innerHTML=` ${write.data.Rated}`
+            console.log(write);
+        }
+    )
+}
+
 function showOnPage(list, ids){
     let tile = document.getElementById('movieDisplay')
     for(let i=0;i<list.length;i++){
@@ -43,7 +52,7 @@ function showOnPage(list, ids){
                             '<div class="card__wrap">'+
                                 `<span class="card__rate"><i class="icon ion-ios-star"></i>${append.data.vote_average}</span>`+
                                 '<ul class="card__list">'+
-                                    '<li id="ageRestriction"></li>'+
+                                    `<li id="ageRestriction-${i}"></li>`+
                                 '</ul>'+
                             '</div>'+
                             '<div class="card__description">' +
@@ -53,6 +62,7 @@ function showOnPage(list, ids){
                     '</div>'+
                 '</div>';
                 tile.appendChild(movieTile);
+                rating(append.data.title, i);
             }
         )
     }

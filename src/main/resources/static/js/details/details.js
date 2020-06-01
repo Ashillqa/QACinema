@@ -1,11 +1,17 @@
 const params = new URLSearchParams(window.location.search)
 
-function writeContent(apiID) {
+function writeContent(apiID, status) {
     axios.get(`https://api.themoviedb.org/3/movie/${apiID}?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-US`).then(
         fill => {
             let parent=document.getElementById("movieInfo");
 
             let detailsChild=document.createElement("div");
+
+            let showTime = "";
+            if (status!=="upcoming"){
+                showTime=`<li><span>Running time:</span> ${fill.data.runtime} min</li>`;
+            }
+
             detailsChild.className="col-10";
             detailsChild.innerHTML=`<div class="card card--details card--series">
                   <div class="row">
@@ -24,8 +30,8 @@ function writeContent(apiID) {
                               <span class="card__rate"><i class="icon ion-ios-star"></i>${fill.data.vote_average}</span>
 
                               <ul class="card__list">
-                                 <li>HD</li>
-                                 <li id="ageRating"></li>
+                                 <li><a style="color: #ff5860;" id="screens" href="screens.html">HD</a></li>
+                                 <li><a style="color: #ff5860;" id="ageRating" href="classifications.html"></a></li>
                               </ul>
                            </div>
 
@@ -33,7 +39,7 @@ function writeContent(apiID) {
                               <li><span>Genre:</span> 
                               <a href="#" id="Genres"></a>
                               <li><span>Release date:</span> ${fill.data.release_date}</li>
-                              <li><span>Running time:</span> ${fill.data.runtime} min</li>
+                              ${showTime}
                               <li><span>Country:</span> <a href="#" id="Country"></a> </li>
                               <br>
                               <li><span>Director:</span> <a href="#" id="Director"></a> </li>
@@ -133,7 +139,7 @@ function videoSource(apiID) {
 axios.get(`http://localhost:8080/movie/get/${params.get('id')}`).then(
     write => {
         let showTimes = [];
-        writeContent(write.data.apiID);
+        writeContent(write.data.apiID, write.data.status);
         videoSource(write.data.apiID);
 
         for (let i =0; i< write.data.showTimes.length; i++){
