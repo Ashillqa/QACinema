@@ -17,6 +17,9 @@ public class Movie {
 
     private Long apiID;
 
+
+    private String rating;
+
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "movie_line", joinColumns = {
             @JoinColumn(name = "movie_id", referencedColumnName = "id",
@@ -27,7 +30,8 @@ public class Movie {
             })
     private final List<ShowTime> showTimes = new ArrayList<>();
 
-    public Movie(Long apiID, String status) {
+    public Movie(Long apiID, String status, String rating) {
+        this.rating = rating;
         this.apiID = apiID;
         this.status = status;
     }
@@ -40,13 +44,21 @@ public class Movie {
         this.apiID = apiID;
     }
 
-    public Movie(Long id, Long apiID, String status) {
+    public Movie(Long id, Long apiID, String status, String rating) {
+        this.rating = rating;
         this.apiID = apiID;
         this.id = id;
         this.status = status;
     }
 
     public Movie() {
+    }
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
     }
 
     public Long getId() {
@@ -77,11 +89,12 @@ public class Movie {
         return Objects.equals(id, movie.id) &&
                 Objects.equals(status, movie.status) &&
                 Objects.equals(apiID, movie.apiID) &&
+                Objects.equals(rating, movie.rating) &&
                 Objects.equals(showTimes, movie.showTimes);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, status, apiID, showTimes);
+        return Objects.hash(id, status, apiID, rating, showTimes);
     }
 }

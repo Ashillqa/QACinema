@@ -43,8 +43,6 @@ public class BookingDTOTest {
         assertNull(bookingDTO.getEmailAddress());
         bookingDTO.setMovieName(null);
         assertNull(bookingDTO.getMovieName());
-        bookingDTO.setMovie(null);
-        assertNull(bookingDTO.getMovie());
         bookingDTO.setPhoneNumber(null);
         assertNull(bookingDTO.getPhoneNumber());
         bookingDTO.setStudentNr(null);
