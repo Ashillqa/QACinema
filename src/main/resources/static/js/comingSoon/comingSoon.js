@@ -23,15 +23,6 @@ function rating(title,i) {
     )
 }
 
-function rating(title,i) {
-    axios.get(`http://www.omdbapi.com/?apikey=367564e0&t=${title}`).then(
-        write => {
-            document.getElementById(`ageRestriction-${i}`).innerHTML=` ${write.data.Rated}`
-            console.log(write);
-        }
-    )
-}
-
 function showOnPage(list, ids){
     let tile = document.getElementById('movieDisplay')
     for(let i=0;i<list.length;i++){
