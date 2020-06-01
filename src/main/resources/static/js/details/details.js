@@ -48,7 +48,6 @@ function writeContent(apiID, status, rating) {
 
                            <div class="b-description_readmore_wrapper js-description_readmore_wrapper" style="max-width: 682.5px;"><div class="card__description card__description--details b-description_readmore_ellipsis" style="min-height: 150px; max-height: 150px; overflow: hidden;">
                            ${fill.data.overview}
-                            </div><div class="b-description_readmore_button"></div></div>
                         </div>
                      </div>
                      <!-- end card content -->

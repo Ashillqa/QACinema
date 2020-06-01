@@ -29,7 +29,7 @@
 
     <style>
         #ratings{
-            margin-left: 200px;
+            margin-left: 220px;
             padding: 50px;
         }
         .agedescriptions{
@@ -80,8 +80,8 @@
                                 <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
 
                                 <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
-                                    <li><a href="#">Showing</a></li>
-                                    <li><a href="#">Coming Soon</a></li>
+                                    <li><a href="gallery.html">Showing</a></li>
+                                    <li><a href="comingSoon.html">Coming Soon</a></li>
                                 </ul>
                             </li>
                             <!-- end dropdown -->
@@ -95,7 +95,7 @@
                                 <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planning Your Trip</a>
 
                                 <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog1">
-                                    <li><a href="#">Getting Here</a></li>
+                                    <li><a href="gettingHere.html">Getting Here</a></li>
                                     <li><a href="#">What To Do</a></li>
                                 </ul>
                             </li>
@@ -106,8 +106,8 @@
                                 <a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
 
                                 <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Forum</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="forum.html">Forum</a></li>
                                 </ul>
                             </li>
                             <!-- end dropdown -->
@@ -134,7 +134,27 @@
             </div>
         </div>
     </div>
+
+    <!-- header search -->
+    <form action="#" class="header__search">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header__search-content">
+                        <label for="searchBox"></label>
+                        <input type="text" placeholder="Search Term" id="searchBox">
+                        <button type="button" id="searchButton">search</button>
+                        <script src="js/search/search.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- end header search -->
 </header>
+<!-- end header -->
+
+
 <section class="section section--first section--bg" data-bg="img/section/section.jpg">
     <div class="container">
         <div class="row">
@@ -156,116 +176,139 @@
 
 
 <div class= "container" id="ratings">
+    <!-- card -->
+    <div class="col">
+        <div class="card card--list">
+            <div class="row">
+                <div class="col-12 col-sm-4">
+                    <img class="ageimg" src="img/ratings/tbc100px.png"/>
+                </div>
 
-<!-- card -->
-<div class="col">
-    <div class="card card--list">
-        <div class="row">
-            <div class="col-12 col-sm-4">
-                    <img class="ageimg" src="img/ratings/universal.png"/>
-            </div>
-
-            <div class="col">
-                <div class="card__content agedescriptions">
-                    <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/u" target="_blank">Universal</a> </h3>
-                    <div class="card__description">
-                        <p class="text-justify">A U film should be suitable for audiences aged four years and over, although it is impossible to predict what might upset any particular child.</p>
-                        <p class="text-justify">U films should be set within a positive framework and should offer reassuring counterbalances to any violence, threat or horror. If a work is particularly suitable for pre-school children, this will be indicated in the ratings info.</p>
+                <div class="col">
+                    <div class="card__content agedescriptions">
+                        <h3 class="card__title"><a href="https://www.bbfc.co.uk/industry-services/additional-information/bbfc-age-ratings-poster-exhibitors" target="_blank">To Be Confirmed</a> </h3>
+                        <div class="card__description">
+                            <p class="text-justify">In some instances films had not been certified before the website was uploaded.</p>
+                            <p class="text-justify">Child and Family tickets purchased before a film is certified as 15 or over can be refunded. Please contact Guest Services before the performance for a refund, as admission may be refused on the day.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- end card -->
-<!-- card -->
-<div class="col">
-    <div class="card card--list">
-        <div class="row">
-            <div class="col-12 col-sm-4">
-                <div class="card">
-                    <img class="ageimg" src="img/ratings/parental.png"/>
+    <!-- end card -->
+    <!-- card -->
+    <div class="col">
+        <div class="card card--list">
+            <div class="row">
+                <div class="col-12 col-sm-4">
+                    <img class="ageimg" src="img/ratings/U100PX.png"/>
                 </div>
-            </div>
 
-            <div class="col">
-                <div class="card__content agedescriptions">
-                    <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/pg" target="_blank">Parental Guidance</a></h3>
-                    <div class="card__description">
-                        <p class="text-justify">General viewing, but some scenes may be unsuitable for young children. A PG film should not unsettle a child aged around eight or older.</p>
-                        <p class="text-justify"> Unaccompanied children of any age may watch, but parents are advised to consider whether the content may upset younger, or more sensitive, children.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end card -->
-<!-- card -->
-<div class="col">
-    <div class="card card--list">
-        <div class="row">
-            <div class="col-12 col-sm-4">
-                <div class="card_">
-                    <img class="ageimg" src="img/ratings/rated12A.png"/>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card__content agedescriptions">
-                    <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/12a-and-12" target="_blank">Rated 12A</a></h3>
-                    <div class="card__description">
-                        <p class="text-justify">Films classified 12A contain material that is not generally suitable for children aged under 12. No one younger than 12 may see a 12A film in a cinema unless accompanied by an adult. Adults planning to take a child under 12 to view a 12A film should consider whether the film is suitable for that child. </p>
-                        <p class="text-justify">To help them decide, we recommend that they check the Ratings info for that film in advance. No one younger than 12 may rent or buy a 12 rated video work.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end card -->
-<!-- card -->
-<div class="col">
-    <div class="card card--list">
-        <div class="row">
-            <div class="col-12 col-sm-4">
-                <div class="card">
-                    <img class="ageimg" src="img/ratings/15.png"/>
-                </div>
-            </div>
 
-            <div class="col">
-                <div class="card__content agedescriptions">
-                    <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/15" target="_blank">Rated 15</a></h3>
-                    <div class="card__description">
-                        <p class="text-justify">Suitable only for persons of 15 years and older. Please note: proof of age may be required.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end card -->
-<!-- card -->
-<div class="col">
-    <div class="card card--list">
-        <div class="row">
-            <div class="col-12 col-sm-4">
-                <div class="card">
-                    <img class="ageimg" src="img/ratings/18.png"/></div>
-            </div>
+                <div class="col">
+                    <div class="card__content agedescriptions">
+                        <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/u" target="_blank">Universal</a> </h3>
+                        <div class="card__description">
+                            <p class="text-justify">A U film should be suitable for audiences aged four years and over, although it is impossible to predict what might upset any particular child.</p>
+                            <p class="text-justify">U films should be set within a positive framework and should offer reassuring counterbalances to any violence, threat or horror. If a work is particularly suitable for pre-school children, this will be indicated in the ratings info.</p>
+                        </div>
 
-            <div class="col">
-                <div class="card__content agedescriptions">
-                    <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/18" target="_blank">Rated 18</a></h3>
-                    <div class="card__description">
-                        <p class="text-justify">No one younger than 18 may see an 18 film in a cinema. Adults should be free to choose their own entertainment. Please note: proof of age may be required</p>
+           
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- end card -->
+    <!-- end card -->
+    <!-- card -->
+    <div class="col">
+        <div class="card card--list">
+            <div class="row">
+                <div class="col-12 col-sm-4">
+                    <div class="card">
+                        <img class="ageimg" src="img/ratings/PG100PX.png"/>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card__content agedescriptions">
+                        <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/pg" target="_blank">Parental Guidance</a></h3>
+                        <div class="card__description">
+                            <p class="text-justify">General viewing, but some scenes may be unsuitable for young children. A PG film should not unsettle a child aged around eight or older.</p>
+                            <p class="text-justify"> Unaccompanied children of any age may watch, but parents are advised to consider whether the content may upset younger, or more sensitive, children.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end card -->
+    <!-- card -->
+    <div class="col">
+        <div class="card card--list">
+            <div class="row">
+                <div class="col-12 col-sm-4">
+                    <div class="card_">
+                        <img class="ageimg" src="img/ratings/12A100PX.png"/>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card__content agedescriptions">
+                        <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/12a-and-12" target="_blank">Rated 12A</a></h3>
+                        <div class="card__description">
+                            <p class="text-justify">Films classified 12A contain material that is not generally suitable for children aged under 12. No one younger than 12 may see a 12A film in a cinema unless accompanied by an adult. Adults planning to take a child under 12 to view a 12A film should consider whether the film is suitable for that child. </p>
+                            <p class="text-justify">To help them decide, we recommend that they check the Ratings info for that film in advance. No one younger than 12 may rent or buy a 12 rated video work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end card -->
+    <!-- card -->
+    <div class="col">
+        <div class="card card--list">
+            <div class="row">
+                <div class="col-12 col-sm-4">
+                    <div class="card">
+                        <img class="ageimg" src="img/ratings/15100PX.png"/>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card__content agedescriptions">
+                        <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/15" target="_blank">Rated 15</a></h3>
+                        <div class="card__description">
+                            <p class="text-justify">Suitable only for persons of 15 years and older. Please note: proof of age may be required.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end card -->
+    <!-- card -->
+    <div class="col">
+        <div class="card card--list">
+            <div class="row">
+                <div class="col-12 col-sm-4">
+                    <div class="card">
+                        <img class="ageimg" src="img/ratings/18100PX.png"/></div>
+                </div>
+
+                <div class="col">
+                    <div class="card__content agedescriptions">
+                        <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/18" target="_blank">Rated 18</a></h3>
+                        <div class="card__description">
+                            <p class="text-justify">No one younger than 18 may see an 18 film in a cinema. Adults should be free to choose their own entertainment. Please note: proof of age may be required</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end card -->
 </div>
 
 
@@ -293,7 +336,7 @@
                 </ul>
             </div>
             <!-- end footer list -->
-<p class="section__text"></p>
+            <p class="section__text"></p>
             <!-- footer list -->
             <div class="col-6 col-sm-4 col-md-3">
                 <h6 class="footer__title">Legal</h6>
@@ -309,8 +352,8 @@
             <div class="col-12 col-sm-4 col-md-3">
                 <h6 class="footer__title">Contact</h6>
                 <ul class="footer__list">
-                    <li><a href="tel:+18002345678">+1 (800) 234-5678</a></li>
-                    <li><a href="mailto:support@moviego.com">support@flixgo.com</a></li>
+                    <li><a href="contactUs.html">0161 393 2271</a></li>
+						<li><a href="contactUs.html">Ashill.Pathak@academytrainee.com</a></li>
                 </ul>
                 <ul class="footer__social">
                     <li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
