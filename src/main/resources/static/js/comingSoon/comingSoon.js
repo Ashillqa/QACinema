@@ -46,7 +46,7 @@ function showOnPage(list, ids, ratings){
                     '</div>'+
                     '<div class="col-12 col-sm-8">'+
                     '<div class="card__content">'+
-                    `<h3 class="card__title"><a id="title" href="#">${append.data.title}</a></h3>`+
+                    `<h3 class="card__title"><a id="title" href="details2.html?title=${append.data.title}&id=${ids[i]}">${append.data.title}</a></h3>`+
                     '<span class="card__category">'+
                     genres +
                     '</span>'+
@@ -79,10 +79,12 @@ function applyFilter (){
     let ld = movies.getElementsByClassName('col-6 col-sm-12 col-lg-6');
     let li = movies.getElementsByClassName('card__title');
     let genre = movies.getElementsByClassName("card__category");
-    let rating = movies.getElementsByClassName("card__rate");
 
 
     function genreMatch(Element){
+        if (genreSelect==="select genre"){
+            return true;
+        }
         for (let i=0;i<Element.length;i++){
             if(Element[i].innerHTML.toLowerCase().indexOf(genreSelect)>-1){
                 return true;
