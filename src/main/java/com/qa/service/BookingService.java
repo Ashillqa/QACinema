@@ -1,51 +1,34 @@
 package com.qa.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
-import com.qa.domain.Booking;
+import com.qa.service.Mapper;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.qa.dto.BookingDTO;
 import com.qa.exceptions.BookingNotFoundException;
+import com.qa.domain.Booking;
 import com.qa.repo.BookingRepository;
+import com.qa.utils.MyBeanUtils;
 
 @Service
-public class BookingService {
-	private final BookingRepository repo;
+public class BookingService  {
+
+	private BookingRepository repo;
+
+	private Mapper<Booking, BookingDTO> mapper;
 
 	@Autowired
-	public BookingService(BookingRepository repo) {
+	public BookingService(BookingRepository repo, ModelMapper mapper) {
 		this.repo = repo;
+		this.mapper = (Booking booking) -> mapper.map(booking, BookingDTO.class);
 	}
 
-	public List<Booking> readBookings(){
-		return this.repo.findAll();
-	}
-
-	public Booking createBooking(Booking booking) {
-		return this.repo.save(booking);
-	}
-
-	public Booking findBookingById(Long id) {
-		return this.repo.findById(id).orElseThrow(BookingNotFoundException::new);
-	}
-
-	public Booking updateBooking(Long id, Booking booking) {
-
-		Booking update = findBookingById(id);
-
-		update.setMovieId(booking.getMovieId());
-		update.setAdultNr(booking.getAdultNr());
-		update.setChildNr(booking.getChildNr());
-		update.setCustomerName(booking.getCustomerName());
-		update.setDateTime(booking.getDateTime());
-		update.setEmailAddress(booking.getEmailAddress());
-		update.setMovieName(booking.getMovieName());
-		update.setPhoneNumber(booking.getPhoneNumber());
-		update.setStudentNr(booking.getStudentNr());
-		update.setTotalPrice(booking.getTotalPrice());
-
-		return this.repo.save(update);
+	public BookingDTO createBooking(Booking booking) {
+		return this.mapper.mapToDTO(this.repo.save(booking));
 	}
 
 	public boolean deleteBooking(Long id) {
@@ -54,6 +37,20 @@ public class BookingService {
 		}
 		this.repo.deleteById(id);
 		return this.repo.existsById(id);
+	}
+
+	public BookingDTO findBookingByID(Long id) {
+		return this.mapper.mapToDTO(this.repo.findById(id).orElseThrow(BookingNotFoundException::new));
+	}
+
+	public List<BookingDTO> readBookings() {
+		return this.repo.findAll().stream().map(this.mapper::mapToDTO).collect(Collectors.toList());
+	}
+
+	public BookingDTO updateBooking(Booking booking, Long id) {
+		Booking toUpdate = this.repo.findById(id).orElseThrow(BookingNotFoundException::new);
+		MyBeanUtils.mergeNotNull(booking, toUpdate);
+		return this.mapper.mapToDTO(this.repo.save(toUpdate));
 	}
 
 }

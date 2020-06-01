@@ -13,6 +13,13 @@
       rel="stylesheet"
     />
 
+    <!--Bootstrap 4 JavaScript-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!--Stripe JavaScript Library-->
+    <script src="https://js.stripe.com/v3/"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
     <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
@@ -52,7 +59,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="Dmitry Volkov" />
-    <title>QA Cinema | Booking</title>
+    <title>QA Cinemas | Payment</title>
   </head>
   <body class="body">
     <!-- header -->
@@ -203,14 +210,14 @@
           <div class="col-12">
             <div class="section__wrap">
               <!-- section title -->
-              <h2 class="section__title">Booking</h2>
+              <h2 class="section__title">Payment</h2>
               <!-- end section title -->
 
               <!-- breadcrumb -->
               <ul class="breadcrumb">
                 <li class="breadcrumb__item"><a href="#">Home</a></li>
                 <li class="breadcrumb__item breadcrumb__item--active">
-                  Booking
+                  Payment
                 </li>
               </ul>
               <!-- end breadcrumb -->
@@ -242,148 +249,64 @@
           <!-- end movie title -->
         </div>
 
-        <form action="payment.html" class="sign__form2">
-          <div class="row">
-            <!-- Customer Name -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="row">
-                <div class="sign__group">
-                  <input
-                    type="text"
-                    class="sign__input"
-                    id="customerName"
-                    placeholder="Name"
-                  />
-                </div>
+        <div class="section__wrap">
+          <!-- movie title -->
+          <h5 class="section__text" id="customerName"></h5>
 
-                <div class="sign__group">
-                  <input
-                    type="email"
-                    class="sign__input"
-                    id="customerEmail"
-                    placeholder="Email"
-                  />
-                </div>
+          <!-- end movie title -->
+        </div>
 
-                <div class="sign__group">
-                  <input
-                    type="text"
-                    class="sign__input"
-                    id="customerPhone"
-                    placeholder="Phone Number"
-                  />
-                </div>
-              </div>
-            </div>
-            <!-- end customer name -->
+        <div class="section__wrap">
+          <!-- movie title -->
+          <h5 class="section__text" id="customerEmail"></h5>
 
-            <!-- price -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="sign__group">
-                <label for="adult" id="ticketTypeAdult" class="sign__text"
-                  >Adult</label
-                >
-                <select
-                  name="adult"
-                  id="adult"
-                  onchange="updateTotal('adult')"
-                  class="sign__input"
-                >
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-              </div>
+          <!-- end movie title -->
+        </div>
 
-              <div class="sign__group">
-                <label for="child" id="ticketTypeChild" class="sign__text"
-                  >Children</label
-                >
-                <select
-                  name="child"
-                  id="child"
-                  onchange="updateTotal('child')"
-                  class="sign__input"
-                >
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-              </div>
+        <div class="section__wrap">
+          <!-- movie title -->
+          <h5 class="section__text" id="customerPhone"></h5>
 
-              <div class="sign__group">
-                <label for="student" id="ticketTypeStudent" class="sign__text"
-                  >Student</label
-                >
-                <select
-                  name="student"
-                  id="student"
-                  onchange="updateTotal('student')"
-                  class="sign__input"
-                >
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-              </div>
+          <!-- end movie title -->
+        </div>
 
-              <div class="sign__group" id="totalPriceDiv">
-                <label type="text" class="section__title" id="totalPrice"
-                  >Total:
-                </label>
-              </div>
-            </div>
-            <!-- end price -->
-            <!-- price -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div>
-                <div class="accordion" id="accordion"></div>
+        <div class="section__wrap">
+          <!-- movie title -->
+          <h5 class="section__text" id="ticketNumber"></h5>
 
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-                <script src="js/bookingTimes.js"></script>
-              </div>
-            </div>
-            <!-- end price -->
-            <button
-              type="submit"
-              class="sign__btn"
-              value="Submit"
-              id="paymentButton"
-              onclick="saveStorage()"
-            >
-              Take me to payment
-            </button>
-          </div>
-        </form>
+          <!-- end movie title -->
+        </div>
+
+        <div class="section__wrap">
+          <!-- movie title -->
+          <h5 class="section__text" id="totalPrice"></h5>
+
+          <!-- end movie title -->
+        </div>
+
+
       </div>
     </div>
     <!-- end pricing -->
 
-    <!-- footer -->
+    <div class="section">
+      <div class="container">
+
+    <div class="col-12 col-md-6">
+      <div class="sign__group">
+
+        <h3 class="section__title">
+          Thank you for your purchase. You should receive a confirmation email shortly
+        </h3>
+
+      </div>
+
+      </div>
+    </div>
+
+      </div>
+
+
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -486,5 +409,9 @@
     <script src="js/photoswipe.min.js"></script>
     <script src="js/photoswipe-ui-default.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/bookingsDetail.js"></script>
+
+    <script src="js/payment/payment.js"></script>
+
   </body>
 </html>

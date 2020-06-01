@@ -1,5 +1,7 @@
 let list = [];
 let ids = [];
+let ratings = [];
+
 
 axios.get(`http://localhost:8080/movie/getAll`).then(
     data => {
@@ -7,15 +9,19 @@ axios.get(`http://localhost:8080/movie/getAll`).then(
             if (i.status!=="upcoming"){
                 continue;
             }
+            if (i.rating===null){
+                ratings.push("N/A");
+            } else{
+                ratings.push(i.rating)
+            }
             list.push(i.apiID);
             ids.push(i.id);
         }
-        showOnPage(list, ids);
+        showOnPage(list, ids, ratings);
     }
 )
 
-
-function showOnPage(list, ids){
+function showOnPage(list, ids, ratings){
     let tile = document.getElementById('movieDisplay')
     for(let i=0;i<list.length;i++){
         let movieTile = document.createElement('div');
@@ -43,7 +49,8 @@ function showOnPage(list, ids){
                     '<div class="card__wrap">'+
                     `<span class="card__rate"><i class="icon ion-ios-star"></i>${append.data.vote_average}</span>`+
                     '<ul class="card__list">'+
-                    `<li id="ageRestriction">${append.data.release_date}</li>`+
+                    `<li>${append.data.release_date}</li>`+
+                    `<li><a style="color: #ff5860;" id="ageRating" href="classifications.html">${ratings[i]}</a></li>`+
                     '</ul>'+
                     '</div>'+
                     '<div class="card__description">' +
@@ -57,6 +64,7 @@ function showOnPage(list, ids){
         )
     }
 }
+
 
 
 
