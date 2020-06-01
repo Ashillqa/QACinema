@@ -45,7 +45,8 @@ $(function () {
                     "/create-charge",
                     {email: email, token: token},
                     function (data) {
-                        alert(data.details);
+                        // alert(data.details);
+                        location.replace("paymentComplete.html");
                     }, 'json');
             }
         });
