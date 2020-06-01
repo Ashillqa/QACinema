@@ -157,7 +157,7 @@
 				<div class="col-12">
 					<div class="section__wrap">
 						<!-- section title -->
-						<h2 class="section__title">Locating us</h2>
+						<h2 class="section__title">Activities to complement your cinexperience!</h2>
 						<!-- end section title -->
 
 						<!-- breadcrumb -->
@@ -180,10 +180,42 @@
 			<div class="row">
 				<div class="col-12 col-md-6">
 					<div class="faq">
-						<h3 class="faq__title">Where are we?</h3>
-						<p class="faq__text">Currently we have one location open! you can find us at this location currently.</p>
-                      
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.140220305424!2d-0.10740898395720985!3d51.49229427963265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876049820df25c9%3A0xd83e10d4fdd092d7!2sCinema%20Museum!5e0!3m2!1sen!2suk!4v1590660730527!5m2!1sen!2suk" width="450" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+						<h3 class="faq__title">In house confectionery</h3>
+						<p class="faq__text">A sweet treat for a sweet movie</p>
+
+
+                        <div class ="w3-content w3-display-container">
+                            <img class ="mySlides" src="img/frontOfCinema.jpg" style="width:100%">
+                            <img class ="mySlides" src="img/QA-cinema-logo.png" style="width:100%">
+                            <img class ="mySlides" src="img/frontOfCinema.jpg" style="width:100%">
+
+                            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                        
+                        </div>
+                        
+                        
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+                        
+                        
                         
 						<p class="faq__text">Currently the cinema that we have open is in the Salford keys area! The map shows the location of the building, but your journey may be a little more complex than walking. If you have need for navigation, continue reading this page!</p>
 					</div>
