@@ -5,9 +5,7 @@ let ratings = [];
 axios.get(`http://localhost:8080/movie/getAll`).then(
     data => {
         for(let i of data.data){
-            if (i.status==="upcoming"){
-                continue;
-            }
+
             list.push(i.apiID);
             ids.push(i.id);
             if (i.rating===null){
