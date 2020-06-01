@@ -1,15 +1,15 @@
 const params = new URLSearchParams(window.location.search)
 
-function writeContent(apiID, status) {
+function writeContent(apiID, status, rating) {
     axios.get(`https://api.themoviedb.org/3/movie/${apiID}?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-US`).then(
         fill => {
             let parent=document.getElementById("movieInfo");
 
             let detailsChild=document.createElement("div");
 
-            let showTime = "";
+            let runTime = "";
             if (status!=="upcoming"){
-                showTime=`<li><span>Running time:</span> ${fill.data.runtime} min</li>`;
+                runTime=`<li><span>Running time:</span> ${fill.data.runtime} min</li>`;
             }
 
             detailsChild.className="col-10";
@@ -31,7 +31,7 @@ function writeContent(apiID, status) {
 
                               <ul class="card__list">
                                  <li><a style="color: #ff5860;" id="screens" href="screens.html">HD</a></li>
-                                 <li><a style="color: #ff5860;" id="ageRating" href="classifications.html"></a></li>
+                                 <li><a style="color: #ff5860;" id="ageRating" href="classifications.html">${rating}</a></li>
                               </ul>
                            </div>
 
@@ -39,7 +39,7 @@ function writeContent(apiID, status) {
                               <li><span>Genre:</span> 
                               <a href="#" id="Genres"></a>
                               <li><span>Release date:</span> ${fill.data.release_date}</li>
-                              ${showTime}
+                              ${runTime}
                               <li><span>Country:</span> <a href="#" id="Country"></a> </li>
                               <br>
                               <li><span>Director:</span> <a href="#" id="Director"></a> </li>
@@ -117,7 +117,6 @@ function dateSelect(dates) {
 function actorsRatingCountryDirector(title) {
     axios.get(`http://www.omdbapi.com/?apikey=367564e0&t=${title}`).then(
         write => {
-            document.getElementById("ageRating").innerHTML=` ${write.data.Rated}`
             document.getElementById("Country").innerHTML=` ${write.data.Country}`
             document.getElementById("Director").innerHTML=` ${write.data.Director}`
             document.getElementById("Actors").innerHTML=` ${write.data.Actors}`
@@ -139,7 +138,15 @@ function videoSource(apiID) {
 axios.get(`http://localhost:8080/movie/get/${params.get('id')}`).then(
     write => {
         let showTimes = [];
-        writeContent(write.data.apiID, write.data.status);
+        let rating;
+
+        if (write.data.rating===null){
+            rating = "N/A";
+        } else{
+            rating = write.data.rating;
+        }
+
+        writeContent(write.data.apiID, write.data.status, rating);
         videoSource(write.data.apiID);
 
         for (let i =0; i< write.data.showTimes.length; i++){
