@@ -58,6 +58,18 @@
       <version>2.3.5</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.stripe</groupId>
+      <artifactId>stripe-java</artifactId>
+      <version>7.26.0</version>
+    </dependency>
+
+    <!-- send email -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-mail</artifactId>
+    </dependency>
+
   </dependencies>
 
   <build>

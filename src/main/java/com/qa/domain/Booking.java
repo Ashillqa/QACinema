@@ -13,7 +13,9 @@ public class Booking {
     @GeneratedValue
     private Long id;
 
-    private Long movieId;
+    @ManyToOne(targetEntity = Movie.class, fetch = FetchType.EAGER)
+    private Movie movie;
+
     private String movieName;
     private String dateTime;
     private BigDecimal totalPrice;
@@ -24,8 +26,7 @@ public class Booking {
     private Integer childNr;
     private Integer studentNr;
 
-    public Booking(Long movieId, String movieName, String dateTime, BigDecimal totalPrice, String emailAddress, String phoneNumber, String customerName, Integer adultNr, Integer childNr, Integer studentNr) {
-        this.movieId = movieId;
+    public Booking(String movieName, String dateTime, BigDecimal totalPrice, String emailAddress, String phoneNumber, String customerName, Integer adultNr, Integer childNr, Integer studentNr) {
         this.movieName = movieName;
         this.dateTime = dateTime;
         this.totalPrice = totalPrice;
@@ -37,9 +38,8 @@ public class Booking {
         this.studentNr = studentNr;
     }
 
-    public Booking(Long id, Long movieId, String movieName, String dateTime, BigDecimal totalPrice, String emailAddress, String phoneNumber, String customerName, Integer adultNr, Integer childNr, Integer studentNr) {
+    public Booking(Long id, String movieName, String dateTime, BigDecimal totalPrice, String emailAddress, String phoneNumber, String customerName, Integer adultNr, Integer childNr, Integer studentNr) {
         this.id = id;
-        this.movieId = movieId;
         this.movieName = movieName;
         this.dateTime = dateTime;
         this.totalPrice = totalPrice;
@@ -54,12 +54,12 @@ public class Booking {
     public Booking() {
     }
 
-    public Long getMovieId() {
-        return movieId;
+    public Movie getMovie() {
+        return movie;
     }
 
-    public void setMovieId(Long movieId) {
-        this.movieId = movieId;
+    public void setMovie(Movie movieId) {
+        this.movie = movieId;
     }
 
     public String getMovieName() {
@@ -143,39 +143,12 @@ public class Booking {
     }
 
     @Override
-    public String toString() {
-        return "{\"id\":" + id + "," +
-                "\"movieId\":" + movieId + "," +
-                "\"movieName\":\"" + movieName + "\"," +
-                "\"dateTime\":\"" + dateTime + "\"," +
-                "\"totalPrice\":" + totalPrice + "," +
-                "\"emailAddress\":\"" + emailAddress + "\"," +
-                "\"phoneNumber\":\"" + phoneNumber + "\"," +
-                "\"customerName\":\"" + customerName + "\"," +
-                "\"adultNr\":" + adultNr + "," +
-                "\"childNr\":" + childNr + "," +
-                "\"studentNr\":" + studentNr + "}";
-    }
-
-    public String listToJsonString(List<Booking> bookingList) {
-        StringBuilder stringBuilder = new StringBuilder("[");
-
-        for (Booking value : bookingList) {
-            stringBuilder.append(value.toString());
-        }
-
-        stringBuilder.append("]");
-
-        return stringBuilder.toString();
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Booking booking = (Booking) o;
         return Objects.equals(id, booking.id) &&
-                Objects.equals(movieId, booking.movieId) &&
+                Objects.equals(movie, booking.movie) &&
                 Objects.equals(movieName, booking.movieName) &&
                 Objects.equals(dateTime, booking.dateTime) &&
                 Objects.equals(totalPrice, booking.totalPrice) &&
@@ -189,6 +162,6 @@ public class Booking {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, movieId, movieName, dateTime, totalPrice, emailAddress, phoneNumber, customerName, adultNr, childNr, studentNr);
+        return Objects.hash(id, movie, movieName, dateTime, totalPrice, emailAddress, phoneNumber, customerName, adultNr, childNr, studentNr);
     }
 }

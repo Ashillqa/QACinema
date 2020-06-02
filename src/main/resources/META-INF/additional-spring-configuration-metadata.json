@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "stripe.keys.public",
+      "type": "java.lang.String",
+      "description": "Description for stripe.keys.public."
+    },
+    {
+      "name": "stripe.keys.secret",
+      "type": "java.lang.String",
+      "description": "Description for stripe.keys.secret."
+    }
+  ] }

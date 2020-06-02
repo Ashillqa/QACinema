@@ -29,117 +29,136 @@
 
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-	<meta name="author" content="Dmitry Volkov">
-	<title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
+	<meta name="author" content="Team Jobs">
+	<title>About</title>
+    
+    <style>
+    
+        li{
+            color: rgba(255,255,255,0.7);
+        }
+        
+        th {
+            color: rgba(255,255,255,0.7);
+            text-align: right; 
+        }
+        
+        td {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .section__text2 {
+            color: rgb(255,0,0);
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 25px;
+            font-family: 'Open Sans', sans-serif;
+            letter-spacing: 0.2px;
+}
+        
+    </style>
 
 </head>
 <body class="body">
-	
-	<!-- header -->
-	<header class="header">
-		<div class="header__wrap">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<div class="header__content">
-							<!-- header logo -->
-							<a href="index.html" class="header__logo">
-								<img src="img/logo.svg" alt="">
-							</a>
-							<!-- end header logo -->
 
-							<!-- header nav -->
-							<ul class="header__nav">
-								<!-- dropdown -->
-								<li class="header__nav-item">
-									<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+<!-- header -->
+<header class="header">
+	<div class="header__wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="header__content">
+						<!-- header logo -->
+						<a href="index.html" class="header__logo">
+							<img src="img/QA-cinema-logo2.png" alt="">
+						</a>
+						<!-- end header logo -->
 
-									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
-										<li><a href="index.html">Home slideshow bg</a></li>
-										<li><a href="index2.html">Home static bg</a></li>
-									</ul>
-								</li>
-								<!-- end dropdown -->
+						<!-- header nav -->
+						<ul class="header__nav">
 
-								<!-- dropdown -->
-								<li class="header__nav-item">
-									<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
+							<li class="header__nav-item">
+								<a href="index.html" class="header__nav-link">Home</a>
+							</li>
 
-									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
-										<li><a href="catalog1.html">Catalog Grid</a></li>
-										<li><a href="gallery.html">Catalog List</a></li>
-										<li><a href="details1.html">Details Movie</a></li>
-										<li><a href="details2.html">Details TV Series</a></li>
-									</ul>
-								</li>
-								<!-- end dropdown -->
+							<!-- dropdown -->
+							<li class="header__nav-item">
+								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
 
-								<li class="header__nav-item">
-									<a href="pricing.html" class="header__nav-link">Pricing Plan</a>
-								</li>
+								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
+									<li><a href="gallery.html">Showing</a></li>
+									<li><a href="comingSoon.html">Coming Soon</a></li>
+								</ul>
+							</li>
+							<!-- end dropdown -->
 
-								<li class="header__nav-item">
-									<a href="faq.html" class="header__nav-link">Help</a>
-								</li>
+							<li class="header__nav-item">
+								<a href="screens.html" class="header__nav-link">Screens</a>
+							</li>
 
-								<!-- dropdown -->
-								<li class="dropdown header__nav-item">
-									<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
+							<!--dropdown-->
+							<li class="header__nav-item">
+								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planning Your Trip</a>
 
-									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-										<li><a href="about.html">About</a></li>
-										<li><a href="signin.html">Sign In</a></li>
-										<li><a href="signup.html">Sign Up</a></li>
-										<li><a href="404.html">404 Page</a></li>
-									</ul>
-								</li>
-								<!-- end dropdown -->
-							</ul>
-							<!-- end header nav -->
+								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog1">
+									<li><a href="gettingHere.html">Getting Here</a></li>
+									<li><a href="#">What To Do</a></li>
+								</ul>
+							</li>
+							<!-- end dropdown -->
 
-							<!-- header auth -->
-							<div class="header__auth">
-								<button class="header__search-btn" type="button">
-									<i class="icon ion-ios-search"></i>
-								</button>
+							<!-- dropdown -->
+							<li class="dropdown header__nav-item">
+								<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
 
-								<a href="signin.html" class="header__sign-in">
-									<i class="icon ion-ios-log-in"></i>
-									<span>sign in</span>
-								</a>
-							</div>
-							<!-- end header auth -->
+								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
+									<li><a href="about.html">About</a></li>
+									<li><a href="forum.html">Forum</a></li>
+								</ul>
+							</li>
+							<!-- end dropdown -->
+						</ul>
+						<!-- end header nav -->
 
-							<!-- header menu btn -->
-							<button class="header__btn" type="button">
-								<span></span>
-								<span></span>
-								<span></span>
+						<!-- header auth -->
+						<div class="header__auth">
+							<button class="header__search-btn" type="button">
+								<i class="icon ion-ios-search"></i>
 							</button>
-							<!-- end header menu btn -->
 						</div>
+						<!-- end header auth -->
+
+						<!-- header menu btn -->
+						<button class="header__btn" type="button">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+						<!-- end header menu btn -->
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<!-- header search -->
-		<form action="#" class="header__search">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<div class="header__search-content">
-							<input type="text" placeholder="Search for a movie, TV Series that you are looking for">
-
-							<button type="button">search</button>
-						</div>
+	<!-- header search -->
+	<form action="#" class="header__search">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="header__search-content">
+						<label for="searchBox"></label>
+						<input type="text" placeholder="Search Term" id="searchBox">
+						<button type="button" id="searchButton">search</button>
+						<script src="js/search/search.js"></script>
 					</div>
 				</div>
 			</div>
-		</form>
-		<!-- end header search -->
-	</header>
-	<!-- end header -->
+		</div>
+	</form>
+	<!-- end header search -->
+</header>
+<!-- end header -->
 
 	<!-- page title -->
 	<section class="section section--first section--bg" data-bg="img/section/section.jpg">
@@ -168,26 +187,83 @@
 	<section class="section">
 		<div class="container">
 			<div class="row">
-				<!-- section title -->
+                
+                <!-- section title -->
 				<div class="col-12">
-					<h2 class="section__title"><b>FLIXGO</b> – Best Place for Movies</h2>
+					<h2 class="section__title"><b>Operating Hours</b> – We'd love to see you!</h2>
 				</div>
 				<!-- end section title -->
 
 				<!-- section text -->
 				<div class="col-12">
-					<p class="section__text">It is a long <b>established</b> fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.</p>
+					<p class="section__text2">Please note, these times are unavailable due to the Covid19 Epidemic of 2020. We will notify our customers as soon as it is safe to continue normal operations along these times! We thank you for your understanding, as keeping our clients safe is our number one priority, along with providing the best possible cinema experience for our customers. 
+                    </p>
+                                        
+                    <table>
+                        <tr><th>Friday: </th><td>&nbsp 1:30pm - 12pm</td></tr>
+                        <tr><th>Saturday: </th><td>&nbsp 1:30am - 12pm</td></tr>
+                        <tr><th>Sunday: </th><td>&nbsp 1:30am - 12pm</td></tr>
 
-					<p class="section__text section__text--last-with-margin">'Content here, content here', making it look like <a href="#">readable</a> English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                    </table>
+                    <p></p>
+                    
+                    <p class="section__text section__text--last-with-margin">Remember that these times are a guideline, and may be subject to change in the event of special events and movie premiers.</p>
+				
+
 				</div>
 				<!-- end section text -->
+				<!-- section title -->
+				<div class="col-12">
+					<h2 class="section__title"><b>QACinema</b> – A Team Jobs Production</h2>
+				</div>
+				<!-- end section title -->
+
+				<!-- section text -->
+				<div class="col-12">
+					<p class="section__text">QA Cinema was developed by a QA Consultancy team, under the handle "Team Jobs" named after Steve Jobs. This team is comprised of five keen developers!
+                    </p>
+                    
+                  <ul>
+                        <li>Ring, Korbinian: Back-end power house and tester</li>
+                        <li>Williams, David: Back-end beast and Jira project overseer</li>
+                        <li>Siyamachira, Tawanda: Front end and logo/artist extrodinaire</li>
+                        <li>Pathak, Ashill: Eager back end builder and front end designer</li>
+                        <li>Burt, Matthew: Front end designer and HTML Handler</li>
+                    </ul> 
+                    <p></p>
+                    
+                    <p class="section__text section__text--last-with-margin"> This project is this teams first team project! Our work will only improve in the future! If you have any feedback, please get in touch via our contact information! </p>
+				
+
+				</div>
+				<!-- end section text -->
+                
+                                <!-- section title -->
+				<div class="col-12">
+					<h2 class="section__title"><b>Find us on Twitter!</b> – Keeping up with the QACinema family</h2>
+				</div>
+				<!-- end section title -->
+
+				<!-- section text -->
+				<div class="col-12">
+					<p class="section__text">Please note, these times are unavailable due to the Covid19 Epidemic of 2020. We will notify our customers as soon as it is safe to continue normal operations along these times! We thank you for your understanding, as keeping our clients safe is our number one priority, along with providing the best possible cinema experience for our customers. 
+                    </p>
+                
+                    <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/QACinema2?ref_src=twsrc%5Etfw">Tweets by QACinema2</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+                    
+                    <p class="section__text section__text--last-with-margin">Remember that these times are a guideline, and may be subject to change in the event of special events and movie premiers.</p>
+				
+
+				</div>
+				<!-- end section text -->
+                
 
 				<!-- feature -->
 				<div class="col-12 col-md-6 col-lg-4">
 					<div class="feature">
 						<i class="icon ion-ios-tv feature__icon"></i>
 						<h3 class="feature__title">Ultra HD</h3>
-						<p class="feature__text">If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+						<p class="feature__text">Watch your favorite movies in ULTRA HD! This is the future of cinema viewing experiences, see movies you love like never before.</p>
 					</div>
 				</div>
 				<!-- end feature -->
@@ -197,37 +273,7 @@
 					<div class="feature">
 						<i class="icon ion-ios-film feature__icon"></i>
 						<h3 class="feature__title">Film</h3>
-						<p class="feature__text">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first.</p>
-					</div>
-				</div>
-				<!-- end feature -->
-
-				<!-- feature -->
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="feature">
-						<i class="icon ion-ios-trophy feature__icon"></i>
-						<h3 class="feature__title">Awards</h3>
-						<p class="feature__text">It to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining.</p>
-					</div>
-				</div>
-				<!-- end feature -->
-
-				<!-- feature -->
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="feature">
-						<i class="icon ion-ios-notifications feature__icon"></i>
-						<h3 class="feature__title">Notifications</h3>
-						<p class="feature__text">Various versions have evolved over the years, sometimes by accident, sometimes on purpose.</p>
-					</div>
-				</div>
-				<!-- end feature -->
-
-				<!-- feature -->
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="feature">
-						<i class="icon ion-ios-rocket feature__icon"></i>
-						<h3 class="feature__title">Rocket</h3>
-						<p class="feature__text">It to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+						<p class="feature__text">Fresh Box office hits and releases, available at our cinemas near you!</p>
 					</div>
 				</div>
 				<!-- end feature -->
@@ -237,7 +283,7 @@
 					<div class="feature">
 						<i class="icon ion-ios-globe feature__icon"></i>
 						<h3 class="feature__title">Multi Language Subtitles </h3>
-						<p class="feature__text">Various versions have evolved over the years, sometimes by accident, sometimes on purpose.</p>
+						<p class="feature__text">As standard, we have movies with subtitles available at certain screeings. <i>*Check booking for subtitle availability</i> </p>
 					</div>
 				</div>
 				<!-- end feature -->
@@ -245,50 +291,8 @@
 		</div>
 	</section>
 	<!-- end about -->
+    
 
-	<!-- how it works -->
-	<section class="section section--dark">
-		<div class="container">
-			<div class="row">
-				<!-- section title -->
-				<div class="col-12">
-					<h2 class="section__title section__title--no-margin">How it works?</h2>
-				</div>
-				<!-- end section title -->
-
-				<!-- how box -->
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="how">
-						<span class="how__number">01</span>
-						<h3 class="how__title">Create an account</h3>
-						<p class="how__text">It has never been an issue to find an old movie or TV show on the internet. However, this is not the case with the new releases.</p>
-					</div>
-				</div>
-				<!-- ebd how box -->
-
-				<!-- how box -->
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="how">
-						<span class="how__number">02</span>
-						<h3 class="how__title">Choose your Plan</h3>
-						<p class="how__text">It has never been an issue to find an old movie or TV show on the internet. However, this is not the case with the new releases.</p>
-					</div>
-				</div>
-				<!-- ebd how box -->
-
-				<!-- how box -->
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="how">
-						<span class="how__number">03</span>
-						<h3 class="how__title">Enjoy MovieGo</h3>
-						<p class="how__text">It has never been an issue to find an old movie or TV show on the internet. However, this is not the case with the new releases.</p>
-					</div>
-				</div>
-				<!-- ebd how box -->
-			</div>
-		</div>
-	</section>
-	<!-- end how it works -->
 
 	<!-- partners -->
 	<section class="section">
@@ -302,56 +306,18 @@
 
 				<!-- section text -->
 				<div class="col-12">
-					<p class="section__text section__text--last-with-margin">It is a long <b>established</b> fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.</p>
+					<p class="section__text section__text--last-with-margin">QACinemas does not work alone! As part of the QA family, we are partenered with all QA entities!</p>
 				</div>
 				<!-- end section text -->
 
 				<!-- partner -->
 				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
 					<a href="#" class="partner">
-						<img src="img/partners/themeforest-light-background.png" alt="" class="partner__img">
+						<img src="img/partners/QAlogo.png" alt="" class="partner__img ">
 					</a>
 				</div>
 				<!-- end partner -->
 
-				<!-- partner -->
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-					<a href="#" class="partner">
-						<img src="img/partners/audiojungle-light-background.png" alt="" class="partner__img">
-					</a>
-				</div>
-				<!-- end partner -->
-
-				<!-- partner -->
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-					<a href="#" class="partner">
-						<img src="img/partners/codecanyon-light-background.png" alt="" class="partner__img">
-					</a>
-				</div>
-				<!-- end partner -->
-
-				<!-- partner -->
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-					<a href="#" class="partner">
-						<img src="img/partners/photodune-light-background.png" alt="" class="partner__img">
-					</a>
-				</div>
-				<!-- end partner -->
-
-				<!-- partner -->
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-					<a href="#" class="partner">
-						<img src="img/partners/activeden-light-background.png" alt="" class="partner__img">
-					</a>
-				</div>
-				<!-- end partner -->
-
-				<!-- partner -->
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-					<a href="#" class="partner">
-						<img src="img/partners/3docean-light-background.png" alt="" class="partner__img">
-					</a>
-				</div>
 				<!-- end partner -->
 			</div>
 		</div>
@@ -398,8 +364,8 @@
 				<div class="col-12 col-sm-4 col-md-3">
 					<h6 class="footer__title">Contact</h6>
 					<ul class="footer__list">
-						<li><a href="tel:+18002345678">+1 (800) 234-5678</a></li>
-						<li><a href="mailto:support@moviego.com">support@flixgo.com</a></li>
+						<li><a href="contactUs.html">0161 393 2271</a></li>
+						<li><a href="contactUs.html">Ashill.Pathak@academytrainee.com</a></li>
 					</ul>
 					<ul class="footer__social">
 						<li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>

@@ -29,7 +29,7 @@
     <link
       rel="icon"
       type="image/png"
-      href="icon/favicon-32x32.png"
+      href="img/QA-cinema-logo2.png"
       sizes="32x32"
     />
     <link rel="apple-touch-icon" href="icon/favicon-32x32.png" />
@@ -52,7 +52,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="Dmitry Volkov" />
-    <title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
+    <title>QA Cinema | Booking</title>
   </head>
   <body class="body">
   <!-- header -->
@@ -142,9 +142,9 @@
           <div class="col-12">
             <div class="header__search-content">
               <label for="searchBox"></label>
-              <input type="text" placeholder="Search for a movie, TV Series that you are looking for" id="searchBox">
-
-              <button type="button">search</button>
+              <input type="text" placeholder="Search Term" id="searchBox">
+              <button type="button" id="searchButton">search</button>
+              <script src="js/search/search.js"></script>
             </div>
           </div>
         </div>
@@ -164,14 +164,14 @@
           <div class="col-12">
             <div class="section__wrap">
               <!-- section title -->
-              <h2 class="section__title">Pricing</h2>
+              <h2 class="section__title">Booking</h2>
               <!-- end section title -->
 
               <!-- breadcrumb -->
               <ul class="breadcrumb">
                 <li class="breadcrumb__item"><a href="#">Home</a></li>
                 <li class="breadcrumb__item breadcrumb__item--active">
-                  Pricing
+                  Booking
                 </li>
               </ul>
               <!-- end breadcrumb -->
@@ -191,11 +191,19 @@
 
         <div class="section__wrap">
           <!-- movie title -->
-          <h2 class="section__title" id="movieName">Movie Name</h2>
+          <h2 class="section__title" id="movieName"></h2>
+
           <!-- end movie title -->
         </div>
 
-        <form action="#" class="sign__form2">
+        <div class="section__wrap">
+          <!-- movie title -->
+          <h2 class="section__title" id="movieTime"></h2>
+
+          <!-- end movie title -->
+        </div>
+
+        <form action="payment.html" class="sign__form2">
           <div class="row">
             <!-- Customer Name -->
             <div class="col-12 col-md-6 col-lg-4">
@@ -233,7 +241,7 @@
             <!-- price -->
             <div class="col-12 col-md-6 col-lg-4">
               <div class="sign__group">
-                <label for="adult" id="ticketTypes" class="sign__text"
+                <label for="adult" id="ticketTypeAdult" class="sign__text"
                   >Adult</label
                 >
                 <select
@@ -257,7 +265,7 @@
               </div>
 
               <div class="sign__group">
-                <label for="child" id="ticketTypes" class="sign__text"
+                <label for="child" id="ticketTypeChild" class="sign__text"
                   >Children</label
                 >
                 <select
@@ -281,7 +289,7 @@
               </div>
 
               <div class="sign__group">
-                <label for="student" id="ticketTypes" class="sign__text"
+                <label for="student" id="ticketTypeStudent" class="sign__text"
                   >Student</label
                 >
                 <select
@@ -304,7 +312,7 @@
                 </select>
               </div>
 
-              <div class="sign__group" id="totalPrice">
+              <div class="sign__group" id="totalPriceDiv">
                 <label type="text" class="section__title" id="totalPrice"
                   >Total:
                 </label>
@@ -317,11 +325,17 @@
                 <div class="accordion" id="accordion"></div>
 
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-                <script src="js/details/details.js"></script>
+                <script src="js/bookingTimes.js"></script>
               </div>
             </div>
             <!-- end price -->
-            <button type="submit" class="sign__btn" value="Submit">
+            <button
+              type="submit"
+              class="sign__btn"
+              value="Submit"
+              id="paymentButton"
+              onclick="saveStorage()"
+            >
               Take me to payment
             </button>
           </div>
@@ -329,201 +343,6 @@
       </div>
     </div>
     <!-- end pricing -->
-
-    <!-- features -->
-    <section class="section section--dark">
-      <div class="container">
-        <div class="row">
-          <!-- section title -->
-          <div class="col-12">
-            <h2 class="section__title section__title--no-margin">
-              Our Features
-            </h2>
-          </div>
-          <!-- end section title -->
-
-          <!-- feature -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="feature">
-              <i class="icon ion-ios-tv feature__icon"></i>
-              <h3 class="feature__title">Ultra HD</h3>
-              <p class="feature__text">
-                If you are going to use a passage of Lorem Ipsum, you need to be
-                sure there isn't anything embarrassing hidden in the middle of
-                text.
-              </p>
-            </div>
-          </div>
-          <!-- end feature -->
-
-          <!-- feature -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="feature">
-              <i class="icon ion-ios-film feature__icon"></i>
-              <h3 class="feature__title">Film</h3>
-              <p class="feature__text">
-                All the Lorem Ipsum generators on the Internet tend to repeat
-                predefined chunks as necessary, making this the first.
-              </p>
-            </div>
-          </div>
-          <!-- end feature -->
-
-          <!-- feature -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="feature">
-              <i class="icon ion-ios-trophy feature__icon"></i>
-              <h3 class="feature__title">Awards</h3>
-              <p class="feature__text">
-                It to make a type specimen book. It has survived not only five
-                centuries, but also the leap into electronic typesetting,
-                remaining.
-              </p>
-            </div>
-          </div>
-          <!-- end feature -->
-
-          <!-- feature -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="feature">
-              <i class="icon ion-ios-notifications feature__icon"></i>
-              <h3 class="feature__title">Notifications</h3>
-              <p class="feature__text">
-                Various versions have evolved over the years, sometimes by
-                accident, sometimes on purpose.
-              </p>
-            </div>
-          </div>
-          <!-- end feature -->
-
-          <!-- feature -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="feature">
-              <i class="icon ion-ios-rocket feature__icon"></i>
-              <h3 class="feature__title">Rocket</h3>
-              <p class="feature__text">
-                It to make a type specimen book. It has survived not only five
-                centuries, but also the leap into electronic typesetting.
-              </p>
-            </div>
-          </div>
-          <!-- end feature -->
-
-          <!-- feature -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="feature">
-              <i class="icon ion-ios-globe feature__icon"></i>
-              <h3 class="feature__title">Multi Language Subtitles</h3>
-              <p class="feature__text">
-                Various versions have evolved over the years, sometimes by
-                accident, sometimes on purpose.
-              </p>
-            </div>
-          </div>
-          <!-- end feature -->
-        </div>
-      </div>
-    </section>
-    <!-- end features -->
-
-    <!-- partners -->
-    <section class="section">
-      <div class="container">
-        <div class="row">
-          <!-- section title -->
-          <div class="col-12">
-            <h2 class="section__title section__title--no-margin">
-              Our Partners
-            </h2>
-          </div>
-          <!-- end section title -->
-
-          <!-- section text -->
-          <div class="col-12">
-            <p class="section__text section__text--last-with-margin">
-              It is a long <b>established</b> fact that a reader will be
-              distracted by the readable content of a page when looking at its
-              layout. The point of using Lorem Ipsum is that it has a
-              more-or-less normal distribution of letters, as opposed to using.
-            </p>
-          </div>
-          <!-- end section text -->
-
-          <!-- partner -->
-          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-            <a href="#" class="partner">
-              <img
-                src="img/partners/themeforest-light-background.png"
-                alt=""
-                class="partner__img"
-              />
-            </a>
-          </div>
-          <!-- end partner -->
-
-          <!-- partner -->
-          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-            <a href="#" class="partner">
-              <img
-                src="img/partners/audiojungle-light-background.png"
-                alt=""
-                class="partner__img"
-              />
-            </a>
-          </div>
-          <!-- end partner -->
-
-          <!-- partner -->
-          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-            <a href="#" class="partner">
-              <img
-                src="img/partners/codecanyon-light-background.png"
-                alt=""
-                class="partner__img"
-              />
-            </a>
-          </div>
-          <!-- end partner -->
-
-          <!-- partner -->
-          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-            <a href="#" class="partner">
-              <img
-                src="img/partners/photodune-light-background.png"
-                alt=""
-                class="partner__img"
-              />
-            </a>
-          </div>
-          <!-- end partner -->
-
-          <!-- partner -->
-          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-            <a href="#" class="partner">
-              <img
-                src="img/partners/activeden-light-background.png"
-                alt=""
-                class="partner__img"
-              />
-            </a>
-          </div>
-          <!-- end partner -->
-
-          <!-- partner -->
-          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-            <a href="#" class="partner">
-              <img
-                src="img/partners/3docean-light-background.png"
-                alt=""
-                class="partner__img"
-              />
-            </a>
-          </div>
-          <!-- end partner -->
-        </div>
-      </div>
-    </section>
-    <!-- end partners -->
 
     <!-- footer -->
     <footer class="footer">
@@ -571,10 +390,8 @@
           <div class="col-12 col-sm-4 col-md-3">
             <h6 class="footer__title">Contact</h6>
             <ul class="footer__list">
-              <li><a href="tel:+18002345678">+1 (800) 234-5678</a></li>
-              <li>
-                <a href="mailto:support@moviego.com">support@flixgo.com</a>
-              </li>
+              <li><a href="contactUs.html">0161 393 2271</a></li>
+						<li><a href="contactUs.html">Ashill.Pathak@academytrainee.com</a></li>
             </ul>
             <ul class="footer__social">
               <li class="facebook">
@@ -615,6 +432,7 @@
     <!-- end footer -->
 
     <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
@@ -627,6 +445,5 @@
     <script src="js/photoswipe.min.js"></script>
     <script src="js/photoswipe-ui-default.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/ticketCalculation.js"></script>
   </body>
 </html>
