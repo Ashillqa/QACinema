@@ -12,7 +12,7 @@ axios.get(`http://localhost:8080/movie/getAll`).then(
             list.push(i.apiID);
             ids.push(i.id);
             if (i.rating===null){
-                ratings.push("N/A");
+                ratings.push("TBC");
             } else{
                 ratings.push(i.rating)
             }

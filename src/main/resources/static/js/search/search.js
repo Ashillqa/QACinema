@@ -6,3 +6,9 @@ function search(){
 }
 
 searchButton.addEventListener("click",search);
+
+searchBox.addEventListener("keypress",function(event){
+    if (event.key  === "Enter") {
+        search();
+    }
+})

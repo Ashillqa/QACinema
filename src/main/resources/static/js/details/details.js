@@ -140,7 +140,7 @@ axios.get(`http://localhost:8080/movie/get/${params.get('id')}`).then(
         let rating;
 
         if (write.data.rating===null){
-            rating = "N/A";
+            rating = "TBC";
         } else{
             rating = write.data.rating;
         }
