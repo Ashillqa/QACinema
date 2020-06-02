@@ -33,6 +33,7 @@ axios.get(`http://${window.location.href.toString().split("/")[2]}/movie/getAll`
         }
         showOnPage(list, ids, ratings);
         showFeatured(featuredList, featuredIds, featuredRatings);
+
     }
 )
 
@@ -135,6 +136,7 @@ function applyFilter (){
             ld[i].style.display= 'none';
         }
     }
+    checkEmpty();
 
 }
 
@@ -180,6 +182,32 @@ function showFeatured(list, ids, ratings) {
     showMore.className = "col-12"
     showMore.innerHTML = `<a href="gallery.html" class="section__btn">Show more</a>`
     div.appendChild(showMore);
+}
+
+function didntFind(state) {
+    if (state==="show"){
+        console.log("we empty");
+    } else {
+        console.log("there it is");
+    }
+}
+
+function checkEmpty(){
+    let displayed = "";
+    let movies2 = document.getElementById('movieDisplay');
+    displayed = movies2.getElementsByClassName("col-6 col-sm-12 col-lg-6");
+    if (displayed[0]===undefined){
+        didntFind("show");
+        return false;
+    }
+    for (let i = 0; i<displayed.length;i++){
+        if (displayed[i].style.display!=="none"){
+            didntFind("hide");
+            return true;
+        }
+    }
+    didntFind("show");
+    return false;
 }
 
 document.getElementById("filter__years").addEventListener("mouseup",applyFilter);
