@@ -369,26 +369,80 @@
                         
                         <p class="faq__text">A wonderful, romantic spot to visit with your significant other, before you come visit us! Make an evening of it, with cinema, french food and live jazz acts!</p>
 					</div>
-
                  
-
-				</div>
-                
-                		<div class="col-12 col-md-6">
-					<div class="faq">
+                 		<div class="faq">
 						<h3 class="faq__title">Prince of Wales</h3>
-						<p class="faq__text">Pint and pictures, anyone?</p>
-                        
-                                            
+						<p class="faq__text">Pints and a picture?</p>
+
+                        <!-- start slideshow -->
                         <div class ="w3-content w3-display-container">
-                            <img class ="mySlides3" src="img/tesco01.jpg" style="width:100%">
+                            <img class ="mySlides6" src="img/pWales01.jpg" style="width:100%">
+                            <img class ="mySlides6" src="img/pWales02.jpg" style="width:100%">
+                            <img class ="mySlides6" src="img/pWales03.jpg" style="width:100%">                   
                         </div>
      
+                        <script>
+                            var myIndex = 0;
+                            carousel6();
+
+                            function carousel6() {
+                            var i;
+                            var x = document.getElementsByClassName("mySlides6");
+                            
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";  
+                            }
+                            
+                            myIndex++;
+                            if (myIndex > x.length) {myIndex = 1}    
+                                x[myIndex-1].style.display = "block";  
+                                setTimeout(carousel6, 2000); // Change image every 2 seconds
+                            }
+                        </script>
 
                         <!-- end slideshow -->
                         
+                        
+                        <p class="faq__text">A wonderful, romantic spot to visit with your significant other, before you come visit us! Make an evening of it, with cinema, french food and live jazz acts!</p>
+					</div>
 
+				</div>
+                
+                <div class="col-12 col-md-6">
+				  <div class="faq">
+				        <h3 class="faq__title">Kennington Bed and Breakfast</h3>
+						          <p class="faq__text">Travelling to visit us?</p>
+                                       <!-- start slideshow -->
+                        <div class ="w3-content w3-display-container">
+                            <img class ="mySlides5" src="img/bnb01.jpg" style="width:100%">
+                            <img class ="mySlides5" src="img/bnb02.jpg" style="width:100%">
+                            <img class ="mySlides5" src="img/bnb03.jpg" style="width:100%">                   
+                        </div>
+     
+                        <script>
+                            var myIndex = 0;
+                            carousel5();
+
+                            function carousel5() {
+                            var i;
+                            var x = document.getElementsByClassName("mySlides5");
+                            
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";  
+                            }
+                            
+                            myIndex++;
+                            if (myIndex > x.length) {myIndex = 1}    
+                                x[myIndex-1].style.display = "block";  
+                                setTimeout(carousel5, 2000); // Change image every 2 seconds
+                            }
+                        </script>
+
+                        <!-- end slideshow -->
+                       <p class="faq__text">A peaceful hideaway to rest, within walking distance of the cinema! Catch a movie and a rest!</p>
+                    
                     </div>
+                    
 			</div>
      
 		</div>
