@@ -9,8 +9,9 @@ function sendEmail() {
     let info = `{"email": "${email}", "username": "${username}", "subject": "${subject}", "body": "${feedback}"}`;
 
     console.log(info);
-    axios.post("http://localhost:8080/sendEmail", JSON.parse(info)).then(res =>  {
-            alert("Thank you for your feedback");
+    axios.post(`http://${window.location.href.toString().split("/")[2]}/sendEmail`, JSON.parse(info)).then(res =>  {
+        alert("Thank you for your feedback");
             console.log(res);
+            // location.replace("paymentComplete.html");
         });
 }

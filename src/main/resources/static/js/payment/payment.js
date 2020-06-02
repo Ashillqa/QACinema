@@ -62,7 +62,7 @@ function postBookingDetails() {
     "adultNr": ${sessionStorage.getItem('adult')}, "childNr": ${sessionStorage.getItem('child')}, "studentNr": ${sessionStorage.getItem('student')}}`;
 
 
-    axios.post(`http://localhost:8080/booking/createBooking`, JSON.parse(bookingDetails)).then(
+    axios.post(`http://${window.location.href.toString().split("/")[2]}/booking/createBooking`, JSON.parse(bookingDetails)).then(
         res =>{
             console.log(res);
         }

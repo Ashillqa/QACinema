@@ -2,7 +2,7 @@ let list = [];
 let ids = [];
 let ratings = [];
 
-axios.get(`http://localhost:8080/movie/getAll`).then(
+axios.get(`http://${window.location.href.toString().split("/")[2]}/movie/getAll`).then(
     data => {
         for(let i of data.data){
 
@@ -12,7 +12,7 @@ axios.get(`http://localhost:8080/movie/getAll`).then(
             list.push(i.apiID);
             ids.push(i.id);
             if (i.rating===null){
-                ratings.push("N/A");
+                ratings.push("TBC");
             } else{
                 ratings.push(i.rating)
             }
@@ -47,7 +47,7 @@ function showOnPage(list, ids, ratings){
                     '</div>'+
                     '<div class="col-12 col-sm-8">'+
                     '<div class="card__content">'+
-                    `<h3 class="card__title"><a id="title" href="#">${append.data.title}</a></h3>`+
+                    `<h3 class="card__title"><a id="title" href="details2.html?title=${append.data.title}&id=${ids[i]}">${append.data.title}</a></h3>`+
                     '<span class="card__category">'+
                     genres +
                     '</span>'+
@@ -89,6 +89,9 @@ function applyFilter (){
 
 
     function genreMatch(Element){
+        if (genreSelect==="select genre"){
+            return true;
+        }
         for (let i=0;i<Element.length;i++){
             if(Element[i].innerHTML.toLowerCase().indexOf(genreSelect)>-1){
                 return true;
