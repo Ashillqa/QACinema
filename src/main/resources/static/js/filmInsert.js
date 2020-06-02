@@ -1,7 +1,7 @@
 let list = [];
 let ids = [];
 
-axios.get(`http://localhost:8080/movie/getAll`).then(
+axios.get(`http://${window.location.href.toString().split("/")[2]}/movie/getAll`).then(
         data => {
             for(let i of data.data){
                 if (i.status==="upcoming"){
