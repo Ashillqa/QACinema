@@ -76,17 +76,21 @@
 
 								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog1">
 									<li><a href="gettingHere.html">Getting Here</a></li>
-									<li><a href="#">What To Do</a></li>
+									<li><a href="placesToGo.html">What To Do</a></li>
 								</ul>
 							</li>
 							<!-- end dropdown -->
+
+							<li class="header__nav-item">
+								<a href="about.html" class="header__nav-link">About</a>
+							</li>
 
 							<!-- dropdown -->
 							<li class="dropdown header__nav-item">
 								<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
 
 								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-									<li><a href="about.html">About</a></li>
+									<li><a href="contactUs.html">Contact Us</a></li>
 									<li><a href="forum.html">Forum</a></li>
 								</ul>
 							</li>
@@ -122,7 +126,7 @@
 				<div class="col-12">
 					<div class="header__search-content">
 						<label for="searchBox"></label>
-						<input type="text" placeholder="Search Term" id="searchBox">
+						<input type="text" placeholder="Search Term" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Term'" id="searchBox">
 						<button type="button" id="searchButton">search</button>
 						<script src="js/search/search.js"></script>
 					</div>
