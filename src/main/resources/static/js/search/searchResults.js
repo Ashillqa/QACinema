@@ -3,7 +3,6 @@ let ids = [];
 let ratings = [];
 const params = new URLSearchParams(window.location.search)
 
-
 axios.get(`http://${window.location.href.toString().split("/")[2]}/movie/getAll`).then(
     data => {
         for(let i of data.data){
