@@ -1,6 +1,6 @@
 package com.qa.controller;
 
-import com.qa.commons.Response;
+import com.qa.domain.Response;
 import com.qa.service.StripeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
