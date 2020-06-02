@@ -48,7 +48,7 @@ document.getElementById("movieTime").textContent = params.get('time');
 
 
 function dateSelect(dates) {
-    let bigParent = document.getElementById("accordion");
+    let bigParent = document.getElementById("mCSB_1_container");
     let counter = 0;
     dates.sort();
 

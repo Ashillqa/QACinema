@@ -65,7 +65,7 @@ function writeContent(apiID, status, rating) {
 }
 
 function dateSelect(dates) {
-    let bigParent = document.getElementById("accordion");
+    let bigParent = document.getElementById("mCSB_1_container");
     let counter = 0;
 
     for (let i=0;i<dates.length;counter++){
