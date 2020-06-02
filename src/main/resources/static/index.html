@@ -19,6 +19,9 @@
 	<link rel="stylesheet" href="css/photoswipe.css">
 	<link rel="stylesheet" href="css/default-skin.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 	<!-- Favicons -->
 	<link rel="icon" type="image/png" href="img/QA-cinema-logo2.png" sizes="32x32">
@@ -32,142 +35,320 @@
 	<meta name="author" content="Dmitry Volkov">
 	<title>QA Cinema - Team Jobs Productions</title>
 
+	<style>
+		body {
+			font-family: Arial;
+			color: white;
+
+		}
+
+		/* Style the tab */
+		.tab {
+			overflow: hidden;
+			border: 1px solid #ff5860;
+			background-color: #672346;
+		}
+
+		/* Style the buttons inside the tab */
+		.tab button {
+			background-color: inherit;
+			float: left;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 14px 16px;
+			transition: 0.3s;
+			font-size: 17px;
+		}
+
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+			background-color: #ff5860;
+
+		}
+
+		/* Create an active/current tablink class */
+		.tab button.active {
+			background-color: #ccc;
+			color: #000000;
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+			display: none;
+			padding: 6px 12px;
+			-webkit-animation: fadeEffect 1s;
+			animation: fadeEffect 1s;
+		}
+
+		/* Fade in tabs */
+		@-webkit-keyframes fadeEffect {
+			from {opacity: 0;}
+			to {opacity: 1;}
+		}
+
+		@keyframes fadeEffect {
+			from {opacity: 0;}
+			to {opacity: 1;}
+		}
+		img.middle {
+			vertical-align: middle;
+		}
+		.textcenter {
+			padding: 70px 0;
+		}
+	</style>
 </head>
-
-
 <body class="body">
+	
+	<!-- header -->
+	<header class="header">
+		<div class="header__wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="header__content">
+							<!-- header logo -->
+							<a href="index.html" class="header__logo">
+								<img src="img/QA-cinema-logo2.png" alt="">
+							</a>
+							<!-- end header logo -->
 
-<!-- header -->
-<header class="header">
+							<!-- header nav -->
+							<ul class="header__nav">
 
-	<div class="header__wrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="header__content">
-						<!-- header logo -->
-						<a href="index.html" class="header__logo">
-							<img src="img/QA-cinema-logo2.png" alt="">
-						</a>
-						<!-- end header logo -->
+								<li class="header__nav-item">
+									<a href="index.html" class="header__nav-link">Home</a>
+								</li>
 
-						<!-- header nav -->
-						<ul class="header__nav">
+								<!-- dropdown -->
+								<li class="header__nav-item">
+									<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
 
-							<li class="header__nav-item">
-								<a href="index.html" class="header__nav-link">Home</a>
-							</li>
+									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
+										<li><a href="gallery.html">Showing</a></li>
+										<li><a href="comingSoon.html">Coming Soon</a></li>
+									</ul>
+								</li>
+								<!-- end dropdown -->
 
-							<!-- dropdown -->
-							<li class="header__nav-item">
-								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
+								<li class="header__nav-item">
+									<a href="screens.html" class="header__nav-link">Screens</a>
+								</li>
 
-								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
-									<li><a href="gallery.html">Showing</a></li>
-									<li><a href="comingSoon.html">Coming Soon</a></li>
-								</ul>
-							</li>
-							<!-- end dropdown -->
+								<!--dropdown-->
+								<li class="header__nav-item">
+									<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planning Your Trip</a>
 
-							<li class="header__nav-item">
-								<a href="screens.html" class="header__nav-link">Screens</a>
-							</li>
+									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog1">
+										<li><a href="gettingHere.html">Getting Here</a></li>
+										<li><a href="#">What To Do</a></li>
+									</ul>
+								</li>
+								<!-- end dropdown -->
 
-							<!--dropdown-->
-							<li class="header__nav-item">
-								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planning Your Trip</a>
+								<!-- dropdown -->
+								<li class="dropdown header__nav-item">
+									<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
 
-								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog1">
-									<li><a href="gettingHere.html">Getting Here</a></li>
-									<li><a href="#">What To Do</a></li>
-								</ul>
-							</li>
-							<!-- end dropdown -->
+									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
+										<li><a href="about.html">About</a></li>
+										<li><a href="forum.html">Forum</a></li>
+									</ul>
+								</li>
+								<!-- end dropdown -->
+							</ul>
+							<!-- end header nav -->
 
-							<!-- dropdown -->
-							<li class="dropdown header__nav-item">
-								<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
+							<!-- header auth -->
+							<div class="header__auth">
+								<button class="header__search-btn" type="button">
+									<i class="icon ion-ios-search"></i>
+								</button>
+							</div>
+							<!-- end header auth -->
 
-								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-									<li><a href="about.html">About</a></li>
-									<li><a href="forum.html">Forum</a></li>
-								</ul>
-							</li>
-							<!-- end dropdown -->
-						</ul>
-						<!-- end header nav -->
-
-						<!-- header auth -->
-						<div class="header__auth">
-							<button class="header__search-btn" type="button">
-								<i class="icon ion-ios-search"></i>
+							<!-- header menu btn -->
+							<button class="header__btn" type="button">
+								<span></span>
+								<span></span>
+								<span></span>
 							</button>
+							<!-- end header menu btn -->
 						</div>
-						<!-- end header auth -->
-
-						<!-- header menu btn -->
-						<button class="header__btn" type="button">
-							<span></span>
-							<span></span>
-							<span></span>
-						</button>
-						<!-- end header menu btn -->
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<!-- header search -->
-	<form action="#" class="header__search">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="header__search-content">
-						<label for="searchBox"></label>
-						<input type="text" placeholder="Search Term" id="searchBox">
-						<button type="button" id="searchButton">search</button>
-						<script src="js/search/search.js"></script>
+		<!-- header search -->
+		<form action="#" class="header__search">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="header__search-content">
+							<label for="searchBox"></label>
+							<input type="text" placeholder="Search for a movie, TV Series that you are looking for" id="searchBox">
+
+							<button type="button">search</button>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</form>
-	<!-- end header search -->
+		</form>
+		<!-- end header search -->
+	</header>
+	<!-- end header -->
+	<!-- content -->
 
-</header>
-<!-- end header -->
-
+	<!-- end content -->
 	<!-- home -->
 	<section class="home">
 		<div class="container">
 			<div class="row" id="primeDiv">
 				<div class="col-12">
-					<h1 class="home__title" href="gallery.html"><b>OUR FEATURED TITLES</b></h1>
+					<h1 class="home__title"><b>FEATURED MOVIES</b></h1>
+
 				</div>
+
+
+
 			</div>
 		</div>
-	</section>
-	<!-- end home -->
 
-	<!-- content -->
-	<section class="content">
-		<div class="content__head">
-			<div class="container">
+	</section>
+
+	<section class="section section--bg carousel-fade" data-bg="img/section/section.jpg">
+		<div class="container">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel"  style="width: fit-content; height: auto; margin:auto;>
+
+			<ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
+
+				<div class="item active">
+					<img src="img/banner/qa-banner.png" style=" width: auto; height: auto;"/>
+					<div class="carousel-caption">
+						<h3>Closed Until Further Notice</h3>
+						<p> Following government guidelines QA Cinemas are closed until further notice.</p>
+					</div>
+				</div>
+
+				<div class="item">
+					<img src="img/banner/qa-banner1.png" style="width: auto; height: auto;"/>
+					<div class="carousel-caption">
+						<h3>We look forward to having you back at our cinemas soon</h3>
+						<p>Please contact out customer service team for enquiries.</p>
+					</div>
+				</div>
+
+				<div class="item">
+					<img src="img/banner/qa-banner2.png" style="width: auto; height: auto;"/>
+					<div class="carousel-caption">
+						<h3>To stay up to date! </h3>
+						<p>Follow our social media accounts to get the latest QA cinemas news.</p>
+					</div>
+				</div>
+
+			</div>
+
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+					<span class="sr-only">Next</span>
+				</a>
+		</div>
+	</section>
+
+	<section class="section section--bg" data-bg="img/section/section.jpg">
+		<div class="container">
+			<div class="tab">
+				<button class="tablinks" onclick="openTab(event, 'Experiences')" id="defaultOpen">Experiences</button>
+				<button class="tablinks" onclick="openTab(event, 'Offers')">Offers & Competitions</button>
+				<button class="tablinks" onclick="openTab(event, 'Snacks')">Snacks & Drinks</button>
+				<button class="tablinks" onclick="openTab(event, 'Venue')">Venue Hire & Events</button>
+			</div>
+
+			<div id="Experiences" class="tabcontent">
 				<div class="row">
-					<div class="col-12">
-						<h2 class="content__title">Come experience the magic of cinema...</h2>
+					<div class="col">
+						<img src="img/hometabs/3d.jpg" height="240px" width="384px" class="middle"/></div>
+					<div class="col textcenter" style="padding-right: 100px">
+						<p>Swooping dinosaurs, menacing spaceships, intense fight scenes with RealD 3D, the action reaches right out to your cinema seat.</p>
+						<p>The latest animated family films are even more delightful in 3D. Comfortable, reusable and stylish, RealD cinema eyewear looks great and performs spectacularly.</p>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="container">
-			
+			<div id="Offers" class="tabcontent">
+				<div class="row">
+					<div class="col">
+						<img src="img/hometabs/pop2.jpg" height="240px" width="384px" class="middle"/></div>
+					<div class="col textcenter" style="padding-right: 100px">
+						<p>Recommended to Infinity by a friend?</p>
+						<p>If you become an Infinity member using your friend’s unique Recommend A Friend code, once you have completed your first year of membership, your 13th month of membership will be free.</p>
+						<p>13 months of Unlimited movies for the price of 12!</p>
+					</div>
+				</div>
+			</div>
 
+			<div id="Snacks" class="tabcontent">
+				<div class="row">
+					<div class="col">
+						<img src="img/hometabs/pop1.jpg" height="240px" width="384px" class="middle"/></div>
+					<div class="col textcenter" style="padding-right: 100px">
+						<p>Put some spotlight on your popcorn! Add some indulgence today with our popcorn toppers: Mini Rolos, Smarties, Mini Oreos or Pretzels, to personalise your popcorn.</p>
+						<p>Discount applicable for QA Infinity members.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="Venue" class="tabcontent">
+				<div class="row">
+					<div class="col">
+						<img src="img/hometabs/cinema4.jpg" height="240px" width="384px" class="middle"/></div>
+					<div class="col textcenter" style="padding-right: 100px">
+						<h3>Private Screening</h3>
+						<p>Treat your family and friends to a party they’ll never forget at QA Cinemas. Be a Hollywood star for the day, hosting your own private screening to show your favourite movie or the latest blockbuster.</p>
+					</div>
+				</div>
+			</div>
+
+			<script>
+				function openTab(evt, tabsName) {
+					var i, tabcontent, tablinks;
+					tabcontent = document.getElementsByClassName("tabcontent");
+					for (i = 0; i < tabcontent.length; i++) {
+						tabcontent[i].style.display = "none";
+					}
+					tablinks = document.getElementsByClassName("tablinks");
+					for (i = 0; i < tablinks.length; i++) {
+						tablinks[i].className = tablinks[i].className.replace(" active", "");
+					}
+					document.getElementById(tabsName).style.display = "block";
+					evt.currentTarget.className += " active";
+				}
+				// Get the element with id="defaultOpen" and click on it
+				document.getElementById("defaultOpen").click();
+			</script>
 		</div>
 	</section>
-	<!-- end content -->
 
 	<!-- expected premiere -->
 	<section class="section section--bg" data-bg="img/section/section.jpg">
@@ -175,7 +356,7 @@
 			<div class="row" id="soonComeDiv">
 				<!-- section title -->
 				<div class="col-12">
-					<h2 class="section__title" href="comingSoon.html"><b>PREMIERING SOON</b></h2>
+					<h2 class="section__title"><b>COMING SOON</b></h2>
 				</div>
 				<!-- end section title -->
 
@@ -184,66 +365,72 @@
 	</section>
 	<!-- end expected premiere -->
 
-<!-- footer -->
-<footer class="footer">
-	<div class="container">
-		<div class="row">
+	<!-- end home -->
 
 
-			<!-- footer list -->
-			<div class="col-6 col-sm-4 col-md-3">
-				<h6 class="footer__title">Resources</h6>
-				<ul class="footer__list">
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Pricing Plan</a></li>
-					<li><a href="#">Help</a></li>
-				</ul>
-			</div>
-			<!-- end footer list -->
 
-			<!-- footer list -->
-			<div class="col-6 col-sm-4 col-md-3">
-				<h6 class="footer__title">Legal</h6>
-				<ul class="footer__list">
-					<li><a href="#">Terms of Use</a></li>
-					<li><a href="#">Privacy Policy</a></li>
-					<li><a href="#">Security</a></li>
-				</ul>
-			</div>
-			<!-- end footer list -->
+	
 
-			<!-- footer list -->
-			<div class="col-12 col-sm-4 col-md-3">
-				<h6 class="footer__title">Contact</h6>
-				<ul class="footer__list">
-					<li><a href="contactUs.html">0161 393 2271</a></li>
-					<li><a href="contactUs.html">Ashill.Pathak@academytrainee.com</a></li>
-				</ul>
-				<ul class="footer__social">
-					<li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
-					<li class="instagram"><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
-					<li class="twitter"><a href="#"><i class="icon ion-logo-twitter"></i></a></li>
-					<li class="vk"><a href="#"><i class="icon ion-logo-vk"></i></a></li>
-				</ul>
-			</div>
-			<!-- end footer list -->
+	<!-- footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				
 
-			<!-- footer copyright -->
-			<div class="col-12">
-				<div class="footer__copyright">
-					<small><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></small>
-
-					<ul>
-						<li><a href="#">Terms of Use</a></li>
-						<li><a href="#">Privacy Policy</a></li>
+				<!-- footer list -->
+				<div class="col-6 col-sm-4 col-md-3">
+					<h6 class="footer__title">Resources</h6>
+					<ul class="footer__list">
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Pricing Plan</a></li>
+						<li><a href="#">Help</a></li>
 					</ul>
 				</div>
+				<!-- end footer list -->
+
+				<!-- footer list -->
+				<div class="col-6 col-sm-4 col-md-3">
+					<h6 class="footer__title">Legal</h6>
+					<ul class="footer__list">
+						<li><a href="#">Terms of Use</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Security</a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer list -->
+				<div class="col-12 col-sm-4 col-md-3">
+					<h6 class="footer__title">Contact</h6>
+					<ul class="footer__list">
+						<li><a href="tel:+18002345678">+44</a></li>
+						<li><a href="mailto:support@moviego.com">support@flixgo.com</a></li>
+					</ul>
+					<ul class="footer__social">
+						<li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
+						<li class="instagram"><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
+						<li class="twitter"><a href="#"><i class="icon ion-logo-twitter"></i></a></li>
+						<li class="vk"><a href="#"><i class="icon ion-logo-vk"></i></a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer copyright -->
+				<div class="col-12">
+					<div class="footer__copyright">
+						<small><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></small>
+
+						<ul>
+							<li><a href="#">Terms of Use</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- end footer copyright -->
 			</div>
-			<!-- end footer copyright -->
 		</div>
-	</div>
-</footer>
-<!-- end footer -->
+	</footer>
+	<!-- end footer -->
 
 	<!-- JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
