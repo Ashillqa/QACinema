@@ -1,4 +1,4 @@
-package com.qa.commons;
+package com.qa.domain;
 
 public class Response {
 
