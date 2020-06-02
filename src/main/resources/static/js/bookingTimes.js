@@ -96,7 +96,6 @@ function dateSelect(dates) {
                 </div>`;
 
         bigParent.appendChild(day);
-        templist = [];
     }
 }
 
