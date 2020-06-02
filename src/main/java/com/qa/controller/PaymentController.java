@@ -37,7 +37,7 @@ public class PaymentController {
 
         // You may want to store charge id along with order information
 
-        return new Response(true, "Success! Your charge id is " + chargeId);
+        return new Response(true, "You have successfully made a purchase");
     }
 
 }
