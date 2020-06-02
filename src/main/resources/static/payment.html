@@ -245,6 +245,13 @@
           <!-- end movie title -->
         </div>
 
+        <div class="section__wrap">
+          <!-- movie title -->
+          <h5 class="section__text" id="upgrade"></h5>
+
+          <!-- end movie title -->
+        </div>
+
 
       </div>
     </div>
@@ -261,6 +268,10 @@
         </p>
 
         <form action="paymentComplete.html" id="payment-form" method="post" class="sign__form2">
+          <label class="section__text" for="cardHoldersName">
+            Enter the card holder's name below
+          </label>
+          <input id="cardHoldersName" class="sign__input" placeholder="Card Holder's Name">
           <input id="api-key" type="hidden" th:value="${stripe.keys.public}">
           <div class="sign__group">
             <label class="section__text" for="card-element">
