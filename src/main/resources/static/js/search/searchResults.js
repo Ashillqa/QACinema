@@ -20,19 +20,19 @@ axios.get(`http://${window.location.href.toString().split("/")[2]}/movie/getAll`
                 ratings.push(i.rating)
             }
 
-            // if (i.status!=="featured"){
-            //     continue;
-            // }
-            // featuredList.push(i.apiID);
-            // featuredIds.push(i.id);
-            // if (i.rating===null){
-            //     featuredRatings.push("TBC");
-            // } else{
-            //     featuredRatings.push(i.rating)
-            // }
+            if (i.status!=="featured"){
+                continue;
+            }
+            featuredList.push(i.apiID);
+            featuredIds.push(i.id);
+            if (i.rating===null){
+                featuredRatings.push("TBC");
+            } else{
+                featuredRatings.push(i.rating)
+            }
         }
         showOnPage(list, ids, ratings);
-        // showFeatured(featuredList, featuredIds, featuredRatings);
+        showFeatured(featuredList, featuredIds, featuredRatings);
     }
 )
 
@@ -138,51 +138,57 @@ function applyFilter (){
 
 }
 
-// function showFeatured(list, ids, ratings) {
-//     let div = document.getElementById("primeDiv");
-//     for(let i=0;i<list.length;i++){
-//         let carousel = document.createElement("div");
-//         carousel.className = "col-6 col-sm-4 col-lg-3 col-xl-2";
-//         axios.get(`https://api.themoviedb.org/3/movie/${list[i]}?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-UK`).then(
-//             res2 => {
-//
-//                 let genres = "";
-//                 for (let k = 0; k< res2.data.genres.length; k++){
-//                     genres += `<a href="#">${res2.data.genres[k].name}</a>`
-//                 }
-//
-//                 carousel.innerHTML =
-//                     '    <div class="card">\n' +
-//                     '        <div class="card__cover">\n' +
-//                     `            <img src="https://image.tmdb.org/t/p/original${res2.data.poster_path}" alt="" />\n` +
-//                     `<a id="play" href="details2.html?title=${res2.data.title}&id=${ids[i]}" class="card__play">` +
-//                     '                <i class="icon ion-ios-play"></i>\n' +
-//                     '            </a>\n' +
-//                     '        </div>\n' +
-//                     '        <div class="card__content">\n' +
-//                     '            <h3 class="card__title">\n' +
-//                     `<a href="details2.html?title=${res2.data.title}&id=${ids[i]}">${res2.data.title}</a>\n` +
-//                     '            </h3>\n' +
-//                     '            <span class="card__category">\n' +
-//                     genres +
-//                     '                </span>\n' +
-//                     `            <span class="card__rate"><i class="icon ion-ios-star"></i>${res2.data.vote_average}</span>\n` +
-//                     '<ul class="card__list">'+
-//                     `<li><a style="color: #ff5860;" id="ageRating" href="classifications.html">${ratings[i]}</a></li>`+
-//                     '</ul>'+
-//                     '        </div>\n' +
-//                     '    </div>\n';
-//             }
-//         )
-//         div.appendChild(carousel);
-//     }
-// }
+function showFeatured(list, ids, ratings) {
+    let div = document.getElementById("primeDiv");
+    for(let i=0;i<list.length;i++){
+        let carousel = document.createElement("div");
+        carousel.className = "col-6 col-sm-4 col-lg-3 col-xl-2";
+        axios.get(`https://api.themoviedb.org/3/movie/${list[i]}?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-UK`).then(
+            res2 => {
+
+                let genres = "";
+                for (let k = 0; k< res2.data.genres.length; k++){
+                    genres += `<a href="#">${res2.data.genres[k].name}</a>`
+                }
+
+                carousel.innerHTML =
+                    '    <div class="card">\n' +
+                    '        <div class="card__cover">\n' +
+                    `            <img src="https://image.tmdb.org/t/p/original${res2.data.poster_path}" alt="" />\n` +
+                    `<a id="play" href="details2.html?title=${res2.data.title}&id=${ids[i]}" class="card__play">` +
+                    '                <i class="icon ion-ios-play"></i>\n' +
+                    '            </a>\n' +
+                    '        </div>\n' +
+                    '        <div class="card__content">\n' +
+                    '            <h3 class="card__title">\n' +
+                    `<a href="details2.html?title=${res2.data.title}&id=${ids[i]}">${res2.data.title}</a>\n` +
+                    '            </h3>\n' +
+                    '            <span class="card__category">\n' +
+                    genres +
+                    '                </span>\n' +
+                    `            <span class="card__rate"><i class="icon ion-ios-star"></i>${res2.data.vote_average}</span>\n` +
+                    '<ul class="card__list">'+
+                    `<li><a style="color: #ff5860;" id="ageRating" href="classifications.html">${ratings[i]}</a></li>`+
+                    '</ul>'+
+                    '        </div>\n' +
+                    '    </div>\n';
+            }
+        )
+        div.appendChild(carousel);
+    }
+    let showMore = document.createElement("div")
+    showMore.className = "col-12"
+    showMore.innerHTML = `<a href="gallery.html" class="section__btn">Show more</a>`
+    div.appendChild(showMore);
+}
 
 document.getElementById("filter__years").addEventListener("mouseup",applyFilter);
 document.getElementById("filter__imbd").addEventListener("mouseup",applyFilter);
 document.getElementById("filter__genre").addEventListener("click",applyFilter);
 document.getElementById("resetButton").addEventListener("click",function(){window.location = window.location.href.split("?")[0];})
 document.getElementById('searchBox2').addEventListener('keyup',applyFilter);
+
+
 
 
 
