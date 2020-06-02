@@ -50,6 +50,7 @@ document.getElementById("movieTime").textContent = params.get('time');
 function dateSelect(dates) {
     let bigParent = document.getElementById("accordion");
     let counter = 0;
+    dates.sort();
 
     for (let i=0;i<dates.length;){
         let day = document.createElement("div")

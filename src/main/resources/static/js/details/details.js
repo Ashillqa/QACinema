@@ -67,6 +67,7 @@ function writeContent(apiID, status, rating) {
 function dateSelect(dates) {
     let bigParent = document.getElementById("accordion");
     let counter = 0;
+
     for (let i=0;i<dates.length;counter++){
         let day = document.createElement("div")
         day.className="accordion__card"
