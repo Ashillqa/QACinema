@@ -2,10 +2,8 @@ let dates = ["28/05/2020 14:30","28/05/2020 22:30","29/05/2020 22:30","28/05/202
 dateSelect(dates);
 
 function dateSelect(dates) {
-    console.log("hello")
     let bigParent = document.getElementById("accordion");
     let counter = 0;
-
 
     for (let i=0;i<dates.length;){
         let day = document.createElement("div")
