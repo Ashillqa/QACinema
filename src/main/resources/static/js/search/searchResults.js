@@ -1,14 +1,12 @@
 let list = [];
 let ids = [];
 let ratings = [];
+const params = new URLSearchParams(window.location.search)
 
 axios.get(`http://localhost:8080/movie/getAll`).then(
     data => {
         for(let i of data.data){
 
-            if (i.status==="upcoming"){
-                continue;
-            }
             list.push(i.apiID);
             ids.push(i.id);
             if (i.rating===null){
@@ -28,6 +26,9 @@ function showOnPage(list, ids, ratings){
         movieTile.className="col-6 col-sm-12 col-lg-6";
         axios.get(`https://api.themoviedb.org/3/movie/${list[i]}?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-UK`).then(
             append => {
+                if (params.get("term")!==null && !append.data.title.toLowerCase().includes(params.get("term").toLowerCase())){
+                    return;
+                }
 
                 let genres = "";
                 for (let k = 0; k< append.data.genres.length; k++){
@@ -102,7 +103,7 @@ function applyFilter (){
         console.log()
         if(
             (li[i].getElementsByTagName('a')[0].innerHTML.toLowerCase().indexOf(filterValue)>-1 ||
-                ld[i].getElementsByTagName('p')[0].innerHTML.toLowerCase().indexOf(filterValue)>-1) &&
+            ld[i].getElementsByTagName('p')[0].innerHTML.toLowerCase().indexOf(filterValue)>-1) &&
             genreMatch(genre[i].getElementsByTagName('a'),genreSelect) &&
             parseFloat(rating[i].textContent)>=parseFloat(minRating) &&
             parseFloat(rating[i].textContent)<=parseFloat(maxRating) &&
