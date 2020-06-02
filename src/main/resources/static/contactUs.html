@@ -165,8 +165,86 @@
 			</div>
 		</div>
 	</section>
-	
 	<!-- end faq -->
+
+	<!-- content -->
+	<section class="content">
+		<div class="content__head">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<!-- content title -->
+						<h2 class="content__title">Kindly Leave Some Feedback</h2>
+						<!-- end content title -->
+
+						<!-- content mobile tabs nav -->
+						<div class="content__mobile-tabs" id="content__mobile-tabs">
+							<div class="content__mobile-tabs-btn dropdown-toggle" role="navigation" id="mobile-tabs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<input type="button" value="Comments">
+								<span></span>
+							</div>
+
+							<div class="content__mobile-tabs-menu dropdown-menu" aria-labelledby="mobile-tabs">
+								<ul class="nav nav-tabs" role="tablist">
+									<li class="nav-item"><a class="nav-link active" id="1-tab" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">Comments</a></li>
+
+									<li class="nav-item"><a class="nav-link" id="2-tab" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">Reviews</a></li>
+
+									<li class="nav-item"><a class="nav-link" id="3-tab" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">Photos</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- end content mobile tabs nav -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-lg-8 col-xl-8">
+					<!-- content tabs -->
+					<div class="tab-content" id="myTabContent">
+						<div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="1-tab">
+							<div class="row">
+								<!-- comments -->
+								<div class="col-12">
+									<div class="comments">
+										<ul id="enterPointCom" class="comments__list">
+
+										</ul>
+
+
+										<form id="comForm" class="form">
+											<div class="sign__group">
+												<div class="sign__group">
+													<input id="email" type="email" class="sign__input" placeholder="Email" required>
+												</div>
+											</div>
+											<div class="sign__group">
+												<input id="username" type="text" class="sign__input" placeholder="Name" required>
+											</div>
+											<div class="sign__group">
+												<input id="subject" type="text" class="sign__input" placeholder="Subject" required>
+											</div>
+
+											<div class="sign__group">
+												<textarea id="feedback" name="text" class="form__textarea" placeholder="Add Feedback" required></textarea>
+											</div>
+
+											<button class="form__btn" onclick="sendEmail()">Send</button>
+										</form>
+									</div>
+								</div>
+								<!-- end comments -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end content -->
 
 	<!-- footer -->
 	<footer class="footer">
@@ -186,8 +264,8 @@
 				<div class="col-6 col-sm-4 col-md-3">
 					<h6 class="footer__title">Resources</h6>
 					<ul class="footer__list">
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Pricing Plan</a></li>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="contactUs.html">Contact Us</a></li>
 						<li><a href="#">Help</a></li>
 					</ul>
 				</div>
@@ -238,6 +316,7 @@
 	<!-- end footer -->
 
 	<!-- JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
@@ -250,6 +329,7 @@
 	<script src="js/photoswipe.min.js"></script>
 	<script src="js/photoswipe-ui-default.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/emailSending.js"></script>
 </body>
 
 </html>
