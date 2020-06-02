@@ -18,7 +18,7 @@ public class BookingDTOTest {
         bookingDTO = new BookingDTO(1L, "Shrek 3", "27/05/2020 15:30", BigDecimal.valueOf(13.99),"email@email.com","0044 771234123","Jeff Tester",1,1,0);
         other = new BookingDTO(1L, "Shrek 3", "27/05/2020 15:30", BigDecimal.valueOf(13.99),"email@email.com","0044 771234123","Jeff Tester",1,1,0);
     }
-
+//////////////////////////////
     @Test
     public void settersTest() {
         assertNotNull(bookingDTO.getId());
