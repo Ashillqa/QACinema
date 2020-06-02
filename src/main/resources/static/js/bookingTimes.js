@@ -5,24 +5,41 @@ let params = new URLSearchParams(window.location.search);
     let studentNumber = 0;
     let total = 0;
 
+    
+    let upgradeLarge = false;
+
+
+
 function updateTotal(type){
+    let checked = 0;
     let id = "totalPrice";
     document.getElementById(id).className = "section__title";
+
 
     if(type === 'adult'){
         let adult = document.getElementById(type);
         adultNumber = adult.options[adult.selectedIndex].value;
+        if(document.getElementById("extra2Pounds").checked === true){
+            checked = 2;
+        }
     }
-    else if(type === 'child'){
+    if(type === 'child'){
         let child = document.getElementById(type);
         childNumber = child.options[child.selectedIndex].value;
+        if(document.getElementById("extra2Pounds").checked === true){
+            checked = 2;
+        }
     }
-    else if(type === 'student'){
+    if(type === 'student'){
         let student = document.getElementById(type);
         studentNumber = student.options[student.selectedIndex].value;
+        if(document.getElementById("extra2Pounds").checked === true){
+            checked = 2;
+        }
     }
 
-    let subTotal = (adultNumber * 8) + (childNumber * 4) + (studentNumber * 6);
+
+    let subTotal = (adultNumber * 8) + (childNumber * 4) + (studentNumber * 6) + checked;
 
     let timeFactor = params.get('time').split(' ');
 
@@ -36,40 +53,46 @@ function updateTotal(type){
         total = subTotal * 0.75;
     }
 
-    document.getElementById(id).textContent = "£"+ total;
+    if ((type === 'extra') && document.getElementById("extra2Pounds").checked === true){
+        console.log("entering");
+        total += 2;
+        console.log(total);
+    }
 
-   
+    document.getElementById(id).textContent = "£"+ total;
 }
 
 document.getElementById("movieName").textContent = params.get('title');
 
 document.getElementById("movieTime").textContent = params.get('time');
 
-
-
 function dateSelect(dates) {
-    let templist = [];
-    let bigParent = document.getElementById("accordion");
+    let bigParent = document.getElementById("mCSB_1_container");
     let counter = 0;
-    for (let i=0;i<dates.length;counter++){
+    dates.sort();
+
+    for (let i=0;i<dates.length;){
         let day = document.createElement("div")
         day.className="accordion__card"
         let insert ="";
-        templist.push(dates[0]);
+        let tempList = [];
+        tempList.push(dates[0]);
         dates.splice(0,1);
 
         for(let j=0; j<dates.length;j++){
-            if(dates[j].split(" ")[0]===templist[0].split(" ")[0]){
-                templist.push(dates[j]);
-                dates.splice(j,1)
+            if(dates[j].split(" ")[0]===tempList[0].split(" ")[0]){
+                tempList.push(dates[j]);
+                tempList.sort();
+                dates.splice(j,j+1)
+                j--;
             }
         }
 
-        for(let j=0; j<templist.length;j++){
+        for(let j=0; j<tempList.length;j++){
             insert+=
                 `<tbody>
                     <tr>
-                        <th>${templist[j].split(" ")[1]}<a class="sign__btn1" href="bookings2.html?id=${params.get('id')}&time=${templist[j]}&title=${params.get('title')}">Change</a></th>
+                        <th>${tempList[j].split(" ")[1]}<a class="sign__btn1" href="bookings2.html?id=${params.get('id')}&time=${tempList[j]}&title=${params.get('title')}">Change</a></th>
                     </tr>
                 </tbody>`
         }
@@ -77,7 +100,7 @@ function dateSelect(dates) {
         day.innerHTML=
             `<div class="card-header" id="heading${counter}">
                     <button type="button" data-toggle="collapse" data-target="#collapse${counter}" aria-expanded="true" aria-controls="collapse${counter}">
-                        <span>${templist[0].split(" ")[0]}</span>
+                        <span>${tempList[0].split(" ")[0]}</span>
                     </button>
                 </div>
         
@@ -92,11 +115,10 @@ function dateSelect(dates) {
                 </div>`;
 
         bigParent.appendChild(day);
-        templist = [];
     }
 }
 
-axios.get(`http://localhost:8080/movie/get/${params.get('id')}`).then(
+axios.get(`http://${window.location.href.toString().split("/")[2]}/movie/get/${params.get('id')}`).then(
     write => {
         let showTimes = [];
 
@@ -120,9 +142,11 @@ function saveStorage(){
     sessionStorage.setItem("name", document.getElementById("customerName").value);
     sessionStorage.setItem("phone", document.getElementById("customerPhone").value);
     sessionStorage.setItem("email", document.getElementById("customerEmail").value);
+    sessionStorage.setItem("upgrade", document.getElementById("extra2Pounds").checked);
 
     sessionStorage.setItem("movieName", params.get('title'));
     sessionStorage.setItem("movieTime", params.get('time'));
+    sessionStorage.setItem("movieId", params.get('id'));
 }
 
 

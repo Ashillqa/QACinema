@@ -122,9 +122,9 @@
 				<div class="col-12">
 					<div class="header__search-content">
 						<label for="searchBox"></label>
-						<input type="text" placeholder="Search for a movie, TV Series that you are looking for" id="searchBox">
-
-						<button type="button">search</button>
+						<input type="text" placeholder="Search Term" id="searchBox">
+						<button type="button" id="searchButton">search</button>
+						<script src="js/search/search.js"></script>
 					</div>
 				</div>
 			</div>
@@ -163,78 +163,57 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="filter__content">
+
 						<div class="filter__items">
 							<!-- filter item -->
 							<div class="filter__item" id="filter__genre">
 								<span class="filter__item-label">GENRE:</span>
 
 								<div class="filter__item-btn dropdown-toggle" role="navigation" id="filter-genre" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									<input type="button" value="Action/Adventure">
+									<input type="button" value="Select Genre" id="selectGenre">
 									<span></span>
 								</div>
 
 								<ul class="filter__item-menu dropdown-menu scrollbar-dropdown" aria-labelledby="filter-genre">
-									<li>Action/Adventure</li>
-									<li>Animals</li>
-									<li>Animation</li>
-									<li>Biography</li>
-									<li>Comedy</li>
-									<li>Cooking</li>
-									<li>Dance</li>
-									<li>Documentary</li>
-									<li>Drama</li>
-									<li>Education</li>
-									<li>Entertainment</li>
-									<li>Family</li>
-									<li>Fantasy</li>
-									<li>History</li>
-									<li>Horror</li>
-									<li>Independent</li>
-									<li>International</li>
-									<li>Kids</li>
-									<li>Kids & Family</li>
-									<li>Medical</li>
-									<li>Military/War</li>
-									<li>Music</li>
-									<li>Musical</li>
-									<li>Mystery/Crime</li>
-									<li>Nature</li>
-									<li>Paranormal</li>
-									<li>Politics</li>
-									<li>Racing</li>
-									<li>Romance</li>
-									<li>Sci-Fi/Horror</li>
-									<li>Science</li>
-									<li>Science Fiction</li>
-									<li>Science/Nature</li>
-									<li>Spanish</li>
-									<li>Travel</li>
-									<li>Western</li>
-								</ul>
-							</div>
-							<!-- end filter item -->
-
-							<!-- filter item -->
-							<div class="filter__item" id="filter__quality">
-								<span class="filter__item-label">QUALITY:</span>
-
-								<div class="filter__item-btn dropdown-toggle" role="navigation" id="filter-quality" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									<input type="button" value="HD 1080">
-									<span></span>
-								</div>
-
-								<ul class="filter__item-menu dropdown-menu scrollbar-dropdown" aria-labelledby="filter-quality">
-									<li>HD 1080</li>
-									<li>HD 720</li>
-									<li>DVD</li>
-									<li>TS</li>
+									<li class="genre_selector">Action</li>
+									<li class="genre_selector">Adventure</li>
+									<li class="genre_selector">Animals</li>
+									<li class="genre_selector">Animation</li>
+									<li class="genre_selector">Biography</li>
+									<li class="genre_selector">Comedy</li>
+									<li class="genre_selector">Cooking</li>
+									<li class="genre_selector">Crime</li>
+									<li class="genre_selector">Dance</li>
+									<li class="genre_selector">Documentary</li>
+									<li class="genre_selector">Drama</li>
+									<li class="genre_selector">Education</li>
+									<li class="genre_selector">Family</li>
+									<li class="genre_selector">Fantasy</li>
+									<li class="genre_selector">History</li>
+									<li class="genre_selector">Horror</li>
+									<li class="genre_selector">Kids</li>
+									<li class="genre_selector">Medical</li>
+									<li class="genre_selector">Music</li>
+									<li class="genre_selector">Musical</li>
+									<li class="genre_selector">Nature</li>
+									<li class="genre_selector">Paranormal</li>
+									<li class="genre_selector">Politics</li>
+									<li class="genre_selector">Racing</li>
+									<li class="genre_selector">Romance</li>
+									<li class="genre_selector">Science</li>
+									<li class="genre_selector">Science Fiction</li>
+									<li class="genre_selector">Science</li>
+									<li class="genre_selector">Thriller</li>
+									<li class="genre_selector">Travel</li>
+									<li class="genre_selector">War/Military</li>
+									<li class="genre_selector">Western</li>
 								</ul>
 							</div>
 							<!-- end filter item -->
 
 							<!-- filter item -->
 							<div class="filter__item" id="filter__rate">
-								<span class="filter__item-label">IMBd:</span>
+								<span class="filter__item-label">VIEWER RATING:</span>
 
 								<div class="filter__item-btn dropdown-toggle" role="button" id="filter-rate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									<div class="filter__range">
@@ -268,9 +247,17 @@
 							</div>
 							<!-- end filter item -->
 						</div>
-						
+
+						<div class="filter__item">
+							<span class="filter__item-label">REFINE SEARCH:</span>
+							<div class="filter__item-btn dropdown-toggle">
+								<input class="sign__input" type="text" placeholder="Search Term" id="searchBox2">
+							</div>
+						</div>
+						<!-- end filter item -->
+
 						<!-- filter btn -->
-						<button class="filter__btn" type="button">apply filter</button>
+						<button class="filter__btn" type="reset" id="resetButton" href="search.html">reset</button>
 						<!-- end filter btn -->
 					</div>
 				</div>
@@ -287,23 +274,7 @@
 
 
 			</div>
-			<div class="row">
-				 <div class="col-12">
-					<ul class="paginator paginator--list">
-						<li class="paginator__item paginator__item--prev">
-							<a href="#"><i class="icon ion-ios-arrow-back"></i></a>
-						</li>
-						<li class="paginator__item"><a href="#">1</a></li>
-						<li class="paginator__item paginator__item--active"><a href="#">2</a></li>
-						<li class="paginator__item"><a href="#">3</a></li>
-						<li class="paginator__item"><a href="#">4</a></li>
-						<li class="paginator__item paginator__item--next">
-							<a href="#"><i class="icon ion-ios-arrow-forward"></i></a>
-						</li>
-					</ul>
-				</div> 
 
-			</div>
 		</div>
 	</div>
 	<!-- end catalog -->
@@ -311,143 +282,13 @@
 	<!-- expected premiere -->
 	<section class="section section--bg" data-bg="img/section/section.jpg">
 		<div class="container">
-			<div class="row">
+			<div class="row" id="primeDiv">
 				<!-- section title -->
 				<div class="col-12">
 					<h2 class="section__title">Expected premiere</h2>
 				</div>
 				<!-- end section title -->
 
-				<!-- card -->
-				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-					<div class="card">
-						<div class="card__cover">
-							<img src="img/covers/cover.jpg" alt="">
-							<a href="#" class="card__play">
-								<i class="icon ion-ios-play"></i>
-							</a>
-						</div>
-						<div class="card__content">
-							<h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
-							<span class="card__category">
-								<a href="#">Action</a>
-								<a href="#">Triler</a>
-							</span>
-							<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-						</div>
-					</div>
-				</div>
-				<!-- end card -->
-
-				<!-- card -->
-				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-					<div class="card">
-						<div class="card__cover">
-							<img src="img/covers/cover3.jpg" alt="">
-							<a href="#" class="card__play">
-								<i class="icon ion-ios-play"></i>
-							</a>
-						</div>
-						<div class="card__content">
-							<h3 class="card__title"><a href="#">Benched</a></h3>
-							<span class="card__category">
-								<a href="#">Comedy</a>
-							</span>
-							<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
-						</div>
-					</div>
-				</div>
-				<!-- end card -->
-
-				<!-- card -->
-				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-					<div class="card">
-						<div class="card__cover">
-							<img src="img/covers/cover2.jpg" alt="">
-							<a href="#" class="card__play">
-								<i class="icon ion-ios-play"></i>
-							</a>
-						</div>
-						<div class="card__content">
-							<h3 class="card__title"><a href="#">Whitney</a></h3>
-							<span class="card__category">
-								<a href="#">Romance</a>
-								<a href="#">Drama</a>
-								<a href="#">Music</a>
-							</span>
-							<span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
-						</div>
-					</div>
-				</div>
-				<!-- end card -->
-
-				<!-- card -->
-				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-					<div class="card">
-						<div class="card__cover">
-							<img src="img/covers/cover6.jpg" alt="">
-							<a href="#" class="card__play">
-								<i class="icon ion-ios-play"></i>
-							</a>
-						</div>
-						<div class="card__content">
-							<h3 class="card__title"><a href="#">Blindspotting</a></h3>
-							<span class="card__category">
-								<a href="#">Comedy</a>
-								<a href="#">Drama</a>
-							</span>
-							<span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
-						</div>
-					</div>
-				</div>
-				<!-- end card -->
-
-				<!-- card -->
-				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-					<div class="card">
-						<div class="card__cover">
-							<img src="img/covers/cover4.jpg" alt="">
-							<a href="#" class="card__play">
-								<i class="icon ion-ios-play"></i>
-							</a>
-						</div>
-						<div class="card__content">
-							<h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
-							<span class="card__category">
-								<a href="#">Action</a>
-								<a href="#">Triler</a>
-							</span>
-							<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-						</div>
-					</div>
-				</div>
-				<!-- end card -->
-
-				<!-- card -->
-				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-					<div class="card">
-						<div class="card__cover">
-							<img src="img/covers/cover5.jpg" alt="">
-							<a href="#" class="card__play">
-								<i class="icon ion-ios-play"></i>
-							</a>
-						</div>
-						<div class="card__content">
-							<h3 class="card__title"><a href="#">Benched</a></h3>
-							<span class="card__category">
-								<a href="#">Comedy</a>
-							</span>
-							<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
-						</div>
-					</div>
-				</div>
-				<!-- end card -->
-
-				<!-- section btn -->
-				<div class="col-12">
-					<a href="#" class="section__btn">Show more</a>
-				</div>
-				<!-- end section btn -->
 			</div>
 		</div>
 	</section>
@@ -493,8 +334,8 @@
 				<div class="col-12 col-sm-4 col-md-3">
 					<h6 class="footer__title">Contact</h6>
 					<ul class="footer__list">
-						<li><a href="tel:+18002345678">+1 (800) 234-5678</a></li>
-						<li><a href="mailto:support@moviego.com">support@flixgo.com</a></li>
+						<li><a href="contactUs.html">0161 393 2271</a></li>
+						<li><a href="contactUs.html">Ashill.Pathak@academytrainee.com</a></li>
 					</ul>
 					<ul class="footer__social">
 						<li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>

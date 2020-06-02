@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -245,13 +245,6 @@
           <!-- end movie title -->
         </div>
 
-        <div class="section__wrap">
-          <!-- movie title -->
-          <h5 class="section__text" id="upgrade"></h5>
-
-          <!-- end movie title -->
-        </div>
-
 
       </div>
     </div>
@@ -263,45 +256,10 @@
     <div class="col-12 col-md-6">
       <div class="sign__group">
 
-        <p class="section__text">
-          Please fill the form below to complete the payment
-        </p>
+        <h3 class="section__title">
+          Thank you for your purchase. You should receive a confirmation email shortly
+        </h3>
 
-        <form action="paymentComplete.html" id="payment-form" method="post" class="sign__form2">
-          <label class="section__text" for="cardHoldersName">
-            Enter the card holder's name below
-          </label>
-          <input id="cardHoldersName" class="sign__input" placeholder="Card Holder's Name">
-          <input id="api-key" type="hidden" th:value="${stripe.keys.public}">
-          <div class="sign__group">
-            <label class="section__text" for="card-element">
-              Enter credit or debit card below
-            </label>
-            <div class="sign__input" id="card-element">
-              <!-- A Stripe Element will be inserted here. -->
-            </div>
-          </div>
-          <div class="sign__group">
-            <label for="email" class="section__text">Please enter your email address</label>
-            <input class="sign__input" id="email" name="email" placeholder="Email Address" type="email" required>
-          </div>
-          <!-- Used to display Element errors. -->
-          <div class="text-danger w-100" id="card-errors" role="alert" style="color: red"></div>
-          <div class="form-group pt-2">
-            <button class="sign__btn" id="submitButton" type="submit" onclick="postBookingDetails()">
-              Pay With Your Card
-            </button>
-            <div class="section__text">
-              Pay securely with Stripe. By clicking the button above, you agree
-              to our <a target="_blank" href="#">Terms of Service</a>,
-              <a target="_blank" href="#">Privacy</a> and
-              <a target="_blank" href="#">Refund</a> policies.
-
-            </div>
-          </div>
-
-
-        </form>
       </div>
 
       </div>
@@ -412,7 +370,6 @@
     <script src="js/main.js"></script>
     <script src="js/bookingsDetail.js"></script>
 
-    <script src="js/payment/payment.js"></script>
 
   </body>
 </html>

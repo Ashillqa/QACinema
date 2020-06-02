@@ -1,14 +1,11 @@
 package com.qa.dto;
 
-import com.qa.domain.Movie;
-
 import java.math.BigDecimal;
 import java.util.Objects;
 
 public class BookingDTO {
 
     private Long id;
-    private Movie movie;
     private String movieName;
     private String dateTime;
     private BigDecimal totalPrice;
@@ -45,14 +42,6 @@ public class BookingDTO {
     }
 
     public BookingDTO(){
-    }
-
-    public Movie getMovie() {
-        return movie;
-    }
-
-    public void setMovie(Movie movie) {
-        this.movie = movie;
     }
 
     public String getMovieName() {
@@ -139,7 +128,6 @@ public class BookingDTO {
     public String toString() {
         return "BookingDTO{" +
                 "id=" + id +
-                ", movie=" + movie +
                 ", movieName='" + movieName + '\'' +
                 ", dateTime='" + dateTime + '\'' +
                 ", totalPrice=" + totalPrice +
@@ -158,7 +146,6 @@ public class BookingDTO {
         if (o == null || getClass() != o.getClass()) return false;
         BookingDTO that = (BookingDTO) o;
         return Objects.equals(id, that.id) &&
-                Objects.equals(movie, that.movie) &&
                 Objects.equals(movieName, that.movieName) &&
                 Objects.equals(dateTime, that.dateTime) &&
                 Objects.equals(totalPrice, that.totalPrice) &&
@@ -172,6 +159,6 @@ public class BookingDTO {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, movie, movieName, dateTime, totalPrice, emailAddress, phoneNumber, customerName, adultNr, childNr, studentNr);
+        return Objects.hash(id, movieName, dateTime, totalPrice, emailAddress, phoneNumber, customerName, adultNr, childNr, studentNr);
     }
 }

@@ -2,24 +2,16 @@ let list = [];
 let ids = [];
 let ratings = [];
 
-let comingList = [];
-let comingIds = [];
-let comingRatings = [];
+let featuredList = [];
+let featuredIds = [];
+let featuredRatings = [];
+
+const params = new URLSearchParams(window.location.search)
 
 axios.get(`http://${window.location.href.toString().split("/")[2]}/movie/getAll`).then(
     data => {
         for(let i of data.data){
 
-            if (i.status==="upcoming"){
-                comingList.push(i.apiID);
-                comingIds.push(i.id);
-                if (i.rating===null){
-                    comingRatings.push("TBC");
-                } else{
-                    comingRatings.push(i.rating)
-                }
-                continue;
-            }
             list.push(i.apiID);
             ids.push(i.id);
             if (i.rating===null){
@@ -28,9 +20,20 @@ axios.get(`http://${window.location.href.toString().split("/")[2]}/movie/getAll`
                 ratings.push(i.rating)
             }
 
+            if (i.status!=="featured"){
+                continue;
+            }
+            featuredList.push(i.apiID);
+            featuredIds.push(i.id);
+            if (i.rating===null){
+                featuredRatings.push("TBC");
+            } else{
+                featuredRatings.push(i.rating)
+            }
         }
-        showComing(comingList, comingIds, comingRatings);
         showOnPage(list, ids, ratings);
+        showFeatured(featuredList, featuredIds, featuredRatings);
+
     }
 )
 
@@ -41,6 +44,9 @@ function showOnPage(list, ids, ratings){
         movieTile.className="col-6 col-sm-12 col-lg-6";
         axios.get(`https://api.themoviedb.org/3/movie/${list[i]}?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-UK`).then(
             append => {
+                if (params.get("term")!==null && !append.data.title.toLowerCase().includes(params.get("term").toLowerCase())){
+                    return;
+                }
 
                 let genres = "";
                 for (let k = 0; k< append.data.genres.length; k++){
@@ -83,7 +89,6 @@ function showOnPage(list, ids, ratings){
     }
 }
 
-
 function applyFilter (){
     let genreSelect = document.getElementById("selectGenre").value.toLowerCase();
     let minRating = document.getElementById("filter__imbd-start").textContent;
@@ -118,7 +123,7 @@ function applyFilter (){
         console.log()
         if(
             (li[i].getElementsByTagName('a')[0].innerHTML.toLowerCase().indexOf(filterValue)>-1 ||
-                ld[i].getElementsByTagName('p')[0].innerHTML.toLowerCase().indexOf(filterValue)>-1) &&
+            ld[i].getElementsByTagName('p')[0].innerHTML.toLowerCase().indexOf(filterValue)>-1) &&
             genreMatch(genre[i].getElementsByTagName('a'),genreSelect) &&
             parseFloat(rating[i].textContent)>=parseFloat(minRating) &&
             parseFloat(rating[i].textContent)<=parseFloat(maxRating) &&
@@ -131,10 +136,11 @@ function applyFilter (){
             ld[i].style.display= 'none';
         }
     }
+    checkEmpty();
 
 }
 
-function showComing(list, ids, ratings) {
+function showFeatured(list, ids, ratings) {
     let div = document.getElementById("primeDiv");
     for(let i=0;i<list.length;i++){
         let carousel = document.createElement("div");
@@ -162,8 +168,8 @@ function showComing(list, ids, ratings) {
                     '            <span class="card__category">\n' +
                     genres +
                     '                </span>\n' +
+                    `            <span class="card__rate"><i class="icon ion-ios-star"></i>${res2.data.vote_average}</span>\n` +
                     '<ul class="card__list">'+
-                    `<li>${res2.data.release_date}</li>`+
                     `<li><a style="color: #ff5860;" id="ageRating" href="classifications.html">${ratings[i]}</a></li>`+
                     '</ul>'+
                     '        </div>\n' +
@@ -174,8 +180,34 @@ function showComing(list, ids, ratings) {
     }
     let showMore = document.createElement("div")
     showMore.className = "col-12"
-    showMore.innerHTML = `<a href="comingSoon.html" class="section__btn">Show more</a>`
+    showMore.innerHTML = `<a href="gallery.html" class="section__btn">Show more</a>`
     div.appendChild(showMore);
+}
+
+function didntFind(state) {
+    if (state==="show"){
+        console.log("we empty");
+    } else {
+        console.log("there it is");
+    }
+}
+
+function checkEmpty(){
+    let displayed = "";
+    let movies2 = document.getElementById('movieDisplay');
+    displayed = movies2.getElementsByClassName("col-6 col-sm-12 col-lg-6");
+    if (displayed[0]===undefined){
+        didntFind("show");
+        return false;
+    }
+    for (let i = 0; i<displayed.length;i++){
+        if (displayed[i].style.display!=="none"){
+            didntFind("hide");
+            return true;
+        }
+    }
+    didntFind("show");
+    return false;
 }
 
 document.getElementById("filter__years").addEventListener("mouseup",applyFilter);
@@ -183,9 +215,6 @@ document.getElementById("filter__imbd").addEventListener("mouseup",applyFilter);
 document.getElementById("filter__genre").addEventListener("click",applyFilter);
 document.getElementById("resetButton").addEventListener("click",function(){window.location = window.location.href.split("?")[0];})
 document.getElementById('searchBox2').addEventListener('keyup',applyFilter);
-
-
-
 
 
 

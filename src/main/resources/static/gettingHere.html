@@ -57,6 +57,82 @@
     </style>
 </head>
 <body class="body">
+
+<!-- header -->
+<header class="header">
+	<div class="header__wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="header__content">
+						<!-- header logo -->
+						<a href="index.html" class="header__logo">
+							<img src="img/QA-cinema-logo2.png" alt="">
+						</a>
+						<!-- end header logo -->
+
+						<!-- header nav -->
+						<ul class="header__nav">
+
+							<li class="header__nav-item">
+								<a href="index.html" class="header__nav-link">Home</a>
+							</li>
+
+							<!-- dropdown -->
+							<li class="header__nav-item">
+								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
+
+								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
+									<li><a href="gallery.html">Showing</a></li>
+									<li><a href="comingSoon.html">Coming Soon</a></li>
+								</ul>
+							</li>
+							<!-- end dropdown -->
+
+							<li class="header__nav-item">
+								<a href="screens.html" class="header__nav-link">Screens</a>
+							</li>
+
+							<!--dropdown-->
+							<li class="header__nav-item">
+								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planning Your Trip</a>
+
+								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog1">
+									<li><a href="gettingHere.html">Getting Here</a></li>
+									<li><a href="#">What To Do</a></li>
+								</ul>
+							</li>
+							<!-- end dropdown -->
+
+							<!-- dropdown -->
+							<li class="dropdown header__nav-item">
+								<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
+
+								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
+									<li><a href="about.html">About</a></li>
+									<li><a href="forum.html">Forum</a></li>
+								</ul>
+							</li>
+							<!-- end dropdown -->
+						</ul>
+						<!-- end header nav -->
+
+						<!-- header auth -->
+						<div class="header__auth">
+							<button class="header__search-btn" type="button">
+								<i class="icon ion-ios-search"></i>
+							</button>
+						</div>
+						<!-- end header auth -->
+
+						<!-- header menu btn -->
+						<button class="header__btn" type="button">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+						<!-- end header menu btn -->
+
 	
 	<!-- header -->
 	<header class="header">
@@ -145,6 +221,26 @@
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<!-- header search -->
+	<form action="#" class="header__search">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="header__search-content">
+						<label for="searchBox"></label>
+						<input type="text" placeholder="Search Term" id="searchBox">
+						<button type="button" id="searchButton">search</button>
+						<script src="js/search/search.js"></script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	<!-- end header search -->
+</header>
+<!-- end header -->
 
 		<!-- header search -->
 		<form action="#" class="header__search">
@@ -171,12 +267,15 @@
 				<div class="col-12">
 					<div class="section__wrap">
 						<!-- section title -->
+						<h2 class="section__title">Getting Here</h2>
 						<h2 class="section__title">Locating us</h2>
 						<!-- end section title -->
 
 						<!-- breadcrumb -->
 						<ul class="breadcrumb">
 							<li class="breadcrumb__item"><a href="#">Home</a></li>
+							<li class="breadcrumb__item breadcrumb__item--active">Getting Here</li>
+
 							<li class="breadcrumb__item breadcrumb__item--active">FAQ</li>
 						</ul>
 						<!-- end breadcrumb -->
@@ -187,6 +286,8 @@
 	</section>
 	<!-- end page title -->
 
+    <!-- left side -->
+	<!-- faq -->
 	<!-- faq -->
     <!-- left side -->
 	<section class="section">
@@ -265,6 +366,56 @@
 		</div>
     </div>
 	</section>
+						<h3 class="faq__title">Getting here by public transport</h3>
+						<p class="faq__text">The city of Manchester is built with a wide array of public transportation options.</p>
+					</div>
+
+					<div class="faq">
+						<h3 class="faq__title">Why is the sound distorted?</h3>
+						<p class="faq__text">Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+					</div>
+
+					<div class="faq">
+						<h3 class="faq__title">Why is the Video stuttering, buffering or randomly stopping?</h3>
+						<p class="faq__text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+					</div>
+
+					<div class="faq">
+						<h3 class="faq__title">When I change the quality of a video, nothing happens.</h3>
+						<p class="faq__text">If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-6">
+					<div class="faq">
+						<h3 class="faq__title">Why isn't the video starting at the beginning?</h3>
+						<p class="faq__text">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+					</div>
+
+					<div class="faq">
+						<h3 class="faq__title">How do I make the Video go Fullscreen?</h3>
+						<p class="faq__text">It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+					</div>
+
+					<div class="faq">
+						<h3 class="faq__title">What Browsers are supported?</h3>
+						<p class="faq__text">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					</div>
+
+					<div class="faq">
+						<h3 class="faq__title">How do you handle my privacy?</h3>
+						<p class="faq__text">Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+					</div>
+
+					<div class="faq">
+						<h3 class="faq__title">How can I contact you?</h3>
+						<p class="faq__text">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- end faq -->
 
 	<!-- footer -->
@@ -307,8 +458,8 @@
 				<div class="col-12 col-sm-4 col-md-3">
 					<h6 class="footer__title">Contact</h6>
 					<ul class="footer__list">
-						<li><a href="tel:+18002345678">+1 (800) 234-5678</a></li>
-						<li><a href="mailto:support@moviego.com">support@flixgo.com</a></li>
+						<li><a href="contactUs.html">0161 393 2271</a></li>
+						<li><a href="contactUs.html">Ashill.Pathak@academytrainee.com</a></li>
 					</ul>
 					<ul class="footer__social">
 						<li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
