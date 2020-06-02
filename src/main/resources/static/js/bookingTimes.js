@@ -69,11 +69,11 @@ function dateSelect(dates) {
             }
         }
 
-        for(let j=0; j<templist.length;j++){
+        for(let j=0; j<tempList.length;j++){
             insert+=
                 `<tbody>
                     <tr>
-                        <th>${templist[j].split(" ")[1]}<a class="sign__btn1" href="bookings2.html?id=${params.get('id')}&time=${templist[j]}&title=${params.get('title')}">Change</a></th>
+                        <th>${tempList[j].split(" ")[1]}<a class="sign__btn1" href="bookings2.html?id=${params.get('id')}&time=${tempList[j]}&title=${params.get('title')}">Change</a></th>
                     </tr>
                 </tbody>`
         }
@@ -81,7 +81,7 @@ function dateSelect(dates) {
         day.innerHTML=
             `<div class="card-header" id="heading${counter}">
                     <button type="button" data-toggle="collapse" data-target="#collapse${counter}" aria-expanded="true" aria-controls="collapse${counter}">
-                        <span>${templist[0].split(" ")[0]}</span>
+                        <span>${tempList[0].split(" ")[0]}</span>
                     </button>
                 </div>
         
