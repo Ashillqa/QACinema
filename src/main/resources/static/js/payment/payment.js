@@ -41,9 +41,10 @@ $(function () {
                 // Send the token to your server.
                 var token = result.token.id;
                 var email = $('#email').val();
+                var amount = sessionStorage.getItem("total");
                 $.post(
                     "/create-charge",
-                    {email: email, token: token},
+                    {email: email, token: token, amount: amount},
                     function (data) {
                         alert(data.details);
                         location.replace("paymentComplete.html");
@@ -62,7 +63,7 @@ function postBookingDetails() {
 
     axios.post(`http://localhost:8080/booking/createBooking`, JSON.parse(bookingDetails)).then(
         res =>{
-            console.log(res.response);
+            console.log(res);
         }
     )
 

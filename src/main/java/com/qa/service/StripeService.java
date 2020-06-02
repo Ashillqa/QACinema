@@ -46,6 +46,7 @@ public class StripeService {
             chargeParams.put("currency", "gbp");
             chargeParams.put("description", "Charge for " + email);
             chargeParams.put("source", token); // ^ obtained with Stripe.js
+            chargeParams.put("receipt_email", email);
 
             //create a charge
             Charge charge = Charge.create(chargeParams);
