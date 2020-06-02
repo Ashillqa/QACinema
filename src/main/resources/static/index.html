@@ -35,6 +35,69 @@
 	<meta name="author" content="Dmitry Volkov">
 	<title>QA Cinema - Team Jobs Productions</title>
 
+	<style>
+		body {
+			font-family: Arial;
+			color: white;
+
+		}
+
+		/* Style the tab */
+		.tab {
+			overflow: hidden;
+			border: 1px solid #ff5860;
+			background-color: #672346;
+		}
+
+		/* Style the buttons inside the tab */
+		.tab button {
+			background-color: inherit;
+			float: left;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 14px 16px;
+			transition: 0.3s;
+			font-size: 17px;
+		}
+
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+			background-color: #ff5860;
+
+		}
+
+		/* Create an active/current tablink class */
+		.tab button.active {
+			background-color: #ccc;
+			color: #000000;
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+			display: none;
+			padding: 6px 12px;
+			-webkit-animation: fadeEffect 1s;
+			animation: fadeEffect 1s;
+		}
+
+		/* Fade in tabs */
+		@-webkit-keyframes fadeEffect {
+			from {opacity: 0;}
+			to {opacity: 1;}
+		}
+
+		@keyframes fadeEffect {
+			from {opacity: 0;}
+			to {opacity: 1;}
+		}
+		img.middle {
+			vertical-align: middle;
+		}
+		.textcenter {
+			padding: 70px 0;
+		}
+	</style>
 </head>
 <body class="body">
 	
@@ -136,7 +199,9 @@
 		<!-- end header search -->
 	</header>
 	<!-- end header -->
+	<!-- content -->
 
+	<!-- end content -->
 	<!-- home -->
 	<section class="home">
 		<div class="container">
@@ -148,23 +213,21 @@
 
 
 
-				</div>
 			</div>
+		</div>
 
 	</section>
-	<!-- end home -->
 
-	<!-- content -->
-	<section class="section section--bg" data-bg="img/section/section.jpg">
+	<section class="section section--bg carousel-fade" data-bg="img/section/section.jpg">
 		<div class="container">
 			<div id="myCarousel" class="carousel slide" data-ride="carousel"  style="width: fit-content; height: auto; margin:auto;>
-        <!-- Indicators -->
 
-        <ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-		</ol>
+			<ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
 
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner">
@@ -201,18 +264,91 @@
 
 			</div>
 
-			<!-- Left and right controls -->
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				<span class="sr-only">Next</span>
-			</a>
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+					<span class="sr-only">Next</span>
+				</a>
 		</div>
 	</section>
-	<!-- end content -->
+
+	<section class="section section--bg" data-bg="img/section/section.jpg">
+		<div class="container">
+			<div class="tab">
+				<button class="tablinks" onclick="openTab(event, 'Experiences')" id="defaultOpen">Experiences</button>
+				<button class="tablinks" onclick="openTab(event, 'Offers')">Offers & Competitions</button>
+				<button class="tablinks" onclick="openTab(event, 'Snacks')">Snacks & Drinks</button>
+				<button class="tablinks" onclick="openTab(event, 'Venue')">Venue Hire & Events</button>
+			</div>
+
+			<div id="Experiences" class="tabcontent">
+				<div class="row">
+					<div class="col">
+						<img src="img/hometabs/3d.jpg" height="240px" width="384px" class="middle"/></div>
+					<div class="col textcenter" style="padding-right: 100px">
+						<p>Swooping dinosaurs, menacing spaceships, intense fight scenes with RealD 3D, the action reaches right out to your cinema seat.</p>
+						<p>The latest animated family films are even more delightful in 3D. Comfortable, reusable and stylish, RealD cinema eyewear looks great and performs spectacularly.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="Offers" class="tabcontent">
+				<div class="row">
+					<div class="col">
+						<img src="img/hometabs/pop2.jpg" height="240px" width="384px" class="middle"/></div>
+					<div class="col textcenter" style="padding-right: 100px">
+						<p>Recommended to Infinity by a friend?</p>
+						<p>If you become an Infinity member using your friend’s unique Recommend A Friend code, once you have completed your first year of membership, your 13th month of membership will be free.</p>
+						<p>13 months of Unlimited movies for the price of 12!</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="Snacks" class="tabcontent">
+				<div class="row">
+					<div class="col">
+						<img src="img/hometabs/pop1.jpg" height="240px" width="384px" class="middle"/></div>
+					<div class="col textcenter" style="padding-right: 100px">
+						<p>Put some spotlight on your popcorn! Add some indulgence today with our popcorn toppers: Mini Rolos, Smarties, Mini Oreos or Pretzels, to personalise your popcorn.</p>
+						<p>Discount applicable for QA Infinity members.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="Venue" class="tabcontent">
+				<div class="row">
+					<div class="col">
+						<img src="img/hometabs/cinema4.jpg" height="240px" width="384px" class="middle"/></div>
+					<div class="col textcenter" style="padding-right: 100px">
+						<h3>Private Screening</h3>
+						<p>Treat your family and friends to a party they’ll never forget at QA Cinemas. Be a Hollywood star for the day, hosting your own private screening to show your favourite movie or the latest blockbuster.</p>
+					</div>
+				</div>
+			</div>
+
+			<script>
+				function openTab(evt, tabsName) {
+					var i, tabcontent, tablinks;
+					tabcontent = document.getElementsByClassName("tabcontent");
+					for (i = 0; i < tabcontent.length; i++) {
+						tabcontent[i].style.display = "none";
+					}
+					tablinks = document.getElementsByClassName("tablinks");
+					for (i = 0; i < tablinks.length; i++) {
+						tablinks[i].className = tablinks[i].className.replace(" active", "");
+					}
+					document.getElementById(tabsName).style.display = "block";
+					evt.currentTarget.className += " active";
+				}
+				// Get the element with id="defaultOpen" and click on it
+				document.getElementById("defaultOpen").click();
+			</script>
+		</div>
+	</section>
 
 	<!-- expected premiere -->
 	<section class="section section--bg" data-bg="img/section/section.jpg">
@@ -228,6 +364,10 @@
 		</div>
 	</section>
 	<!-- end expected premiere -->
+
+	<!-- end home -->
+
+
 
 	
 
