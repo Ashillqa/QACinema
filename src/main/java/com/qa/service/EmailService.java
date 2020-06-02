@@ -60,7 +60,7 @@ public class EmailService {
         messageBodyPart2.setContent(". The feedback says " + email.getBody(), "text/html");
 
         MimeBodyPart messageBodyPart3 = new MimeBodyPart();
-        messageBodyPart3.setContent("Their return contact info is " + email.getEmail(), "text/html");
+        messageBodyPart3.setContent(". Their return contact info is " + email.getEmail(), "text/html");
 
         Multipart multipart = new MimeMultipart();
         multipart.addBodyPart(messageBodyPart1);
