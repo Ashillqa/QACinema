@@ -301,7 +301,7 @@
 				<div class="col-12 col-md-6">
 					<div class="faq">
 						<h3 class="faq__title">Tesco pre snacks?</h3>
-						<p class="faq__text">If you are searching for a snack in particular at our amazing tuck shop and can't find it, fret not! there is a tesco close at hand! use these directions to find the tesco!</p>
+						<p class="faq__text">Cant find your snack in-house? Bring your own!</p>
                         
                                             
                         <div class ="w3-content w3-display-container">
@@ -309,11 +309,9 @@
                         </div>
      
 
-
                         <!-- end slideshow -->
                         
-                        
-                      
+
                     </div>
 			</div>
                 
@@ -323,10 +321,7 @@
                 
                 <div class="col-12">
 					<p class="section__text section__text--last-with-margin">If you're looking for something a little more substantial, then you should try out some of the nearby eateries! Here's a couple worth mention. . . </p>
-                    
-
-                        
-                    
+    
 				</div>
             </div>
         </div>
@@ -337,16 +332,48 @@
 	<section class="section">
 		<div class="container">
 			<div class="row">            
-                     <div class="col-12">
-					<h2 class="section__title section__title--no-margin">That French bistro?</h2>
+     <div class="col-12 col-md-6">       
+                    
+					<div class="faq">
+						<h3 class="faq__title">Toulouse Lautrec</h3>
+						<p class="faq__text">A romantic pre movie dinnerdate?</p>
+
+                        <!-- start slideshow -->
+                        <div class ="w3-content w3-display-container">
+                            <img class ="mySlides2" src="img/tLautrec01.jpg" style="width:100%">
+                            <img class ="mySlides2" src="img/tLautrec02.jpg" style="width:100%">
+                            <img class ="mySlides2" src="img/tLautrec03.jpg" style="width:100%">                   
+                        </div>
+     
+                        <script>
+                            var myIndex = 0;
+                            carousel4();
+
+                            function carousel4() {
+                            var i;
+                            var x = document.getElementsByClassName("mySlides4");
+                            
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";  
+                            }
+                            
+                            myIndex++;
+                            if (myIndex > x.length) {myIndex = 1}    
+                                x[myIndex-1].style.display = "block";  
+                                setTimeout(carousel4, 2000); // Change image every 2 seconds
+                            }
+                        </script>
+
+                        <!-- end slideshow -->
+                        
+                        
+                        <p class="faq__text">A wonderful, romantic spot to visit with your significant other, before you come visit us! Make an evening of it, with cinema, french food and live jazz acts!</p>
+					</div>
+
 				</div>
                 
-                <div class="col-12">
-					<p class="section__text section__text--last-with-margin">Want a tasty snack to eat while you watch a movie? A lovely drink to sweeten the experience? Here's some ideas on where you can get your perfect snack for the perfect movie!</p>
-                    <div id="over">
-                    </div>
-				</div>
                 
+                 
 				<div class="col-12 col-md-6">       
                     
 					<div class="faq">
