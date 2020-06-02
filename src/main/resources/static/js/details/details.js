@@ -65,28 +65,30 @@ function writeContent(apiID, status, rating) {
 }
 
 function dateSelect(dates) {
-    let templist = [];
     let bigParent = document.getElementById("accordion");
     let counter = 0;
     for (let i=0;i<dates.length;counter++){
         let day = document.createElement("div")
         day.className="accordion__card"
         let insert ="";
-        templist.push(dates[0]);
+        let tempList = [];
+        tempList.push(dates[0]);
         dates.splice(0,1);
 
         for(let j=0; j<dates.length;j++){
-            if(dates[j].split(" ")[0]===templist[0].split(" ")[0]){
-                templist.push(dates[j]);
-                dates.splice(j,1)
+            if(dates[j].split(" ")[0]===tempList[0].split(" ")[0]){
+                tempList.push(dates[j]);
+                tempList.sort();
+                dates.splice(j,j+1)
+                j--;
             }
         }
 
-        for(let j=0; j<templist.length;j++){
+        for(let j=0; j<tempList.length;j++){
             insert+=
                 `<tbody>
                     <tr>
-                        <th>${templist[j].split(" ")[1]}<a class="sign__btn1" href="bookings2.html?id=${params.get('id')}&time=${templist[j]}&title=${params.get('title')}">Book now</a></th>
+                        <th>${tempList[j].split(" ")[1]}<a class="sign__btn1" href="bookings2.html?id=${params.get('id')}&time=${tempList[j]}&title=${params.get('title')}">Book now</a></th>
                     </tr>
                 </tbody>`
         }
@@ -94,7 +96,7 @@ function dateSelect(dates) {
         day.innerHTML=
             `<div class="card-header" id="heading${counter}">
                     <button type="button" data-toggle="collapse" data-target="#collapse${counter}" aria-expanded="true" aria-controls="collapse${counter}">
-                        <span>${templist[0].split(" ")[0]}</span>
+                        <span>${tempList[0].split(" ")[0]}</span>
                     </button>
                 </div>
         
@@ -109,7 +111,7 @@ function dateSelect(dates) {
                 </div>`;
 
         bigParent.appendChild(day);
-        templist = [];
+        tempList = [];
     }
 }
 
