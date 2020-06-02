@@ -74,7 +74,7 @@ function postCom(event){
 	let stars = document.querySelector('input[type="radio"]:checked').value
 	let msg = document.getElementById('text').value;
 	event.preventDefault();
-	fetch('http://localhost:8080/createComment', {
+	fetch(`http://${window.location.href.toString().split("/")[2]}/createComment`, {
 	    method: 'POST',
 	    headers : {'Content-Type': 'application/json'},
 	    body:JSON.stringify({movieTitle:mTitle,userName:name,rating:stars,comment:msg})
@@ -85,7 +85,7 @@ function postCom(event){
 
 
 function seeComms(){
-	fetch('http://localhost:8080/getAllComments')
+	fetch(`http://${window.location.href.toString().split("/")[2]}/getAllComments`)
     .then(function (res) {
         return res.json();
     })
