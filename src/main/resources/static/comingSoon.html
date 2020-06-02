@@ -157,119 +157,79 @@
 	</section>
 	<!-- end page title -->
 
-<!-- filter -->
-<div class="filter">
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="filter__content">
-					<div class="filter__items">
-						<!-- filter item -->
-						<div class="filter__item" id="filter__genre">
-							<span class="filter__item-label">GENRE:</span>
+	<!-- filter -->
+	<div class="filter">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="filter__content">
 
-							<div class="filter__item-btn dropdown-toggle" role="navigation" id="filter-genre" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<input type="button" value="Action/Adventure">
-								<span></span>
-							</div>
+						<div class="filter__items">
+							<!-- filter item -->
+							<div class="filter__item" id="filter__genre">
+								<span class="filter__item-label">GENRE:</span>
 
-							<ul class="filter__item-menu dropdown-menu scrollbar-dropdown" aria-labelledby="filter-genre">
-								<li>Action/Adventure</li>
-								<li>Animals</li>
-								<li>Animation</li>
-								<li>Biography</li>
-								<li>Comedy</li>
-								<li>Cooking</li>
-								<li>Dance</li>
-								<li>Documentary</li>
-								<li>Drama</li>
-								<li>Education</li>
-								<li>Entertainment</li>
-								<li>Family</li>
-								<li>Fantasy</li>
-								<li>History</li>
-								<li>Horror</li>
-								<li>Independent</li>
-								<li>International</li>
-								<li>Kids</li>
-								<li>Kids & Family</li>
-								<li>Medical</li>
-								<li>Military/War</li>
-								<li>Music</li>
-								<li>Musical</li>
-								<li>Mystery/Crime</li>
-								<li>Nature</li>
-								<li>Paranormal</li>
-								<li>Politics</li>
-								<li>Racing</li>
-								<li>Romance</li>
-								<li>Sci-Fi/Horror</li>
-								<li>Science</li>
-								<li>Science Fiction</li>
-								<li>Science/Nature</li>
-								<li>Spanish</li>
-								<li>Travel</li>
-								<li>Western</li>
-							</ul>
-						</div>
-						<!-- end filter item -->
-
-						<!-- filter item -->
-						<div class="filter__item" id="filter__rate">
-							<span class="filter__item-label">IMBd:</span>
-
-							<div class="filter__item-btn dropdown-toggle" role="button" id="filter-rate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<div class="filter__range">
-									<div id="filter__imbd-start"></div>
-									<div id="filter__imbd-end"></div>
+								<div class="filter__item-btn dropdown-toggle" role="navigation" id="filter-genre" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<input type="button" value="Action" id="selectGenre">
+									<span></span>
 								</div>
-								<span></span>
-							</div>
 
-							<div class="filter__item-menu filter__item-menu--range dropdown-menu" aria-labelledby="filter-rate">
-								<div id="filter__imbd"></div>
+								<ul class="filter__item-menu dropdown-menu scrollbar-dropdown" aria-labelledby="filter-genre">
+									<li class="genre_selector">Action</li>
+									<li class="genre_selector">Adventure</li>
+									<li class="genre_selector">Animals</li>
+									<li class="genre_selector">Animation</li>
+									<li class="genre_selector">Biography</li>
+									<li class="genre_selector">Comedy</li>
+									<li class="genre_selector">Cooking</li>
+									<li class="genre_selector">Crime</li>
+									<li class="genre_selector">Dance</li>
+									<li class="genre_selector">Documentary</li>
+									<li class="genre_selector">Drama</li>
+									<li class="genre_selector">Education</li>
+									<li class="genre_selector">Family</li>
+									<li class="genre_selector">Fantasy</li>
+									<li class="genre_selector">History</li>
+									<li class="genre_selector">Horror</li>
+									<li class="genre_selector">Kids</li>
+									<li class="genre_selector">Medical</li>
+									<li class="genre_selector">Music</li>
+									<li class="genre_selector">Musical</li>
+									<li class="genre_selector">Nature</li>
+									<li class="genre_selector">Paranormal</li>
+									<li class="genre_selector">Politics</li>
+									<li class="genre_selector">Racing</li>
+									<li class="genre_selector">Romance</li>
+									<li class="genre_selector">Science</li>
+									<li class="genre_selector">Science Fiction</li>
+									<li class="genre_selector">Science</li>
+									<li class="genre_selector">Thriller</li>
+									<li class="genre_selector">Travel</li>
+									<li class="genre_selector">War/Military</li>
+									<li class="genre_selector">Western</li>
+								</ul>
 							</div>
+							<!-- end filter item -->
 						</div>
-						<!-- end filter item -->
 
 						<!-- filter item -->
-						<div class="filter__item" id="filter__year">
-							<span class="filter__item-label">RELEASE YEAR:</span>
-
-							<div class="filter__item-btn dropdown-toggle" role="button" id="filter-year" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<div class="filter__range">
-									<div id="filter__years-start"></div>
-									<div id="filter__years-end"></div>
-								</div>
-								<span></span>
-							</div>
-
-							<div class="filter__item-menu filter__item-menu--range dropdown-menu" aria-labelledby="filter-year">
-								<div id="filter__years"></div>
+						<div class="filter__item">
+							<span class="filter__item-label">REFINE SEARCH:</span>
+							<div class="filter__item-btn dropdown-toggle">
+								<input class="sign__input" type="text" placeholder="Search Term" id="searchBox2">
 							</div>
 						</div>
 						<!-- end filter item -->
+
+						<!-- filter btn -->
+						<button class="filter__btn" type="reset" id="resetButton" href="search.html">reset</button>
+						<!-- end filter btn -->
 					</div>
-
-					<div class="filter__item" id="qewf">
-						<span class="filter__item-label">REFINE SEARCH:</span>
-
-						<div class="filter__item-btn dropdown-toggle">
-							<input class="sign__input" type="text" placeholder="Search Term" id="searchBox2">
-							<span></span>
-						</div>
-					</div>
-
-
-					<!-- filter btn -->
-					<button class="filter__btn" type="button">apply filter</button>
-					<!-- end filter btn -->
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<!-- end filter -->
+	<!-- end filter -->
 
 	<!-- catalog -->
 	<div class="catalog">
