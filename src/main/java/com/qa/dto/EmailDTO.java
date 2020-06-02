@@ -71,17 +71,17 @@ public class EmailDTO {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof EmailDTO)) return false;
-        EmailDTO emailDTO = (EmailDTO) o;
-        return getId().equals(emailDTO.getId()) &&
-                getUsername().equals(emailDTO.getUsername()) &&
-                getEmail().equals(emailDTO.getEmail()) &&
-                getSubject().equals(emailDTO.getSubject()) &&
-                getBody().equals(emailDTO.getBody());
+        if (o == null || getClass() != o.getClass()) return false;
+        EmailDTO that = (EmailDTO) o;
+        return Objects.equals(id, that.id) &&
+               Objects.equals(username, that.username) &&
+               Objects.equals(email, that.email) &&
+               Objects.equals(subject, that.subject) &&
+               Objects.equals(body, that.body);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getUsername(), getEmail(), getSubject(), getBody());
+        return Objects.hash(id, username, email, subject, body);
     }
 }

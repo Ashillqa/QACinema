@@ -86,7 +86,7 @@ public class BookingDTOTest {
         assertTrue(bookingDTO.equals(other));
     }
 
-
+////////////////////ID////////////////////////////////////
     @Test
     public void nullId() {
         bookingDTO.setId(null);
@@ -105,7 +105,178 @@ public class BookingDTOTest {
         other.setId(2L);
         assertFalse(bookingDTO.equals(other));
     }
+////////////////////CUSTOMERNAME//////////////////////////////////////////////////
+    @Test
+    public void nullCustomerName() {
+        bookingDTO.setCustomerName(null);
+        assertFalse(bookingDTO.equals(other));
+    }
 
+    @Test
+    public void nullCustomerNameOnBoth() {
+        bookingDTO.setCustomerName(null);
+        other.setCustomerName(null);
+        assertTrue(bookingDTO.equals(other));
+    }
+
+    @Test
+    public void otherCustomerNameDifferent() {
+        other.setCustomerName("Bob");
+        assertFalse(bookingDTO.equals(other));
+    }
+////////////////////DATETIME/////////////////////////////////////////////////////
+    @Test
+    public void nullDateTime() {
+        bookingDTO.setDateTime(null);
+        assertFalse(bookingDTO.equals(other));
+    }
+
+    @Test
+    public void nullDateTimeOnBoth() {
+        bookingDTO.setDateTime(null);
+        other.setDateTime(null);
+        assertTrue(bookingDTO.equals(other));
+    }
+
+    @Test
+    public void otherDateTimeDifferent() {
+        other.setDateTime("29/05/2020 15:30");
+        assertFalse(bookingDTO.equals(other));
+    }
+///////////////////EMAILADDRESS/////////////////////////////////////////////////
+    @Test
+    public void nullEmailAddress() {
+        bookingDTO.setEmailAddress(null);
+        assertFalse(bookingDTO.equals(other));
+    }
+
+    @Test
+    public void nullEmailAddressOnBoth() {
+        bookingDTO.setEmailAddress(null);
+        other.setEmailAddress(null);
+        assertTrue(bookingDTO.equals(other));
+    }
+
+    @Test
+    public void otherEmailAddressDifferent() {
+        other.setEmailAddress("different@email.com");
+        assertFalse(bookingDTO.equals(other));
+    }
+///////////////////MOVIENAME/////////////////////////////////////////////////
+    @Test
+    public void nullMovieName() {
+        bookingDTO.setMovieName(null);
+        assertFalse(bookingDTO.equals(other));
+    }
+
+    @Test
+    public void nullMovieNameOnBoth() {
+        bookingDTO.setMovieName(null);
+        other.setMovieName(null);
+        assertTrue(bookingDTO.equals(other));
+    }
+
+    @Test
+    public void otherMovieNameDifferent() {
+        other.setMovieName("Spongebob");
+        assertFalse(bookingDTO.equals(other));
+    }
+///////////////////PHONENUMBER/////////////////////////////////////////////////
+    @Test
+    public void nullPhoneNumber() {
+        bookingDTO.setPhoneNumber(null);
+        assertFalse(bookingDTO.equals(other));
+    }
+
+    @Test
+    public void nullPhoneNumberOnBoth() {
+        bookingDTO.setPhoneNumber(null);
+        other.setPhoneNumber(null);
+        assertTrue(bookingDTO.equals(other));
+    }
+
+    @Test
+    public void otherPhoneNumberDifferent() {
+        other.setPhoneNumber("0044 771234127");
+        assertFalse(bookingDTO.equals(other));
+    }
+///////////////////CHILDNR/////////////////////////////////////////////////
+    @Test
+    public void nullChildNr() {
+        bookingDTO.setChildNr(null);
+        assertFalse(bookingDTO.equals(other));
+    }
+
+    @Test
+    public void nullChildNrOnBoth() {
+        bookingDTO.setChildNr(null);
+        other.setChildNr(null);
+        assertTrue(bookingDTO.equals(other));
+    }
+
+    @Test
+    public void otherChildNrDifferent() {
+        other.setChildNr(2);
+        assertFalse(bookingDTO.equals(other));
+    }
+///////////////////ADULTNR/////////////////////////////////////////////////
+    @Test
+    public void nullAdultNr() {
+        bookingDTO.setAdultNr(null);
+        assertFalse(bookingDTO.equals(other));
+    }
+
+    @Test
+    public void nullAdultNrOnBoth() {
+        bookingDTO.setAdultNr(null);
+        other.setAdultNr(null);
+        assertTrue(bookingDTO.equals(other));
+    }
+
+    @Test
+    public void otherAdultNrDifferent() {
+        other.setAdultNr(2);
+        assertFalse(bookingDTO.equals(other));
+    }
+///////////////////STUDENTNR///////////////////////////////////////////////// 
+    @Test
+    public void nullStudentNr() {
+        bookingDTO.setStudentNr(null);
+        assertFalse(bookingDTO.equals(other));
+    }
+
+    @Test
+    public void nullStudentNrOnBoth() {
+        bookingDTO.setStudentNr(null);
+        other.setStudentNr(null);
+        assertTrue(bookingDTO.equals(other));
+    }
+
+    @Test
+    public void otherStudentNrDifferent() {
+        other.setStudentNr(2);
+        assertFalse(bookingDTO.equals(other));
+    }
+///////////////////GETTOTAL/////////////////////////////////////////////////  
+    @Test
+    public void nullTotalPrice() {
+        bookingDTO.setTotalPrice(null);
+        assertFalse(bookingDTO.equals(other));
+    }
+
+    @Test
+    public void nullTotalPriceOnBoth() {
+        bookingDTO.setTotalPrice(null);
+        other.setTotalPrice(null);
+        assertTrue(bookingDTO.equals(other));
+    }
+
+    @Test
+    public void otherTotalPriceDifferent() {
+        other.setTotalPrice(BigDecimal.valueOf(14.99));
+        assertFalse(bookingDTO.equals(other));
+    }
+///////////////////////////////////////////////////////////////////////////
 
     @Test
     public void constructorWithoutId() {
