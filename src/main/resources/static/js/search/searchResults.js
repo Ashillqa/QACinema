@@ -11,7 +11,6 @@ const params = new URLSearchParams(window.location.search)
 axios.get(`http://${window.location.href.toString().split("/")[2]}/movie/getAll`).then(
     data => {
         for(let i of data.data){
-
             list.push(i.apiID);
             ids.push(i.id);
             if (i.rating===null){
@@ -33,7 +32,6 @@ axios.get(`http://${window.location.href.toString().split("/")[2]}/movie/getAll`
         }
         showOnPage(list, ids, ratings);
         showFeatured(featuredList, featuredIds, featuredRatings);
-
     }
 )
 
@@ -46,6 +44,8 @@ function showOnPage(list, ids, ratings){
             append => {
                 if (params.get("term")!==null && !append.data.title.toLowerCase().includes(params.get("term").toLowerCase())){
                     return;
+                } else {
+                    didntFind("hide")
                 }
 
                 let genres = "";
@@ -120,7 +120,6 @@ function applyFilter (){
 
 
     for(let i=0;i<li.length;i++){
-        console.log()
         if(
             (li[i].getElementsByTagName('a')[0].innerHTML.toLowerCase().indexOf(filterValue)>-1 ||
             ld[i].getElementsByTagName('p')[0].innerHTML.toLowerCase().indexOf(filterValue)>-1) &&
@@ -137,7 +136,6 @@ function applyFilter (){
         }
     }
     checkEmpty();
-
 }
 
 function showFeatured(list, ids, ratings) {
@@ -186,9 +184,9 @@ function showFeatured(list, ids, ratings) {
 
 function didntFind(state) {
     if (state==="show"){
-        console.log("we empty");
+        document.getElementById("nothingHere").style.display='';
     } else {
-        console.log("there it is");
+        document.getElementById("nothingHere").style.display='none';
     }
 }
 
@@ -196,16 +194,14 @@ function checkEmpty(){
     let displayed = "";
     let movies2 = document.getElementById('movieDisplay');
     displayed = movies2.getElementsByClassName("col-6 col-sm-12 col-lg-6");
-    if (displayed[0]===undefined){
-        didntFind("show");
-        return false;
-    }
+
     for (let i = 0; i<displayed.length;i++){
         if (displayed[i].style.display!=="none"){
             didntFind("hide");
             return true;
         }
     }
+
     didntFind("show");
     return false;
 }
