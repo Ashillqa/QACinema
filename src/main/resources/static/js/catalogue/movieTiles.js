@@ -2,11 +2,22 @@ let list = [];
 let ids = [];
 let ratings = [];
 
+let comingList = [];
+let comingIds = [];
+let comingRatings = [];
+
 axios.get(`http://${window.location.href.toString().split("/")[2]}/movie/getAll`).then(
     data => {
         for(let i of data.data){
 
             if (i.status==="upcoming"){
+                comingList.push(i.apiID);
+                comingIds.push(i.id);
+                if (i.rating===null){
+                    comingRatings.push("TBC");
+                } else{
+                    comingRatings.push(i.rating)
+                }
                 continue;
             }
             list.push(i.apiID);
@@ -16,7 +27,9 @@ axios.get(`http://${window.location.href.toString().split("/")[2]}/movie/getAll`
             } else{
                 ratings.push(i.rating)
             }
+
         }
+        showComing(comingList, comingIds, comingRatings);
         showOnPage(list, ids, ratings);
     }
 )
@@ -119,6 +132,50 @@ function applyFilter (){
         }
     }
 
+}
+
+function showComing(list, ids, ratings) {
+    let div = document.getElementById("primeDiv");
+    for(let i=0;i<list.length;i++){
+        let carousel = document.createElement("div");
+        carousel.className = "col-6 col-sm-4 col-lg-3 col-xl-2";
+        axios.get(`https://api.themoviedb.org/3/movie/${list[i]}?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-UK`).then(
+            res2 => {
+
+                let genres = "";
+                for (let k = 0; k< res2.data.genres.length; k++){
+                    genres += `<a href="#">${res2.data.genres[k].name}</a>`
+                }
+
+                carousel.innerHTML =
+                    '    <div class="card">\n' +
+                    '        <div class="card__cover">\n' +
+                    `            <img src="https://image.tmdb.org/t/p/original${res2.data.poster_path}" alt="" />\n` +
+                    `<a id="play" href="details2.html?title=${res2.data.title}&id=${ids[i]}" class="card__play">` +
+                    '                <i class="icon ion-ios-play"></i>\n' +
+                    '            </a>\n' +
+                    '        </div>\n' +
+                    '        <div class="card__content">\n' +
+                    '            <h3 class="card__title">\n' +
+                    `<a href="details2.html?title=${res2.data.title}&id=${ids[i]}">${res2.data.title}</a>\n` +
+                    '            </h3>\n' +
+                    '            <span class="card__category">\n' +
+                    genres +
+                    '                </span>\n' +
+                    '<ul class="card__list">'+
+                    `<li>${res2.data.release_date}</li>`+
+                    `<li><a style="color: #ff5860;" id="ageRating" href="classifications.html">${ratings[i]}</a></li>`+
+                    '</ul>'+
+                    '        </div>\n' +
+                    '    </div>\n';
+            }
+        )
+        div.appendChild(carousel);
+    }
+    let showMore = document.createElement("div")
+    showMore.className = "col-12"
+    showMore.innerHTML = `<a href="gallery.html" class="section__btn">Show more</a>`
+    div.appendChild(showMore);
 }
 
 document.getElementById("filter__years").addEventListener("mouseup",applyFilter);
