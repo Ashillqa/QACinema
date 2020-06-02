@@ -63,11 +63,6 @@ public class MovieTest {
         assertTrue(movie.equals(other));
     }
 
-    @Test
-    public void movieNameNullButOtherNameNotNull() {
-        movie.setStatus(null);
-        assertFalse(movie.equals(other));
-    }
 
     @Test
     public void movieNamesNotEqual() {
@@ -81,7 +76,7 @@ public class MovieTest {
         other.setStatus(null);
         assertTrue(movie.equals(other));
     }
-
+///////////////id//////////////////////////////////
     @Test
     public void nullId() {
         movie.setId(null);
@@ -100,7 +95,65 @@ public class MovieTest {
         other.setId(2L);
         assertFalse(movie.equals(other));
     }
+//////////////////////////Status////////////////////////////////////
+    @Test
+    public void NullStatus() {
+        movie.setStatus(null);
+        assertFalse(movie.equals(other));
+    }
+    @Test
+    public void nullStatusOnBoth() {
+        movie.setStatus(null);
+        other.setStatus(null);
+        assertTrue(movie.equals(other));
+    }
 
+    @Test
+    public void otherStatusDifferent() {
+        other.setStatus("featured");
+        assertFalse(movie.equals(other));
+    }
+/////////////////////////APIID////////////////////////////////////////////
+    
+    @Test
+    public void NullApiID() {
+        movie.setApiID(null);
+        assertFalse(movie.equals(other));
+    }
+    @Test
+    public void nullApiIDOnBoth() {
+        movie.setApiID(null);
+        other.setApiID(null);
+        assertTrue(movie.equals(other));
+    }
+
+    @Test
+    public void otherApiIDDifferent() {
+        other.setApiID(1154L);
+        assertFalse(movie.equals(other));
+    }
+    
+    
+//////////////////////////RATING/////////////////////////////////////////////
+    
+    @Test
+    public void NullRating() {
+        movie.setRating(null);
+        assertFalse(movie.equals(other));
+    }
+    @Test
+    public void nullRatingOnBoth() {
+        movie.setRating(null);
+        other.setRating(null);
+        assertTrue(movie.equals(other));
+    }
+
+    @Test
+    public void otherRatingDifferent() {
+        other.setRating("U");
+        assertFalse(movie.equals(other));
+    }
+/////////////////////////////////////////////////////////////////////////////    
     @Test
     public void constructorWithoutId() {
         Movie movie = new Movie(129838L,"Showing","R");
