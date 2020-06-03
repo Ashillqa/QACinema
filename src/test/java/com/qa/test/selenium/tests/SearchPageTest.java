@@ -14,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,6 +23,7 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
@@ -36,7 +38,7 @@ public class SearchPageTest {
     public static void init() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         ChromeOptions opts = new ChromeOptions();
-        opts.setHeadless(false);
+        opts.setHeadless(true);
         driver = new ChromeDriver(opts);
 //		this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -65,7 +67,7 @@ public class SearchPageTest {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title1")));
         String title = search.getTitle1().getText();
         search.getPlay1().click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("details2.html"));
+        assertTrue(driver.getCurrentUrl().contains("details2.html"));
         DetailsPage details = PageFactory.initElements(driver, DetailsPage.class);
 
         wait.until(ExpectedConditions.textToBePresentInElement(details.getTitle(), title));
@@ -81,7 +83,7 @@ public class SearchPageTest {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title1")));
         String title = search.getTitle1().getText();
         search.getTitle1().click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("details2.html"));
+        assertTrue(driver.getCurrentUrl().contains("details2.html"));
         DetailsPage details = PageFactory.initElements(driver, DetailsPage.class);
 
         wait.until(ExpectedConditions.textToBePresentInElement(details.getTitle(), title));
@@ -89,14 +91,14 @@ public class SearchPageTest {
     }
 
     @Test
-    public void testMovieGalleryCategoryLink() {
+    public void testMovieGalleryClassificationLink() {
         driver.get("http://localhost:" + port +"/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
         WebDriverWait wait = new WebDriverWait(driver, 2);
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"ageRating\"]")));
         search.getRating().click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("classifications"));
+        assertTrue(driver.getCurrentUrl().contains("classifications"));
         ClassificationsPage classifications = PageFactory.initElements(driver, ClassificationsPage.class);
 
         wait.until(ExpectedConditions.textToBePresentInElement(classifications.getTitle(), "Classifications"));
@@ -113,7 +115,7 @@ public class SearchPageTest {
 
         String title = search.getMovieFeature().findElement(By.className("featuredMovieTitle")).getText();
         search.getMovieFeature().findElement(By.id("play")).click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("details2.html"));
+        assertTrue(driver.getCurrentUrl().contains("details2.html"));
         DetailsPage details = PageFactory.initElements(driver, DetailsPage.class);
 
         wait.until(ExpectedConditions.textToBePresentInElement(details.getTitle(), title));
@@ -127,10 +129,9 @@ public class SearchPageTest {
 
         WebDriverWait wait = new WebDriverWait(driver, 2);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"primeDiv\"]/div[4]")));
-
         String title = search.getMovieFeature().findElement(By.className("featuredMovieTitle")).getText();
-        search.getMovieFeature().findElement(By.id("play")).click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("details2.html"));
+        search.getMovieFeature().findElement(By.className("featuredMovieTitle")).click();
+        assertTrue(driver.getCurrentUrl().contains("details2.html"));
         DetailsPage details = PageFactory.initElements(driver, DetailsPage.class);
 
         wait.until(ExpectedConditions.textToBePresentInElement(details.getTitle(), title));
@@ -138,18 +139,29 @@ public class SearchPageTest {
     }
 
     @Test
-    public void testFeatureMovieGalleryCategoryLink() {
-        driver.get("http://localhost:" + port +"/search.html");
+    public void testFeatureMovieGalleryClassificationLink() {
+        driver.get("http://localhost:" + port + "/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
-        WebDriverWait wait = new WebDriverWait(driver, 2);
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"ageRating\"]")));
-        search.getRating().click();
-        Assert.assertTrue(driver.getCurrentUrl().contains("classifications"));
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"primeDiv\"]/div[4]")));
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("ageRating")));
+        search.getMovieFeature().findElement(By.id("ageRating")).click();
+        assertTrue(driver.getCurrentUrl().contains("classifications"));
         ClassificationsPage classifications = PageFactory.initElements(driver, ClassificationsPage.class);
 
         wait.until(ExpectedConditions.textToBePresentInElement(classifications.getTitle(), "Classifications"));
-        assertEquals(classifications.getTitle().getText(),"Classifications");
+        assertEquals(classifications.getTitle().getText(), "Classifications");
     }
 
+    @Test
+    public void testShowMoreButton() {
+        driver.get("http://localhost:" + port + "/search.html");
+        SearchPage search = PageFactory.initElements(driver, SearchPage.class);
+
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.elementToBeClickable(search.getShowMoreButton()));
+        search.getShowMoreButton().click();
+        assertTrue(driver.getCurrentUrl().contains("gallery"));
+    }
 }
