@@ -41,7 +41,7 @@ function showOnPage(list, ids, ratings){
         movieTile.className="col-6 col-sm-12 col-lg-6";
         axios.get(`https://api.themoviedb.org/3/movie/${list[i]}?api_key=e8787f4d45be4c1bcdb939f0d6113db5&language=en-UK`).then(
             append => {
-
+                didntFind("hide")
                 let genres = "";
                 for (let k = 0; k< append.data.genres.length; k++){
                     genres += `<a href="#">${append.data.genres[k].name}</a>`
@@ -115,7 +115,6 @@ function applyFilter (){
 
 
     for(let i=0;i<li.length;i++){
-        console.log()
         if(
             (li[i].getElementsByTagName('a')[0].innerHTML.toLowerCase().indexOf(filterValue)>-1 ||
                 ld[i].getElementsByTagName('p')[0].innerHTML.toLowerCase().indexOf(filterValue)>-1) &&
@@ -131,7 +130,7 @@ function applyFilter (){
             ld[i].style.display= 'none';
         }
     }
-
+    checkEmpty();
 }
 
 function showComing(list, ids, ratings) {
@@ -176,6 +175,30 @@ function showComing(list, ids, ratings) {
     showMore.className = "col-12"
     showMore.innerHTML = `<a href="comingSoon.html" class="section__btn">Show more</a>`
     div.appendChild(showMore);
+}
+
+function didntFind(state) {
+    if (state==="show"){
+        document.getElementById("nothingHere").style.display='';
+    } else {
+        document.getElementById("nothingHere").style.display='none';
+    }
+}
+
+function checkEmpty(){
+    let displayed = "";
+    let movies2 = document.getElementById('movieDisplay');
+    displayed = movies2.getElementsByClassName("col-6 col-sm-12 col-lg-6");
+
+    for (let i = 0; i<displayed.length;i++){
+        if (displayed[i].style.display!=="none"){
+            didntFind("hide");
+            return true;
+        }
+    }
+
+    didntFind("show");
+    return false;
 }
 
 document.getElementById("filter__years").addEventListener("mouseup",applyFilter);

@@ -79,7 +79,7 @@ insert into movie_line (movie_id, showtime_id) values (131,139);
 insert into movie (id, apiid, status, rating) values (132,556678,'upcoming', 'U');
 insert into movie_line (movie_id, showtime_id) values (132,116);
 insert into movie_line (movie_id, showtime_id) values (132,138);
-insert into movie (id, apiid, status, rating) values (133,696007,'upcoming', '15');
+insert into movie (id, apiid, status, rating) values (133,508439,'upcoming', 'U');
 insert into movie_line (movie_id, showtime_id) values (133,114);
 insert into movie_line (movie_id, showtime_id) values (133,143);
 insert into movie (id, apiid, status) values (134,524047,'upcoming');
