@@ -37,7 +37,7 @@ public class GalleryPageTest {
     public void init() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         ChromeOptions opts = new ChromeOptions();
-//        opts.setHeadless(true);
+        opts.setHeadless(true);
         this.driver = new ChromeDriver(opts);
 //		this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     }

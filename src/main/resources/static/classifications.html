@@ -78,7 +78,7 @@
                         <ul class="header__nav">
 
                             <li class="header__nav-item">
-                                <a href="index.html" class="header__nav-link">Home</a>
+                                <a id="home" href="index.html" class="header__nav-link">Home</a>
                             </li>
 
                             <!-- dropdown -->
@@ -86,14 +86,14 @@
                                 <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
 
                                 <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
-                                    <li><a href="gallery.html">Showing</a></li>
-                                    <li><a href="comingSoon.html">Coming Soon</a></li>
+                                    <li><a id="showing" href="gallery.html">Showing</a></li>
+                                    <li><a id="coming" href="comingSoon.html">Coming Soon</a></li>
                                 </ul>
                             </li>
                             <!-- end dropdown -->
 
                             <li class="header__nav-item">
-                                <a href="screens.html" class="header__nav-link">Screens</a>
+                                <a id="screens" href="screens.html" class="header__nav-link">Screens</a>
                             </li>
 
                             <!--dropdown-->
@@ -101,14 +101,14 @@
                                 <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planning Your Trip</a>
 
                                 <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog1">
-                                    <li><a href="gettingHere.html">Getting Here</a></li>
-                                    <li><a href="placesToGo.html">What To Do</a></li>
+                                    <li><a id="gettingHere" href="gettingHere.html">Getting Here</a></li>
+                                    <li><a id="whatToDo" href="placesToGo.html">What To Do</a></li>
                                 </ul>
                             </li>
                             <!-- end dropdown -->
 
                             <li class="header__nav-item">
-                                <a href="about.html" class="header__nav-link">About</a>
+                                <a id="about" href="about.html" class="header__nav-link">About</a>
                             </li>
 
                             <!-- dropdown -->
@@ -116,8 +116,8 @@
                                 <a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
 
                                 <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-                                    <li><a href="contactUs.html">Contact Us</a></li>
-                                    <li><a href="forum.html">Forum</a></li>
+                                    <li><a id="contact" href="contactUs.html">Contact Us</a></li>
+                                    <li><a id="forum" href="forum.html">Forum</a></li>
                                 </ul>
                             </li>
                             <!-- end dropdown -->
@@ -126,7 +126,7 @@
 
                         <!-- header auth -->
                         <div class="header__auth">
-                            <button class="header__search-btn" type="button">
+                            <button id="search" class="header__search-btn" type="button">
                                 <i class="icon ion-ios-search"></i>
                             </button>
                         </div>
@@ -152,7 +152,7 @@
                 <div class="col-12">
                     <div class="header__search-content">
                         <label for="searchBox"></label>
-                        <input type="text" placeholder="Search Term" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Term'" id="searchBox">
+                        <input id="searchBox" type="text" placeholder="Search Term" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Term'" id="searchBox">
                         <button type="button" id="searchButton">search</button>
                         <script src="js/search/search.js"></script>
                     </div>
@@ -172,6 +172,14 @@
                     <!-- section title -->
                     <h2 class="section__title">Classifications</h2>
                     <!-- end section title -->
+                    <!-- breadcrumb -->
+              <ul class="breadcrumb">
+                <li class="breadcrumb__item"><a id="homeBread" href="index.html">Home</a></li>
+                <li class="breadcrumb__item breadcrumb__item--active">
+                  Classifications
+                </li>
+              </ul>
+              <!-- end breadcrumb -->
                 </div>
             </div>
         </div>
@@ -190,12 +198,12 @@
         <div class="card card--list">
             <div class="row">
                 <div class="col-12 col-sm-4">
-                    <img class="ageimg" src="img/ratings/tbc100px.png"/>
+                    <img class="ageimg" src="img/ratings/tbc100px.png" alt=""/>
                 </div>
 
                 <div class="col">
                     <div class="card__content agedescriptions">
-                        <h3 class="card__title"><a href="https://www.bbfc.co.uk/industry-services/additional-information/bbfc-age-ratings-poster-exhibitors" target="_blank">To Be Confirmed</a> </h3>
+                        <h3 class="card__title"><a id="tbcLink" href="https://www.bbfc.co.uk/industry-services/additional-information/bbfc-age-ratings-poster-exhibitors" target="_blank">To Be Confirmed</a> </h3>
                         <div class="card__description">
                             <p class="text-justify">In some instances films had not been certified before the website was uploaded.</p>
                             <p class="text-justify">Child and Family tickets purchased before a film is certified as 15 or over can be refunded. Please contact Guest Services before the performance for a refund, as admission may be refused on the day.</p>
@@ -211,13 +219,12 @@
         <div class="card card--list">
             <div class="row">
                 <div class="col-12 col-sm-4">
-                    <img class="ageimg" src="img/ratings/U100PX.png"/>
+                    <img class="ageimg" src="img/ratings/U100PX.png" alt=""/>
                 </div>
-
-
+                
                 <div class="col">
                     <div class="card__content agedescriptions">
-                        <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/u" target="_blank">Universal</a> </h3>
+                        <h3 class="card__title"><a id="ULink" href="https://www.bbfc.co.uk/about-classification/u" target="_blank">Universal</a> </h3>
                         <div class="card__description">
                             <p class="text-justify">A U film should be suitable for audiences aged four years and over, although it is impossible to predict what might upset any particular child.</p>
                             <p class="text-justify">U films should be set within a positive framework and should offer reassuring counterbalances to any violence, threat or horror. If a work is particularly suitable for pre-school children, this will be indicated in the ratings info.</p>
@@ -236,13 +243,13 @@
             <div class="row">
                 <div class="col-12 col-sm-4">
                     <div class="card">
-                        <img class="ageimg" src="img/ratings/PG100PX.png"/>
+                        <img class="ageimg" src="img/ratings/PG100PX.png" alt=""/>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="card__content agedescriptions">
-                        <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/pg" target="_blank">Parental Guidance</a></h3>
+                        <h3 class="card__title"><a id="pgLink" href="https://www.bbfc.co.uk/about-classification/pg" target="_blank">Parental Guidance</a></h3>
                         <div class="card__description">
                             <p class="text-justify">General viewing, but some scenes may be unsuitable for young children. A PG film should not unsettle a child aged around eight or older.</p>
                             <p class="text-justify"> Unaccompanied children of any age may watch, but parents are advised to consider whether the content may upset younger, or more sensitive, children.</p>
@@ -259,12 +266,12 @@
             <div class="row">
                 <div class="col-12 col-sm-4">
                     <div class="card_">
-                        <img class="ageimg" src="img/ratings/12A100PX.png"/>
+                        <img class="ageimg" src="img/ratings/12A100PX.png" alt=""/>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card__content agedescriptions">
-                        <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/12a-and-12" target="_blank">Rated 12A</a></h3>
+                        <h3 class="card__title"><a id="TwelveLink" href="https://www.bbfc.co.uk/about-classification/12a-and-12" target="_blank">Rated 12A</a></h3>
                         <div class="card__description">
                             <p class="text-justify">Films classified 12A contain material that is not generally suitable for children aged under 12. No one younger than 12 may see a 12A film in a cinema unless accompanied by an adult. Adults planning to take a child under 12 to view a 12A film should consider whether the film is suitable for that child. </p>
                             <p class="text-justify">To help them decide, we recommend that they check the Ratings info for that film in advance. No one younger than 12 may rent or buy a 12 rated video work.</p>
@@ -281,13 +288,13 @@
             <div class="row">
                 <div class="col-12 col-sm-4">
                     <div class="card">
-                        <img class="ageimg" src="img/ratings/15100PX.png"/>
+                        <img class="ageimg" src="img/ratings/15100PX.png" alt=""/>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="card__content agedescriptions">
-                        <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/15" target="_blank">Rated 15</a></h3>
+                        <h3 class="card__title"><a id="fifteenLink" href="https://www.bbfc.co.uk/about-classification/15" target="_blank">Rated 15</a></h3>
                         <div class="card__description">
                             <p class="text-justify">Suitable only for persons of 15 years and older. Please note: proof of age may be required.</p>
                         </div>
@@ -303,12 +310,12 @@
             <div class="row">
                 <div class="col-12 col-sm-4">
                     <div class="card">
-                        <img class="ageimg" src="img/ratings/18100PX.png"/></div>
+                        <img class="ageimg" src="img/ratings/18100PX.png" alt=""/></div>
                 </div>
 
                 <div class="col">
                     <div class="card__content agedescriptions">
-                        <h3 class="card__title"><a href="https://www.bbfc.co.uk/about-classification/18" target="_blank">Rated 18</a></h3>
+                        <h3 class="card__title"><a id="eighteenLink" href="https://www.bbfc.co.uk/about-classification/18" target="_blank">Rated 18</a></h3>
                         <div class="card__description">
                             <p class="text-justify">No one younger than 18 may see an 18 film in a cinema. Adults should be free to choose their own entertainment. Please note: proof of age may be required</p>
                         </div>
@@ -329,8 +336,8 @@
             <div class="col-12 col-md-3">
                 <h6 class="footer__title">Download Our App</h6>
                 <ul class="footer__app">
-                    <li><a href="#"><img src="img/Download_on_the_App_Store_Badge.svg" alt=""></a></li>
-                    <li><a href="#"><img src="img/google-play-badge.png" alt=""></a></li>
+                    <li><a href="404.html"><img src="img/Download_on_the_App_Store_Badge.svg" alt=""></a></li>
+                    <li><a href="404.html"><img src="img/google-play-badge.png" alt=""></a></li>
                 </ul>
             </div>
             <!-- end footer list -->
@@ -339,20 +346,20 @@
             <div class="col-6 col-sm-4 col-md-3">
                 <h6 class="footer__title">Resources</h6>
                 <ul class="footer__list">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Pricing Plan</a></li>
-                    <li><a href="#">Help</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                    <li><a href="index.html">Home</a></li>
                 </ul>
             </div>
             <!-- end footer list -->
-            <p class="section__text"></p>
+
             <!-- footer list -->
             <div class="col-6 col-sm-4 col-md-3">
                 <h6 class="footer__title">Legal</h6>
                 <ul class="footer__list">
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Security</a></li>
+                    <li><a href="404.html">Terms of Use</a></li>
+                    <li><a href="404.html">Privacy Policy</a></li>
+                    <li><a href="404.html">Security</a></li>
                 </ul>
             </div>
             <!-- end footer list -->
@@ -362,12 +369,12 @@
                 <h6 class="footer__title">Contact</h6>
                 <ul class="footer__list">
                     <li><a href="contactUs.html">0161 393 2271</a></li>
-						<li><a href="contactUs.html">Ashill.Pathak@academytrainee.com</a></li>
+                    <li><a href="contactUs.html">qacinema.jobs@gmail.com</a></li>
                 </ul>
                 <ul class="footer__social">
                     <li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
                     <li class="instagram"><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
-                    <li class="twitter"><a href="#"><i class="icon ion-logo-twitter"></i></a></li>
+                    <li class="twitter"><a href="https://twitter.com/QACinema2?ref_src=twsrc%5Etfw"><i class="icon ion-logo-twitter"></i></a></li>
                     <li class="vk"><a href="#"><i class="icon ion-logo-vk"></i></a></li>
                 </ul>
             </div>
