@@ -23,12 +23,18 @@ public class SearchPage {
     @FindBy(id = "play")
     private WebElement playFeature;
 
-    @FindBy(id = "title")
+    @FindBy(className = "featuredMovieTitle")
     private WebElement titleFeature;
 
     @FindBy(id = "ageRating")
     private WebElement ratingFeature;
 
+    @FindBy(className = "section__btn")
+    private WebElement showMoreButton;
+
+    public WebElement getShowMoreButton() {
+        return showMoreButton;
+    }
 
     public WebElement getMovieFeature() {
         return movieFeature;
