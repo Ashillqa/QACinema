@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class GalleryPage {
 
-    @FindBy(id = "resetButton")
+    @FindBy(xpath = "//*[@id=\"resetButton\"]")
     private WebElement resetButton;
 
     public WebElement getResetButton() {

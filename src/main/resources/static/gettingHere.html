@@ -74,7 +74,7 @@
 						<ul class="header__nav">
 
 							<li class="header__nav-item">
-								<a id="home" href="index.html" class="header__nav-link">Home</a>
+								<a href="index.html" class="header__nav-link">Home</a>
 							</li>
 
 							<!-- dropdown -->
@@ -82,14 +82,14 @@
 								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
 
 								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
-									<li><a id="showing" href="gallery.html">Showing</a></li>
-									<li><a id="coming" href="comingSoon.html">Coming Soon</a></li>
+									<li><a href="gallery.html">Showing</a></li>
+									<li><a href="comingSoon.html">Coming Soon</a></li>
 								</ul>
 							</li>
 							<!-- end dropdown -->
 
 							<li class="header__nav-item">
-								<a id="screens" href="screens.html" class="header__nav-link">Screens</a>
+								<a href="screens.html" class="header__nav-link">Screens</a>
 							</li>
 
 							<!--dropdown-->
@@ -97,14 +97,14 @@
 								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planning Your Trip</a>
 
 								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog1">
-									<li><a id="gettingHere" href="gettingHere.html">Getting Here</a></li>
-									<li><a id="whatToDo" href="placesToGo.html">What To Do</a></li>
+									<li><a href="gettingHere.html">Getting Here</a></li>
+									<li><a href="placesToGo.html">What To Do</a></li>
 								</ul>
 							</li>
 							<!-- end dropdown -->
 
 							<li class="header__nav-item">
-								<a id="about" href="about.html" class="header__nav-link">About</a>
+								<a href="about.html" class="header__nav-link">About</a>
 							</li>
 
 							<!-- dropdown -->
@@ -112,8 +112,8 @@
 								<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
 
 								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-									<li><a id="contact" href="contactUs.html">Contact Us</a></li>
-									<li><a id="forum" href="forum.html">Forum</a></li>
+									<li><a href="contactUs.html">Contact Us</a></li>
+									<li><a href="forum.html">Forum</a></li>
 								</ul>
 							</li>
 							<!-- end dropdown -->
@@ -122,7 +122,7 @@
 
 						<!-- header auth -->
 						<div class="header__auth">
-							<button id="search" class="header__search-btn" type="button">
+							<button class="header__search-btn" type="button">
 								<i class="icon ion-ios-search"></i>
 							</button>
 						</div>
@@ -148,7 +148,7 @@
 				<div class="col-12">
 					<div class="header__search-content">
 						<label for="searchBox"></label>
-						<input id="searchBox" type="text" placeholder="Search Term" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Term'" id="searchBox">
+						<input type="text" placeholder="Search Term" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Term'" id="searchBox">
 						<button type="button" id="searchButton">search</button>
 						<script src="js/search/search.js"></script>
 					</div>
@@ -168,13 +168,14 @@
 					<div class="section__wrap">
 						<!-- section title -->
 						<h2 class="section__title">Getting Here</h2>
-						<h2 class="section__title">Locating us</h2>
 						<!-- end section title -->
 
 						<!-- breadcrumb -->
 						<ul class="breadcrumb">
-							<li class="breadcrumb__item"><a id="homeBread" href="index.html">Home</a></li>
+							<li class="breadcrumb__item"><a href="#">Home</a></li>
 							<li class="breadcrumb__item breadcrumb__item--active">Getting Here</li>
+
+							<li class="breadcrumb__item breadcrumb__item--active">FAQ</li>
 						</ul>
 						<!-- end breadcrumb -->
 					</div>
@@ -184,14 +185,13 @@
 	</section>
 	<!-- end page title -->
 
-    <!-- left side -->
-	<!-- faq -->
-	<!-- faq -->
-    <!-- left side -->
+
 	<section class="section">
 		<div class="container">
+
 			<div class="row">
 				<div class="col-12 col-md-6">
+
 					<div class="faq">
 						<h3 class="faq__title">Where are we?</h3>
 						<p class="faq__text">Currently we have one location open! you can find us at this location currently.</p>
@@ -204,9 +204,12 @@
 					<div class="faq">
 						<h3 class="faq__title">Getting here by tube</h3>
 						<p class="faq__text">If you wish to access our location by tube, use this handy tool for plotting your route</p>
-                        <div style="width:450px"><script language="JavaScript" src="https://www.tfl.gov.uk/tfl/syndication/widgets/tubemap/tubemap-iframe-stretchy.js"></script></div>
+                        <div style="width:450px">
+							<script src="https://www.tfl.gov.uk/tfl/syndication/widgets/tubemap/tubemap-iframe-stretchy.js"></script>
+						</div>
                         <p class="faq__text">Please remember to give adequate time to travel to our cinema, as no one enjoys being late to a movie, or someone turning up in the middle of an important scene! It is advised to plan your route in advance if taking the tube!</p>
 					</div>
+
 				</div>
                 
                 <!-- right side --> 
@@ -217,25 +220,29 @@
 						<p class="faq__text">Due to the nature of the city of London, there are congestion charge zones in certain parts of the city. This handy map should help visualize where these congestion charges apply!</p>
                         <iframe src="https://www.google.com/maps/d/embed?mid=1sVykjrC54hdZ9ccqrabPliIlDaI&hl=en" width="450" height="450"></iframe>
 					</div>
+
                     
-			 <div class="faq">
+			 		<div class="faq">
 						<h3 class="faq__title">Transport for London Twitter</h3>
 						<p class="faq__text">Whatever your transport method, it's good to see any updates via the transport twitter!</p>
                        
-                  <a class="twitter-timeline" href="https://twitter.com/TfL?ref_src=twsrc%5Etfw" data-width="600" data-height="600">Tweets by TfL</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				 		<a class="twitter-timeline" href="https://twitter.com/TfL?ref_src=twsrc%5Etfw" data-width="600" data-height="600">Tweets by TfL</a>
+				 		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                         
-                        <p class="faq__text"><i>*Disclaimer: Transport for London is not in any way assosciated with QACinemas. We are not to be held responsible for any content they may or may not choose to post.</i></p>
+                        <p class="faq__text"><i>*Disclaimer: Transport for London is not in any way associated with QACinemas. We are not to be held responsible for any content they may or may not choose to post.</i></p>
 					</div>
+			 	</div>
     
 			</div>
-                
+
+
                 <div class="col-12">
 					<h2 class="section__title section__title--no-margin">Our Parking</h2>
 				</div>
                 
                 <div class="col-12">
 					<p class="section__text section__text--last-with-margin">If you have decided to travel with us, you will find parking at the cinema itself, but we understand that sometimes our popular services lead to car parks being full! This map shows you how to get from the cinema, to the nearest car park! Now you can worry less about parking and more about what you see on the big screen at our wonderful QACinema!</p>
-                    <div id="over">
+                    <div id="over1">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1242.0751597254605!2d-0.10686494166055005!3d51.49210894490824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x4876049820df25c9%3A0xd83e10d4fdd092d7!2sCinema%20Museum%2C%202%20Dugard%20Way%2C%20Prince&#39;s%2C%20London%20SE11%204TH!3m2!1d51.4922943!2d-0.10522029999999999!4m5!1s0x487605e3f54b935d%3A0xd9e88883b09eb6e0!2sKnights%20Walk%20Estate%20SE11%204NW!3m2!1d51.492072799999995!2d-0.10632649999999999!5e0!3m2!1sen!2suk!4v1590743595186!5m2!1sen!2suk" width="450" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe>
                     </div>
 				</div>
@@ -250,140 +257,80 @@
                        <div id="over">
                        								<img src="img/frontOfCinema.jpg" alt="">
                        </div>
-                       
-                                           <table>
-                        <tr><th>Friday: </th><td>&nbsp 1:30pm - 12pm</td></tr>
-                        <tr><th>Saturday: </th><td>&nbsp 1:30am - 12pm</td></tr>
-                        <tr><th>Sunday: </th><td>&nbsp 1:30am - 12pm</td></tr>
-                        <tr><th>Email:</th><td>&nbsp QACinema@qacinema.com</td></tr>
 
-                    </table>
-				
-                </div>
-                
-		</div>
-    </div>
-	</section>
-						<h3 class="faq__title">Getting here by public transport</h3>
-						<p class="faq__text">The city of Manchester is built with a wide array of public transportation options.</p>
 					</div>
-
-					<div class="faq">
-						<h3 class="faq__title">Why is the sound distorted?</h3>
-						<p class="faq__text">Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-					</div>
-
-					<div class="faq">
-						<h3 class="faq__title">Why is the Video stuttering, buffering or randomly stopping?</h3>
-						<p class="faq__text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-					</div>
-
-					<div class="faq">
-						<h3 class="faq__title">When I change the quality of a video, nothing happens.</h3>
-						<p class="faq__text">If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-					</div>
-				</div>
-
-				<div class="col-12 col-md-6">
-					<div class="faq">
-						<h3 class="faq__title">Why isn't the video starting at the beginning?</h3>
-						<p class="faq__text">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-					</div>
-
-					<div class="faq">
-						<h3 class="faq__title">How do I make the Video go Fullscreen?</h3>
-						<p class="faq__text">It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-					</div>
-
-					<div class="faq">
-						<h3 class="faq__title">What Browsers are supported?</h3>
-						<p class="faq__text">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-					</div>
-
-					<div class="faq">
-						<h3 class="faq__title">How do you handle my privacy?</h3>
-						<p class="faq__text">Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-					</div>
-
-					<div class="faq">
-						<h3 class="faq__title">How can I contact you?</h3>
-						<p class="faq__text">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-					</div>
-				</div>
 			</div>
-		</div>
 	</section>
 
 	<!-- end faq -->
 
-	<!-- footer -->
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
-				<!-- footer list -->
-				<div class="col-12 col-md-3">
-					<h6 class="footer__title">Download Our App</h6>
-					<ul class="footer__app">
-						<li><a href="#"><img src="img/Download_on_the_App_Store_Badge.svg" alt=""></a></li>
-						<li><a href="#"><img src="img/google-play-badge.png" alt=""></a></li>
-					</ul>
-				</div>
-				<!-- end footer list -->
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<!-- footer list -->
+			<div class="col-12 col-md-3">
+				<h6 class="footer__title">Download Our App</h6>
+				<ul class="footer__app">
+					<li><a href="404.html"><img src="img/Download_on_the_App_Store_Badge.svg" alt=""></a></li>
+					<li><a href="404.html"><img src="img/google-play-badge.png" alt=""></a></li>
+				</ul>
+			</div>
+			<!-- end footer list -->
 
-				<!-- footer list -->
-				<div class="col-6 col-sm-4 col-md-3">
-					<h6 class="footer__title">Resources</h6>
-					<ul class="footer__list">
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Pricing Plan</a></li>
-						<li><a href="#">Help</a></li>
-					</ul>
-				</div>
-				<!-- end footer list -->
+			<!-- footer list -->
+			<div class="col-6 col-sm-4 col-md-3">
+				<h6 class="footer__title">Resources</h6>
+				<ul class="footer__list">
+					<li><a href="about.html">About</a></li>
+					<li><a href="contactUs.html">Contact Us</a></li>
+					<li><a href="index.html">Home</a></li>
+				</ul>
+			</div>
+			<!-- end footer list -->
 
-				<!-- footer list -->
-				<div class="col-6 col-sm-4 col-md-3">
-					<h6 class="footer__title">Legal</h6>
-					<ul class="footer__list">
+			<!-- footer list -->
+			<div class="col-6 col-sm-4 col-md-3">
+				<h6 class="footer__title">Legal</h6>
+				<ul class="footer__list">
+					<li><a href="404.html">Terms of Use</a></li>
+					<li><a href="404.html">Privacy Policy</a></li>
+					<li><a href="404.html">Security</a></li>
+				</ul>
+			</div>
+			<!-- end footer list -->
+
+			<!-- footer list -->
+			<div class="col-12 col-sm-4 col-md-3">
+				<h6 class="footer__title">Contact</h6>
+				<ul class="footer__list">
+					<li><a href="contactUs.html">0161 393 2271</a></li>
+					<li><a href="contactUs.html">qacinema.jobs@gmail.com</a></li>
+				</ul>
+				<ul class="footer__social">
+					<li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
+					<li class="instagram"><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
+					<li class="twitter"><a href="https://twitter.com/QACinema2?ref_src=twsrc%5Etfw"><i class="icon ion-logo-twitter"></i></a></li>
+					<li class="vk"><a href="#"><i class="icon ion-logo-vk"></i></a></li>
+				</ul>
+			</div>
+			<!-- end footer list -->
+
+			<!-- footer copyright -->
+			<div class="col-12">
+				<div class="footer__copyright">
+					<small><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></small>
+
+					<ul>
 						<li><a href="#">Terms of Use</a></li>
 						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Security</a></li>
 					</ul>
 				</div>
-				<!-- end footer list -->
-
-				<!-- footer list -->
-				<div class="col-12 col-sm-4 col-md-3">
-					<h6 class="footer__title">Contact</h6>
-					<ul class="footer__list">
-						<li><a href="contactUs.html">0161 393 2271</a></li>
-						<li><a href="contactUs.html">Ashill.Pathak@academytrainee.com</a></li>
-					</ul>
-					<ul class="footer__social">
-						<li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
-						<li class="instagram"><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
-						<li class="twitter"><a href="#"><i class="icon ion-logo-twitter"></i></a></li>
-						<li class="vk"><a href="#"><i class="icon ion-logo-vk"></i></a></li>
-					</ul>
-				</div>
-				<!-- end footer list -->
-
-				<!-- footer copyright -->
-				<div class="col-12">
-					<div class="footer__copyright">
-						<small><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></small>
-
-						<ul>
-							<li><a href="#">Terms of Use</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-						</ul>
-					</div>
-				</div>
-				<!-- end footer copyright -->
 			</div>
+			<!-- end footer copyright -->
 		</div>
-	</footer>
-	<!-- end footer -->
+	</div>
+</footer>
+<!-- end footer -->
 
 	<!-- JS -->
 	<script src="js/jquery-3.3.1.min.js"></script>
