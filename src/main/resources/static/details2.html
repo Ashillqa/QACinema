@@ -52,7 +52,7 @@
 						<ul class="header__nav">
 
 							<li class="header__nav-item">
-								<a href="index.html" class="header__nav-link">Home</a>
+								<a id="home" href="index.html" class="header__nav-link">Home</a>
 							</li>
 
 							<!-- dropdown -->
@@ -60,14 +60,14 @@
 								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
 
 								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
-									<li><a href="gallery.html">Showing</a></li>
-									<li><a href="comingSoon.html">Coming Soon</a></li>
+									<li><a id="showing" href="gallery.html">Showing</a></li>
+									<li><a id="coming" href="comingSoon.html">Coming Soon</a></li>
 								</ul>
 							</li>
 							<!-- end dropdown -->
 
 							<li class="header__nav-item">
-								<a href="screens.html" class="header__nav-link">Screens</a>
+								<a id="screens" href="screens.html" class="header__nav-link">Screens</a>
 							</li>
 
 							<!--dropdown-->
@@ -75,14 +75,14 @@
 								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planning Your Trip</a>
 
 								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog1">
-									<li><a href="gettingHere.html">Getting Here</a></li>
-									<li><a href="placesToGo.html">What To Do</a></li>
+									<li><a id="gettingHere" href="gettingHere.html">Getting Here</a></li>
+									<li><a id="whatToDo" href="placesToGo.html">What To Do</a></li>
 								</ul>
 							</li>
 							<!-- end dropdown -->
 
 							<li class="header__nav-item">
-								<a href="about.html" class="header__nav-link">About</a>
+								<a id="about" href="about.html" class="header__nav-link">About</a>
 							</li>
 
 							<!-- dropdown -->
@@ -90,8 +90,8 @@
 								<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
 
 								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-									<li><a href="contactUs.html">Contact Us</a></li>
-									<li><a href="forum.html">Forum</a></li>
+									<li><a id="contact" href="contactUs.html">Contact Us</a></li>
+									<li><a id="forum" href="forum.html">Forum</a></li>
 								</ul>
 							</li>
 							<!-- end dropdown -->
@@ -100,7 +100,7 @@
 
 						<!-- header auth -->
 						<div class="header__auth">
-							<button class="header__search-btn" type="button">
+							<button id="search" class="header__search-btn" type="button">
 								<i class="icon ion-ios-search"></i>
 							</button>
 						</div>
@@ -126,7 +126,7 @@
 				<div class="col-12">
 					<div class="header__search-content">
 						<label for="searchBox"></label>
-						<input type="text" placeholder="Search Term" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Term'" id="searchBox">
+						<input id="searchBox" type="text" placeholder="Search Term" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Term'" id="searchBox">
 						<button type="button" id="searchButton">search</button>
 						<script src="js/search/search.js"></script>
 					</div>
