@@ -38,7 +38,7 @@ public class NavBarPage {
 	private WebElement forum;
 	
 	@FindBy(id = "search")
-	private WebElement search1;
+	private WebElement search;
 	
 	@FindBy(id = "searchButton")
 	private WebElement searchMain;
@@ -48,7 +48,7 @@ public class NavBarPage {
 	}
 	
 	public WebElement getSearch() {
-		return search1;
+		return search;
 	}
 	
 	public WebElement getMore() {

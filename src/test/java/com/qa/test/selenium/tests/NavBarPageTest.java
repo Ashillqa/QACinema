@@ -18,6 +18,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Sleeper;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
@@ -71,13 +72,14 @@ public class NavBarPageTest {
 	        assertEquals("http://localhost:" + port +"/gallery.html", driver.getCurrentUrl());
 
 	    }
-
+  
 	    @Test
 	    public void testSearchNav() throws InterruptedException {
 	    	driver.get("http://localhost:" + port +"/index.html");
 	    	NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
 			navigation.getSearch().click();
-			wait.until(ExpectedConditions.elementToBeClickable(navigation.getSearchMain())).click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("searchButton")));
+			navigation.getSearchMain().click();
 	    	assertEquals("http://localhost:" + port +"/search.html?term=", driver.getCurrentUrl());
 	    }
 
