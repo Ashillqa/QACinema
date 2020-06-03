@@ -3,9 +3,9 @@ package com.qa.test.selenium.tests;
 import com.qa.test.selenium.pages.DetailsPage;
 import com.qa.test.selenium.pages.GalleryPage;
 import com.qa.test.selenium.pages.SearchPage;
-import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Assert;
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
@@ -26,22 +26,22 @@ import static org.junit.Assert.assertEquals;
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class SearchPageTest {
 
-    private WebDriver driver;
+    public static WebDriver driver;
 
     @LocalServerPort
     private int port;
 
-    @Before
-    public void init() {
+    @BeforeClass
+    public static void init() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         ChromeOptions opts = new ChromeOptions();
         opts.setHeadless(true);
-        this.driver = new ChromeDriver(opts);
+        driver = new ChromeDriver(opts);
 //		this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     }
 
-    @After
-    public void teardown() {
+    @AfterClass
+    public static void teardown() {
         driver.quit();
     }
 
@@ -61,12 +61,47 @@ public class SearchPageTest {
         driver.get("http://localhost:" + port +"/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
 
-        String title = search.getMovie().findElement(By.id("title")).getText();
-        search.getMovie().findElement(By.id("play")).click();
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title1")));
+        String title = search.getTitle1().getText();
+        search.getPlay1().click();
         Assert.assertTrue(driver.getCurrentUrl().contains("details2.html"));
         DetailsPage details = PageFactory.initElements(driver, DetailsPage.class);
 
+        wait.until(ExpectedConditions.textToBePresentInElement(details.getTitle(), title));
+        assertEquals(details.getTitle().getText(),title);
+    }
+
+    @Test
+    public void testMovieGalleryTitleLink() {
+        driver.manage().window().maximize();
+        driver.get("http://localhost:" + port +"/search.html");
+        SearchPage search = PageFactory.initElements(driver, SearchPage.class);
         WebDriverWait wait = new WebDriverWait(driver, 2);
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title1")));
+        String title = search.getTitle1().getText();
+        search.getTitle1().click();
+        Assert.assertTrue(driver.getCurrentUrl().contains("details2.html"));
+        DetailsPage details = PageFactory.initElements(driver, DetailsPage.class);
+
+        wait.until(ExpectedConditions.textToBePresentInElement(details.getTitle(), title));
+        assertEquals(details.getTitle().getText(),title);
+    }
+
+    @Test
+    public void testMovieGalleryCategoryLink() {
+        driver.manage().window().maximize();
+        driver.get("http://localhost:" + port +"/search.html");
+        SearchPage search = PageFactory.initElements(driver, SearchPage.class);
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title1")));
+        String title = search.getTitle1().getText();
+        search.getTitle1().click();
+        Assert.assertTrue(driver.getCurrentUrl().contains("details2.html"));
+        DetailsPage details = PageFactory.initElements(driver, DetailsPage.class);
+
         wait.until(ExpectedConditions.textToBePresentInElement(details.getTitle(), title));
         assertEquals(details.getTitle().getText(),title);
     }

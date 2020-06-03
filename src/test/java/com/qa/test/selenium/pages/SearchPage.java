@@ -8,15 +8,21 @@ public class SearchPage {
     @FindBy(id = "resetButton")
     private WebElement resetButton;
 
-    @FindBy(xpath = "//*[@id=\"movieDisplay\"]/div[2]/div/div")
-    private WebElement movie;
+    @FindBy(id = "play1")
+    private WebElement play1;
 
-    public WebElement getMovie() {
-        return movie;
-    }
+    @FindBy(id = "title1")
+    private WebElement title1;
 
     public WebElement getResetButton() {
         return resetButton;
     }
 
+    public WebElement getPlay1() {
+        return play1;
+    }
+
+    public WebElement getTitle1() {
+        return title1;
+    }
 }

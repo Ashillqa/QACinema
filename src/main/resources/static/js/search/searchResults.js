@@ -8,7 +8,7 @@ let featuredRatings = [];
 
 const params = new URLSearchParams(window.location.search)
 
-axios.get(`http://${window.location.href.toString().split("/")[2]}/movie/getAll`).then(
+axios.get(`/movie/getAll`).then(
     data => {
         for(let i of data.data){
             list.push(i.apiID);
@@ -59,14 +59,14 @@ function showOnPage(list, ids, ratings){
                     '<div class="col-12 col-sm-4">'+
                     '<div class="card__cover">'+
                     `<img src="https://image.tmdb.org/t/p/original${append.data.poster_path}" alt="">`+
-                    `<a id="play" href="details2.html?title=${append.data.title}&id=${ids[i]}" class="card__play">`+
+                    `<a id="play${i}" href="details2.html?title=${append.data.title}&id=${ids[i]}" class="card__play">`+
                     `<i class="icon ion-ios-play" id="playbutton${ids[i]}"></i>`+
                     '</a>'+
                     '</div>'+
                     '</div>'+
                     '<div class="col-12 col-sm-8">'+
                     '<div class="card__content">'+
-                    `<h3 class="card__title"><a id="title" href="details2.html?title=${append.data.title}&id=${ids[i]}">${append.data.title}</a></h3>`+
+                    `<h3 class="card__title"><a id="title${i}" href="details2.html?title=${append.data.title}&id=${ids[i]}">${append.data.title}</a></h3>`+
                     '<span class="card__category">'+
                     genres +
                     '</span>'+
