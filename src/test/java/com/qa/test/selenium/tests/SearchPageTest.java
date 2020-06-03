@@ -36,7 +36,7 @@ public class SearchPageTest {
     public static void init() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         ChromeOptions opts = new ChromeOptions();
-        opts.setHeadless(false);
+        opts.setHeadless(true);
         driver = new ChromeDriver(opts);
 //		this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -129,7 +129,7 @@ public class SearchPageTest {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"primeDiv\"]/div[4]")));
 
         String title = search.getMovieFeature().findElement(By.className("featuredMovieTitle")).getText();
-        search.getMovieFeature().findElement(By.id("play")).click();
+        search.getMovieFeature().findElement(By.id("title")).click();
         Assert.assertTrue(driver.getCurrentUrl().contains("details2.html"));
         DetailsPage details = PageFactory.initElements(driver, DetailsPage.class);
 
