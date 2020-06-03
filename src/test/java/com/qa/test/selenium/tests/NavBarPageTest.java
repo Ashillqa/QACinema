@@ -17,6 +17,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
+import static java.lang.Thread.sleep;
+
 
 
 import com.qa.test.selenium.pages.NavBarPage;
@@ -34,7 +36,7 @@ public class NavBarPageTest {
 	    public static void init() {
 	        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 	        ChromeOptions opts = new ChromeOptions();
-	        opts.setHeadless(true);
+	        //opts.setHeadless(true);
 	        driver = new ChromeDriver(opts);
 //			this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 	        driver.manage().window().maximize();
@@ -62,6 +64,18 @@ public class NavBarPageTest {
 	        assertEquals("http://localhost:" + port +"/gallery.html", driver.getCurrentUrl());
 	     
 	    }
+	    
+	    @Test
+	    public void testSearchNav() throws InterruptedException {
+	    	driver.get("http://localhost:" + port +"/index.html");
+	    	NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
+	    	WebDriverWait wait = new WebDriverWait(driver, 2);
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.id("search")));
+	    	navigation.getSearch().click();
+	    	sleep(2000);
+	    	navigation.getSearchMain().click();
+	    	assertEquals("http://localhost:" + port +"/search.html?term=", driver.getCurrentUrl());
+	    }
 
 
 	    
@@ -74,6 +88,7 @@ public class NavBarPageTest {
 	        navigation.getMovieNav().click();	        
 	        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("coming")));
 	        assertEquals("Coming Soon",navigation.getComing().getText());
+	        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("coming")));
 	        navigation.getComing().click();
 	        assertEquals("http://localhost:" + port +"/comingSoon.html", driver.getCurrentUrl());
 	    }

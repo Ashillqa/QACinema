@@ -40,7 +40,7 @@ public class NavBarPage {
 	@FindBy(id = "search")
 	private WebElement search1;
 	
-	@FindBy(id = "searchButton")
+	@FindBy(xpath = "//*[@id=\"searchButton\"]")
 	private WebElement searchMain;
 	
 	public WebElement getSearchMain() {
