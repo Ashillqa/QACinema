@@ -65,7 +65,6 @@ public class GalleryPageTest {
         GalleryPage gallery = PageFactory.initElements(driver, GalleryPage.class);
         assertEquals("reset".toUpperCase(),gallery.getResetButton().getText());
         logger.log(Status.PASS, "Title verified");
-
     }
 
 }
