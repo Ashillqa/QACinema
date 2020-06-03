@@ -93,7 +93,7 @@
 						<ul class="header__nav">
 
 							<li class="header__nav-item">
-								<a href="index.html" class="header__nav-link">Home</a>
+								<a id="home" href="index.html" class="header__nav-link">Home</a>
 							</li>
 
 							<!-- dropdown -->
@@ -101,14 +101,14 @@
 								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
 
 								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
-									<li><a href="gallery.html">Showing</a></li>
-									<li><a href="comingSoon.html">Coming Soon</a></li>
+									<li><a id="showing" href="gallery.html">Showing</a></li>
+									<li><a id="coming" href="comingSoon.html">Coming Soon</a></li>
 								</ul>
 							</li>
 							<!-- end dropdown -->
 
 							<li class="header__nav-item">
-								<a href="screens.html" class="header__nav-link">Screens</a>
+								<a id="screens" href="screens.html" class="header__nav-link">Screens</a>
 							</li>
 
 							<!--dropdown-->
@@ -116,14 +116,14 @@
 								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planning Your Trip</a>
 
 								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog1">
-									<li><a href="gettingHere.html">Getting Here</a></li>
-									<li><a href="placesToGo.html">What To Do</a></li>
+									<li><a id="gettingHere" href="gettingHere.html">Getting Here</a></li>
+									<li><a id="whatToDo" href="placesToGo.html">What To Do</a></li>
 								</ul>
 							</li>
 							<!-- end dropdown -->
 
 							<li class="header__nav-item">
-								<a href="about.html" class="header__nav-link">About</a>
+								<a id="about" href="about.html" class="header__nav-link">About</a>
 							</li>
 
 							<!-- dropdown -->
@@ -131,8 +131,8 @@
 								<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
 
 								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-									<li><a href="contactUs.html">Contact Us</a></li>
-									<li><a href="forum.html">Forum</a></li>
+									<li><a id="contact" href="contactUs.html">Contact Us</a></li>
+									<li><a id="forum" href="forum.html">Forum</a></li>
 								</ul>
 							</li>
 							<!-- end dropdown -->
@@ -141,7 +141,7 @@
 
 						<!-- header auth -->
 						<div class="header__auth">
-							<button class="header__search-btn" type="button">
+							<button id="search" class="header__search-btn" type="button">
 								<i class="icon ion-ios-search"></i>
 							</button>
 						</div>
@@ -167,7 +167,7 @@
 				<div class="col-12">
 					<div class="header__search-content">
 						<label for="searchBox"></label>
-						<input type="text" placeholder="Search Term" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Term'" id="searchBox">
+						<input id="searchBox" type="text" placeholder="Search Term" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Term'" id="searchBox">
 						<button type="button" id="searchButton">search</button>
 						<script src="js/search/search.js"></script>
 					</div>
@@ -178,48 +178,45 @@
 	<!-- end header search -->
 </header>
 <!-- end header -->
+<!-- page title -->
+<section class="section section--first section--bg" data-bg="img/section/section.jpg">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section__wrap">
+					<!-- section title -->
+					<h2 class="section__title">Forum</h2>
+					<!-- end section title -->
 
-	<!-- content -->
-	<section class="content">
-		<div class="content__head">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<!-- content title -->
-						<h2 class="content__title">Discover</h2>
-						<!-- end content title -->
-
-						<!-- content tabs nav -->
-						<ul class="nav nav-tabs content__tabs" id="content__tabs" role="tablist">
-							<li class="nav-item">
-								<a class="nav-link active" data-toggle="tab" role="tab" aria-controls="tab-1" aria-selected="true">Comments</a>
-							</li>
-						</ul>
-						<!-- end content tabs nav -->
-
-						<!-- content mobile tabs nav -->
-						<div class="content__mobile-tabs" id="content__mobile-tabs">
-							<div class="content__mobile-tabs-btn dropdown-toggle" role="navigation" id="mobile-tabs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<input type="button" value="Comments">
-								<span></span>
-							</div>
-
-							<div class="content__mobile-tabs-menu dropdown-menu" aria-labelledby="mobile-tabs">
-								<ul class="nav nav-tabs" role="tablist">
-									<li class="nav-item"><a class="nav-link active" id="1-tab" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">Comments</a></li>
-
-									<li class="nav-item"><a class="nav-link" id="2-tab" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">Reviews</a></li>
-
-									<li class="nav-item"><a class="nav-link" id="3-tab" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">Photos</a></li>
-								</ul>
-							</div>
-						</div>
-						<!-- end content mobile tabs nav -->
-					</div>
+					<!-- breadcrumb -->
+					<ul class="breadcrumb">
+						<li class="breadcrumb__item"><a id="homeBread" href="index.html">Home</a></li>
+						<li class="breadcrumb__item breadcrumb__item--active">Forum</li>
+					</ul>
+					<!-- end breadcrumb -->
 				</div>
 			</div>
 		</div>
-
+	</div>
+</section>
+<!-- end page title -->
+	<!-- content -->
+	<section class="content">
+	<div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section__wrap">
+                    <!-- section title -->
+                    <h3 class="section__title">Comments</h3>
+                    <!-- end section title -->
+                    <!-- breadcrumb -->
+              <!-- end breadcrumb -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+<section class="content">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-lg-8 col-xl-8">
@@ -273,73 +270,74 @@
 	</section>
 	<!-- end content -->
 
-	<!-- footer -->
-	<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <!-- footer list -->
-            <div class="col-12 col-md-3">
-                <h6 class="footer__title">Download Our App</h6>
-                <ul class="footer__app">
-                    <li><a href="#"><img src="img/Download_on_the_App_Store_Badge.svg" alt=""></a></li>
-                    <li><a href="#"><img src="img/google-play-badge.png" alt=""></a></li>
-                </ul>
-            </div>
-            <!-- end footer list -->
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<!-- footer list -->
+			<div class="col-12 col-md-3">
+				<h6 class="footer__title">Download Our App</h6>
+				<ul class="footer__app">
+					<li><a href="404.html"><img src="img/Download_on_the_App_Store_Badge.svg" alt=""></a></li>
+					<li><a href="404.html"><img src="img/google-play-badge.png" alt=""></a></li>
+				</ul>
+			</div>
+			<!-- end footer list -->
 
-            <!-- footer list -->
-            <div class="col-6 col-sm-4 col-md-3">
-                <h6 class="footer__title">Resources</h6>
-                <ul class="footer__list">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Pricing Plan</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
-            </div>
-            <!-- end footer list -->
+			<!-- footer list -->
+			<div class="col-6 col-sm-4 col-md-3">
+				<h6 class="footer__title">Resources</h6>
+				<ul class="footer__list">
+					<li><a href="about.html">About</a></li>
+					<li><a href="contactUs.html">Contact Us</a></li>
+					<li><a href="index.html">Home</a></li>
+				</ul>
+			</div>
+			<!-- end footer list -->
 
-            <!-- footer list -->
-            <div class="col-6 col-sm-4 col-md-3">
-                <h6 class="footer__title">Legal</h6>
-                <ul class="footer__list">
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Security</a></li>
-                </ul>
-            </div>
-            <!-- end footer list -->
+			<!-- footer list -->
+			<div class="col-6 col-sm-4 col-md-3">
+				<h6 class="footer__title">Legal</h6>
+				<ul class="footer__list">
+					<li><a href="404.html">Terms of Use</a></li>
+					<li><a href="404.html">Privacy Policy</a></li>
+					<li><a href="404.html">Security</a></li>
+				</ul>
+			</div>
+			<!-- end footer list -->
 
-            <!-- footer list -->
-            <div class="col-12 col-sm-4 col-md-3">
-                <h6 class="footer__title">Contact</h6>
-                <ul class="footer__list">
-                    <li><a href="contactUs.html">0161 393 2271</a></li>
-						<li><a href="contactUs.html">Ashill.Pathak@academytrainee.com</a></li>
-                </ul>
-                <ul class="footer__social">
-                    <li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
-                    <li class="instagram"><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
-                    <li class="twitter"><a href="#"><i class="icon ion-logo-twitter"></i></a></li>
-                    <li class="vk"><a href="#"><i class="icon ion-logo-vk"></i></a></li>
-                </ul>
-            </div>
-            <!-- end footer list -->
+			<!-- footer list -->
+			<div class="col-12 col-sm-4 col-md-3">
+				<h6 class="footer__title">Contact</h6>
+				<ul class="footer__list">
+					<li><a href="contactUs.html">0161 393 2271</a></li>
+					<li><a href="contactUs.html">qacinema.jobs@gmail.com</a></li>
+				</ul>
+				<ul class="footer__social">
+					<li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
+					<li class="instagram"><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
+					<li class="twitter"><a href="https://twitter.com/QACinema2?ref_src=twsrc%5Etfw"><i class="icon ion-logo-twitter"></i></a></li>
+					<li class="vk"><a href="#"><i class="icon ion-logo-vk"></i></a></li>
+				</ul>
+			</div>
+			<!-- end footer list -->
 
-            <!-- footer copyright -->
-            <div class="col-12">
-                <div class="footer__copyright">
-                    <small><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></small>
+			<!-- footer copyright -->
+			<div class="col-12">
+				<div class="footer__copyright">
+					<small><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></small>
 
-                    <ul>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- end footer copyright -->
-        </div>
-    </div>
+					<ul>
+						<li><a href="#">Terms of Use</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end footer copyright -->
+		</div>
+	</div>
 </footer>
+<!-- end footer -->
+
 
 			
 
