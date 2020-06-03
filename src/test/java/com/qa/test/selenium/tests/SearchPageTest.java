@@ -1,5 +1,6 @@
 package com.qa.test.selenium.tests;
 
+import com.qa.test.selenium.pages.ClassificationsPage;
 import com.qa.test.selenium.pages.DetailsPage;
 import com.qa.test.selenium.pages.GalleryPage;
 import com.qa.test.selenium.pages.SearchPage;
@@ -35,9 +36,10 @@ public class SearchPageTest {
     public static void init() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         ChromeOptions opts = new ChromeOptions();
-        opts.setHeadless(true);
+        opts.setHeadless(false);
         driver = new ChromeDriver(opts);
 //		this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
     }
 
     @AfterClass
@@ -47,7 +49,6 @@ public class SearchPageTest {
 
     @Test
     public void testResetButton() {
-        driver.manage().window().maximize();
         driver.get("http://localhost:" + port +"/search.html");
         GalleryPage gallery = PageFactory.initElements(driver, GalleryPage.class);
         assertEquals("reset".toUpperCase(),gallery.getResetButton().getText());
@@ -57,7 +58,6 @@ public class SearchPageTest {
 
     @Test
     public void testMovieGalleryPlayButtonLink() {
-        driver.manage().window().maximize();
         driver.get("http://localhost:" + port +"/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
 
@@ -74,7 +74,6 @@ public class SearchPageTest {
 
     @Test
     public void testMovieGalleryTitleLink() {
-        driver.manage().window().maximize();
         driver.get("http://localhost:" + port +"/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
         WebDriverWait wait = new WebDriverWait(driver, 2);
@@ -91,19 +90,66 @@ public class SearchPageTest {
 
     @Test
     public void testMovieGalleryCategoryLink() {
-        driver.manage().window().maximize();
         driver.get("http://localhost:" + port +"/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
         WebDriverWait wait = new WebDriverWait(driver, 2);
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title1")));
-        String title = search.getTitle1().getText();
-        search.getTitle1().click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"ageRating\"]")));
+        search.getRating().click();
+        Assert.assertTrue(driver.getCurrentUrl().contains("classifications"));
+        ClassificationsPage classifications = PageFactory.initElements(driver, ClassificationsPage.class);
+
+        wait.until(ExpectedConditions.textToBePresentInElement(classifications.getTitle(), "Classifications"));
+        assertEquals(classifications.getTitle().getText(),"Classifications");
+    }
+
+    @Test
+    public void testFeatureMovieGalleryPlayButtonLink() {
+        driver.get("http://localhost:" + port +"/search.html");
+        SearchPage search = PageFactory.initElements(driver, SearchPage.class);
+
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"primeDiv\"]/div[4]")));
+
+        String title = search.getMovieFeature().findElement(By.className("featuredMovieTitle")).getText();
+        search.getMovieFeature().findElement(By.id("play")).click();
         Assert.assertTrue(driver.getCurrentUrl().contains("details2.html"));
         DetailsPage details = PageFactory.initElements(driver, DetailsPage.class);
 
         wait.until(ExpectedConditions.textToBePresentInElement(details.getTitle(), title));
         assertEquals(details.getTitle().getText(),title);
+    }
+
+    @Test
+    public void testFeatureMovieGalleryTitleLink() {
+        driver.get("http://localhost:" + port +"/search.html");
+        SearchPage search = PageFactory.initElements(driver, SearchPage.class);
+
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"primeDiv\"]/div[4]")));
+
+        String title = search.getMovieFeature().findElement(By.className("featuredMovieTitle")).getText();
+        search.getMovieFeature().findElement(By.id("play")).click();
+        Assert.assertTrue(driver.getCurrentUrl().contains("details2.html"));
+        DetailsPage details = PageFactory.initElements(driver, DetailsPage.class);
+
+        wait.until(ExpectedConditions.textToBePresentInElement(details.getTitle(), title));
+        assertEquals(details.getTitle().getText(),title);
+    }
+
+    @Test
+    public void testFeatureMovieGalleryCategoryLink() {
+        driver.get("http://localhost:" + port +"/search.html");
+        SearchPage search = PageFactory.initElements(driver, SearchPage.class);
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"ageRating\"]")));
+        search.getRating().click();
+        Assert.assertTrue(driver.getCurrentUrl().contains("classifications"));
+        ClassificationsPage classifications = PageFactory.initElements(driver, ClassificationsPage.class);
+
+        wait.until(ExpectedConditions.textToBePresentInElement(classifications.getTitle(), "Classifications"));
+        assertEquals(classifications.getTitle().getText(),"Classifications");
     }
 
 }

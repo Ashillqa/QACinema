@@ -161,7 +161,7 @@ function showFeatured(list, ids, ratings) {
                     '        </div>\n' +
                     '        <div class="card__content">\n' +
                     '            <h3 class="card__title">\n' +
-                    `<a href="details2.html?title=${res2.data.title}&id=${ids[i]}">${res2.data.title}</a>\n` +
+                    `<a class="featuredMovieTitle" href="details2.html?title=${res2.data.title}&id=${ids[i]}">${res2.data.title}</a>\n` +
                     '            </h3>\n' +
                     '            <span class="card__category">\n' +
                     genres +
