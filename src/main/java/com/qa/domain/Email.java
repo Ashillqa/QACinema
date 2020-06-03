@@ -80,17 +80,17 @@ public class Email {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Email)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         Email email1 = (Email) o;
-        return getId().equals(email1.getId()) &&
-                getUsername().equals(email1.getUsername()) &&
-                getEmail().equals(email1.getEmail()) &&
-                getSubject().equals(email1.getSubject()) &&
-                getBody().equals(email1.getBody());
+        return Objects.equals(id, email1.id) &&
+                Objects.equals(username, email1.username) &&
+                Objects.equals(email, email1.email) &&
+                Objects.equals(subject, email1.subject) &&
+                Objects.equals(body, email1.body);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getUsername(), getEmail(), getSubject(), getBody());
+        return Objects.hash(id, username, email, subject, body);
     }
 }

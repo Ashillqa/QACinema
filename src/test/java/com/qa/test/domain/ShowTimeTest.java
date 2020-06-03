@@ -73,7 +73,7 @@ public class ShowTimeTest {
         other.setTime(null);
         assertEquals(showTime, other);
     }
-
+/////////////////////ID//////////////////////////////////////
     @Test
     public void nullId() {
         showTime.setId(null);
@@ -92,7 +92,27 @@ public class ShowTimeTest {
         other.setId(2L);
         assertNotEquals(showTime, other);
     }
+//////////////////////////////SHOWTIME////////////////////////////////
+    @Test
+    public void nullTime() {
+        showTime.setTime(null);
+        assertNotEquals(showTime, other);
+    }
 
+    @Test
+    public void nullTimeOnBoth() {
+        showTime.setTime(null);
+        other.setTime(null);
+        assertEquals(showTime, other);
+    }
+
+    @Test
+    public void otherTimeDifferent() {
+        other.setTime("29/05/2020 13:30");
+        assertNotEquals(showTime, other);
+    }
+    
+ //////////////////////////////////////////////////////////////////////   
     @Test
     public void constructorWithoutId() {
         ShowTime showTime = new ShowTime("27/04/2020 14:30");
