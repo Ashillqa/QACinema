@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet"> 
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="css/nouislider.min.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/plyr.css">
+	<link rel="stylesheet" href="css/photoswipe.css">
+	<link rel="stylesheet" href="css/default-skin.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- Favicons -->
+	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
+	<link rel="apple-touch-icon" href="icon/favicon-32x32.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="icon/apple-touch-icon-144x144.png">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Dmitry Volkov">
+	<title>QACinema - How to get here</title>
+    
+    <style>
+        
+        section__title section__title--no-margin{
+            text-align: justify;
+        }
+      li{
+            color: rgba(255,255,255,0.7);
+        }
+        
+        th {
+            color: rgba(255,255,255,0.7);
+            text-align: right; 
+        }
+        
+        td {
+            color: rgba(255,255,255,0.7);
+        }
+      
+        
+        .section__text2 {
+            color: rgb(255,0,0);
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 25px;
+            font-family: 'Open Sans', sans-serif;
+            letter-spacing: 0.2px;
+}
+        
+        #over img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        }  
+        
+        a {
+            color:rgba(255,255,255,0.7);
+        }   
+        
+        a:hover, a:active, a:focus {
+            color:rgb(201, 76, 153);
+        }
+ 
+        
+        
+        
+        
+.prev, .next{    
+    cursor: pointer;
+    position: absolute;
+    top: 100%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #fff000; 
+    font-weight: bold;
+    font-size: 18px; 
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    background: blue;
+}
+
+/* sets the position on the next key. prev key is in its default, to the left */ 
+
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev{
+    left: 0;    
+}
+        
+    </style>
+</head>
+<body class="body">
+
+<!-- header -->
+<header class="header">
+	<div class="header__wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="header__content">
+						<!-- header logo -->
+						<a href="index.html" class="header__logo">
+							<img src="img/QA-cinema-logo2.png" alt="">
+						</a>
+						<!-- end header logo -->
+
+						<!-- header nav -->
+						<ul class="header__nav">
+
+							<li class="header__nav-item">
+								<a href="index.html" class="header__nav-link">Home</a>
+							</li>
+
+							<!-- dropdown -->
+							<li class="header__nav-item">
+								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
+
+								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
+									<li><a href="gallery.html">Showing</a></li>
+									<li><a href="comingSoon.html">Coming Soon</a></li>
+								</ul>
+							</li>
+							<!-- end dropdown -->
+
+							<li class="header__nav-item">
+								<a href="screens.html" class="header__nav-link">Screens</a>
+							</li>
+
+							<!--dropdown-->
+							<li class="header__nav-item">
+								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planning Your Trip</a>
+
+								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog1">
+									<li><a href="gettingHere.html">Getting Here</a></li>
+									<li><a href="placesToGo.html">What To Do</a></li>
+								</ul>
+							</li>
+							<!-- end dropdown -->
+
+							<li class="header__nav-item">
+								<a href="about.html" class="header__nav-link">About</a>
+							</li>
+
+							<!-- dropdown -->
+							<li class="dropdown header__nav-item">
+								<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
+
+								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
+									<li><a href="contactUs.html">Contact Us</a></li>
+									<li><a href="forum.html">Forum</a></li>
+								</ul>
+							</li>
+							<!-- end dropdown -->
+						</ul>
+						<!-- end header nav -->
+
+						<!-- header auth -->
+						<div class="header__auth">
+							<button class="header__search-btn" type="button">
+								<i class="icon ion-ios-search"></i>
+							</button>
+						</div>
+						<!-- end header auth -->
+
+						<!-- header menu btn -->
+						<button class="header__btn" type="button">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+						<!-- end header menu btn -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- header search -->
+	<form action="#" class="header__search">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="header__search-content">
+						<label for="searchBox"></label>
+						<input type="text" placeholder="Search Term" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Term'" id="searchBox">
+						<button type="button" id="searchButton">search</button>
+						<script src="js/search/search.js"></script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	<!-- end header search -->
+</header>
+<!-- end header -->
+
+	<!-- page title -->
+	<section class="section section--first section--bg" data-bg="img/section/section.jpg">
+		<div class="container">
+			<div class="row">
+            
+				<div class="col-12">
+					<div class="section__wrap">
+						<!-- section title -->
+                     
+						<h2 class="section__title">Activities to complement your cinexperience!</h2>
+						<!-- end section title -->
+
+						<!-- breadcrumb -->
+						<ul class="breadcrumb">
+							<li class="breadcrumb__item"><a href="#">Home</a></li>
+							<li class="breadcrumb__item breadcrumb__item--active">FAQ</li>
+						</ul>
+						<!-- end breadcrumb -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end page title -->
+    
+    
+    
+
+	<!-- faq -->
+    <!-- left side --> 
+	<section class="section">
+		<div class="container">
+			<div class="row">            
+                     <div class="col-12">
+					<h2 class="section__title section__title--no-margin">Snacks!</h2>
+				</div>
+                
+                <div class="col-12">
+					<p class="section__text section__text--last-with-margin">Want a tasty snack to eat while you watch a movie? A lovely drink to sweeten the experience? Here's some ideas on where you can get your perfect snack for the perfect movie! *Please note, due to the current pandemic, services may not be open as desrcibed here</p>
+                    <div id="over">
+                    </div>
+				</div>
+                
+				<div class="col-12 col-md-6">       
+                    
+					<div class="faq">
+						<h3 class="faq__title">In house confectionery</h3>
+						<p class="faq__text">A sweet treat for a sweet movie</p>
+
+                        <!-- start slideshow -->
+                        <div class ="w3-content w3-display-container">
+                            <img class ="mySlides" src="img/confec01.jpg" style="width:100%">
+                            <img class ="mySlides" src="img/confec02.jpg" style="width:100%">
+                            <img class ="mySlides" src="img/confec03.jpg" style="width:100%">                   
+                        </div>
+     
+                        <script>
+                            var myIndex = 0;
+                            carousel();
+
+                            function carousel() {
+                            var i;
+                            var x = document.getElementsByClassName("mySlides");
+                            
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";  
+                            }
+                            
+                            myIndex++;
+                            if (myIndex > x.length) {myIndex = 1}    
+                                x[myIndex-1].style.display = "block";  
+                                setTimeout(carousel, 2000); // Change image every 2 seconds
+                            }
+                        </script>
+
+                        <!-- end slideshow -->
+                        
+                        
+                        <p class="faq__text">We have an in-store tuck shop, to get snacks directly at the cinema, providing you with everything you need for the perfect cinema experience. <i>*Standard ticket holders get a popcorn and drink included with ticket, for £2.00 extra, you can make this a large! Opening hours are the same as the cinema</i></p>
+                        
+                    <table>
+                        <tr><th>Friday: </th><td>&nbsp 1:30pm - 12pm</td></tr>
+                        <tr><th>Saturday: </th><td>&nbsp 1:30am - 12pm</td></tr>
+                        <tr><th>Sunday: </th><td>&nbsp 1:30am - 12pm</td></tr>
+                        <tr><th>Email:</th><td>&nbsp confectioneers@qacinema.com</td></tr>
+
+                    </table>
+					</div>
+
+				</div>
+                
+                
+                <!-- right side --> 
+
+				<div class="col-12 col-md-6">
+					<div class="faq">
+						<h3 class="faq__title">Tesco pre snacks?</h3>
+						<p class="faq__text">Cant find your snack in-house? Bring your own!</p>
+                        
+                                            
+                        <div class ="w3-content w3-display-container">
+                            <img class ="mySlides3" src="img/tesco01.jpg" style="width:100%">
+                        </div>
+     
+                        <p class="faq__text">Navigate to the <a href="gettingHere.html"><u>getting here</u></a> page for local area maps!</p>
+
+                        <!-- end slideshow -->
+                     <table>
+                         <tr><th>Monday: </th><td>&nbsp 6am - 12am</td></tr>
+                         <tr><th>Tuesday: </th><td>&nbsp 6am - 12am</td></tr>
+                        <tr><th>Wednesday: </th><td>&nbsp 6am - 12am</td></tr> 
+                        <tr><th>Thursday: </th><td>&nbsp 6am - 12am</td></tr>
+                        <tr><th>Friday: </th><td>&nbsp 6am - 12am</td></tr>
+                        <tr><th>Saturday: </th><td>&nbsp 6am - 12am</td></tr>
+                        <tr><th>Sunday: </th><td>&nbsp 6am - 12am</td></tr>
+                         <tr><th>Phone:</th><td>&nbsp +443456719538</td></tr>
+
+                    </table>
+                    </div>
+			</div>
+                
+                <div class="col-12">
+					<h2 class="section__title section__title--no-margin">Looking to dine out before your movie? We got you!</h2>
+				</div>
+                
+                <div class="col-12">
+					<p class="section__text section__text--last-with-margin">If you're looking for something a little more substantial, then you should try out some of the nearby eateries! Here's a couple worth mention. . . </p>
+    
+				</div>
+            </div>
+        </div>
+    </section>
+                
+                
+                 <!-- left side --> 
+	<section class="section">
+		<div class="container">
+			<div class="row">            
+             <div class="col-12 col-md-6">       
+                    
+					<div class="faq">
+						<h3 class="faq__title">Toulouse Lautrec</h3>
+						<p class="faq__text">A romantic pre movie dinnerdate?</p>
+
+                        <!-- start slideshow -->
+                        <div class ="w3-content w3-display-container">
+                            <img class ="mySlides4" src="img/tLautrec01.jpg" style="width:100%">
+                            <img class ="mySlides4" src="img/tLautrec02.jpg" style="width:100%">
+                            <img class ="mySlides4" src="img/tLautrec03.jpg" style="width:100%">                   
+                        </div>
+     
+                        <script>
+                            var myIndex = 0;
+                            carousel4();
+
+                            function carousel4() {
+                            var i;
+                            var x = document.getElementsByClassName("mySlides4");
+                            
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";  
+                            }
+                            
+                            myIndex++;
+                            if (myIndex > x.length) {myIndex = 1}    
+                                x[myIndex-1].style.display = "block";  
+                                setTimeout(carousel4, 2000); // Change image every 2 seconds
+                            }
+                        </script>
+
+                        <!-- end slideshow -->
+                        
+                        
+                        <p class="faq__text">A wonderful, romantic spot to visit with your significant other, before you come visit us! Make an evening of it, with cinema, french food and live jazz acts!</p>
+                        
+                        <table>
+                         <tr><th>Monday: </th><td>&nbsp 4pm - 10pm</td></tr>
+                         <tr><th>Tuesday: </th><td>&nbsp 4pm - 10pm</td></tr>
+                        <tr><th>Wednesday: </th><td>&nbsp 4pm - 10pm</td></tr> 
+                        <tr><th>Thursday: </th><td>&nbsp 4pm - 10pm</td></tr>
+                        <tr><th>Friday: </th><td>&nbsp 4pm - 10pm</td></tr>
+                        <tr><th>Saturday: </th><td>&nbsp 12am - 12am</td></tr>
+                        <tr><th>Sunday: </th><td>&nbsp 12am - 12am</td></tr>
+                        <tr><th>Phone:</th><td>&nbsp 020 7582 6800</td></tr>
+
+
+                    </table>
+					</div>
+                 
+                 		<div class="faq">
+						<h3 class="faq__title">Prince of Wales</h3>
+						<p class="faq__text">Pints and a picture?</p>
+
+                        <!-- start slideshow -->
+                        <div class ="w3-content w3-display-container">
+                            <img class ="mySlides6" src="img/pWales01.jpg" style="width:100%">
+                            <img class ="mySlides6" src="img/pWales02.jpg" style="width:100%">
+                            <img class ="mySlides6" src="img/pWales03.jpg" style="width:100%">                   
+                        </div>
+     
+                        <script>
+                            var myIndex = 0;
+                            carousel6();
+
+                            function carousel6() {
+                            var i;
+                            var x = document.getElementsByClassName("mySlides6");
+                            
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";  
+                            }
+                            
+                            myIndex++;
+                            if (myIndex > x.length) {myIndex = 1}    
+                                x[myIndex-1].style.display = "block";  
+                                setTimeout(carousel6, 2000); // Change image every 2 seconds
+                            }
+                        </script>
+
+                        <!-- end slideshow -->
+                        
+                        
+                        <p class="faq__text">A rustic little pub close to the cinema, great for you and your friends to get a cheeky pint in before watching the newest and greatest blockbusters with us!</p>
+                            
+                    <table>
+
+                        <tr><th>Friday: </th><td>&nbsp 5pm - 8pm</td></tr>
+                        <tr><th>Saturday: </th><td>&nbsp 3pm - 8pm</td></tr>
+                        <tr><th>Sunday: </th><td>&nbsp 1pm - 4pm</td></tr>
+                        <tr><th>Phone:</th><td>&nbsp +442077359916</td></tr>
+
+
+                    </table>
+					</div>
+
+				</div>
+                
+                <div class="col-12 col-md-6">
+				  <div class="faq">
+				        <h3 class="faq__title">Kennington Bed and Breakfast</h3>
+						          <p class="faq__text">Travelling to visit us?</p>
+                                       <!-- start slideshow -->
+                        <div class ="w3-content w3-display-container">
+                            <img class ="mySlides5" src="img/bnb01.jpg" style="width:100%">
+                            <img class ="mySlides5" src="img/bnb02.jpg" style="width:100%">
+                            <img class ="mySlides5" src="img/bnb03.jpg" style="width:100%">                   
+                        </div>
+     
+                        <script>
+                            var myIndex = 0;
+                            carousel5();
+
+                            function carousel5() {
+                            var i;
+                            var x = document.getElementsByClassName("mySlides5");
+                            
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";  
+                            }
+                            
+                            myIndex++;
+                            if (myIndex > x.length) {myIndex = 1}    
+                                x[myIndex-1].style.display = "block";  
+                                setTimeout(carousel5, 2000); // Change image every 2 seconds
+                            }
+                        </script>
+
+                        <!-- end slideshow -->
+                       <p class="faq__text">A peaceful hideaway to rest, within walking distance of the cinema! Catch a movie and a rest! The perfect spot for an affordable night in the area</p>
+                      
+                    <table>
+                         <tr><th>Monday: </th><td>&nbsp 9am - 10pm</td></tr>
+                         <tr><th>Tuesday: </th><td>&nbsp 9am - 10pm</td></tr>
+                        <tr><th>Wednesday: </th><td>&nbsp 9am - 10pm</td></tr> 
+                        <tr><th>Thursday: </th><td>&nbsp 9am - 10pm</td></tr>
+                        <tr><th>Friday: </th><td>&nbsp 9am - 10pm</td></tr>
+                        <tr><th>Saturday: </th><td>&nbsp 9am - 12am</td></tr>
+                        <tr><th>Sunday: </th><td>&nbsp 9am - 12am</td></tr>
+                        <tr><th>Phone:</th><td>&nbsp +442077357669</td></tr>
+
+
+                    </table>
+                    
+                    </div>
+                    
+                     <div class="faq">
+				        <h3 class="faq__title">Your business here!</h3>
+						          <p class="faq__text">In the area? Want your venue to be on our site?? Please, use the contact page to let us know! In these trying times, businesses can work together to help overcome the pandemic! <i>*All businesses must show themselves to be honourable and legitimate, and will be reviewed by our team on submission</i></p>
+                                       <!-- start slideshow -->
+                        <!-- end slideshow -->
+                    
+                    </div>
+                    
+			</div>
+     
+		</div>
+    </div>
+	</section>
+	<!-- end faq -->
+    
+
+	<!-- footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<!-- footer list -->
+				<div class="col-12 col-md-3">
+					<h6 class="footer__title">Download Our App</h6>
+					<ul class="footer__app">
+						<li><a href="#"><img src="img/Download_on_the_App_Store_Badge.svg" alt=""></a></li>
+						<li><a href="#"><img src="img/google-play-badge.png" alt=""></a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer list -->
+				<div class="col-6 col-sm-4 col-md-3">
+					<h6 class="footer__title">Resources</h6>
+					<ul class="footer__list">
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Pricing Plan</a></li>
+						<li><a href="#">Help</a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer list -->
+				<div class="col-6 col-sm-4 col-md-3">
+					<h6 class="footer__title">Legal</h6>
+					<ul class="footer__list">
+						<li><a href="#">Terms of Use</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Security</a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer list -->
+				<div class="col-12 col-sm-4 col-md-3">
+					<h6 class="footer__title">Contact</h6>
+					<ul class="footer__list">
+						<li><a href="tel:+18002345678">+1 (800) 234-5678</a></li>
+						<li><a href="mailto:support@moviego.com">support@flixgo.com</a></li>
+					</ul>
+					<ul class="footer__social">
+						<li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
+						<li class="instagram"><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
+						<li class="twitter"><a href="#"><i class="icon ion-logo-twitter"></i></a></li>
+						<li class="vk"><a href="#"><i class="icon ion-logo-vk"></i></a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer copyright -->
+				<div class="col-12">
+					<div class="footer__copyright">
+						<small><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></small>
+
+						<ul>
+							<li><a href="#">Terms of Use</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- end footer copyright -->
+			</div>
+		</div>
+	</footer>
+	<!-- end footer -->
+
+	<!-- JS -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.min.js"></script>
+	<script src="js/wNumb.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="js/plyr.min.js"></script>
+	<script src="js/jquery.morelines.min.js"></script>
+	<script src="js/photoswipe.min.js"></script>
+	<script src="js/photoswipe-ui-default.min.js"></script>
+	<script src="js/main.js"></script>
+    
+    
+</body>
+
+</html>
