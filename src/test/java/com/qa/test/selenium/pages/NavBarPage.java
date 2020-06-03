@@ -4,7 +4,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class NavBarPage {
 	
-	@FindBy(id = "dropdownMenuCatalog")
+	@FindBy(css = "#dropdownMenuCatalog")
 	private WebElement movieNav;
 	
 	@FindBy(id = "showing")

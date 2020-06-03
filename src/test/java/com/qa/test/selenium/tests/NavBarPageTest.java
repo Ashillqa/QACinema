@@ -2,6 +2,8 @@ package com.qa.test.selenium.tests;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.concurrent.TimeUnit;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -38,7 +40,7 @@ public class NavBarPageTest {
 	        ChromeOptions opts = new ChromeOptions();
 	        //opts.setHeadless(true);
 	        driver = new ChromeDriver(opts);
-//			this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+			//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	        driver.manage().window().maximize();
 	    }
 	    
@@ -50,16 +52,16 @@ public class NavBarPageTest {
 	    
 	    
 	    @Test
-	    public void testMoviesShowingNav() {
+	    public void testMoviesShowingNav() throws InterruptedException {
 	        driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
 	        WebDriverWait wait = new WebDriverWait(driver, 2);
-	        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("dropdownMenuCatalog")));
+	        sleep(2000);
 	        assertEquals("movies".toUpperCase(),navigation.getMovieNav().getText());
 	        navigation.getMovieNav().click();
-	        
-	        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("showing")));
+	        wait.until(ExpectedConditions.elementToBeClickable(By.id("showing")));
 	        assertEquals("Showing",navigation.getShowing().getText());
+	        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("showing")));
 	        navigation.getShowing().click();
 	        assertEquals("http://localhost:" + port +"/gallery.html", driver.getCurrentUrl());
 	     
@@ -84,9 +86,10 @@ public class NavBarPageTest {
 	        driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
 	        WebDriverWait wait = new WebDriverWait(driver, 2);
-	        assertEquals("MOVIES",navigation.getMovieNav().getText());
+	        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"dropdownMenuCatalog\"]")));
+	        assertEquals("movies".toUpperCase(),navigation.getMovieNav().getText());
 	        navigation.getMovieNav().click();	        
-	        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("coming")));
+	        wait.until(ExpectedConditions.elementToBeClickable(By.id("coming")));
 	        assertEquals("Coming Soon",navigation.getComing().getText());
 	        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("coming")));
 	        navigation.getComing().click();
@@ -102,7 +105,7 @@ public class NavBarPageTest {
 	        WebDriverWait wait = new WebDriverWait(driver, 2);
 	        assertEquals("SCREENS", navigation.getScreens().getText());
 	        navigation.getScreens().click();	        
-	        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("screens")));
+	        
 	        assertEquals("http://localhost:" + port +"/screens.html", driver.getCurrentUrl());
 	    }
 
@@ -115,7 +118,7 @@ public class NavBarPageTest {
 	        WebDriverWait wait = new WebDriverWait(driver, 2);
 	        assertEquals("PLANNING YOUR TRIP", navigation.getPlanningNav().getText());
 	        navigation.getPlanningNav().click();	        
-	        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("gettingHere")));
+	        wait.until(ExpectedConditions.elementToBeClickable(By.id("gettingHere")));;
 	        assertEquals("Getting Here",navigation.getGettingHere().getText());
 	        navigation.getGettingHere().click();
 	        assertEquals("http://localhost:" + port +"/gettingHere.html", driver.getCurrentUrl());
@@ -129,7 +132,7 @@ public class NavBarPageTest {
 	        WebDriverWait wait = new WebDriverWait(driver, 2);
 	        assertEquals("PLANNING YOUR TRIP", navigation.getPlanningNav().getText());
 	        navigation.getPlanningNav().click();	     
-	        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("whatToDo")));
+	        wait.until(ExpectedConditions.elementToBeClickable(By.id("whatToDo")));
 	        assertEquals("What To Do",navigation.getWhatToDo().getText());
 	        navigation.getWhatToDo().click();
 	        assertEquals("http://localhost:" + port +"/placesToGo.html", driver.getCurrentUrl());
