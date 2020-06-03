@@ -52,6 +52,7 @@ public class GalleryPageTest {
 
     @After
     public void teardown() {
+        extent.flush();
         driver.quit();
     }
 
@@ -59,13 +60,12 @@ public class GalleryPageTest {
     public void testResetButtonPresent() {
         driver.manage().window().maximize();
         ExtentTest logger=extent.createTest("LoginTest");
-        logger.log(Status.PASS, "Title verified");
         logger.log(Status.INFO, "Login to amazon");
         driver.get("http://localhost:" + port +"/gallery.html");
         GalleryPage gallery = PageFactory.initElements(driver, GalleryPage.class);
-
         assertEquals("reset".toUpperCase(),gallery.getResetButton().getText());
-        extent.flush();
+        logger.log(Status.PASS, "Title verified");
+
     }
 
 }
