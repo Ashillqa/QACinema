@@ -65,7 +65,7 @@ public class NavBarPageTest {
 	    public void testMoviesShowingNav() {
 	        driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
-	        wait.until(ExpectedConditions.elementToBeClickable(navigation.getMovieNav())).click();
+	        navigation.getMovieNav().click();
 	        navigation.getShowing().click();
 	        wait.until(ExpectedConditions.urlContains("gallery.html"));
 	        assertEquals("http://localhost:" + port +"/gallery.html", driver.getCurrentUrl());
@@ -76,8 +76,8 @@ public class NavBarPageTest {
 	    public void testSearchNav() throws InterruptedException {
 	    	driver.get("http://localhost:" + port +"/index.html");
 	    	NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
-			wait.until(ExpectedConditions.elementToBeClickable(navigation.getSearch())).click();
-	    	wait.until(ExpectedConditions.elementToBeClickable(navigation.getSearchMain())).click();
+			navigation.getSearch().click();
+			wait.until(ExpectedConditions.elementToBeClickable(navigation.getSearchMain())).click();
 	    	assertEquals("http://localhost:" + port +"/search.html?term=", driver.getCurrentUrl());
 	    }
 
@@ -86,8 +86,8 @@ public class NavBarPageTest {
 	    public void testMoviesComingNav() {
 	        driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
-	        wait.until(ExpectedConditions.elementToBeClickable(navigation.getMovieNav())).click();
-	        wait.until(ExpectedConditions.elementToBeClickable(navigation.getComing())).click();
+	        navigation.getMovieNav().click();
+	        navigation.getComing().click();
 	        assertEquals("http://localhost:" + port +"/comingSoon.html", driver.getCurrentUrl());
 	    }
 
@@ -97,7 +97,7 @@ public class NavBarPageTest {
 	    public void testScreensNav() {
 	        driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
-	        wait.until(ExpectedConditions.elementToBeClickable(navigation.getScreens())).click();
+	        navigation.getScreens().click();
 	        assertEquals("http://localhost:" + port +"/screens.html", driver.getCurrentUrl());
 	    }
 
@@ -107,8 +107,8 @@ public class NavBarPageTest {
 	    public void testPlanningTripNav() {
 	    	driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
-			wait.until(ExpectedConditions.elementToBeClickable(navigation.getPlanningNav())).click();
-	        wait.until(ExpectedConditions.elementToBeClickable(navigation.getGettingHere())).click();
+			navigation.getPlanningNav().click();
+	        navigation.getGettingHere().click();
 	        assertEquals("http://localhost:" + port +"/gettingHere.html", driver.getCurrentUrl());
 	    }
 
@@ -117,8 +117,8 @@ public class NavBarPageTest {
 	    public void testPlanningToDoNav() {
 	    	driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
-	        wait.until(ExpectedConditions.elementToBeClickable(navigation.getPlanningNav())).click();
-	        wait.until(ExpectedConditions.elementToBeClickable(navigation.getWhatToDo())).click();
+	        navigation.getPlanningNav().click();
+	        navigation.getWhatToDo().click();
 	        assertEquals("http://localhost:" + port +"/placesToGo.html", driver.getCurrentUrl());
 	    }
 
@@ -128,7 +128,7 @@ public class NavBarPageTest {
 	    	driver.manage().window().maximize();
 	    	driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
-	        wait.until(ExpectedConditions.elementToBeClickable(navigation.getAbout())).click();
+	        navigation.getAbout().click();
 	        assertEquals("http://localhost:" + port +"/about.html", driver.getCurrentUrl());
 	    }
 
