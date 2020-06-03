@@ -10,6 +10,7 @@ import com.qa.test.selenium.pages.DetailsPage;
 import com.qa.test.selenium.pages.GalleryPage;
 import com.qa.test.selenium.pages.SearchPage;
 import org.junit.*;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,6 +29,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 
 import java.io.File;
+import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -55,11 +57,6 @@ public class SearchPageTest {
         extent.attachReporter(reporter);
     }
 
-    @AfterMethod
-    public void result(ITestResult result){
-        logger.log(Status.INFO, "asdf");
-    }
-
     @AfterClass
     public static void teardown() {
         extent.flush();
@@ -67,13 +64,17 @@ public class SearchPageTest {
     }
 
     @Test
-    public void testResetButton() {
-        logger=extent.createTest("test1");
+    public void testResetButton () throws InterruptedException, IOException {
+        logger=extent.createTest("Reset Button Test");
         driver.get("http://localhost:" + port +"/search.html");
+        logger.log(Status.INFO, "navigating to site");
         GalleryPage gallery = PageFactory.initElements(driver, GalleryPage.class);
         assertEquals("reset".toUpperCase(),gallery.getResetButton().getText());
+        logger.log(Status.INFO, "obtaining text from button, making sure it's written as 'reset'");
         gallery.getResetButton().click();
-        assertEquals("http://localhost:" + port +"/search.html", driver.getCurrentUrl());
+        logger.log(Status.INFO, "clicking button");
+
+        assertEquals("http://localhost:" + port +"/search.html",driver.getCurrentUrl());
     }
 
     @Test
