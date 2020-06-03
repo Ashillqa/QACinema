@@ -48,7 +48,7 @@ public class NavBarPageTest {
 	    public static void init() {
 	        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 	        ChromeOptions opts = new ChromeOptions();
-	        opts.setHeadless(false);
+	        opts.setHeadless(true);
 	        driver = new ChromeDriver(opts);
 			driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 	        driver.manage().window().maximize();
