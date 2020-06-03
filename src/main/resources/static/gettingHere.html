@@ -21,11 +21,7 @@
 	<link rel="stylesheet" href="css/main.css">
 
 	<!-- Favicons -->
-<<<<<<< HEAD
-	<link rel="icon" type="image/png" href="img/QA-cinema-logo2.png" sizes="32x32">
-=======
 	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
->>>>>>> featureMattyAbout
 	<link rel="apple-touch-icon" href="icon/favicon-32x32.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-touch-icon-114x114.png">
@@ -33,9 +29,8 @@
 
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-<<<<<<< HEAD
-	<meta name="author" content="Matthew Burt (Matteo Bartolomeo Sforza)">
-	<title>QACinema | How to get here</title>
+	<meta name="author" content="Dmitry Volkov">
+	<title>QACinema - How to get here</title>
     
     <style>
     
@@ -44,11 +39,24 @@
         margin-right: auto;
         display: block;
         }  
+        li{
+            color: rgba(255,255,255,0.7);
+        }
+        
+        th {
+            color: rgba(255,255,255,0.7);
+            text-align: right; 
+        }
+        
+        td {
+            color: rgba(255,255,255,0.7);
+        }
+      
+      
         
     </style>
 </head>
 <body class="body">
-
 <!-- header -->
 <header class="header">
 	<div class="header__wrap">
@@ -90,17 +98,21 @@
 
 								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog1">
 									<li><a href="gettingHere.html">Getting Here</a></li>
-									<li><a href="#">What To Do</a></li>
+									<li><a href="placesToGo.html">What To Do</a></li>
 								</ul>
 							</li>
 							<!-- end dropdown -->
+
+							<li class="header__nav-item">
+								<a href="about.html" class="header__nav-link">About</a>
+							</li>
 
 							<!-- dropdown -->
 							<li class="dropdown header__nav-item">
 								<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
 
 								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-									<li><a href="about.html">About</a></li>
+									<li><a href="contactUs.html">Contact Us</a></li>
 									<li><a href="forum.html">Forum</a></li>
 								</ul>
 							</li>
@@ -136,7 +148,7 @@
 				<div class="col-12">
 					<div class="header__search-content">
 						<label for="searchBox"></label>
-						<input type="text" placeholder="Search Term" id="searchBox">
+						<input type="text" placeholder="Search Term" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Term'" id="searchBox">
 						<button type="button" id="searchButton">search</button>
 						<script src="js/search/search.js"></script>
 					</div>
@@ -156,12 +168,14 @@
 					<div class="section__wrap">
 						<!-- section title -->
 						<h2 class="section__title">Getting Here</h2>
+						<h2 class="section__title">Locating us</h2>
 						<!-- end section title -->
 
 						<!-- breadcrumb -->
 						<ul class="breadcrumb">
 							<li class="breadcrumb__item"><a href="#">Home</a></li>
 							<li class="breadcrumb__item breadcrumb__item--active">Getting Here</li>
+
 							<li class="breadcrumb__item breadcrumb__item--active">FAQ</li>
 						</ul>
 						<!-- end breadcrumb -->
@@ -174,6 +188,8 @@
 
     <!-- left side -->
 	<!-- faq -->
+	<!-- faq -->
+    <!-- left side -->
 	<section class="section">
 		<div class="container">
 			<div class="row">
@@ -234,8 +250,16 @@
                    <div class="col-12">
 					<p class="section__text section__text--last-with-margin">The building we are in currently is a modern masterpeice of architechture, which is only fitting of the modern masterpeices of cinematography we display on all of our premium HD screens!</p>
                        <div id="over">
-                       	    <img src="img/frontOfCinema.jpg" alt="Our wonderful cinema">
+                       								<img src="img/frontOfCinema.jpg" alt="">
                        </div>
+                       
+                                           <table>
+                        <tr><th>Friday: </th><td>&nbsp 1:30pm - 12pm</td></tr>
+                        <tr><th>Saturday: </th><td>&nbsp 1:30am - 12pm</td></tr>
+                        <tr><th>Sunday: </th><td>&nbsp 1:30am - 12pm</td></tr>
+                        <tr><th>Email:</th><td>&nbsp QACinema@qacinema.com</td></tr>
+
+                    </table>
 				
                 </div>
                 
@@ -291,6 +315,7 @@
 			</div>
 		</div>
 	</section>
+
 	<!-- end faq -->
 
 	<!-- footer -->

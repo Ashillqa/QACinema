@@ -24,5 +24,17 @@ document.getElementById("ticketNumber").innerHTML =
   ", Student:" +
   sessionStorage.getItem("student");
 
+let status;
+
+if (sessionStorage.getItem("upgrade") === "true"){
+    status = "YES";
+}
+else {
+    status = "NO";
+}
+console.log(sessionStorage.getItem("upgrade"));
+document.getElementById("upgrade").innerHTML = "Upgrade: " + status;
+
+
 document.getElementById("totalPrice").innerHTML = "Total: £" + sessionStorage.getItem("total");
 
