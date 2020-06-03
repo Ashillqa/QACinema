@@ -1,5 +1,6 @@
 package com.qa.test.selenium.tests;
 
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -51,7 +52,10 @@ public class NavBarPageTest {
 	        ChromeOptions opts = new ChromeOptions();
 	        opts.setHeadless(false);
 	        driver = new ChromeDriver(opts);
-//			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+
 	        driver.manage().window().maximize();
 	    }
 
