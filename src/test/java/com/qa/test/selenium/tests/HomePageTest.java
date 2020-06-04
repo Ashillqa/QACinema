@@ -32,6 +32,7 @@ public class HomePageTest {
 	HomePage home = PageFactory.initElements(driver, HomePage.class);
 	WebDriverWait wait = new WebDriverWait(driver, 5);
 	
+	
 	 @LocalServerPort
 	 private int port;
 	 
@@ -43,6 +44,7 @@ public class HomePageTest {
 	        driver = new ChromeDriver(opts);
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	        driver.manage().window().maximize();
+
 	    }
 
 	@Before

@@ -50,6 +50,7 @@ public class SearchPageTest {
 //		this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         extent.attachReporter(reporter);
+
     }
 
     @Before
@@ -124,6 +125,7 @@ public class SearchPageTest {
         assertEquals(classifications.getTitle().getText(),"Classifications");
     }
 
+
     @Test
     public void testFeatureMovieGalleryTitleLink() {
         driver.get("http://localhost:" + port +"/search.html");
@@ -138,6 +140,7 @@ public class SearchPageTest {
         wait.until(ExpectedConditions.textToBePresentInElement(details.getTitle(), title));
         assertEquals(details.getTitle().getText(),title);
     }
+
 
     @Test
     public void testShowMoreButton() {
