@@ -3,16 +3,16 @@ package com.qa.test.selenium.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class MovieShowingPage {
+public class ComingSoon {
 	
 	@FindBy(id = "homeBread")
 	private WebElement breadcrumbHome;
 	
-	@FindBy(xpath = "//*[@id=\"playbutton120\"]")
-	private WebElement showingPlay;
+	@FindBy(id = "playbutton130")
+	private WebElement comingPlay;
 	
-	@FindBy(xpath = "//*[@id=\"title\"]")
-	private WebElement showingTitle;
+	@FindBy(id = "title130")
+	private WebElement comingTitle;
 	
 	
 	@FindBy(xpath = "//*[@id=\"ageRating\"]")
@@ -20,9 +20,7 @@ public class MovieShowingPage {
 	
 	@FindBy(xpath = "//*[@id=\"primeDiv\"]/div[8]/a")
 	private WebElement showMore;
-	
-	@FindBy(xpath = "//*[@id=\"play\"]/i")
-	private WebElement ExpectedPlay;
+
 	
 	@FindBy(xpath = "//*[@id=\"primeDiv\"]/div[2]/div/div[2]/h3/a")
 	private WebElement ExpectedTitle;
@@ -34,12 +32,12 @@ public class MovieShowingPage {
 		return breadcrumbHome;
 	}
 
-	public WebElement getShowingPlay() {
-		return showingPlay;
+	public WebElement getComingPlay() {
+		return comingPlay;
 	}
 
-	public WebElement getShowingTitle() {
-		return showingTitle;
+	public WebElement getComingTitle() {
+		return comingTitle;
 	}
 
 	public WebElement getShowingClassif() {
@@ -48,10 +46,6 @@ public class MovieShowingPage {
 
 	public WebElement getShowMore() {
 		return showMore;
-	}
-
-	public WebElement getExpectedPlay() {
-		return ExpectedPlay;
 	}
 
 	public WebElement getExpectedTitle() {

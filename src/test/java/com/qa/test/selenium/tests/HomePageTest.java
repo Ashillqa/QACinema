@@ -69,7 +69,6 @@ public class HomePageTest {
 	 public void FeaturedPlayClick() throws InterruptedException{
 		 driver.get("http://localhost:" + port +"/index.html");
 		 HomePage home = PageFactory.initElements(driver, HomePage.class);
-		 //sleep(3000);
 		 home.getFeaturePlay().click();
 		 assertTrue(driver.getCurrentUrl().contains("details2.html")); 
 	 }
@@ -78,7 +77,6 @@ public class HomePageTest {
 	 public void ComingSoonClickTest() throws InterruptedException {
 		 driver.get("http://localhost:" + port +"/index.html");
 		 HomePage home = PageFactory.initElements(driver, HomePage.class);
-		// sleep(3000);
 		 home.getSoonPlay().click();
 		 assertTrue(driver.getCurrentUrl().contains("details2.html"));
 		 
@@ -88,7 +86,6 @@ public class HomePageTest {
 	 public void featuredTitleClick() throws InterruptedException {
 		 driver.get("http://localhost:" + port +"/index.html");
 		 HomePage home = PageFactory.initElements(driver, HomePage.class);
-		// sleep(3000);
 		 home.getFeatureTitle().click();
 		 assertTrue(driver.getCurrentUrl().contains("details2.html"));
 	 }
@@ -96,9 +93,7 @@ public class HomePageTest {
 	 @Test
 	 public void ComingTitleClick() {
 		 driver.get("http://localhost:" + port +"/index.html");
-		 //WebDriverWait wait = new WebDriverWait(driver, 4);
 		 HomePage home = PageFactory.initElements(driver, HomePage.class);
-		 //wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\\\"soonComeDiv\\\"]/div[2]/div/div[2]/h3/a")));
 		 home.getSoonTitle().click();
 		 assertTrue(driver.getCurrentUrl().contains("details2.html"));
 	 }
@@ -107,7 +102,6 @@ public class HomePageTest {
 	 public void featuredClassificationClick() throws InterruptedException {
 		 driver.get("http://localhost:" + port +"/index.html");
 		 HomePage home = PageFactory.initElements(driver, HomePage.class);
-	//	 sleep(3000);
 		 home.getFeatureClassif().click();
 		 assertEquals("http://localhost:" + port +"/classifications.html", driver.getCurrentUrl());
 	 }
@@ -116,7 +110,6 @@ public class HomePageTest {
 	 public void SoonClassificationClick() throws InterruptedException {
 		 driver.get("http://localhost:" + port +"/index.html");
 		 HomePage home = PageFactory.initElements(driver, HomePage.class);
-		// sleep(3000);
 		 home.getSoonClassif().click();
 		 assertEquals("http://localhost:" + port +"/classifications.html", driver.getCurrentUrl());
 	 }

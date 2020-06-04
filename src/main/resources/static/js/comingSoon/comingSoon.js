@@ -48,7 +48,7 @@ function showOnPage(list, ids, ratings){
                     '</div>'+
                     '<div class="col-12 col-sm-8">'+
                     '<div class="card__content">'+
-                    `<h3 class="card__title"><a id="title" href="details2.html?title=${append.data.title}&id=${ids[i]}">${append.data.title}</a></h3>`+
+                    `<h3 class="card__title"><a id="title${ids[i]}" href="details2.html?title=${append.data.title}&id=${ids[i]}">${append.data.title}</a></h3>`+
                     '<span class="card__category">'+
                     genres +
                     '</span>'+
