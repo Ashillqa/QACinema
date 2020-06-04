@@ -1,13 +1,16 @@
 package com.qa.test.selenium.tests;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.qa.App;
 import com.qa.test.selenium.pages.ClassificationsPage;
 import com.qa.test.selenium.pages.DetailsPage;
 import com.qa.test.selenium.pages.GalleryPage;
 import com.qa.test.selenium.pages.SearchPage;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,6 +24,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeTest;
+
+import java.io.File;
+import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -30,6 +39,10 @@ import static org.junit.Assert.assertTrue;
 public class SearchPageTest {
 
     public static WebDriver driver;
+    public static ExtentHtmlReporter reporter = new ExtentHtmlReporter("Reports/SearchPage.html");
+    public static ExtentReports extent = new ExtentReports();
+    WebDriverWait wait = new WebDriverWait(driver, 2);
+    ExtentTest logger;
 
     @LocalServerPort
     private int port;
@@ -42,43 +55,51 @@ public class SearchPageTest {
         driver = new ChromeDriver(opts);
 //		this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
+        extent.attachReporter(reporter);
     }
 
     @AfterClass
     public static void teardown() {
+        extent.flush();
         driver.quit();
     }
 
     @Test
-    public void testResetButton() {
+    public void testResetButton () throws InterruptedException, IOException {
+        logger=extent.createTest("Reset Button Test");
         driver.get("http://localhost:" + port +"/search.html");
+        logger.log(Status.INFO, "navigating to site");
         GalleryPage gallery = PageFactory.initElements(driver, GalleryPage.class);
         assertEquals("reset".toUpperCase(),gallery.getResetButton().getText());
+        logger.log(Status.INFO, "obtaining text from button, making sure it's written as 'reset'");
         gallery.getResetButton().click();
-        assertEquals("http://localhost:" + port +"/search.html", driver.getCurrentUrl());
+        logger.log(Status.INFO, "clicking button");
+        assertEquals("http://localhost:" + port +"/search.html",driver.getCurrentUrl());
+        logger.log(Status.PASS, "Test Passed");
     }
 
     @Test
     public void testMovieGalleryPlayButtonLink() {
+        logger=extent.createTest("test2");
         driver.get("http://localhost:" + port +"/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
-
-        WebDriverWait wait = new WebDriverWait(driver, 2);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title1")));
-        String title = search.getTitle1().getText();
+        String title = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title1"))).getText();
         search.getPlay1().click();
         assertTrue(driver.getCurrentUrl().contains("details2.html"));
         DetailsPage details = PageFactory.initElements(driver, DetailsPage.class);
 
         wait.until(ExpectedConditions.textToBePresentInElement(details.getTitle(), title));
         assertEquals(details.getTitle().getText(),title);
+
     }
 
     @Test
     public void testMovieGalleryTitleLink() {
+        logger=extent.createTest("test3");
         driver.get("http://localhost:" + port +"/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
-        WebDriverWait wait = new WebDriverWait(driver, 2);
+
+        logger.log(Status.FAIL, "asdf");
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title1")));
         String title = search.getTitle1().getText();
@@ -94,7 +115,6 @@ public class SearchPageTest {
     public void testMovieGalleryClassificationLink() {
         driver.get("http://localhost:" + port +"/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
-        WebDriverWait wait = new WebDriverWait(driver, 2);
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"ageRating\"]")));
         search.getRating().click();
@@ -110,7 +130,6 @@ public class SearchPageTest {
         driver.get("http://localhost:" + port +"/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
 
-        WebDriverWait wait = new WebDriverWait(driver, 2);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"primeDiv\"]/div[4]")));
 
         String title = search.getMovieFeature().findElement(By.className("featuredMovieTitle")).getText();
@@ -127,7 +146,6 @@ public class SearchPageTest {
         driver.get("http://localhost:" + port +"/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
 
-        WebDriverWait wait = new WebDriverWait(driver, 2);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"primeDiv\"]/div[4]")));
         String title = search.getMovieFeature().findElement(By.className("featuredMovieTitle")).getText();
         search.getMovieFeature().findElement(By.className("featuredMovieTitle")).click();
@@ -143,7 +161,6 @@ public class SearchPageTest {
         driver.get("http://localhost:" + port + "/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
 
-        WebDriverWait wait = new WebDriverWait(driver, 2);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"primeDiv\"]/div[4]")));
         wait.until(ExpectedConditions.elementToBeClickable(By.id("ageRating")));
         search.getMovieFeature().findElement(By.id("ageRating")).click();

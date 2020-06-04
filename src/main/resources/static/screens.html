@@ -32,6 +32,7 @@
 	<meta name="author" content="Dmitry Volkov">
 	<title>QA Cinemas | Screens</title>
 
+
 </head>
 <body class="body">
 
@@ -52,7 +53,7 @@
 						<ul class="header__nav">
 
 							<li class="header__nav-item">
-								<a id="home" href="index.html" class="header__nav-link">Home</a>
+								<a href="index.html" class="header__nav-link">Home</a>
 							</li>
 
 							<!-- dropdown -->
@@ -60,14 +61,14 @@
 								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
 
 								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
-									<li><a id="showing" href="gallery.html">Showing</a></li>
-									<li><a id="coming" href="comingSoon.html">Coming Soon</a></li>
+									<li><a href="gallery.html">Showing</a></li>
+									<li><a href="comingSoon.html">Coming Soon</a></li>
 								</ul>
 							</li>
 							<!-- end dropdown -->
 
 							<li class="header__nav-item">
-								<a id="screens" href="screens.html" class="header__nav-link">Screens</a>
+								<a href="screens.html" class="header__nav-link">Screens</a>
 							</li>
 
 							<!--dropdown-->
@@ -75,14 +76,14 @@
 								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planning Your Trip</a>
 
 								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog1">
-									<li><a id="gettingHere" href="gettingHere.html">Getting Here</a></li>
-									<li><a id="whatToDo" href="placesToGo.html">What To Do</a></li>
+									<li><a href="gettingHere.html">Getting Here</a></li>
+									<li><a href="placesToGo.html">What To Do</a></li>
 								</ul>
 							</li>
 							<!-- end dropdown -->
 
 							<li class="header__nav-item">
-								<a id="about" href="about.html" class="header__nav-link">About</a>
+								<a href="about.html" class="header__nav-link">About</a>
 							</li>
 
 							<!-- dropdown -->
@@ -90,8 +91,8 @@
 								<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
 
 								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-									<li><a id="contact" href="contactUs.html">Contact Us</a></li>
-									<li><a id="forum" href="forum.html">Forum</a></li>
+									<li><a href="contactUs.html">Contact Us</a></li>
+									<li><a href="forum.html">Forum</a></li>
 								</ul>
 							</li>
 							<!-- end dropdown -->
@@ -100,7 +101,7 @@
 
 						<!-- header auth -->
 						<div class="header__auth">
-							<button id="search" class="header__search-btn" type="button">
+							<button class="header__search-btn" type="button">
 								<i class="icon ion-ios-search"></i>
 							</button>
 						</div>
@@ -126,7 +127,7 @@
 				<div class="col-12">
 					<div class="header__search-content">
 						<label for="searchBox"></label>
-						<input id="searchBox" type="text" placeholder="Search Term" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Term'" id="searchBox">
+						<input type="text" placeholder="Search Term" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Term'" id="searchBox">
 						<button type="button" id="searchButton">search</button>
 						<script src="js/search/search.js"></script>
 					</div>
@@ -166,11 +167,16 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<img class="resize" src="img/screens/Standard Seat 2.png" height="100%" width="100%" alt=""/></div>
+					<img class="resize" src="img/screens/Standard Seat 2.png" height="100%" width="100%"/>
+					<button onclick="myStandardFunction()" class="seats__btn1">Book Standard</button>
+				</div>
 				<div class="col">
-					<img  class="rezise" src="img/screens/Deluxe Seat.png" height="100%" width="100%" alt=""/></div>
+					<img  class="rezise" src="img/screens/Deluxe Seat.png" height="100%" width="100%"/>
+					<button onclick="myStandardFunction()" class="seats__btn2">Book Deluxe</button>
+				</div>
 			</div>
 		</div>
+
 	</div>
 	<!-- end pricing -->
 
@@ -179,121 +185,13 @@
 		<div class="container">
 			<div id="chart"></div>
 			<script src="https://cdn.seatsio.net/chart.js"></script>
-			<script>
-				new seatsio.SeatingChart({
-					divId: 'chart',
-					workspaceKey: '8a84d781-237d-46ed-aecb-860387b9287a',
-					event: '9b14fa0e-d626-406a-84a7-b04b0e4ae7cd',
-					onObjectSelected: function(object){
-						console.dir(object);
-					},
-					pricing: [
-						{'category': 1, 'ticketTypes': [
-								{'ticketType': 'Adult', 'price': 30},
-								{'ticketType': 'Child', 'price': 15}
-							]},
-						{'category': 2, 'ticketTypes': [
-								{'ticketType': 'Adult', 'price': 30},
-								{'ticketType': 'Child', 'price': 15}
-							]},
-						{'category': 3, 'ticketTypes': [
-								{'ticketType': 'Adult', 'price': 30},
-								{'ticketType': 'Child', 'price': 15}
-							]},
-						{'category': 4,'ticketTypes': [
-								{'ticketType': 'Adult/Child', 'price': 50}]}
-					],
-					priceFormatter: function(price) {
-						return '£' + price;
-					},
-					showLegend: true,
-					legend: {
-						hidePricing: true
-					},
-					enabled: true,
-					multiSelect: true,
-					zoomOnSelect: true,
-					showMinimap: true,
-					categoryFilter: {
-						enabled: true,
-						multiSelect: true,
-						zoomOnSelect: false,
-					},
-					showViewFromYourSeatOnDesktop: false,
-				}).render();
-			</script>
+			<button onclick="selectSeats()" class="seats__btn3">Book Selected Tickets</button>
 		</div>
 	</section>
 	<!-- end features -->
 
-	<!-- partners -->
-	<section class="section">
-		<div class="container">
-			<div class="row">
-				<!-- section title -->
-				<div class="col-12">
-					<h2 class="section__title section__title--no-margin">Our Partners</h2>
-				</div>
-				<!-- end section title -->
 
-				<!-- section text -->
-				<div class="col-12">
-					<p class="section__text section__text--last-with-margin">It is a long <b>established</b> fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.</p>
-				</div>
-				<!-- end section text -->
-
-				<!-- partner -->
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-					<a href="#" class="partner">
-						<img src="img/partners/themeforest-light-background.png" alt="" class="partner__img">
-					</a>
-				</div>
-				<!-- end partner -->
-
-				<!-- partner -->
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-					<a href="#" class="partner">
-						<img src="img/partners/audiojungle-light-background.png" alt="" class="partner__img">
-					</a>
-				</div>
-				<!-- end partner -->
-
-				<!-- partner -->
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-					<a href="#" class="partner">
-						<img src="img/partners/codecanyon-light-background.png" alt="" class="partner__img">
-					</a>
-				</div>
-				<!-- end partner -->
-
-				<!-- partner -->
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-					<a href="#" class="partner">
-						<img src="img/partners/photodune-light-background.png" alt="" class="partner__img">
-					</a>
-				</div>
-				<!-- end partner -->
-
-				<!-- partner -->
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-					<a href="#" class="partner">
-						<img src="img/partners/activeden-light-background.png" alt="" class="partner__img">
-					</a>
-				</div>
-				<!-- end partner -->
-
-				<!-- partner -->
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
-					<a href="#" class="partner">
-						<img src="img/partners/3docean-light-background.png" alt="" class="partner__img">
-					</a>
-				</div>
-				<!-- end partner -->
-			</div>
-		</div>
-	</section>
-	<!-- end partners -->
-
+	<!-- footer -->
 <footer class="footer">
 	<div class="container">
 		<div class="row">
@@ -375,6 +273,8 @@
 	<script src="js/photoswipe.min.js"></script>
 	<script src="js/photoswipe-ui-default.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/seatsio.js"></script>
+
 </body>
 
 </html>

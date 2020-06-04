@@ -121,7 +121,7 @@ function dateSelect(dates) {
     }
 }
 
-axios.get(`http://${window.location.href.toString().split("/")[2]}/movie/get/${params.get('id')}`).then(
+axios.get(`/movie/get/${params.get('id')}`).then(
     write => {
         let showTimes = [];
 
