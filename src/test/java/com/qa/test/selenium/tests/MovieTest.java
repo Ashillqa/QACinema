@@ -21,7 +21,7 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class) @Ignore
+@RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class MovieTest {
 	
@@ -36,16 +36,16 @@ public class MovieTest {
     public static void init() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         ChromeOptions opts = new ChromeOptions();
-        opts.setHeadless(true);
+        opts.setHeadless(false);
         driver = new ChromeDriver(opts);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-//		sleep(20000);
+
     }
 
 	@Before
 	public void apiBreaker() throws InterruptedException {
-		sleep(2000);
+		sleep(5000);
 	}
 	
 	@AfterClass
@@ -106,7 +106,7 @@ public class MovieTest {
 	 @Test
 	 public void showMoreClickTest() {
 		 driver.get("http://localhost:" + port +"/gallery.html");
-		 movieShow.getShowMore().click();
+		 wait.until(ExpectedConditions.presenceOfElementLocated(By.id("comingButton"))).click();
 		 assertTrue(driver.getCurrentUrl().contains("comingSoon.html"));
 	 }
 

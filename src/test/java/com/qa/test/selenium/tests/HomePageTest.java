@@ -24,7 +24,7 @@ import static java.lang.Thread.sleep;
 
 import com.qa.test.selenium.pages.HomePage;
 
-@RunWith(SpringRunner.class) @Ignore
+@RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class HomePageTest {
 	
@@ -40,11 +40,11 @@ public class HomePageTest {
 	    public static void init() throws InterruptedException {
 	        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 	        ChromeOptions opts = new ChromeOptions();
-	        opts.setHeadless(true);
+	        opts.setHeadless(false);
 	        driver = new ChromeDriver(opts);
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	        driver.manage().window().maximize();
-//		 	sleep(20000);
+
 	    }
 
 	@Before
