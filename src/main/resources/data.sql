@@ -82,9 +82,71 @@ insert into movie_line (movie_id, showtime_id) values (132,138);
 insert into movie (id, apiid, status, rating) values (133,508439,'upcoming', 'U');
 insert into movie_line (movie_id, showtime_id) values (133,114);
 insert into movie_line (movie_id, showtime_id) values (133,143);
+
 insert into movie (id, apiid, status) values (134,524047,'upcoming');
-insert into movie_line (movie_id, showtime_id) values (134,112);
-insert into movie_line (movie_id, showtime_id) values (134,145);
+insert into show_time (id,time) values (146,'12/06/2020 17:30');
+insert into show_time (id,time) values (147,'12/06/2020 20:00');
+insert into show_time (id,time) values (148,'12/06/2020 22:30');
+insert into movie_line (movie_id, showtime_id) values (134,146);
+insert into movie_line (movie_id, showtime_id) values (134,147);
+insert into movie_line (movie_id, showtime_id) values (134,148);
+
+insert into show_time (id,time) values (149,'13/06/2020 17:30');
+insert into show_time (id,time) values (150,'13/06/2020 20:00');
+insert into show_time (id,time) values (151,'13/06/2020 22:30');
+insert into movie_line (movie_id, showtime_id) values (134,149);
+insert into movie_line (movie_id, showtime_id) values (134,150);
+insert into movie_line (movie_id, showtime_id) values (134,151);
+
+insert into show_time (id,time) values (152,'14/06/2020 17:30');
+insert into show_time (id,time) values (153,'14/06/2020 20:00');
+insert into show_time (id,time) values (154,'14/06/2020 22:30');
+insert into movie_line (movie_id, showtime_id) values (134,152);
+insert into movie_line (movie_id, showtime_id) values (134,153);
+insert into movie_line (movie_id, showtime_id) values (134,154);
+
+insert into show_time (id,time) values (155,'19/06/2020 17:30');
+insert into show_time (id,time) values (156,'19/06/2020 20:00');
+insert into show_time (id,time) values (157,'19/06/2020 22:30');
+insert into movie_line (movie_id, showtime_id) values (134,155);
+insert into movie_line (movie_id, showtime_id) values (134,156);
+insert into movie_line (movie_id, showtime_id) values (134,157);
+
+insert into show_time (id,time) values (158,'20/06/2020 17:30');
+insert into show_time (id,time) values (159,'20/06/2020 20:00');
+insert into show_time (id,time) values (160,'20/06/2020 22:30');
+insert into movie_line (movie_id, showtime_id) values (134,158);
+insert into movie_line (movie_id, showtime_id) values (134,159);
+insert into movie_line (movie_id, showtime_id) values (134,160);
+
+insert into show_time (id,time) values (161,'21/06/2020 17:30');
+insert into show_time (id,time) values (162,'21/06/2020 20:00');
+insert into show_time (id,time) values (163,'21/06/2020 22:30');
+insert into movie_line (movie_id, showtime_id) values (134,161);
+insert into movie_line (movie_id, showtime_id) values (134,162);
+insert into movie_line (movie_id, showtime_id) values (134,163);
+
+insert into show_time (id,time) values (164,'26/06/2020 17:30');
+insert into show_time (id,time) values (165,'26/06/2020 20:00');
+insert into show_time (id,time) values (166,'26/06/2020 22:30');
+insert into movie_line (movie_id, showtime_id) values (134,164);
+insert into movie_line (movie_id, showtime_id) values (134,165);
+insert into movie_line (movie_id, showtime_id) values (134,166);
+
+insert into show_time (id,time) values (167,'27/06/2020 17:30');
+insert into show_time (id,time) values (168,'27/06/2020 20:00');
+insert into show_time (id,time) values (169,'27/06/2020 22:30');
+insert into movie_line (movie_id, showtime_id) values (134,167);
+insert into movie_line (movie_id, showtime_id) values (134,168);
+insert into movie_line (movie_id, showtime_id) values (134,169);
+
+insert into show_time (id,time) values (170,'28/06/2020 17:30');
+insert into show_time (id,time) values (171,'28/06/2020 20:00');
+insert into show_time (id,time) values (172,'28/06/2020 22:30');
+insert into movie_line (movie_id, showtime_id) values (134,170);
+insert into movie_line (movie_id, showtime_id) values (134,171);
+insert into movie_line (movie_id, showtime_id) values (134,172);
+
 insert into movie (id, apiid, status) values (135,572751,'upcoming');
 insert into movie_line (movie_id, showtime_id) values (135,117);
 insert into movie_line (movie_id, showtime_id) values (135,136);
