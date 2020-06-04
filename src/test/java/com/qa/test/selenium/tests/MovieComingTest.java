@@ -23,7 +23,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.qa.test.selenium.pages.ComingSoon;
 import com.qa.test.selenium.pages.SearchPage;
 
-@RunWith(SpringRunner.class)
+@RunWith(SpringRunner.class) @Ignore
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class MovieComingTest {
 	

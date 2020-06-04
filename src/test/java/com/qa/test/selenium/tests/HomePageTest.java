@@ -5,10 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
 
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -27,7 +24,7 @@ import static java.lang.Thread.sleep;
 
 import com.qa.test.selenium.pages.HomePage;
 
-@RunWith(SpringRunner.class)
+@RunWith(SpringRunner.class) @Ignore
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class HomePageTest {
 	

@@ -34,7 +34,7 @@ import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-@RunWith(SpringRunner.class)
+@RunWith(SpringRunner.class) @Ignore
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class NavBarPageTest {
 
