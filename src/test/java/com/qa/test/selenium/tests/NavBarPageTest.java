@@ -58,7 +58,7 @@ public class NavBarPageTest {
 
 		@Before
 		public void apiBreaker() throws InterruptedException {
-			sleep(5000);
+			sleep(500);
 		}
 
 	    @AfterClass
