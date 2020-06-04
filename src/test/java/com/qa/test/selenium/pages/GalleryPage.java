@@ -17,11 +17,10 @@ public class GalleryPage {
     @FindBy(id = "title130")
     private WebElement comingTitle;
 
-
     @FindBy(xpath = "//*[@id=\"ageRating\"]")
     private WebElement showingClassif;
 
-    @FindBy(xpath = "//*[@id=\"primeDiv\"]/div[8]/a")
+    @FindBy(id = "comingButton")
     private WebElement showMore;
 
 
@@ -30,6 +29,21 @@ public class GalleryPage {
 
     @FindBy(xpath = "/html/body/section[2]/div/div/div[2]/div/div[2]/ul/li[2]/a")
     private WebElement ExpectedClassif;
+
+    @FindBy(id = "searchBox2")
+    private WebElement term;
+
+    public WebElement getTerm() {
+        return term;
+    }
+
+    public WebElement getGenre() {
+        return genre;
+    }
+
+    @FindBy(id = "selectGenre")
+    private WebElement genre;
+
 
     public WebElement getBreadcrumbHome() {
         return breadcrumbHome;

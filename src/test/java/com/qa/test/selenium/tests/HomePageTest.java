@@ -49,7 +49,7 @@ public class HomePageTest {
 
 	@Before
 	public void apiBreaker() throws InterruptedException {
-		sleep(2000);
+		sleep(5000);
 	}
 
 
