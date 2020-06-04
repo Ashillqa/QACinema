@@ -27,7 +27,7 @@ import com.qa.test.selenium.pages.GalleryPage;
 import org.junit.*;
 import org.testng.annotations.AfterTest;
 
-@RunWith(SpringRunner.class)
+@RunWith(SpringRunner.class) @Ignore
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class GalleryPageTest {
 
