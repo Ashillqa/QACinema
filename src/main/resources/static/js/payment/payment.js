@@ -48,9 +48,14 @@ $(function () {
                     "/create-charge",
                     {email: email, token: token, amount: amount},
                     function (data) {
+                        console.log(data);
                         alert(data.details);
                         console.log(data.details);
-                        location.replace("paymentComplete.html");
+
+                        if (data.status === true){
+                            postBookingDetails();
+                            location.replace("paymentComplete.html");
+                        }
                     }, 'json');
             }
         });
