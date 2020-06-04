@@ -10,10 +10,7 @@ import com.qa.test.selenium.pages.*;
 import org.junit.*;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Action;
@@ -41,7 +38,8 @@ import static org.junit.Assert.assertTrue;
 public class NavBarPageTest {
 
 	  public static WebDriver driver;
-	  private final WebDriverWait wait = new WebDriverWait(driver, 2);
+	  private final WebDriverWait wait = new WebDriverWait(driver, 4);
+	JavascriptExecutor js = (JavascriptExecutor) driver;
 
 	    @LocalServerPort
 	    private int port;
@@ -50,12 +48,9 @@ public class NavBarPageTest {
 	    public static void init() {
 	        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 	        ChromeOptions opts = new ChromeOptions();
-	        opts.setHeadless(false);
+	        opts.setHeadless(true);
 	        driver = new ChromeDriver(opts);
-
 			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-
-
 	        driver.manage().window().maximize();
 	    }
 
@@ -65,12 +60,14 @@ public class NavBarPageTest {
 	    }
 
 
-
 	    @Test
 	    public void testMoviesShowingNav() throws InterruptedException {
 	        driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
+			navigation.getMenu().click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("dropdownMenuCatalog")));
 	        navigation.getMovieNav().click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("showing")));
 	        navigation.getShowing().click();
 	        wait.until(ExpectedConditions.urlContains("gallery.html"));
 	        assertEquals("http://localhost:" + port +"/gallery.html", driver.getCurrentUrl());
@@ -81,8 +78,10 @@ public class NavBarPageTest {
 	    public void testSearchNav() throws InterruptedException {
 	    	driver.get("http://localhost:" + port +"/index.html");
 	    	NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
-			navigation.getSearch().click();
-			navigation.getSearchMain().click();
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.id("search")));
+			js.executeScript("document.getElementById(`search`).click();");
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.id("searchButton")));
+			js.executeScript("document.getElementById(`searchButton`).click();");
 	    	assertEquals("http://localhost:" + port +"/search.html?term=", driver.getCurrentUrl());
 	    }
 
@@ -91,7 +90,10 @@ public class NavBarPageTest {
 	    public void testMoviesComingNav() {
 	        driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
+			navigation.getMenu().click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("dropdownMenuCatalog")));
 	        navigation.getMovieNav().click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("coming")));
 	        navigation.getComing().click();
 	        assertEquals("http://localhost:" + port +"/comingSoon.html", driver.getCurrentUrl());
 	    }
@@ -102,6 +104,8 @@ public class NavBarPageTest {
 	    public void testScreensNav() {
 	        driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
+			navigation.getMenu().click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("screens")));
 	        navigation.getScreens().click();
 	        assertEquals("http://localhost:" + port +"/screens.html", driver.getCurrentUrl());
 	    }
@@ -112,7 +116,10 @@ public class NavBarPageTest {
 	    public void testPlanningTripNav() {
 	    	driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
+			navigation.getMenu().click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("dropdownMenuCatalog1")));
 			navigation.getPlanningNav().click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("gettingHere")));
 	        navigation.getGettingHere().click();
 	        assertEquals("http://localhost:" + port +"/gettingHere.html", driver.getCurrentUrl());
 	    }
@@ -122,7 +129,10 @@ public class NavBarPageTest {
 	    public void testPlanningToDoNav() {
 	    	driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
+			navigation.getMenu().click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("dropdownMenuCatalog1")));
 	        navigation.getPlanningNav().click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("whatToDo")));
 	        navigation.getWhatToDo().click();
 	        assertEquals("http://localhost:" + port +"/placesToGo.html", driver.getCurrentUrl());
 	    }
@@ -133,6 +143,8 @@ public class NavBarPageTest {
 	    	driver.manage().window().maximize();
 	    	driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
+			navigation.getMenu().click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("about")));
 	        navigation.getAbout().click();
 	        assertEquals("http://localhost:" + port +"/about.html", driver.getCurrentUrl());
 	    }
@@ -142,7 +154,10 @@ public class NavBarPageTest {
 	    public void testExtendedContact() {
 	    	driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
-	        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("dropdownMenuMore"))).click();
+			navigation.getMenu().click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("dropdownMenuMore")));
+	        navigation.getSeeMore().click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("contact")));
 	        navigation.getContact().click();
 	        assertEquals("http://localhost:" + port +"/contactUs.html", driver.getCurrentUrl());
 	    }

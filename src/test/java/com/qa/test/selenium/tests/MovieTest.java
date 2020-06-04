@@ -23,7 +23,7 @@ import com.qa.test.selenium.pages.MovieShowingPage;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-public class movieTest {
+public class MovieTest {
 	
 	public static WebDriver driver;
 	
