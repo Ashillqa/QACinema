@@ -37,12 +37,12 @@ public class NavBarPage {
 	@FindBy(id = "forum")
 	private WebElement forum;
 	
-	@FindBy(id = "search")
+	@FindBy(xpath = "//*[@id=\"search\"]/i")
 	private WebElement search;
 	
 	@FindBy(id = "searchButton")
 	private WebElement searchMain;
-	
+
 	public WebElement getSearchMain() {
 		return searchMain;
 	}

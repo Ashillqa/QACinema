@@ -70,13 +70,7 @@ public class NavBarPageTest {
 	    public void testMoviesShowingNav() throws InterruptedException {
 	        driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
-			Wait<WebDriver> wait = new FluentWait<>(driver)
-					.withTimeout(Duration.ofSeconds(3))
-            		.pollingEvery(Duration.ofMillis(50))
-            		.ignoring(WebDriverException.class);
-			Thread.sleep(3000);
 	        navigation.getMovieNav().click();
-	        Thread.sleep(3000);
 	        navigation.getShowing().click();
 	        wait.until(ExpectedConditions.urlContains("gallery.html"));
 	        assertEquals("http://localhost:" + port +"/gallery.html", driver.getCurrentUrl());
@@ -88,7 +82,6 @@ public class NavBarPageTest {
 	    	driver.get("http://localhost:" + port +"/index.html");
 	    	NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
 			navigation.getSearch().click();
-			wait.until(ExpectedConditions.elementToBeClickable(By.id("searchButton")));
 			navigation.getSearchMain().click();
 	    	assertEquals("http://localhost:" + port +"/search.html?term=", driver.getCurrentUrl());
 	    }
