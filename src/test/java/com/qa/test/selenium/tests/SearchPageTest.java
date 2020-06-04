@@ -50,7 +50,7 @@ public class SearchPageTest {
 //		this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         extent.attachReporter(reporter);
-        sleep(20000);
+//        sleep(20000);
     }
 
     @Before
@@ -78,7 +78,7 @@ public class SearchPageTest {
         logger.log(Status.PASS, "Test Passed");
     }
 
-    @Test @Ignore
+    @Test
     public void testMovieGalleryPlayButtonLink() {
         logger=extent.createTest("test2");
         driver.get("http://localhost:" + port +"/search.html");
@@ -93,7 +93,7 @@ public class SearchPageTest {
 
     }
 
-    @Test @Ignore
+    @Test
     public void testMovieGalleryTitleLink() {
         logger=extent.createTest("test3");
         driver.get("http://localhost:" + port +"/search.html");
@@ -141,7 +141,7 @@ public class SearchPageTest {
         assertEquals(details.getTitle().getText(),title);
     }
 
-    @Test @Ignore
+    @Test
     public void testFeatureMovieGalleryTitleLink() {
         driver.get("http://localhost:" + port +"/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
@@ -156,7 +156,7 @@ public class SearchPageTest {
         assertEquals(details.getTitle().getText(),title);
     }
 
-    @Test @Ignore
+    @Test
     public void testFeatureMovieGalleryClassificationLink() {
         driver.get("http://localhost:" + port + "/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);

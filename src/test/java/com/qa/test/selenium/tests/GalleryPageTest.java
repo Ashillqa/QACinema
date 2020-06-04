@@ -47,7 +47,7 @@ public class GalleryPageTest {
 //        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         extent.attachReporter(reporter);
-        sleep(20000);
+//        sleep(20000);
     }
 
     @Before

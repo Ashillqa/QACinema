@@ -42,7 +42,7 @@ public class MovieComingTest {
         driver = new ChromeDriver(opts);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        sleep(20000);
+//        sleep(20000);
         
     }
 
@@ -67,7 +67,7 @@ public class MovieComingTest {
 		 
 	}
 	
-	@Test @Ignore
+	@Test
 	public void comingSoonClickTitleTest() {
 		driver.get("http://localhost:" + port +"/comingSoon.html");
 //		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title130"))).click();
@@ -75,7 +75,7 @@ public class MovieComingTest {
 		assertTrue(driver.getCurrentUrl().contains("details2.html?title=The%20SpongeBob"));
 	}
 	
-	@Test @Ignore
+	@Test
 	public void comingSoonClickPlay() {
 		driver.get("http://localhost:" + port +"/comingSoon.html");
 //		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("play130"))).click();
@@ -83,7 +83,7 @@ public class MovieComingTest {
 		assertTrue(driver.getCurrentUrl().contains("details2.html?title=The%20SpongeBob"));
 	}
 	
-	@Test @Ignore
+	@Test
 	public void comingSoonClickClassif() {
 		driver.get("http://localhost:" + port +"/comingSoon.html");
 		movieComing.getComingClassif().click();

@@ -46,7 +46,7 @@ public class HomePageTest {
 	        driver = new ChromeDriver(opts);
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	        driver.manage().window().maximize();
-		 	sleep(20000);
+//		 	sleep(20000);
 	    }
 
 	@Before
