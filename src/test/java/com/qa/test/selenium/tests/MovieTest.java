@@ -1,5 +1,6 @@
 package com.qa.test.selenium.tests;
 
+import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -7,13 +8,17 @@ import java.util.concurrent.TimeUnit;
 
 import com.qa.test.selenium.pages.GalleryPage;
 import org.junit.AfterClass;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.web.server.LocalServerPort;
@@ -25,20 +30,26 @@ public class MovieTest {
 	
 	public static WebDriver driver;
 	GalleryPage movieShow = PageFactory.initElements(driver, GalleryPage.class);
+	WebDriverWait wait = new WebDriverWait(driver, 5);
 
 	@LocalServerPort
     private int port;
 	
 	@BeforeClass
-    public static void init() {
+    public static void init() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         ChromeOptions opts = new ChromeOptions();
         opts.setHeadless(true);
         driver = new ChromeDriver(opts);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        
+		sleep(20000);
     }
+
+	@Before
+	public void apiBreaker() throws InterruptedException {
+		sleep(2000);
+	}
 	
 	@AfterClass
 	 public static void teardown() {
@@ -56,14 +67,14 @@ public class MovieTest {
 	 @Test
 	 public void showingPlayClick() {
 		 driver.get("http://localhost:" + port +"/gallery.html");
-		 movieShow.getShowingPlay().click();
+		 wait.until(ExpectedConditions.presenceOfElementLocated(By.id("play124"))).click();
 		 assertTrue(driver.getCurrentUrl().contains("details2.html"));
 	 }
 	 
 	 @Test
 	 public void showingTitleClick() {
 		 driver.get("http://localhost:" + port +"/gallery.html");
-		 movieShow.getComingTitle().click();
+		 wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title130"))).click();
 		 assertTrue(driver.getCurrentUrl().contains("details2.html"));
 	 }
 	 
@@ -77,7 +88,7 @@ public class MovieTest {
 	 @Test
 	 public void expectedPlayClick() {
 		 driver.get("http://localhost:" + port +"/gallery.html");
-		 movieShow.getShowingPlay().click();
+		 wait.until(ExpectedConditions.presenceOfElementLocated(By.id("play130"))).click();
 		 assertTrue(driver.getCurrentUrl().contains("details2.html"));
 	 }
 	 

@@ -30,6 +30,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
+import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -45,14 +46,20 @@ public class NavBarPageTest {
 	    private int port;
 
 	    @BeforeClass
-	    public static void init() {
+	    public static void init() throws InterruptedException {
 	        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 	        ChromeOptions opts = new ChromeOptions();
 	        opts.setHeadless(true);
 	        driver = new ChromeDriver(opts);
 			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 	        driver.manage().window().maximize();
+			sleep(20000);
 	    }
+
+		@Before
+		public void apiBreaker() throws InterruptedException {
+			sleep(2000);
+		}
 
 	    @AfterClass
 	    public static void teardown() {

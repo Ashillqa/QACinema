@@ -1,5 +1,6 @@
 package com.qa.test.selenium.tests;
 
+import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertEquals;
 
 import static org.junit.Assert.assertFalse;
@@ -38,7 +39,7 @@ public class GalleryPageTest {
     private int port;
 
     @BeforeClass
-    public static void init() {
+    public static void init() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         ChromeOptions opts = new ChromeOptions();
         opts.setHeadless(true);
@@ -46,6 +47,12 @@ public class GalleryPageTest {
 //        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         extent.attachReporter(reporter);
+        sleep(20000);
+    }
+
+    @Before
+    public void apiBreaker() throws InterruptedException {
+        sleep(2000);
     }
 
     @AfterClass

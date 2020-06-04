@@ -8,25 +8,21 @@ public class ComingSoon {
 	@FindBy(id = "homeBread")
 	private WebElement breadcrumbHome;
 	
-	@FindBy(id = "playbutton130")
+	@FindBy(id = "play130")
 	private WebElement comingPlay;
 	
 	@FindBy(id = "title130")
 	private WebElement comingTitle;
-	
-	
-	@FindBy(xpath = "//*[@id=\"ageRating\"]")
-	private WebElement showingClassif;
-	
-	@FindBy(xpath = "//*[@id=\"primeDiv\"]/div[8]/a")
-	private WebElement showMore;
 
+	public WebElement getResetButton() {
+		return resetButton;
+	}
+
+	@FindBy(id = "resetButton")
+	private WebElement resetButton;
 	
-	@FindBy(xpath = "//*[@id=\"primeDiv\"]/div[2]/div/div[2]/h3/a")
-	private WebElement ExpectedTitle;
-	
-	@FindBy(xpath = "/html/body/section[2]/div/div/div[2]/div/div[2]/ul/li[2]/a")
-	private WebElement ExpectedClassif;
+	@FindBy(id = "ageRating130")
+	private WebElement comingClassif;
 
 	public WebElement getBreadcrumbHome() {
 		return breadcrumbHome;
@@ -40,20 +36,8 @@ public class ComingSoon {
 		return comingTitle;
 	}
 
-	public WebElement getShowingClassif() {
-		return showingClassif;
-	}
-
-	public WebElement getShowMore() {
-		return showMore;
-	}
-
-	public WebElement getExpectedTitle() {
-		return ExpectedTitle;
-	}
-
-	public WebElement getExpectedClassif() {
-		return ExpectedClassif;
+	public WebElement getComingClassif() {
+		return comingClassif;
 	}
 	
 	

@@ -11,7 +11,7 @@ public class GalleryPage {
     @FindBy(id = "homeBread")
     private WebElement breadcrumbHome;
 
-    @FindBy(id = "playbutton130")
+    @FindBy(id = "playbutton124")
     private WebElement showingPlay;
 
     @FindBy(id = "title130")
