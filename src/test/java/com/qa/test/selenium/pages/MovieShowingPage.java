@@ -11,7 +11,7 @@ public class MovieShowingPage {
 	@FindBy(xpath = "//*[@id=\"playbutton120\"]")
 	private WebElement showingPlay;
 	
-	@FindBy(xpath = "//*[@id=\"title\"]")
+	@FindBy(id = "title")
 	private WebElement showingTitle;
 	
 	
