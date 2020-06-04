@@ -19,39 +19,39 @@ This project set out to create a new website for QA Cinemas, a well known cinema
 
 ## About the Project
 
-#####The overall objective of the project:
+##### The overall objective of the project:
 
 To create a full-stack Web application suitable for a given client specification, with utilisation of supporting tools, methodologies and technologies that encapsulate all modules covered during training.
 
 
 
-#####The MVP was to be achieved with the following requirements:
+##### The MVP was to be achieved with the following requirements:
 
-· Full commitment to an Agile approach throughout the project, including daily stand-up meetings and utilisation of Sprints, user stories, acceptance criteria, story points, and effective communication within the team.
+* Full commitment to an Agile approach throughout the project, including daily stand-up meetings and utilisation of Sprints, user stories, acceptance criteria, story points, and effective communication within the team.
 
-· A Kanban board with full expansion on user stories and tasks needed to complete the project. Providing a record of any issues or risks that were faced during the course of the project.
+* A Kanban board with full expansion on user stories and tasks needed to complete the project. Providing a record of any issues or risks that were faced during the course of the project.
 
-· Code fully integrated from every team member into a central repository on a Version Control System, with utilisation of issues, pull requests, merge requests, and any other aspects.
+* Code fully integrated from every team member into a central repository on a Version Control System, with utilisation of issues, pull requests, merge requests, and any other aspects.
 
-· Fully designed backend test suites for the application. Striving to achieve industry-standard (80%) test coverage through both unit and integration testing.
+* Fully designed backend test suites for the application. Striving to achieve industry-standard (80%) test coverage through both unit and integration testing.
 
-· Fully-designed frontend test suites for the application, which cover a wide range of user journeys.
+* Fully-designed frontend test suites for the application, which cover a wide range of user journeys.
 
 <details>
-<summary>### Technologies Used</summary>
+<summary>**Technologies Used**</summary>
     
-· Version Control System: Git
-· Source Code Management: GitHub
-· Kanban Board: Jira
-· Back-End Programming Language: Java
-· API Development Platform: Spring
-· Front-End Web Technologies: HTML, CSS, JavaScript (no frameworks)
-· Build Tool: Maven
-· Unit Testing: JUnit / TestNG, Mockito
-· Integration Testing: Selenium
-· Test Reporting: Surefire / ExtentReports
-· CI Server: Jenkins
-· Static Analysis: SonarQube
+* Version Control System: Git
+* Source Code Management: GitHub
+* Kanban Board: Jira
+* Back-End Programming Language: Java
+* API Development Platform: Spring
+* Front-End Web Technologies: HTML, CSS, JavaScript (no frameworks)
+* Build Tool: Maven
+* Unit Testing: JUnit / TestNG, Mockito
+* Integration Testing: Selenium
+* Test Reporting: Surefire / ExtentReports
+* CI Server: Jenkins
+* Static Analysis: SonarQube
 
 </details>
 
@@ -99,7 +99,8 @@ For the CI pipeline, Jenkins was used for this project.
 ```
 <details>
 <summary>Links for Dependencies</summary>
-- Java SE 14 [here](https://www.oracle.com/java/technologies/javase-downloads.html#JDK14),
+<p href="https://www.oracle.com/java/technologies/javase-downloads.html#JDK14">Java SE 14</p>
+
 - Apache Maven [here](https://maven.apache.org),
 - Git [here](https://git-scm.com/downloads),
 - IntelliJ Ultimate [here](https://www.jetbrains.com/idea/download/#section=windows),
@@ -261,11 +262,11 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 **[Back to top](#table-of-contents)**
 ## Authors
 
-* **[Ashill Pathak]**(https://github.com/Ashillqa)
-* **[David Williams]**(https://github.com/DavidWilliamsQA)
-* **[Korbinian Ring]**(https://github.com/KMRRingQA)
-* **[Matthew Burt]**(https://github.com/MatthewBurtQA)
-* **[Tawanda Siyamachira]**(https://github.com/TSiyamachiraQA)
+* **[Ashill Pathak](https://github.com/Ashillqa)**
+* **[David Williams](https://github.com/DavidWilliamsQA)**
+* **[Korbinian Ring](https://github.com/KMRRingQA)**
+* **[Matthew Burt](https://github.com/MatthewBurtQA)**
+* **[Tawanda Siyamachira](https://github.com/TSiyamachiraQA)**
 
 
 ## Acknowledgements
