@@ -142,8 +142,8 @@ Note: When you run the second command the program will run, launching the Spring
 
 ### API Reference
 
-[The Movie Database](https://developers.themoviedb.org/4/getting-started/authorization) - this database was used to make API(s) calls for all the movie information, throught the movie listing pages.
-[Seats.io](https://www.seats.io/) - this database was used to make API(s) calls for the seats GUI on the "screens.html" page.
+* [The Movie Database](https://developers.themoviedb.org/4/getting-started/authorization) - this database was used to make API(s) calls for all the movie information, throught the movie listing pages.
+* [Seats.io](https://www.seats.io/) - this database was used to make API(s) calls for the seats GUI on the "screens.html" page.
 
 
 ### Running Tests
