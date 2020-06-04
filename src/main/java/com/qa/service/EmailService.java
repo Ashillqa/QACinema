@@ -46,7 +46,6 @@ public class EmailService {
             }
         });
         Message msg = new MimeMessage(session);
-        msg.setFrom(new InternetAddress("temiloluwaw@gmail.com", false));
 
         msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse("qacinema.jobs@gmail.com"));
         msg.setSubject("Feedback: " + email.getSubject());
