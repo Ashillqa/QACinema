@@ -3,14 +3,13 @@ let params = new URLSearchParams(window.location.search);
     let adultNumber = 0;
     let childNumber = 0;
     let studentNumber = 0;
-    let total = 0;
 
-    
-    let upgradeLarge = false;
+    let totalTickets = 0;
 
 
 
 function updateTotal(type){
+    let total = 0;
     let checked = 0;
     let id = "totalPrice";
     document.getElementById(id).className = "section__title";
@@ -20,26 +19,25 @@ function updateTotal(type){
         let adult = document.getElementById(type);
         adultNumber = adult.options[adult.selectedIndex].value;
         if(document.getElementById("extra2Pounds").checked === true){
-            checked = 2;
+            document.getElementById("extra2Pounds").checked = false;
         }
     }
     if(type === 'child'){
         let child = document.getElementById(type);
         childNumber = child.options[child.selectedIndex].value;
         if(document.getElementById("extra2Pounds").checked === true){
-            checked = 2;
+            document.getElementById("extra2Pounds").checked = false;
         }
     }
     if(type === 'student'){
         let student = document.getElementById(type);
         studentNumber = student.options[student.selectedIndex].value;
         if(document.getElementById("extra2Pounds").checked === true){
-            checked = 2;
+            document.getElementById("extra2Pounds").checked = false;
         }
     }
 
-
-    let subTotal = (adultNumber * 8) + (childNumber * 4) + (studentNumber * 6) + checked;
+    let subTotal = (adultNumber * 8) + (childNumber * 4) + (studentNumber * 6);
 
     let timeFactor = params.get('time').split(' ');
 
@@ -53,13 +51,18 @@ function updateTotal(type){
         total = subTotal * 0.75;
     }
 
+    let finalTotal = total + checked;
+    totalTickets = parseInt(adultNumber) + parseInt(childNumber) + parseInt(studentNumber);
+
     if ((type === 'extra') && document.getElementById("extra2Pounds").checked === true){
         console.log("entering");
-        total += 2;
+        console.log(total);
+        console.log(totalTickets);
+        finalTotal = finalTotal + (2 * (totalTickets));
         console.log(total);
     }
 
-    document.getElementById(id).textContent = "£"+ total;
+    document.getElementById(id).textContent = "£"+ finalTotal;
 }
 
 document.getElementById("movieName").textContent = params.get('title');

@@ -4,7 +4,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class NavBarPage {
 	
-	@FindBy(id = "dropdownMenuCatalog")
+	@FindBy(css = "#dropdownMenuCatalog")
 	private WebElement movieNav;
 	
 	@FindBy(id = "showing")
@@ -38,9 +38,9 @@ public class NavBarPage {
 	private WebElement forum;
 	
 	@FindBy(id = "search")
-	private WebElement search1;
+	private WebElement search;
 	
-	@FindBy(xpath = "//*[@id=\"searchButton\"]")
+	@FindBy(id = "searchButton")
 	private WebElement searchMain;
 	
 	public WebElement getSearchMain() {
@@ -48,7 +48,7 @@ public class NavBarPage {
 	}
 	
 	public WebElement getSearch() {
-		return search1;
+		return search;
 	}
 	
 	public WebElement getMore() {
