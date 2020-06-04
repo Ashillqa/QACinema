@@ -37,8 +37,9 @@ To create a full-stack Web application suitable for a given client specification
 
 * Fully-designed frontend test suites for the application, which cover a wide range of user journeys.
 
+
 <details>
-<summary>**Technologies Used**</summary>
+<summary>Technologies Used</summary>
     
 * Version Control System: Git
 * Source Code Management: GitHub
@@ -97,17 +98,17 @@ IntelliJ & Eclipse IDEs were used for this project.
 Postman was used to test API calls from the H2, The Movie Database and Seats.io database before implementing them within the project.
 For the CI pipeline, Jenkins was used for this project.
 ```
+
 <details>
 <summary>Links for Dependencies</summary>
-<p href="https://www.oracle.com/java/technologies/javase-downloads.html#JDK14">Java SE 14</p>
-
-- Apache Maven [here](https://maven.apache.org),
-- Git [here](https://git-scm.com/downloads),
-- IntelliJ Ultimate [here](https://www.jetbrains.com/idea/download/#section=windows),
-- Eclipse IDE [here](https://www.eclipse.org/downloads)
-- Jenkins [here](https://jenkins.io/download).
-- Postman [here](https://www.postman.com/downloads).
-- Google Chrome [here](https://www.google.com/chrome).
+- [Java SE 14](https://www.oracle.com/java/technologies/javase-downloads.html#JDK14),
+- [Apache Maven](https://maven.apache.org),
+- [Git](https://git-scm.com/downloads),
+- [IntelliJ Ultimate](https://www.jetbrains.com/idea/download/#section=windows),
+- [Eclipse IDE](https://www.eclipse.org/downloads)
+- [Jenkins](https://jenkins.io/download).
+- [Postman](https://www.postman.com/downloads).
+- [Google Chrome](https://www.google.com/chrome).
 </details>
 
 ### Getting the Source
