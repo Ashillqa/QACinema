@@ -170,22 +170,22 @@ The screens page:
 The ticket bookings page: 
 * is part of the overall site navigation 
 * includes a booking with the following information:
- * Movie title
- * Screening date and time
- * Name of booker
- * Number of seats
- * Adult
- * Child
- * Concession
+   * Movie title
+   * Screening date and time
+   * Name of booker
+   * Number of seats
+   * Adult
+   * Child
+   * Concession
 
 #### Payment
 The payment page:
 * is dedicated to paying for tickets that are booked in advance.
 * gathers the following information, from the user:
- * Card holder’s name
- * Card number
- * Expiry date
- * Security code/CVC
+   * Card holder’s name
+   * Card number
+   * Expiry date
+   * Security code/CVC
 * with details saved and passed onto an external merchant for processing
 
 #### Places to Go
@@ -193,20 +193,20 @@ The places to go page:
 * is part of the overall site navigation
 * includes information about local venues where customers can visit before or after the movie (including bars and restaurants).
 * Each venue should including the following information:
- * Image of the venue
- * Description
- * Details of any offers relating to the cinema
- * Contact details
+   * Image of the venue
+   * Description
+   * Details of any offers relating to the cinema
+   * Contact details
 
 #### Getting There
 The getting there page:
 * is part of the overall site navigation 
 * includes information on the following, as well as any other interesting and relevant facts
- * External image of the cinema
- * Address
- * Directions from bus/train stations
- * Parking
- * Google/Bing map
+   * External image of the cinema
+   * Address
+   * Directions from bus/train stations
+   * Parking
+   * Google/Bing map
 
 #### Discussion Board
 The discussion/forum page:
@@ -237,9 +237,9 @@ The about page:
 * credits the team that created the site.
 * is part of the overall site navigation 
 * includes any accompanying information the team would like to share.
- * Twitter handle
- * Email address
- * Blog, company website, etc.
+   * Twitter handle
+   * Email address
+   * Blog, company website, etc.
 * must have a link to the Contact Page
 
 #### Contact Page
