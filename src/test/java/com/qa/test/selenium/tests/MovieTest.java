@@ -40,6 +40,7 @@ public class MovieTest {
         driver = new ChromeDriver(opts);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
+
     }
 
 	@Before
