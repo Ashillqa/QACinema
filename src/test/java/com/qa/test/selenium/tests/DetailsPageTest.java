@@ -22,8 +22,8 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.qa.test.selenium.pages.DetailsPage;
+import com.qa.test.selenium.pages.GalleryPage;
 
-import com.qa.test.selenium.pages.MovieShowingPage;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
@@ -31,7 +31,7 @@ public class DetailsPageTest {
 	
 	public static WebDriver driver;
 	private final WebDriverWait wait = new WebDriverWait(driver, 2);
-	MovieShowingPage gallery = PageFactory.initElements(driver, MovieShowingPage.class);
+	GalleryPage gallery = PageFactory.initElements(driver, GalleryPage.class);
 	DetailsPage details = PageFactory.initElements(driver, DetailsPage.class);
 	  
 	 @LocalServerPort
@@ -58,9 +58,9 @@ public class DetailsPageTest {
 	    @Test
 	    public void detailsHDClick() {
 	    	driver.get("http://localhost:" + port +"/gallery.html");
-	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title")));
-	    	String title = gallery.getShowingTitle().getText();
-	    	gallery.getShowingTitle().click();
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title130")));
+	    	String title = gallery.getComingTitle().getText();
+	    	gallery.getComingTitle().click();
 	    	assertTrue(driver.getCurrentUrl().contains("details2.html"));
 	    	wait.until(ExpectedConditions.textToBePresentInElement(details.getTitle(), title));
 	    	assertEquals(details.getTitle().getText(),title);
@@ -72,9 +72,9 @@ public class DetailsPageTest {
 	    @Test
 	    public void detailsAgeRateClick() {
 	    	driver.get("http://localhost:" + port +"/gallery.html");
-	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title")));
-	    	String title = gallery.getShowingTitle().getText();
-	    	gallery.getShowingTitle().click();
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title130")));
+	    	String title = gallery.getComingTitle().getText();
+	    	gallery.getComingTitle().click();
 	    	assertTrue(driver.getCurrentUrl().contains("details2.html"));
 	    	wait.until(ExpectedConditions.textToBePresentInElement(details.getTitle(), title));
 	    	assertEquals(details.getTitle().getText(),title);
@@ -86,9 +86,9 @@ public class DetailsPageTest {
 	    @Test
 	    public void detailsBookingClick() {
 	    	driver.get("http://localhost:" + port +"/gallery.html");
-	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title")));
-	    	String title = gallery.getShowingTitle().getText();
-	    	gallery.getShowingTitle().click();
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title130")));
+	    	String title = gallery.getComingTitle().getText();
+	    	gallery.getComingTitle().click();
 	    	assertTrue(driver.getCurrentUrl().contains("details2.html"));
 	    	wait.until(ExpectedConditions.textToBePresentInElement(details.getTitle(), title));
 	    	assertEquals(details.getTitle().getText(),title);
