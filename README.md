@@ -101,7 +101,7 @@ For the CI pipeline, Jenkins was used for this project.
 
 <details>
 <summary>Links for Dependencies</summary>
-<p href="">Below are a list of dependencies used within the project.</p>
+<p href="google.com">Below are a list of dependencies used within the project.</p>
 * [Java SE 14](https://www.oracle.com/java/technologies/javase-downloads.html#JDK14),
 * [Apache Maven](https://maven.apache.org),
 * [Git](https://git-scm.com/downloads),
