@@ -173,7 +173,7 @@ function showComing(list, ids, ratings) {
     }
     let showMore = document.createElement("div")
     showMore.className = "col-12"
-    showMore.innerHTML = `<a href="comingSoon.html" class="section__btn">Show more</a>`
+    showMore.innerHTML = `<a id="comingButton" href="comingSoon.html" class="section__btn">Show more</a>`
     div.appendChild(showMore);
 }
 

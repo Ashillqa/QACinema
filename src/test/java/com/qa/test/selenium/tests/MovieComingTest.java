@@ -23,7 +23,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.qa.test.selenium.pages.ComingSoon;
 import com.qa.test.selenium.pages.SearchPage;
 
-@RunWith(SpringRunner.class) @Ignore
+@RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class MovieComingTest {
 	
@@ -38,17 +38,17 @@ public class MovieComingTest {
     public static void init() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         ChromeOptions opts = new ChromeOptions();
-        opts.setHeadless(true);
+        opts.setHeadless(false);
         driver = new ChromeDriver(opts);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-//        sleep(20000);
+
         
     }
 
 	@Before
 	public void apiBreaker() throws InterruptedException {
-		sleep(2000);
+		sleep(5000);
 	}
 	
 	@AfterClass
@@ -70,8 +70,8 @@ public class MovieComingTest {
 	@Test
 	public void comingSoonClickTitleTest() {
 		driver.get("http://localhost:" + port +"/comingSoon.html");
-//		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title130"))).click();
-		movieComing.getComingTitle().click();
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title130"))).click();
+//		movieComing.getComingTitle().click();
 		assertTrue(driver.getCurrentUrl().contains("details2.html?title=The%20SpongeBob"));
 	}
 	
@@ -83,14 +83,8 @@ public class MovieComingTest {
 		assertTrue(driver.getCurrentUrl().contains("details2.html?title=The%20SpongeBob"));
 	}
 	
-	@Test
-	public void comingSoonClickClassif() {
-		driver.get("http://localhost:" + port +"/comingSoon.html");
-		movieComing.getComingClassif().click();
-//		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ageRating130"))).click();
-		assertTrue(driver.getCurrentUrl().contains("classifications.html"));
-	}
-	
+
+
 	@Test
 	public void comingSoonClickReset() {
 		driver.get("http://localhost:" + port +"/comingSoon.html");

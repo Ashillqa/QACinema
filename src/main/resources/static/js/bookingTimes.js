@@ -5,11 +5,12 @@ let params = new URLSearchParams(window.location.search);
     let studentNumber = 0;
 
     let totalTickets = 0;
+    let total = 0;
 
 
 
 function updateTotal(type){
-    let total = 0;
+
     let checked = 0;
     let id = "totalPrice";
     document.getElementById(id).className = "section__title";
@@ -133,6 +134,7 @@ axios.get(`/movie/get/${params.get('id')}`).then(
 )
 
 function saveStorage(){
+
     sessionStorage.clear();
 
     console.log("the storage has been called")
