@@ -28,7 +28,7 @@ import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-@RunWith(SpringRunner.class) @Ignore
+@RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class SearchPageTest {
 
@@ -45,17 +45,16 @@ public class SearchPageTest {
     public static void init() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         ChromeOptions opts = new ChromeOptions();
-        opts.setHeadless(true);
+        opts.setHeadless(false);
         driver = new ChromeDriver(opts);
 //		this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         extent.attachReporter(reporter);
-        sleep(20000);
     }
 
     @Before
     public void apiBreaker() throws InterruptedException {
-        sleep(2000);
+        sleep(5000);
     }
 
     @AfterClass
@@ -78,7 +77,7 @@ public class SearchPageTest {
         logger.log(Status.PASS, "Test Passed");
     }
 
-    @Test @Ignore
+    @Test
     public void testMovieGalleryPlayButtonLink() {
         logger=extent.createTest("test2");
         driver.get("http://localhost:" + port +"/search.html");
@@ -93,7 +92,7 @@ public class SearchPageTest {
 
     }
 
-    @Test @Ignore
+    @Test
     public void testMovieGalleryTitleLink() {
         logger=extent.createTest("test3");
         driver.get("http://localhost:" + port +"/search.html");
@@ -125,23 +124,7 @@ public class SearchPageTest {
         assertEquals(classifications.getTitle().getText(),"Classifications");
     }
 
-    @Test @Ignore
-    public void testFeatureMovieGalleryPlayButtonLink() {
-        driver.get("http://localhost:" + port +"/search.html");
-        SearchPage search = PageFactory.initElements(driver, SearchPage.class);
-
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"primeDiv\"]/div[4]")));
-
-        String title = search.getMovieFeature().findElement(By.className("featuredMovieTitle")).getText();
-        search.getMovieFeature().findElement(By.id("play")).click();
-        assertTrue(driver.getCurrentUrl().contains("details2.html"));
-        DetailsPage details = PageFactory.initElements(driver, DetailsPage.class);
-
-        wait.until(ExpectedConditions.textToBePresentInElement(details.getTitle(), title));
-        assertEquals(details.getTitle().getText(),title);
-    }
-
-    @Test @Ignore
+    @Test
     public void testFeatureMovieGalleryTitleLink() {
         driver.get("http://localhost:" + port +"/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
@@ -154,21 +137,6 @@ public class SearchPageTest {
 
         wait.until(ExpectedConditions.textToBePresentInElement(details.getTitle(), title));
         assertEquals(details.getTitle().getText(),title);
-    }
-
-    @Test @Ignore
-    public void testFeatureMovieGalleryClassificationLink() {
-        driver.get("http://localhost:" + port + "/search.html");
-        SearchPage search = PageFactory.initElements(driver, SearchPage.class);
-
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"primeDiv\"]/div[4]")));
-        wait.until(ExpectedConditions.elementToBeClickable(By.id("ageRating")));
-        search.getMovieFeature().findElement(By.id("ageRating")).click();
-        assertTrue(driver.getCurrentUrl().contains("classifications"));
-        ClassificationsPage classifications = PageFactory.initElements(driver, ClassificationsPage.class);
-
-        wait.until(ExpectedConditions.textToBePresentInElement(classifications.getTitle(), "Classifications"));
-        assertEquals(classifications.getTitle().getText(), "Classifications");
     }
 
     @Test

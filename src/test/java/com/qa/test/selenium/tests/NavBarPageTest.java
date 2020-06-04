@@ -34,7 +34,7 @@ import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-@RunWith(SpringRunner.class) @Ignore
+@RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class NavBarPageTest {
 
@@ -53,12 +53,11 @@ public class NavBarPageTest {
 	        driver = new ChromeDriver(opts);
 			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 	        driver.manage().window().maximize();
-			sleep(20000);
 	    }
 
 		@Before
 		public void apiBreaker() throws InterruptedException {
-			sleep(2000);
+			sleep(5000);
 		}
 
 	    @AfterClass
