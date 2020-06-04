@@ -101,14 +101,14 @@ For the CI pipeline, Jenkins was used for this project.
 
 <details>
 <summary>Links for Dependencies</summary>
-- [Java SE 14](https://www.oracle.com/java/technologies/javase-downloads.html#JDK14),
-- [Apache Maven](https://maven.apache.org),
-- [Git](https://git-scm.com/downloads),
-- [IntelliJ Ultimate](https://www.jetbrains.com/idea/download/#section=windows),
-- [Eclipse IDE](https://www.eclipse.org/downloads)
-- [Jenkins](https://jenkins.io/download).
-- [Postman](https://www.postman.com/downloads).
-- [Google Chrome](https://www.google.com/chrome).
+* [Java SE 14](https://www.oracle.com/java/technologies/javase-downloads.html#JDK14),
+* [Apache Maven](https://maven.apache.org),
+* [Git](https://git-scm.com/downloads),
+* [IntelliJ Ultimate](https://www.jetbrains.com/idea/download/#section=windows),
+* [Eclipse IDE](https://www.eclipse.org/downloads)
+* [Jenkins](https://jenkins.io/download).
+* [Postman](https://www.postman.com/downloads).
+* [Google Chrome](https://www.google.com/chrome).
 </details>
 
 ### Getting the Source
