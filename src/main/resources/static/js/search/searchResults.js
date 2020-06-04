@@ -66,7 +66,7 @@ function showOnPage(list, ids, ratings){
                     '</div>'+
                     '<div class="col-12 col-sm-8">'+
                     '<div class="card__content">'+
-                    `<h3 class="card__title"><a id="title${i}" href="details2.html?title=${append.data.title}&id=${ids[i]}">${append.data.title}</a></h3>`+
+                    `<h3 class="card__title"><a id="title${ids[i]}" href="details2.html?title=${append.data.title}&id=${ids[i]}">${append.data.title}</a></h3>`+
                     '<span class="card__category">'+
                     genres +
                     '</span>'+
@@ -155,13 +155,13 @@ function showFeatured(list, ids, ratings) {
                     '    <div class="card">\n' +
                     '        <div class="card__cover">\n' +
                     `            <img src="https://image.tmdb.org/t/p/original${res2.data.poster_path}" alt="" />\n` +
-                    `<a id="play" href="details2.html?title=${res2.data.title}&id=${ids[i]}" class="card__play">` +
+                    `<a id="play${ids[i]}" href="details2.html?title=${res2.data.title}&id=${ids[i]}" class="card__play">` +
                     '                <i class="icon ion-ios-play"></i>\n' +
                     '            </a>\n' +
                     '        </div>\n' +
                     '        <div class="card__content">\n' +
                     '            <h3 class="card__title">\n' +
-                    `<a class="featuredMovieTitle" href="details2.html?title=${res2.data.title}&id=${ids[i]}">${res2.data.title}</a>\n` +
+                    `<a id="title${ids[i]}" class="featuredMovieTitle" href="details2.html?title=${res2.data.title}&id=${ids[i]}">${res2.data.title}</a>\n` +
                     '            </h3>\n' +
                     '            <span class="card__category">\n' +
                     genres +

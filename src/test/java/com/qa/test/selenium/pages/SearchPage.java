@@ -8,10 +8,10 @@ public class SearchPage {
     @FindBy(id = "resetButton")
     private WebElement resetButton;
 
-    @FindBy(id = "play1")
+    @FindBy(id = "play124")
     private WebElement play1;
 
-    @FindBy(id = "title1")
+    @FindBy(id = "title124")
     private WebElement title1;
 
     @FindBy(xpath = "//*[@id=\"ageRating\"]")
@@ -64,7 +64,7 @@ public class SearchPage {
         return play1;
     }
 
-    public WebElement getTitle1() {
+    public WebElement getShowingTitle() {
         return title1;
     }
 }
