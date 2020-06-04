@@ -59,7 +59,6 @@ public class NavBarPageTest {
 	        navigation.getMovieNav().click();
 	        
 	        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("showing")));
-	        assertEquals("Showing",navigation.getShowing().getText());
 	        navigation.getShowing().click();
 	        assertEquals("http://localhost:" + port +"/gallery.html", driver.getCurrentUrl());
 	     
@@ -85,9 +84,7 @@ public class NavBarPageTest {
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
 	        WebDriverWait wait = new WebDriverWait(driver, 2);
 	        assertEquals("MOVIES",navigation.getMovieNav().getText());
-	        navigation.getMovieNav().click();	        
-	        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("coming")));
-	        assertEquals("Coming Soon",navigation.getComing().getText());
+	        navigation.getMovieNav().click();
 	        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("coming")));
 	        navigation.getComing().click();
 	        assertEquals("http://localhost:" + port +"/comingSoon.html", driver.getCurrentUrl());
@@ -101,8 +98,7 @@ public class NavBarPageTest {
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
 	        WebDriverWait wait = new WebDriverWait(driver, 2);
 	        assertEquals("SCREENS", navigation.getScreens().getText());
-	        navigation.getScreens().click();	        
-	        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("screens")));
+	        navigation.getScreens().click();
 	        assertEquals("http://localhost:" + port +"/screens.html", driver.getCurrentUrl());
 	    }
 
@@ -116,7 +112,6 @@ public class NavBarPageTest {
 	        assertEquals("PLANNING YOUR TRIP", navigation.getPlanningNav().getText());
 	        navigation.getPlanningNav().click();	        
 	        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("gettingHere")));
-	        assertEquals("Getting Here",navigation.getGettingHere().getText());
 	        navigation.getGettingHere().click();
 	        assertEquals("http://localhost:" + port +"/gettingHere.html", driver.getCurrentUrl());
 	    }
@@ -155,7 +150,6 @@ public class NavBarPageTest {
 	        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"dropdownMenuMore\"]/i")));
 	        navigation.getMore().click();	
 	        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("contact")));
-	        assertEquals("Contact Us", navigation.getContact().getText());
 	        navigation.getContact().click();
 	        assertEquals("http://localhost:" + port +"/contactUs.html", driver.getCurrentUrl());
 	    }
