@@ -56,7 +56,7 @@ public class BookingTest {
         driver = new ChromeDriver(opts);
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        sleep(5000);
+        sleep(8000);
     }
 
     @AfterClass
