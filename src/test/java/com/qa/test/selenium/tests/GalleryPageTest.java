@@ -24,6 +24,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.qa.test.selenium.pages.GalleryPage;
 import org.junit.*;
+import org.testng.annotations.AfterTest;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
@@ -52,6 +53,7 @@ public class GalleryPageTest {
         extent.flush();
         driver.quit();
     }
+
 
     @Test
     public void testResetButtonPresent() {

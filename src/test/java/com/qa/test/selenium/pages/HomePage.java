@@ -8,25 +8,25 @@ public class HomePage {
 	@FindBy(xpath = "//*[@id=\"primeDiv\"]/div[1]/h1/b")
 	private WebElement featureFilm;
 	
-	@FindBy(xpath = "/html/body/section[1]/div/div/div[2]/div/div[1]/a/i")
+	@FindBy(id = "play124")
 	private WebElement featurePlay;
 	
 	@FindBy(xpath = "//*[@id=\"primeDiv\"]/div[2]/div/div[2]/h3/a")
 	private WebElement featureTitle;
 	
-	@FindBy(xpath="//*[@id=\"ageRating\"]")
+	@FindBy(id="ageRating124")
 	private WebElement featureClassif;
 	
 	@FindBy(xpath = "//*[@id=\"soonComeDiv\"]/div[1]/h2/b")
 	private WebElement comingSoon;
 	
-	@FindBy(xpath = "/html/body/section[4]/div/div/div[2]/div/div[1]/a/i")
+	@FindBy(id = "play130")
 	private WebElement soonPlay;
 	
 	@FindBy(xpath = "//*[@id=\"soonComeDiv\"]/div[2]/div/div[2]/h3/a")
 	private WebElement soonTitle;
 	
-	@FindBy(xpath = "/html/body/section[4]/div/div/div[2]/div/div[2]/div/ul/li[2]/a")
+	@FindBy(id = "ageRating130")
 	private WebElement soonClassif;
 
 	public WebElement getFeatureFilm() {

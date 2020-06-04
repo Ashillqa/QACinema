@@ -60,20 +60,20 @@ function showFeatured(list, ids, ratings) {
                     '    <div class="card">\n' +
                     '        <div class="card__cover">\n' +
                     `            <img src="https://image.tmdb.org/t/p/original${res2.data.poster_path}" alt="" />\n` +
-                                `<a id="play" href="details2.html?title=${res2.data.title}&id=${ids[i]}" class="card__play">` +
+                                `<a id="play${ids[i]}" href="details2.html?title=${res2.data.title}&id=${ids[i]}" class="card__play">` +
                     '                <i class="icon ion-ios-play"></i>\n' +
                     '            </a>\n' +
                     '        </div>\n' +
                     '        <div class="card__content">\n' +
                     '            <h3 class="card__title">\n' +
-                                    `<a href="details2.html?title=${res2.data.title}&id=${ids[i]}">${res2.data.title}</a>\n` +
+                                    `<a "title${ids[i]}" href="details2.html?title=${res2.data.title}&id=${ids[i]}">${res2.data.title}</a>\n` +
                     '            </h3>\n' +
                     '            <span class="card__category">\n' +
                                     genres +
                 '                </span>\n' +
                     `            <span class="card__rate"><i class="icon ion-ios-star"></i>${res2.data.vote_average}</span>\n` +
                                 '<ul class="card__list">'+
-                                    `<li><a style="color: #ff5860;" id="ageRating" href="classifications.html">${ratings[i]}</a></li>`+
+                                    `<li><a style="color: #ff5860;" id="ageRating${ids[i]}" href="classifications.html">${ratings[i]}</a></li>`+
                                 '</ul>'+
                     '        </div>\n' +
                     '    </div>\n';
@@ -100,13 +100,13 @@ function showComing(list, ids, ratings) {
                     '    <div class="card">\n' +
                     '        <div class="card__cover">\n' +
                     `            <img src="https://image.tmdb.org/t/p/original${res3.data.poster_path}" alt="" />\n` +
-                                `<a id="play" href="details2.html?title=${res3.data.title}&id=${ids[j]}" class="card__play">` +
+                                `<a id="play${ids[j]}" href="details2.html?title=${res3.data.title}&id=${ids[j]}" class="card__play">` +
                     '                <i class="icon ion-ios-play"></i>\n' +
                     '            </a>\n' +
                     '        </div>\n' +
                     '        <div class="card__content">\n' +
                     '            <h3 class="card__title">\n' +
-                                    `<a href="details2.html?title=${res3.data.title}&id=${ids[j]}">${res3.data.title}</a>\n` +
+                                    `<a id="title${ids[j]}" href="details2.html?title=${res3.data.title}&id=${ids[j]}">${res3.data.title}</a>\n` +
                     '            </h3>\n' +
                     '            <span class="card__category">\n' +
                                     genres +
@@ -114,7 +114,7 @@ function showComing(list, ids, ratings) {
                                 '<div class="card__wrap">'+
                                     '<ul class="card__list">'+
                                         `<li>${res3.data.release_date}</li>`+
-                                        `<li><a style="color: #ff5860;" id="ageRating" href="classifications.html">${ratings[j]}</a></li>`+
+                                        `<li><a style="color: #ff5860;" id="ageRating${ids[j]}" href="classifications.html">${ratings[j]}</a></li>`+
                                     '</ul>'+
                                 '</div>'+
                     '        </div>\n' +

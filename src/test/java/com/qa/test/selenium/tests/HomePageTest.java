@@ -14,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -30,6 +31,8 @@ import com.qa.test.selenium.pages.HomePage;
 public class HomePageTest {
 	
 	public static WebDriver driver;
+	HomePage home = PageFactory.initElements(driver, HomePage.class);
+	WebDriverWait wait = new WebDriverWait(driver, 5);
 	
 	 @LocalServerPort
 	 private int port;
@@ -53,7 +56,6 @@ public class HomePageTest {
 	 @Test
 	 public void FeaturedMovieAppearsTest() {
 		 driver.get("http://localhost:" + port +"/index.html");
-		 HomePage home = PageFactory.initElements(driver, HomePage.class);
 		 assertEquals("featured movies".toUpperCase(),home.getFeatureFilm().getText());
 		 
 	 }
@@ -61,31 +63,26 @@ public class HomePageTest {
 	 @Test
 	 public void ComingSoonAppearsTest() {
 		 driver.get("http://localhost:" + port +"/index.html");
-		 HomePage home = PageFactory.initElements(driver, HomePage.class);
 		 assertEquals("coming soon".toUpperCase(),home.getComingSoon().getText());
 	 }
 	 
 	 @Test 
 	 public void FeaturedPlayClick() throws InterruptedException{
 		 driver.get("http://localhost:" + port +"/index.html");
-		 HomePage home = PageFactory.initElements(driver, HomePage.class);
-		 home.getFeaturePlay().click();
+		 wait.until(ExpectedConditions.presenceOfElementLocated(By.id("play124"))).click();
 		 assertTrue(driver.getCurrentUrl().contains("details2.html")); 
 	 }
 	 
 	 @Test
 	 public void ComingSoonClickTest() throws InterruptedException {
 		 driver.get("http://localhost:" + port +"/index.html");
-		 HomePage home = PageFactory.initElements(driver, HomePage.class);
-		 home.getSoonPlay().click();
+		 wait.until(ExpectedConditions.presenceOfElementLocated(By.id("play130"))).click();
 		 assertTrue(driver.getCurrentUrl().contains("details2.html"));
-		 
 	 }
 	 
 	 @Test
 	 public void featuredTitleClick() throws InterruptedException {
 		 driver.get("http://localhost:" + port +"/index.html");
-		 HomePage home = PageFactory.initElements(driver, HomePage.class);
 		 home.getFeatureTitle().click();
 		 assertTrue(driver.getCurrentUrl().contains("details2.html"));
 	 }
@@ -93,7 +90,6 @@ public class HomePageTest {
 	 @Test
 	 public void ComingTitleClick() {
 		 driver.get("http://localhost:" + port +"/index.html");
-		 HomePage home = PageFactory.initElements(driver, HomePage.class);
 		 home.getSoonTitle().click();
 		 assertTrue(driver.getCurrentUrl().contains("details2.html"));
 	 }
@@ -101,16 +97,14 @@ public class HomePageTest {
 	 @Test
 	 public void featuredClassificationClick() throws InterruptedException {
 		 driver.get("http://localhost:" + port +"/index.html");
-		 HomePage home = PageFactory.initElements(driver, HomePage.class);
-		 home.getFeatureClassif().click();
+		 wait.until(ExpectedConditions.elementToBeClickable(home.getFeatureClassif())).click();
 		 assertEquals("http://localhost:" + port +"/classifications.html", driver.getCurrentUrl());
 	 }
 	 
 	 @Test
 	 public void SoonClassificationClick() throws InterruptedException {
 		 driver.get("http://localhost:" + port +"/index.html");
-		 HomePage home = PageFactory.initElements(driver, HomePage.class);
-		 home.getSoonClassif().click();
+		 wait.until(ExpectedConditions.elementToBeClickable(home.getSoonClassif())).click();
 		 assertEquals("http://localhost:" + port +"/classifications.html", driver.getCurrentUrl());
 	 }
 	 
