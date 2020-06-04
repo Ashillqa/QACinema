@@ -8,6 +8,7 @@ This project set out to create a new website for QA Cinemas, a well known cinema
 1. [Project Status](#project-status)
 1. [Getting Started](#getting-started)
     1. [Dependencies](#dependencies)
+    1. [Features](#features)
     1. [Building](#building)
     1. [Usage](#usage)
 1. [Release Process](#release-process)
@@ -122,6 +123,132 @@ This project is hosted on [GitHub](https://github.com/Ashillqa/QACinema). You ca
 git clone https://github.com/Ashillqa/QACinema
 ```
 **[Back to top](#table-of-contents)**
+
+## Features
+
+#### Home Page
+The QA Cinemas site home page:
+* is Generally attractive.
+* is The default for the entire site.
+* allows users to navigate to other areas of the site
+* is A good first impression and allows users to access the resources they require.
+
+#### Listings Gallery
+The listings gallery page:
+* includes image gallery posters for the movies currently showing.
+* is part of the overall site navigation.
+* shows ensures each image appears on its own page.
+* shows supporting text including Title, actors, director and showing times for each movie.
+
+#### Opening Times
+The opening times page:
+* has a dedicated page to list the opening times. 
+* is part of the overall site navigation
+* has details about the opening times of the cinema.
+
+#### New Releases Gallery
+The new releases gallery page: 
+* includes an image gallery posters for forthcoming movies.
+* is part of the overall site navigation
+* Each movie appears on its own page
+* Each movie has it's respective supporting text including Title, actors and director
+
+#### Classifications
+The classifications page:
+* has a page dedicated to the film classification system.
+* is part of the overall site navigation.
+* addresses the standard film classifications, rules and conditions relating to each classification.
+* link out to external resources with more detail on individual items.
+
+#### Screens
+The screens page:
+* Includes an image of the seating plan of the standard & deluxe screen 
+* Includes images showing the décor for the standard and deluxe seats.
+
+
+#### Ticket Bookings
+The ticket bookings page: 
+* is part of the overall site navigation 
+* includes a booking with the following information:
+ * Movie title
+ * Screening date and time
+ * Name of booker
+ * Number of seats
+ * Adult
+ * Child
+ * Concession
+
+#### Payment
+The payment page:
+* is dedicated to paying for tickets that are booked in advance.
+* gathers the following information, from the user:
+ * Card holder’s name
+ * Card number
+ * Expiry date
+ * Security code/CVC
+* with details saved and passed onto an external merchant for processing
+
+#### Places to Go
+The places to go page:
+* is part of the overall site navigation
+* includes information about local venues where customers can visit before or after the movie (including bars and restaurants).
+* Each venue should including the following information:
+ * Image of the venue
+ * Description
+ * Details of any offers relating to the cinema
+ * Contact details
+
+#### Getting There
+The getting there page:
+* is part of the overall site navigation 
+* includes information on the following, as well as any other interesting and relevant facts
+ * External image of the cinema
+ * Address
+ * Directions from bus/train stations
+ * Parking
+ * Google/Bing map
+
+#### Discussion Board
+The discussion/forum page:
+* provides customers with the means to discuss movies and their experiences at the cinema.
+* appears in the primary navigation
+* users can comment on movie related topics
+* users can rate films that they have seen
+* users’ posts are moderated to ensure that inappropriate content is not displayed
+
+
+#### Site Navigation
+The site navigation: 
+* allows users to easily navigate to various areas of the site in a uniform and predictable manner
+* is available on all pages of the site.
+* appears identically on all pages that include it
+
+#### Search
+The search bar:
+* allows user to search by keyword (with the implementation of a placeholder)
+
+#### Email Form
+The email form: 
+* allows visitors to contact the site owner or moderator without exposing their email addresses on the internet.
+
+
+#### About Page
+The about page: 
+* credits the team that created the site.
+* is part of the overall site navigation 
+* includes any accompanying information the team would like to share.
+ * Twitter handle
+ * Email address
+ * Blog, company website, etc.
+* must have a link to the Contact Page
+
+#### Contact Page
+The contact us page:
+* provides a way for a site visitor to contact the site owner electronically & physically. 
+* is part of the overall site navigation 
+ 
+
+
 ## Building
 
 How to build the project: 
