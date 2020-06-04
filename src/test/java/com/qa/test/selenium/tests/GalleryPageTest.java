@@ -42,7 +42,7 @@ public class GalleryPageTest {
     public static void init() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         ChromeOptions opts = new ChromeOptions();
-        opts.setHeadless(false);
+        opts.setHeadless(true);
         driver = new ChromeDriver(opts);
 //        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
