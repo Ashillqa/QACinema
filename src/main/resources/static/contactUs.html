@@ -223,20 +223,20 @@
 
 										<form id="comForm" class="form">
 											<div class="sign__group">
-													<input id="email" type="email" class="sign__input" placeholder="Email" required>
+													<input id="email" type="email" class="sign__input" name="Email" placeholder="Email" required>
 											</div>
 											<div class="sign__group">
-												<input id="username" type="text" class="sign__input" placeholder="Name" required>
+												<input id="username" type="text" class="sign__input" name="Name" placeholder="Name" required>
 											</div>
 											<div class="sign__group">
-												<input id="subject" type="text" class="sign__input" placeholder="Subject" required>
+												<input id="subject" type="text" class="sign__input" name="Subject" placeholder="Subject" required>
 											</div>
 
 											<div class="sign__group">
-												<textarea id="feedback" name="text" class="form__textarea" placeholder="Add Feedback" required></textarea>
+												<textarea id="feedback" name="text" class="form__textarea" dirname="Feedback" placeholder="Add Feedback" required></textarea>
 											</div>
 
-											<button class="form__btn" onclick="sendEmail()">Send</button>
+											<button id="submitButton" type="submit" class="form__btn" onclick="sendEmail(event)" >Send</button>
 										</form>
 									</div>
 								</div>
