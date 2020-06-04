@@ -5,10 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
 
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -42,11 +39,10 @@ public class HomePageTest {
 	    public static void init() throws InterruptedException {
 	        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 	        ChromeOptions opts = new ChromeOptions();
-	        opts.setHeadless(true);
+	        opts.setHeadless(false);
 	        driver = new ChromeDriver(opts);
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	        driver.manage().window().maximize();
-		 	sleep(20000);
 	    }
 
 	@Before

@@ -53,12 +53,11 @@ public class NavBarPageTest {
 	        driver = new ChromeDriver(opts);
 			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 	        driver.manage().window().maximize();
-			sleep(20000);
 	    }
 
 		@Before
 		public void apiBreaker() throws InterruptedException {
-			sleep(2000);
+			sleep(500);
 		}
 
 	    @AfterClass
