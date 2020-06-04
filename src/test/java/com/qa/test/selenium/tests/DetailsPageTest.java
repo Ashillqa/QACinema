@@ -94,10 +94,7 @@ public class DetailsPageTest {
 	    	assertEquals(details.getTitle().getText(),title);
 	    	details.getBookButton().click();
 	    	assertTrue(driver.getCurrentUrl().contains("bookings2.html"));
-	    	
-	    	
-	    	
-	    	
+
 	    }
 
 }
