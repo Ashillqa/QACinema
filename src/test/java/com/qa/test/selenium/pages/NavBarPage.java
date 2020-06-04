@@ -3,7 +3,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class NavBarPage {
-	
+
+	@FindBy(xpath = "/html/body/header/div/div/div/div/div/button")
+	private WebElement menu;
+
+	public WebElement getMenu() {
+		return menu;
+	}
+
 	@FindBy(id = "dropdownMenuCatalog")
 	private WebElement movieNav;
 	
@@ -28,27 +35,31 @@ public class NavBarPage {
 	@FindBy(id = "about")
 	private WebElement about;
 	
-	@FindBy(xpath = "//*[@id=\"dropdownMenuMore\"]/i")
+	@FindBy(id = "dropdownMenuMore")
 	private WebElement seeMore;
-	
+
+	public WebElement getSeeMore() {
+		return seeMore;
+	}
+
 	@FindBy(id = "contact")
 	private WebElement contact;
 	
 	@FindBy(id = "forum")
 	private WebElement forum;
 	
-	@FindBy(id = "search")
-	private WebElement search1;
+	@FindBy(xpath = "//*[@id=\"search\"]/i")
+	private WebElement search;
 	
-	@FindBy(xpath = "//*[@id=\"searchButton\"]")
+	@FindBy(id = "searchButton")
 	private WebElement searchMain;
-	
+
 	public WebElement getSearchMain() {
 		return searchMain;
 	}
 	
 	public WebElement getSearch() {
-		return search1;
+		return search;
 	}
 	
 	public WebElement getMore() {

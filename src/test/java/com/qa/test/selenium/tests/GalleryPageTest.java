@@ -1,5 +1,6 @@
 package com.qa.test.selenium.tests;
 
+import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertEquals;
 
 import static org.junit.Assert.assertFalse;
@@ -10,8 +11,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 
-import org.junit.After;
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -24,37 +24,43 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.qa.test.selenium.pages.GalleryPage;
-
-
-import java.util.concurrent.TimeUnit;
+import org.junit.*;
+import org.testng.annotations.AfterTest;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class GalleryPageTest {
 
-    private WebDriver driver;
-    ExtentHtmlReporter reporter = new ExtentHtmlReporter("Reports/learn_automation1.html");
-    ExtentReports extent = new ExtentReports();
-
+    public static WebDriver driver;
+    public static ExtentHtmlReporter reporter = new ExtentHtmlReporter("Reports/GelleryPage.html");
+    public static ExtentReports extent = new ExtentReports();
 
     @LocalServerPort
     private int port;
 
-    @Before
-    public void init() {
+    @BeforeClass
+    public static void init() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         ChromeOptions opts = new ChromeOptions();
-        opts.setHeadless(true);
-        this.driver = new ChromeDriver(opts);
-//		this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        opts.setHeadless(false);
+        driver = new ChromeDriver(opts);
+//        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
         extent.attachReporter(reporter);
+
     }
 
-    @After
-    public void teardown() {
+    @Before
+    public void apiBreaker() throws InterruptedException {
+        sleep(5000);
+    }
+
+    @AfterClass
+    public static void teardown() {
         extent.flush();
         driver.quit();
     }
+
 
     @Test
     public void testResetButtonPresent() {
@@ -65,7 +71,6 @@ public class GalleryPageTest {
         GalleryPage gallery = PageFactory.initElements(driver, GalleryPage.class);
         assertEquals("reset".toUpperCase(),gallery.getResetButton().getText());
         logger.log(Status.PASS, "Title verified");
-
     }
 
 }

@@ -32,6 +32,7 @@ if (sessionStorage.getItem("upgrade") === "true"){
 else {
     status = "NO";
 }
+
 console.log(sessionStorage.getItem("upgrade"));
 document.getElementById("upgrade").innerHTML = "Upgrade: " + status;
 

@@ -61,6 +61,11 @@ function postBookingDetails() {
         "totalPrice": ${sessionStorage.getItem('total')}, "emailAddress": "${sessionStorage.getItem('email')}", "phoneNumber": "${sessionStorage.getItem('phone')}", "customerName":"${sessionStorage.getItem('name')}",
     "adultNr": ${sessionStorage.getItem('adult')}, "childNr": ${sessionStorage.getItem('child')}, "studentNr": ${sessionStorage.getItem('student')}}`;
 
+console.log(bookingDetails);
+
+// for (let x = 0; x < sessionStorage.length; x++){
+//     console.log(sessionStorage.getItem(localStorage.key(x)));
+// }
 
     axios.post(`/booking/createBooking`, JSON.parse(bookingDetails)).then(
         res =>{
