@@ -19,13 +19,13 @@ This project set out to create a new website for QA Cinemas, a well known cinema
 
 ## About the Project
 
-The overall objective of the project:
+#####The overall objective of the project:
 
 To create a full-stack Web application suitable for a given client specification, with utilisation of supporting tools, methodologies and technologies that encapsulate all modules covered during training.
 
 
 
-The MVP was to be achieved with the following requirements:
+#####The MVP was to be achieved with the following requirements:
 
 · Full commitment to an Agile approach throughout the project, including daily stand-up meetings and utilisation of Sprints, user stories, acceptance criteria, story points, and effective communication within the team.
 
@@ -38,7 +38,7 @@ The MVP was to be achieved with the following requirements:
 · Fully-designed frontend test suites for the application, which cover a wide range of user journeys.
 
 <details>
-<summary>Technologies Used</summary>
+<summary>### Technologies Used</summary>
     
 · Version Control System: Git
 · Source Code Management: GitHub
@@ -55,7 +55,7 @@ The MVP was to be achieved with the following requirements:
 
 </details>
 
-Kanban Board for QA Project: [Jira](https://hobby-site.atlassian.net/secure/RapidBoard.jspa?rapidView=2&projectKey=QCP&selectedIssue=QCP-60&atlOrigin=eyJpIjoiOTA4NmMxYzJlNzVkNGQ1NDg2MDc4YmYxODViNGQ2NzkiLCJwIjoiaiJ9)
+Kanban Board for Project: [Jira](https://hobby-site.atlassian.net/secure/RapidBoard.jspa?rapidView=2&projectKey=QCP&selectedIssue=QCP-60&atlOrigin=eyJpIjoiOTA4NmMxYzJlNzVkNGQ1NDg2MDc4YmYxODViNGQ2NzkiLCJwIjoiaiJ9)
 
 Presentation on the project: [on google slides](???)
 
@@ -64,9 +64,12 @@ Presentation on the project: [on google slides](???)
 
 ## Test Coverage 
 
-**Unit & Integration Tests:** For src/main/java: ??% // Sonarqube: ??%
-**Selenium Tests:** 
+#### Unit & Integration Tests
+* For src/main/java: ??% 
+* Sonarqube: ??%
 
+#### Automated Web Tests: 
+* Selenium: ??
 
 
 **[Back to top](#table-of-contents)**
@@ -132,7 +135,7 @@ How to build the project:
 
 Note: When you run the second command the program will run, launching the Spring boot application. You can then navigate to `localhost:8181` via a browser or my shortcut provided in this repo, to reach the home page of the web interface. The app will run until you trigger the `/shutdownAppContext` API call.
 
-###API Reference
+### API Reference
 
 [The Movie Database](https://developers.themoviedb.org/4/getting-started/authorization) - this database was used to make API(s) calls for all the movie information, throught the movie listing pages.
 [Seats.io](https://www.seats.io/) - this database was used to make API(s) calls for the seats GUI on the "screens.html" page.
@@ -258,11 +261,11 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 **[Back to top](#table-of-contents)**
 ## Authors
 
-* **Ashill Pathak**(https://github.com/Ashillqa)
-* **David Williams**(https://github.com/DavidWilliamsQA)
-* **Korbinian Ring**(https://github.com/KMRRingQA)
-* **Matthew Burt**(https://github.com/MatthewBurtQA)
-* **Tawanda Siyamachira**(https://github.com/TSiyamachiraQA)
+* **[Ashill Pathak]**(https://github.com/Ashillqa)
+* **[David Williams]**(https://github.com/DavidWilliamsQA)
+* **[Korbinian Ring]**(https://github.com/KMRRingQA)
+* **[Matthew Burt]**(https://github.com/MatthewBurtQA)
+* **[Tawanda Siyamachira]**(https://github.com/TSiyamachiraQA)
 
 
 ## Acknowledgements
