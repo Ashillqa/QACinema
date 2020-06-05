@@ -6,6 +6,9 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -33,6 +36,9 @@ public class ClassificationPageTest {
 	public static WebDriver driver;
 	private final WebDriverWait wait = new WebDriverWait(driver, 2);
 	ClassificationsPage ageRate = PageFactory.initElements(driver, ClassificationsPage.class);
+	public static ExtentHtmlReporter reporter = new ExtentHtmlReporter("Reports/Classifications.html");
+	public static ExtentReports extent = new ExtentReports();
+	ExtentTest logger;
 	
 	
 	@LocalServerPort
@@ -44,20 +50,20 @@ public class ClassificationPageTest {
 	        ChromeOptions opts = new ChromeOptions();
 	        opts.setHeadless(true);
 	        driver = new ChromeDriver(opts);
-
 			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-
-
 	        driver.manage().window().maximize();
+			extent.attachReporter(reporter);
 	    }
 	    
 	    @AfterClass
 		public static void teardown() {
 			 driver.quit();
+			 extent.flush();
 		 }
 	    
 	    @Test
 	    public void testClassificationTitle() {
+			logger=extent.createTest("Title Correct");
 	    	driver.get("http://localhost:" + port +"/classifications.html");
 	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.className("section__title")));
 	    	assertEquals("Classifications",ageRate.getTitle().getText());
@@ -65,6 +71,7 @@ public class ClassificationPageTest {
 	    
 	    @Test
 	    public void testTBCRedirect() throws InterruptedException {
+			logger=extent.createTest("TBC Link");
 	    	driver.get("http://localhost:" + port +"/classifications.html");
 	    	sleep(1000);
 	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.id("tbcLink")));
@@ -84,6 +91,7 @@ public class ClassificationPageTest {
 	    
 	    @Test
 	    public void testParentalRedirect() throws InterruptedException {
+			logger=extent.createTest("PG Link");
 	    	driver.get("http://localhost:" + port +"/classifications.html");
 	    	sleep(1000);
 	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.id("pgLink")));
@@ -101,6 +109,7 @@ public class ClassificationPageTest {
 	    
 	    @Test
 	    public void testTwelveRedirect() throws InterruptedException {
+			logger=extent.createTest("12 Link");
 	    	driver.get("http://localhost:" + port +"/classifications.html");
 	    	sleep(1000);
 	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.id("TwelveLink")));
@@ -118,6 +127,7 @@ public class ClassificationPageTest {
 	    
 	    @Test
 	    public void testFifteenRedirect() throws InterruptedException {
+			logger=extent.createTest("15 Link");
 	    	driver.get("http://localhost:" + port +"/classifications.html");
 	    	sleep(1000);
 	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.id("fifteenLink")));
@@ -135,6 +145,7 @@ public class ClassificationPageTest {
 	    
 	    @Test
 	    public void testEighteenRedirect() throws InterruptedException {
+			logger=extent.createTest("18 Link");
 	    	driver.get("http://localhost:" + port +"/classifications.html");
 	    	sleep(1000);
 	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.id("eighteenLink")));
@@ -151,6 +162,7 @@ public class ClassificationPageTest {
 	        }
 	    @Test
 	    public void testUniversalRedirect() throws InterruptedException {
+			logger=extent.createTest("Universal Link");
 	    	driver.get("http://localhost:" + port +"/classifications.html");
 	    	sleep(1000);
 	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"ULink\"]")));

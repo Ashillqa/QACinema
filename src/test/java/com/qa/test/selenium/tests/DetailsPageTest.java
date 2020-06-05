@@ -5,6 +5,9 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -33,6 +36,9 @@ public class DetailsPageTest {
 	private final WebDriverWait wait = new WebDriverWait(driver, 2);
 	GalleryPage gallery = PageFactory.initElements(driver, GalleryPage.class);
 	DetailsPage details = PageFactory.initElements(driver, DetailsPage.class);
+	public static ExtentHtmlReporter reporter = new ExtentHtmlReporter("Reports/Details.html");
+	public static ExtentReports extent = new ExtentReports();
+	ExtentTest logger;
 	  
 	 @LocalServerPort
 	 private int port;
@@ -43,20 +49,20 @@ public class DetailsPageTest {
 	        ChromeOptions opts = new ChromeOptions();
 	        opts.setHeadless(true);
 	        driver = new ChromeDriver(opts);
-
 			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-
-
 	        driver.manage().window().maximize();
+			extent.attachReporter(reporter);
 	    }
 	    
 	    @AfterClass
 		public static void teardown() {
 			 driver.quit();
+			 extent.flush();
 		 }
 	    
 	    @Test
 	    public void detailsHDClick() {
+			logger=extent.createTest("Screen Link");
 	    	driver.get("http://localhost:" + port +"/gallery.html");
 	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title130")));
 	    	String title = gallery.getComingTitle().getText();
@@ -71,6 +77,7 @@ public class DetailsPageTest {
 		 
 	    @Test
 	    public void detailsAgeRateClick() {
+			logger=extent.createTest("Classif Link");
 	    	driver.get("http://localhost:" + port +"/gallery.html");
 	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title130")));
 	    	String title = gallery.getComingTitle().getText();
@@ -85,6 +92,7 @@ public class DetailsPageTest {
 	    
 	    @Test
 	    public void detailsBookingClick() {
+			logger=extent.createTest("Booking Link");
 	    	driver.get("http://localhost:" + port +"/gallery.html");
 	    	wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title130")));
 	    	String title = gallery.getComingTitle().getText();

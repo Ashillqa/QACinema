@@ -32,8 +32,7 @@ import org.testng.annotations.AfterTest;
 public class GalleryPageTest {
 
     public static WebDriver driver;
-    public static ExtentHtmlReporter reporter = new ExtentHtmlReporter("Reports/GelleryPage.html");
-    public static ExtentReports extent = new ExtentReports();
+
 
     @LocalServerPort
     private int port;
@@ -46,7 +45,6 @@ public class GalleryPageTest {
         driver = new ChromeDriver(opts);
 //        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        extent.attachReporter(reporter);
 
     }
 
@@ -57,7 +55,6 @@ public class GalleryPageTest {
 
     @AfterClass
     public static void teardown() {
-        extent.flush();
         driver.quit();
     }
 
@@ -65,12 +62,9 @@ public class GalleryPageTest {
     @Test
     public void testResetButtonPresent() {
         driver.manage().window().maximize();
-        ExtentTest logger=extent.createTest("LoginTest");
-        logger.log(Status.INFO, "Login to amazon");
         driver.get("http://localhost:" + port +"/gallery.html");
         GalleryPage gallery = PageFactory.initElements(driver, GalleryPage.class);
         assertEquals("reset".toUpperCase(),gallery.getResetButton().getText());
-        logger.log(Status.PASS, "Title verified");
     }
 
 }
