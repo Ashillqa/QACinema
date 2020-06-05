@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.concurrent.TimeUnit;
 
+import org.hibernate.jdbc.Expectations;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -14,6 +15,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
@@ -125,6 +127,7 @@ public class FooterTest {
 		driver.get("http://localhost:" + port +"/index.html");
 		assertEquals("qacinema.jobs@gmail.com", footer.getEmailLink().getText());
 		footer.getEmailLink().click();
+		wait.until(ExpectedConditions.urlContains("contact"));
 		assertEquals("http://localhost:" + port +"/contactUs.html", driver.getCurrentUrl());
 	}
 	
