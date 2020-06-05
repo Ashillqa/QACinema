@@ -69,11 +69,8 @@ Presentation on the project: [on google slides](???)
 ## Test Coverage 
 
 #### Unit & Integration Tests
-* For src/main/java: ??% 
-* Sonarqube: ??%
-
-#### Automated Web Tests: 
-* Selenium: ??
+* For src/main/java: 87.4% 
+* Sonarqube: 86.2%
 
 
 **[Back to top](#table-of-contents)**
