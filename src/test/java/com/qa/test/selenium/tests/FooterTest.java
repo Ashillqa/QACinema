@@ -9,11 +9,9 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.hibernate.jdbc.Expectations;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -32,6 +30,7 @@ import com.qa.test.selenium.pages.FooterPage;
 public class FooterTest {
 	
 	public static WebDriver driver;
+	JavascriptExecutor js = (JavascriptExecutor) driver;
 	WebDriverWait wait = new WebDriverWait(driver, 5);
 	FooterPage footer = PageFactory.initElements(driver, FooterPage.class);
 	public static ExtentHtmlReporter reporter = new ExtentHtmlReporter("Reports/Footer.html");
@@ -117,7 +116,7 @@ public class FooterTest {
 		driver.get("http://localhost:" + port +"/index.html");
 		assertEquals("Security", footer.getSecurity404().getText());
 		footer.getSecurity404().click();
-		apiBreaker();
+		js.executeScript("");
 		assertEquals("http://localhost:" + port +"/404.html", driver.getCurrentUrl());
 	}
 	
