@@ -1,4 +1,5 @@
-![](src/main/resources/static/img/QA-cinema-logo2.png)
+<img src = "src/main/resources/static/img/QA-cinema-logo2.png" width ="100">
+
 # Cinema Web App: QA Cinemas
 This project set out to create a new website for QA Cinemas, a well known cinema chain. The aim of this project was to be achieved in a team of 5 by satifying all the "essential" requirements alogn with the "desirable" requirements. These requirements include presenting information about the movies, listings, upcoming releases, screen rooms, about us, movie comments amongst various other functions of a cinema site. This task was to be completed in the course of tow 4-day Sprints before it is scheduled to 'go live'.  
 
