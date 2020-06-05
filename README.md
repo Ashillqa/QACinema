@@ -128,10 +128,10 @@ git clone https://github.com/Ashillqa/QACinema
 
 #### Home Page
 The QA Cinemas site home page:
-* is Generally attractive.
-* is The default for the entire site.
+* is generally attractive.
+* is the default for the entire site.
 * allows users to navigate to other areas of the site
-* is A good first impression and allows users to access the resources they require.
+* is a good first impression and allows users to access the resources they require.
 
 #### Listings Gallery
 The listings gallery page:
@@ -192,7 +192,7 @@ The payment page:
 The places to go page:
 * is part of the overall site navigation
 * includes information about local venues where customers can visit before or after the movie (including bars and restaurants).
-* Each venue should including the following information:
+* each venue should including the following information:
    * Image of the venue
    * Description
    * Details of any offers relating to the cinema
