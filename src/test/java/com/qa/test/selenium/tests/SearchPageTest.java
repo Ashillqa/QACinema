@@ -10,8 +10,7 @@ import com.qa.test.selenium.pages.GalleryPage;
 import com.qa.test.selenium.pages.SearchPage;
 import org.junit.*;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
@@ -23,16 +22,17 @@ import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.IOException;
+import java.util.List;
 
 import static java.lang.Thread.sleep;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class SearchPageTest {
 
     public static WebDriver driver;
+    JavascriptExecutor js = (JavascriptExecutor) driver;
     public static ExtentHtmlReporter reporter = new ExtentHtmlReporter("Reports/SearchPage.html");
     public static ExtentReports extent = new ExtentReports();
     WebDriverWait wait = new WebDriverWait(driver, 5);
@@ -45,7 +45,7 @@ public class SearchPageTest {
     public static void init() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         ChromeOptions opts = new ChromeOptions();
-        opts.setHeadless(false);
+        opts.setHeadless(true);
         driver = new ChromeDriver(opts);
 //		this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -147,9 +147,114 @@ public class SearchPageTest {
         driver.get("http://localhost:" + port + "/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
 
-        WebDriverWait wait = new WebDriverWait(driver, 2);
         wait.until(ExpectedConditions.elementToBeClickable(search.getShowMoreButton()));
         search.getShowMoreButton().click();
         assertTrue(driver.getCurrentUrl().contains("gallery"));
     }
+
+    @Test
+    public void testSearch1() {
+        driver.get("http://localhost:" + port + "/search.html?term=joker");
+        SearchPage search = PageFactory.initElements(driver, SearchPage.class);
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title129")));
+        List<WebElement> children = driver.findElement(By.id("movieDisplay")).findElements(By.xpath(".//*"));
+        assertEquals(children.size(),27);
+
+        search.getResetButton().click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title125")));
+        children = driver.findElement(By.id("movieDisplay")).findElements(By.xpath(".//*"));
+        if (children.size() == 27){
+            throw new AssertionError();
+        }
+
+    }
+
+    @Test
+    public void testSearchNot1() {
+        driver.get("http://localhost:" + port + "/search.html?term=y");
+        SearchPage search = PageFactory.initElements(driver, SearchPage.class);
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title129")));
+        List<WebElement> children = driver.findElement(By.id("movieDisplay")).findElements(By.xpath(".//*"));
+        if (children.size() == 27){
+            throw new AssertionError();
+        }
+    }
+
+    @Test
+    public void testGenre() {
+        driver.get("http://localhost:" + port + "/search.html");
+        SearchPage search = PageFactory.initElements(driver, SearchPage.class);
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title129")));
+        js.executeScript("document.getElementById(\"selectGenre\").value = \"Adventure\"\n");
+        search.getGenre().click();
+        assertTrue(driver.findElement(By.id("title122")).isDisplayed());
+        assertFalse(driver.findElement(By.id("title135")).isDisplayed());
+    }
+
+    @Test
+    public void testRating() {
+        driver.get("http://localhost:" + port + "/search.html");
+        SearchPage search = PageFactory.initElements(driver, SearchPage.class);
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title129")));
+        assertTrue(driver.findElement(By.id("title123")).isDisplayed());
+        assertTrue(driver.findElement(By.id("title126")).isDisplayed());
+        assertTrue(driver.findElement(By.id("title121")).isDisplayed());
+        js.executeScript("document.getElementById(\"filter__imbd-end\").innerHTML = 8.0\n");
+        search.getGenre().click();
+        assertFalse(driver.findElement(By.id("title123")).isDisplayed());
+        assertTrue(driver.findElement(By.id("title126")).isDisplayed());
+        assertTrue(driver.findElement(By.id("title121")).isDisplayed());
+        js.executeScript("document.getElementById(\"filter__imbd-start\").innerHTML = 7.0\n");
+        search.getTerm().sendKeys(Keys.SPACE);
+        assertFalse(driver.findElement(By.id("title123")).isDisplayed());
+        assertFalse(driver.findElement(By.id("title121")).isDisplayed());
+        assertTrue(driver.findElement(By.id("title126")).isDisplayed());
+
+
+    }
+
+    @Test
+    public void testFilter() {
+        driver.get("http://localhost:" + port + "/search.html");
+        SearchPage search = PageFactory.initElements(driver, SearchPage.class);
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title129")));
+        assertTrue(driver.findElement(By.id("title120")).isDisplayed());
+        assertTrue(driver.findElement(By.id("title126")).isDisplayed());
+        assertTrue(driver.findElement(By.id("title121")).isDisplayed());
+        search.getTerm().sendKeys("dete");
+        assertFalse(driver.findElement(By.id("title120")).isDisplayed());
+        assertTrue(driver.findElement(By.id("title126")).isDisplayed());
+        assertTrue(driver.findElement(By.id("title121")).isDisplayed());
+        search.getTerm().sendKeys("ctive to");
+        assertFalse(driver.findElement(By.id("title120")).isDisplayed());
+        assertTrue(driver.findElement(By.id("title126")).isDisplayed());
+        assertFalse(driver.findElement(By.id("title121")).isDisplayed());
+    }
+
+    @Test
+    public void testRelease() {
+        driver.get("http://localhost:" + port + "/search.html");
+        SearchPage search = PageFactory.initElements(driver, SearchPage.class);
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title129")));
+        assertTrue(driver.findElement(By.id("title122")).isDisplayed());
+        assertTrue(driver.findElement(By.id("title120")).isDisplayed());
+        assertTrue(driver.findElement(By.id("title121")).isDisplayed());
+        js.executeScript("document.getElementById(\"filter__years-end\").innerHTML =\"2018\"\n");
+        search.getGenre().click();
+        assertFalse(driver.findElement(By.id("title122")).isDisplayed());
+        assertTrue(driver.findElement(By.id("title120")).isDisplayed());
+        assertTrue(driver.findElement(By.id("title121")).isDisplayed());
+        js.executeScript("document.getElementById(\"filter__years-start\").innerHTML = \"2012\"\n");
+        search.getTerm().sendKeys(Keys.SPACE);
+        assertFalse(driver.findElement(By.id("title122")).isDisplayed());
+        assertTrue(driver.findElement(By.id("title120")).isDisplayed());
+        assertFalse(driver.findElement(By.id("title121")).isDisplayed());
+    }
+
 }

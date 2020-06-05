@@ -40,7 +40,7 @@ public class NavBarPageTest {
 
 	  public static WebDriver driver;
 	  private final WebDriverWait wait = new WebDriverWait(driver, 4);
-	JavascriptExecutor js = (JavascriptExecutor) driver;
+	  JavascriptExecutor js = (JavascriptExecutor) driver;
 
 	    @LocalServerPort
 	    private int port;
@@ -58,7 +58,7 @@ public class NavBarPageTest {
 
 		@Before
 		public void apiBreaker() throws InterruptedException {
-			sleep(500);
+			sleep(1000);
 		}
 
 	    @AfterClass

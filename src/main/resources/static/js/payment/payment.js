@@ -8,9 +8,11 @@ $(function () {
 
     // Create an instance of the card Element.
     var card = elements.create('card');
+    card.id = "cardDetails"
 
     // Add an instance of the card Element into the `card-element` <div>.
     card.mount('#card-element');
+
 
     // Handle real-time validation errors from the card Element.
     card.addEventListener('change', function (event) {
@@ -46,9 +48,14 @@ $(function () {
                     "/create-charge",
                     {email: email, token: token, amount: amount},
                     function (data) {
+                        console.log(data);
                         alert(data.details);
                         console.log(data.details);
-                        location.replace("paymentComplete.html");
+
+                        if (data.status === true){
+                            postBookingDetails();
+                            location.replace("paymentComplete.html");
+                        }
                     }, 'json');
             }
         });

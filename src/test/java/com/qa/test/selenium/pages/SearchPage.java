@@ -23,14 +23,64 @@ public class SearchPage {
     @FindBy(id = "play")
     private WebElement playFeature;
 
-    @FindBy(className = "featuredMovieTitle")
+    @FindBy(xpath = "//*[@id=\"title125\"]")
     private WebElement titleFeature;
 
     @FindBy(id = "ageRating")
     private WebElement ratingFeature;
 
-    @FindBy(className = "section__btn")
+    @FindBy(xpath = "//*[@id=\"primeDiv\"]/div[8]/a")
     private WebElement showMoreButton;
+
+
+
+
+
+    @FindBy(id = "selectGenre")
+    private WebElement genre;
+
+    @FindBy(id = "filter__imbd-start")
+    private WebElement minRating;
+
+    @FindBy(id = "filter__imbd-end")
+    private WebElement maxRating;
+
+    @FindBy(id = "filter__years-start")
+    private WebElement minYear;
+
+    @FindBy(id = "filter__years-end")
+    private WebElement maxYear;
+
+    @FindBy(id = "searchBox2")
+    private WebElement term;
+
+    public WebElement getTitle1() {
+        return title1;
+    }
+
+    public WebElement getGenre() {
+        return genre;
+    }
+
+    public WebElement getMinRating() {
+        return minRating;
+    }
+
+    public WebElement getMaxRating() {
+        return maxRating;
+    }
+
+    public WebElement getMinYear() {
+        return minYear;
+    }
+
+    public WebElement getMaxYear() {
+        return maxYear;
+    }
+
+    public WebElement getTerm() {
+        return term;
+    }
 
     public WebElement getShowMoreButton() {
         return showMoreButton;

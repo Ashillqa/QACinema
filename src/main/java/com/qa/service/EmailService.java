@@ -51,6 +51,7 @@ public class EmailService {
         msg.setSubject("Feedback: " + email.getSubject());
 //        msg.setContent("This feedback email was sent by " + username + " and it says" + body + " and their contact email is" + email, "text/html");
         msg.setSentDate(new Date());
+        msg.setFrom(new InternetAddress("temiloluwaw@gmail.com", false));
 
         MimeBodyPart messageBodyPart1 = new MimeBodyPart();
         messageBodyPart1.setContent("This feedback email was sent by " + email.getUsername(), "text/html");
