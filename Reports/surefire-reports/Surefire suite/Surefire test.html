@@ -1,0 +1,1949 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>374/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Jun 05 09:11:10 BST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>380 seconds (380424 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.test.selenium.tests.HomePageTest.ComingSoonAppearsTest()'><b>ComingSoonAppearsTest</b><br>Test class: com.qa.test.selenium.tests.HomePageTest</td>
+<td></td>
+<td>48</td>
+<td>ComingSoonAppearsTest(com.qa.test.selenium.tests.HomePageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.MovieComingTest.ComingSoonBreadcrumbTest()'><b>ComingSoonBreadcrumbTest</b><br>Test class: com.qa.test.selenium.tests.MovieComingTest</td>
+<td></td>
+<td>13</td>
+<td>ComingSoonBreadcrumbTest(com.qa.test.selenium.tests.MovieComingTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.HomePageTest.ComingSoonClickTest()'><b>ComingSoonClickTest</b><br>Test class: com.qa.test.selenium.tests.HomePageTest</td>
+<td></td>
+<td>21</td>
+<td>ComingSoonClickTest(com.qa.test.selenium.tests.HomePageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.HomePageTest.ComingTitleClick()'><b>ComingTitleClick</b><br>Test class: com.qa.test.selenium.tests.HomePageTest</td>
+<td></td>
+<td>43</td>
+<td>ComingTitleClick(com.qa.test.selenium.tests.HomePageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.HomePageTest.FeaturedMovieAppearsTest()'><b>FeaturedMovieAppearsTest</b><br>Test class: com.qa.test.selenium.tests.HomePageTest</td>
+<td></td>
+<td>10</td>
+<td>FeaturedMovieAppearsTest(com.qa.test.selenium.tests.HomePageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.HomePageTest.FeaturedPlayClick()'><b>FeaturedPlayClick</b><br>Test class: com.qa.test.selenium.tests.HomePageTest</td>
+<td></td>
+<td>37</td>
+<td>FeaturedPlayClick(com.qa.test.selenium.tests.HomePageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.FooterTest.FooterAboutTest()'><b>FooterAboutTest</b><br>Test class: com.qa.test.selenium.tests.FooterTest</td>
+<td></td>
+<td>14</td>
+<td>FooterAboutTest(com.qa.test.selenium.tests.FooterTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.FooterTest.FooterContactTest()'><b>FooterContactTest</b><br>Test class: com.qa.test.selenium.tests.FooterTest</td>
+<td></td>
+<td>17</td>
+<td>FooterContactTest(com.qa.test.selenium.tests.FooterTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.FooterTest.FooterEmailLinkTest()'><b>FooterEmailLinkTest</b><br>Test class: com.qa.test.selenium.tests.FooterTest</td>
+<td></td>
+<td>7</td>
+<td>FooterEmailLinkTest(com.qa.test.selenium.tests.FooterTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.FooterTest.FooterHomeTest()'><b>FooterHomeTest</b><br>Test class: com.qa.test.selenium.tests.FooterTest</td>
+<td></td>
+<td>23</td>
+<td>FooterHomeTest(com.qa.test.selenium.tests.FooterTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.FooterTest.FooterNumberLinkTest()'><b>FooterNumberLinkTest</b><br>Test class: com.qa.test.selenium.tests.FooterTest</td>
+<td></td>
+<td>19</td>
+<td>FooterNumberLinkTest(com.qa.test.selenium.tests.FooterTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.FooterTest.FooterPrivacyTest()'><b>FooterPrivacyTest</b><br>Test class: com.qa.test.selenium.tests.FooterTest</td>
+<td></td>
+<td>29</td>
+<td>FooterPrivacyTest(com.qa.test.selenium.tests.FooterTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.FooterTest.FooterSecurityTest()'><b>FooterSecurityTest</b><br>Test class: com.qa.test.selenium.tests.FooterTest</td>
+<td></td>
+<td>9</td>
+<td>FooterSecurityTest(com.qa.test.selenium.tests.FooterTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.FooterTest.FooterTermsTest()'><b>FooterTermsTest</b><br>Test class: com.qa.test.selenium.tests.FooterTest</td>
+<td></td>
+<td>12</td>
+<td>FooterTermsTest(com.qa.test.selenium.tests.FooterTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.FooterTest.FooterTwitterLinkTest()'><b>FooterTwitterLinkTest</b><br>Test class: com.qa.test.selenium.tests.FooterTest</td>
+<td></td>
+<td>26</td>
+<td>FooterTwitterLinkTest(com.qa.test.selenium.tests.FooterTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.NullApiID()'><b>NullApiID</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>NullApiID(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.NullRating()'><b>NullRating</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>NullRating(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.NullStatus()'><b>NullStatus</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>NullStatus(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ResponseTest.ResponseDetailsNullButOtherDetailsNotNull()'><b>ResponseDetailsNullButOtherDetailsNotNull</b><br>Test class: com.qa.test.domain.ResponseTest</td>
+<td></td>
+<td>0</td>
+<td>ResponseDetailsNullButOtherDetailsNotNull(com.qa.test.domain.ResponseTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ResponseTest.ResponseStatusNotEqual()'><b>ResponseStatusNotEqual</b><br>Test class: com.qa.test.domain.ResponseTest</td>
+<td></td>
+<td>0</td>
+<td>ResponseStatusNotEqual(com.qa.test.domain.ResponseTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.MovieTest.ShowingBreadcrumbTest()'><b>ShowingBreadcrumbTest</b><br>Test class: com.qa.test.selenium.tests.MovieTest</td>
+<td></td>
+<td>16</td>
+<td>ShowingBreadcrumbTest(com.qa.test.selenium.tests.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.HomePageTest.SoonClassificationClick()'><b>SoonClassificationClick</b><br>Test class: com.qa.test.selenium.tests.HomePageTest</td>
+<td></td>
+<td>26</td>
+<td>SoonClassificationClick(com.qa.test.selenium.tests.HomePageTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ResponseTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.test.domain.ResponseTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.test.domain.ResponseTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.MovieDTOTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.test.dto.MovieDTOTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.test.dto.MovieDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.ShowTimeDTOTest.checkEquality()'><b>checkEquality</b><br>Test class: com.qa.test.dto.ShowTimeDTOTest</td>
+<td></td>
+<td>0</td>
+<td>checkEquality(com.qa.test.dto.ShowTimeDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.MovieDTOTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.test.dto.MovieDTOTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.test.dto.MovieDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.ShowTimeDTOTest.checkEqualityBetweenDifferentObjects()'><b>checkEqualityBetweenDifferentObjects</b><br>Test class: com.qa.test.dto.ShowTimeDTOTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjects(com.qa.test.dto.ShowTimeDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.checkEqualityBetweenDifferentObjectsNullName()'><b>checkEqualityBetweenDifferentObjectsNullName</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjectsNullName(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.checkEqualityBetweenDifferentObjectsNullName()'><b>checkEqualityBetweenDifferentObjectsNullName</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjectsNullName(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.MovieDTOTest.checkEqualityBetweenDifferentObjectsNullName()'><b>checkEqualityBetweenDifferentObjectsNullName</b><br>Test class: com.qa.test.dto.MovieDTOTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjectsNullName(com.qa.test.dto.MovieDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.checkEqualityBetweenDifferentObjectsNullTimes()'><b>checkEqualityBetweenDifferentObjectsNullTimes</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjectsNullTimes(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.ShowTimeDTOTest.checkEqualityBetweenDifferentObjectsNullTimes()'><b>checkEqualityBetweenDifferentObjectsNullTimes</b><br>Test class: com.qa.test.dto.ShowTimeDTOTest</td>
+<td></td>
+<td>0</td>
+<td>checkEqualityBetweenDifferentObjectsNullTimes(com.qa.test.dto.ShowTimeDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.MovieComingTest.comingSoonClickPlay()'><b>comingSoonClickPlay</b><br>Test class: com.qa.test.selenium.tests.MovieComingTest</td>
+<td></td>
+<td>28</td>
+<td>comingSoonClickPlay(com.qa.test.selenium.tests.MovieComingTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.MovieComingTest.comingSoonClickReset()'><b>comingSoonClickReset</b><br>Test class: com.qa.test.selenium.tests.MovieComingTest</td>
+<td></td>
+<td>18</td>
+<td>comingSoonClickReset(com.qa.test.selenium.tests.MovieComingTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.MovieComingTest.comingSoonClickTitleTest()'><b>comingSoonClickTitleTest</b><br>Test class: com.qa.test.selenium.tests.MovieComingTest</td>
+<td></td>
+<td>23</td>
+<td>comingSoonClickTitleTest(com.qa.test.selenium.tests.MovieComingTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.commentNameNullButOtherNameNotNull()'><b>commentNameNullButOtherNameNotNull</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>commentNameNullButOtherNameNotNull(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.commentNamesNotEqual()'><b>commentNamesNotEqual</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>commentNamesNotEqual(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.constructorWithoutId()'><b>constructorWithoutId</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>constructorWithoutId(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.constructorWithoutId()'><b>constructorWithoutId</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>constructorWithoutId(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.constructorWithoutId()'><b>constructorWithoutId</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>constructorWithoutId(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.constructorWithoutId()'><b>constructorWithoutId</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>constructorWithoutId(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.constructorWithoutId()'><b>constructorWithoutId</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>constructorWithoutId(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.constructorWithoutId()'><b>constructorWithoutId</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>constructorWithoutId(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.constructorWithoutId()'><b>constructorWithoutId</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>constructorWithoutId(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.MovieDTOTest.constructorWithoutId()'><b>constructorWithoutId</b><br>Test class: com.qa.test.dto.MovieDTOTest</td>
+<td></td>
+<td>0</td>
+<td>constructorWithoutId(com.qa.test.dto.MovieDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.ShowTimeDTOTest.constructorWithoutId()'><b>constructorWithoutId</b><br>Test class: com.qa.test.dto.ShowTimeDTOTest</td>
+<td></td>
+<td>0</td>
+<td>constructorWithoutId(com.qa.test.dto.ShowTimeDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.createBookingDTOWithId()'><b>createBookingDTOWithId</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>createBookingDTOWithId(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.BookingControllerUnitTest.createBookingTest()'><b>createBookingTest</b><br>Test class: com.qa.test.controller.BookingControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createBookingTest(com.qa.test.controller.BookingControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.BookingServiceIntegrationTest.createBookingTest()'><b>createBookingTest</b><br>Test class: com.qa.test.service.BookingServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>createBookingTest(com.qa.test.service.BookingServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.BookingServiceUnitTest.createBookingTest()'><b>createBookingTest</b><br>Test class: com.qa.test.service.BookingServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createBookingTest(com.qa.test.service.BookingServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.createBookingWithId()'><b>createBookingWithId</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>createBookingWithId(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.CommentControllerUnitTest.createCommentTest()'><b>createCommentTest</b><br>Test class: com.qa.test.controller.CommentControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createCommentTest(com.qa.test.controller.CommentControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.CommentServiceUnitTest.createCommentTest()'><b>createCommentTest</b><br>Test class: com.qa.test.service.CommentServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createCommentTest(com.qa.test.service.CommentServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.createCommentWithId()'><b>createCommentWithId</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>createCommentWithId(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.createEmailDTOWithId()'><b>createEmailDTOWithId</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>createEmailDTOWithId(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.createEmailWithId()'><b>createEmailWithId</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>createEmailWithId(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.MovieDTOTest.createMovieDTOWithId()'><b>createMovieDTOWithId</b><br>Test class: com.qa.test.dto.MovieDTOTest</td>
+<td></td>
+<td>0</td>
+<td>createMovieDTOWithId(com.qa.test.dto.MovieDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.MovieControllerUnitTest.createMovieTest()'><b>createMovieTest</b><br>Test class: com.qa.test.controller.MovieControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createMovieTest(com.qa.test.controller.MovieControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.MovieServiceUnitTest.createMovieTest()'><b>createMovieTest</b><br>Test class: com.qa.test.service.MovieServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createMovieTest(com.qa.test.service.MovieServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.createMovieWithId()'><b>createMovieWithId</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>createMovieWithId(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.ShowTimeDTOTest.createShowTimeDTOWithId()'><b>createShowTimeDTOWithId</b><br>Test class: com.qa.test.dto.ShowTimeDTOTest</td>
+<td></td>
+<td>0</td>
+<td>createShowTimeDTOWithId(com.qa.test.dto.ShowTimeDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.ShowTimeControllerUnitTest.createShowTimeTest()'><b>createShowTimeTest</b><br>Test class: com.qa.test.controller.ShowTimeControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createShowTimeTest(com.qa.test.controller.ShowTimeControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.ShowTimeServiceUnitTest.createShowTimeTest()'><b>createShowTimeTest</b><br>Test class: com.qa.test.service.ShowTimeServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>createShowTimeTest(com.qa.test.service.ShowTimeServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.createShowTimeWithId()'><b>createShowTimeWithId</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>createShowTimeWithId(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.BookingControllerUnitTest.deleteBookingTest()'><b>deleteBookingTest</b><br>Test class: com.qa.test.controller.BookingControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteBookingTest(com.qa.test.controller.BookingControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.BookingServiceIntegrationTest.deleteBookingTest()'><b>deleteBookingTest</b><br>Test class: com.qa.test.service.BookingServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>deleteBookingTest(com.qa.test.service.BookingServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.BookingServiceUnitTest.deleteBookingTest()'><b>deleteBookingTest</b><br>Test class: com.qa.test.service.BookingServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteBookingTest(com.qa.test.service.BookingServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.CommentControllerUnitTest.deleteCommentTest()'><b>deleteCommentTest</b><br>Test class: com.qa.test.controller.CommentControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteCommentTest(com.qa.test.controller.CommentControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.CommentServiceUnitTest.deleteCommentTest()'><b>deleteCommentTest</b><br>Test class: com.qa.test.service.CommentServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteCommentTest(com.qa.test.service.CommentServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.MovieControllerUnitTest.deleteMovieTest()'><b>deleteMovieTest</b><br>Test class: com.qa.test.controller.MovieControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteMovieTest(com.qa.test.controller.MovieControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.MovieServiceUnitTest.deleteMovieTest()'><b>deleteMovieTest</b><br>Test class: com.qa.test.service.MovieServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteMovieTest(com.qa.test.service.MovieServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.ShowTimeControllerUnitTest.deleteShowTimeTest()'><b>deleteShowTimeTest</b><br>Test class: com.qa.test.controller.ShowTimeControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteShowTimeTest(com.qa.test.controller.ShowTimeControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.ShowTimeServiceUnitTest.deleteShowTimeTest()'><b>deleteShowTimeTest</b><br>Test class: com.qa.test.service.ShowTimeServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>deleteShowTimeTest(com.qa.test.service.ShowTimeServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.DetailsPageTest.detailsAgeRateClick()'><b>detailsAgeRateClick</b><br>Test class: com.qa.test.selenium.tests.DetailsPageTest</td>
+<td></td>
+<td>6</td>
+<td>detailsAgeRateClick(com.qa.test.selenium.tests.DetailsPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.DetailsPageTest.detailsBookingClick()'><b>detailsBookingClick</b><br>Test class: com.qa.test.selenium.tests.DetailsPageTest</td>
+<td></td>
+<td>6</td>
+<td>detailsBookingClick(com.qa.test.selenium.tests.DetailsPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.DetailsPageTest.detailsHDClick()'><b>detailsHDClick</b><br>Test class: com.qa.test.selenium.tests.DetailsPageTest</td>
+<td></td>
+<td>7</td>
+<td>detailsHDClick(com.qa.test.selenium.tests.DetailsPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.equalsWithDifferentObject()'><b>equalsWithDifferentObject</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithDifferentObject(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.equalsWithDifferentObject()'><b>equalsWithDifferentObject</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithDifferentObject(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.equalsWithDifferentObject()'><b>equalsWithDifferentObject</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithDifferentObject(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.equalsWithDifferentObject()'><b>equalsWithDifferentObject</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithDifferentObject(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ResponseTest.equalsWithDifferentObject()'><b>equalsWithDifferentObject</b><br>Test class: com.qa.test.domain.ResponseTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithDifferentObject(com.qa.test.domain.ResponseTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.equalsWithDifferentObject()'><b>equalsWithDifferentObject</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithDifferentObject(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.equalsWithDifferentObject()'><b>equalsWithDifferentObject</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithDifferentObject(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.equalsWithDifferentObject()'><b>equalsWithDifferentObject</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithDifferentObject(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.MovieDTOTest.equalsWithDifferentObject()'><b>equalsWithDifferentObject</b><br>Test class: com.qa.test.dto.MovieDTOTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithDifferentObject(com.qa.test.dto.MovieDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.ShowTimeDTOTest.equalsWithDifferentObject()'><b>equalsWithDifferentObject</b><br>Test class: com.qa.test.dto.ShowTimeDTOTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithDifferentObject(com.qa.test.dto.ShowTimeDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.equalsWithNull()'><b>equalsWithNull</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithNull(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.equalsWithNull()'><b>equalsWithNull</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithNull(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.equalsWithNull()'><b>equalsWithNull</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithNull(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ResponseTest.equalsWithNull()'><b>equalsWithNull</b><br>Test class: com.qa.test.domain.ResponseTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithNull(com.qa.test.domain.ResponseTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.equalsWithNull()'><b>equalsWithNull</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithNull(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.equalsWithNull()'><b>equalsWithNull</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithNull(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.equalsWithNull()'><b>equalsWithNull</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithNull(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.MovieDTOTest.equalsWithNull()'><b>equalsWithNull</b><br>Test class: com.qa.test.dto.MovieDTOTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithNull(com.qa.test.dto.MovieDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.ShowTimeDTOTest.equalsWithNull()'><b>equalsWithNull</b><br>Test class: com.qa.test.dto.ShowTimeDTOTest</td>
+<td></td>
+<td>0</td>
+<td>equalsWithNull(com.qa.test.dto.ShowTimeDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.MovieTest.expectedCertififClick()'><b>expectedCertififClick</b><br>Test class: com.qa.test.selenium.tests.MovieTest</td>
+<td></td>
+<td>48</td>
+<td>expectedCertififClick(com.qa.test.selenium.tests.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.MovieTest.expectedPlayClick()'><b>expectedPlayClick</b><br>Test class: com.qa.test.selenium.tests.MovieTest</td>
+<td></td>
+<td>21</td>
+<td>expectedPlayClick(com.qa.test.selenium.tests.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.MovieTest.expectedTitleClick()'><b>expectedTitleClick</b><br>Test class: com.qa.test.selenium.tests.MovieTest</td>
+<td></td>
+<td>43</td>
+<td>expectedTitleClick(com.qa.test.selenium.tests.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.HomePageTest.featuredClassificationClick()'><b>featuredClassificationClick</b><br>Test class: com.qa.test.selenium.tests.HomePageTest</td>
+<td></td>
+<td>15</td>
+<td>featuredClassificationClick(com.qa.test.selenium.tests.HomePageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.HomePageTest.featuredTitleClick()'><b>featuredTitleClick</b><br>Test class: com.qa.test.selenium.tests.HomePageTest</td>
+<td></td>
+<td>32</td>
+<td>featuredTitleClick(com.qa.test.selenium.tests.HomePageTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.BookingControllerUnitTest.findBookingByIDTest()'><b>findBookingByIDTest</b><br>Test class: com.qa.test.controller.BookingControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>findBookingByIDTest(com.qa.test.controller.BookingControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.BookingServiceIntegrationTest.findBookingByIDTest()'><b>findBookingByIDTest</b><br>Test class: com.qa.test.service.BookingServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>findBookingByIDTest(com.qa.test.service.BookingServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.BookingServiceUnitTest.findBookingByIDTest()'><b>findBookingByIDTest</b><br>Test class: com.qa.test.service.BookingServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>findBookingByIDTest(com.qa.test.service.BookingServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.CommentControllerUnitTest.findCommentByIDTest()'><b>findCommentByIDTest</b><br>Test class: com.qa.test.controller.CommentControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>findCommentByIDTest(com.qa.test.controller.CommentControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.CommentServiceUnitTest.findCommentByIDTest()'><b>findCommentByIDTest</b><br>Test class: com.qa.test.service.CommentServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>findCommentByIDTest(com.qa.test.service.CommentServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.MovieControllerUnitTest.findMovieByIDTest()'><b>findMovieByIDTest</b><br>Test class: com.qa.test.controller.MovieControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>findMovieByIDTest(com.qa.test.controller.MovieControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.MovieServiceUnitTest.findMovieByIDTest()'><b>findMovieByIDTest</b><br>Test class: com.qa.test.service.MovieServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>findMovieByIDTest(com.qa.test.service.MovieServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.ShowTimeControllerUnitTest.findShowTimeByIDTest()'><b>findShowTimeByIDTest</b><br>Test class: com.qa.test.controller.ShowTimeControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>findShowTimeByIDTest(com.qa.test.controller.ShowTimeControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.ShowTimeServiceUnitTest.findShowTimeByIDTest()'><b>findShowTimeByIDTest</b><br>Test class: com.qa.test.service.ShowTimeServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>findShowTimeByIDTest(com.qa.test.service.ShowTimeServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.BookingControllerUnitTest.getAllBookingsTest()'><b>getAllBookingsTest</b><br>Test class: com.qa.test.controller.BookingControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getAllBookingsTest(com.qa.test.controller.BookingControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.CommentControllerUnitTest.getAllCommentsTest()'><b>getAllCommentsTest</b><br>Test class: com.qa.test.controller.CommentControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getAllCommentsTest(com.qa.test.controller.CommentControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.MovieControllerUnitTest.getAllMoviesTest()'><b>getAllMoviesTest</b><br>Test class: com.qa.test.controller.MovieControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getAllMoviesTest(com.qa.test.controller.MovieControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.ShowTimeControllerUnitTest.getAllShowTimesTest()'><b>getAllShowTimesTest</b><br>Test class: com.qa.test.controller.ShowTimeControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>getAllShowTimesTest(com.qa.test.controller.ShowTimeControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.hashCodeTest()'><b>hashCodeTest</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTest(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.hashCodeTest()'><b>hashCodeTest</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTest(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.hashCodeTest()'><b>hashCodeTest</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTest(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.hashCodeTest()'><b>hashCodeTest</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTest(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.hashCodeTest()'><b>hashCodeTest</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTest(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.hashCodeTest()'><b>hashCodeTest</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTest(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.hashCodeTest()'><b>hashCodeTest</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTest(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.MovieDTOTest.hashCodeTest()'><b>hashCodeTest</b><br>Test class: com.qa.test.dto.MovieDTOTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTest(com.qa.test.dto.MovieDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.ShowTimeDTOTest.hashCodeTest()'><b>hashCodeTest</b><br>Test class: com.qa.test.dto.ShowTimeDTOTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTest(com.qa.test.dto.ShowTimeDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.MovieDTOTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.test.dto.MovieDTOTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.test.dto.MovieDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.ShowTimeDTOTest.hashCodeTestWithNull()'><b>hashCodeTestWithNull</b><br>Test class: com.qa.test.dto.ShowTimeDTOTest</td>
+<td></td>
+<td>0</td>
+<td>hashCodeTestWithNull(com.qa.test.dto.ShowTimeDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.ForumPageTest.inappropriateAlertComment()'><b>inappropriateAlertComment</b><br>Test class: com.qa.test.selenium.tests.ForumPageTest</td>
+<td></td>
+<td>14</td>
+<td>inappropriateAlertComment(com.qa.test.selenium.tests.ForumPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.ForumPageTest.inappropriateAlertUserName()'><b>inappropriateAlertUserName</b><br>Test class: com.qa.test.selenium.tests.ForumPageTest</td>
+<td></td>
+<td>9</td>
+<td>inappropriateAlertUserName(com.qa.test.selenium.tests.ForumPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.BookingTest.makeBooking()'><b>makeBooking</b><br>Test class: com.qa.test.selenium.tests.BookingTest</td>
+<td></td>
+<td>19</td>
+<td>makeBooking(com.qa.test.selenium.tests.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.MovieDTOTest.movieDTONameNullButOtherNameNotNull()'><b>movieDTONameNullButOtherNameNotNull</b><br>Test class: com.qa.test.dto.MovieDTOTest</td>
+<td></td>
+<td>0</td>
+<td>movieDTONameNullButOtherNameNotNull(com.qa.test.dto.MovieDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.MovieDTOTest.movieDTONamesNotEqual()'><b>movieDTONamesNotEqual</b><br>Test class: com.qa.test.dto.MovieDTOTest</td>
+<td></td>
+<td>0</td>
+<td>movieDTONamesNotEqual(com.qa.test.dto.MovieDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.movieNamesNotEqual()'><b>movieNamesNotEqual</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>movieNamesNotEqual(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.nulEmailOnBoth()'><b>nulEmailOnBoth</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>nulEmailOnBoth(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullAdultNr()'><b>nullAdultNr</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullAdultNr(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullAdultNr()'><b>nullAdultNr</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullAdultNr(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullAdultNrOnBoth()'><b>nullAdultNrOnBoth</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullAdultNrOnBoth(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullAdultNrOnBoth()'><b>nullAdultNrOnBoth</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullAdultNrOnBoth(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.nullApiIDOnBoth()'><b>nullApiIDOnBoth</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>nullApiIDOnBoth(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.nullBody()'><b>nullBody</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>nullBody(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.nullBody()'><b>nullBody</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullBody(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.nullBodyOnBoth()'><b>nullBodyOnBoth</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>nullBodyOnBoth(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.nullBodyOnBoth()'><b>nullBodyOnBoth</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullBodyOnBoth(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullChildNr()'><b>nullChildNr</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullChildNr(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullChildNr()'><b>nullChildNr</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullChildNr(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullChildNrOnBoth()'><b>nullChildNrOnBoth</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullChildNrOnBoth(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullChildNrOnBoth()'><b>nullChildNrOnBoth</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullChildNrOnBoth(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.nullComment()'><b>nullComment</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>nullComment(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.nullCommentOnBoth()'><b>nullCommentOnBoth</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>nullCommentOnBoth(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullCustomerName()'><b>nullCustomerName</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullCustomerName(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullCustomerNameOnBoth()'><b>nullCustomerNameOnBoth</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullCustomerNameOnBoth(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullDateTime()'><b>nullDateTime</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullDateTime(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullDateTime()'><b>nullDateTime</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullDateTime(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullDateTimeOnBoth()'><b>nullDateTimeOnBoth</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullDateTimeOnBoth(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullDateTimeOnBoth()'><b>nullDateTimeOnBoth</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullDateTimeOnBoth(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ResponseTest.nullDetails()'><b>nullDetails</b><br>Test class: com.qa.test.domain.ResponseTest</td>
+<td></td>
+<td>0</td>
+<td>nullDetails(com.qa.test.domain.ResponseTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullEmail()'><b>nullEmail</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullEmail(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.nullEmail()'><b>nullEmail</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>nullEmail(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.nullEmail()'><b>nullEmail</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullEmail(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullEmailAddress()'><b>nullEmailAddress</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullEmailAddress(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullEmailAddressOnBoth()'><b>nullEmailAddressOnBoth</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullEmailAddressOnBoth(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullEmailOnBoth()'><b>nullEmailOnBoth</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullEmailOnBoth(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.nullEmailOnBoth()'><b>nullEmailOnBoth</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullEmailOnBoth(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullId()'><b>nullId</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.nullId()'><b>nullId</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.nullId()'><b>nullId</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.nullId()'><b>nullId</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.nullId()'><b>nullId</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullId()'><b>nullId</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.nullId()'><b>nullId</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.MovieDTOTest.nullId()'><b>nullId</b><br>Test class: com.qa.test.dto.MovieDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.test.dto.MovieDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.ShowTimeDTOTest.nullId()'><b>nullId</b><br>Test class: com.qa.test.dto.ShowTimeDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullId(com.qa.test.dto.ShowTimeDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullIdOnBoth()'><b>nullIdOnBoth</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullIdOnBoth(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.nullIdOnBoth()'><b>nullIdOnBoth</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>nullIdOnBoth(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.nullIdOnBoth()'><b>nullIdOnBoth</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>nullIdOnBoth(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.nullIdOnBoth()'><b>nullIdOnBoth</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>nullIdOnBoth(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.nullIdOnBoth()'><b>nullIdOnBoth</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>nullIdOnBoth(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullIdOnBoth()'><b>nullIdOnBoth</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullIdOnBoth(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.nullIdOnBoth()'><b>nullIdOnBoth</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullIdOnBoth(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.MovieDTOTest.nullIdOnBoth()'><b>nullIdOnBoth</b><br>Test class: com.qa.test.dto.MovieDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullIdOnBoth(com.qa.test.dto.MovieDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.ShowTimeDTOTest.nullIdOnBoth()'><b>nullIdOnBoth</b><br>Test class: com.qa.test.dto.ShowTimeDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullIdOnBoth(com.qa.test.dto.ShowTimeDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullMovie()'><b>nullMovie</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullMovie(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullMovieName()'><b>nullMovieName</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullMovieName(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullMovieName()'><b>nullMovieName</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullMovieName(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullMovieNameOnBoth()'><b>nullMovieNameOnBoth</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullMovieNameOnBoth(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullMovieNameOnBoth()'><b>nullMovieNameOnBoth</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullMovieNameOnBoth(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullMovieOnBoth()'><b>nullMovieOnBoth</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullMovieOnBoth(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.nullMovieTitle()'><b>nullMovieTitle</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>nullMovieTitle(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.nullMovieTitleOnBoth()'><b>nullMovieTitleOnBoth</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>nullMovieTitleOnBoth(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullPhoneNumber()'><b>nullPhoneNumber</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullPhoneNumber(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullPhoneNumber()'><b>nullPhoneNumber</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullPhoneNumber(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullPhoneNumberOnBoth()'><b>nullPhoneNumberOnBoth</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullPhoneNumberOnBoth(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullPhoneNumberOnBoth()'><b>nullPhoneNumberOnBoth</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullPhoneNumberOnBoth(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.nullRating()'><b>nullRating</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>nullRating(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.nullRatingOnBoth()'><b>nullRatingOnBoth</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>nullRatingOnBoth(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.nullRatingOnBoth()'><b>nullRatingOnBoth</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>nullRatingOnBoth(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.nullStatusOnBoth()'><b>nullStatusOnBoth</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>nullStatusOnBoth(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullStudentNr()'><b>nullStudentNr</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullStudentNr(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullStudentNr()'><b>nullStudentNr</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullStudentNr(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullStudentNrOnBoth()'><b>nullStudentNrOnBoth</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullStudentNrOnBoth(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullStudentNrOnBoth()'><b>nullStudentNrOnBoth</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullStudentNrOnBoth(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.nullSubject()'><b>nullSubject</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>nullSubject(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.nullSubject()'><b>nullSubject</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullSubject(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.nullSubjectOnBoth()'><b>nullSubjectOnBoth</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>nullSubjectOnBoth(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.nullSubjectOnBoth()'><b>nullSubjectOnBoth</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullSubjectOnBoth(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.nullTime()'><b>nullTime</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>nullTime(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.nullTimeOnBoth()'><b>nullTimeOnBoth</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>nullTimeOnBoth(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullTotalPrice()'><b>nullTotalPrice</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullTotalPrice(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullTotalPrice()'><b>nullTotalPrice</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullTotalPrice(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.nullTotalPriceOnBoth()'><b>nullTotalPriceOnBoth</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>nullTotalPriceOnBoth(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.nullTotalPriceOnBoth()'><b>nullTotalPriceOnBoth</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullTotalPriceOnBoth(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.nullUsername()'><b>nullUsername</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>nullUsername(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.nullUsername()'><b>nullUsername</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullUsername(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.nullUsernameOnBoth()'><b>nullUsernameOnBoth</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>nullUsernameOnBoth(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.nullUsernameOnBoth()'><b>nullUsernameOnBoth</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>nullUsernameOnBoth(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.otherAdultNrDifferent()'><b>otherAdultNrDifferent</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>otherAdultNrDifferent(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.otherAdultNrDifferent()'><b>otherAdultNrDifferent</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherAdultNrDifferent(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.otherApiIDDifferent()'><b>otherApiIDDifferent</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>otherApiIDDifferent(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.otherBodyDifferent()'><b>otherBodyDifferent</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>otherBodyDifferent(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.otherBodyDifferent()'><b>otherBodyDifferent</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherBodyDifferent(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.otherChildNrDifferent()'><b>otherChildNrDifferent</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>otherChildNrDifferent(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.otherChildNrDifferent()'><b>otherChildNrDifferent</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherChildNrDifferent(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.otherCommentDifferent()'><b>otherCommentDifferent</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>otherCommentDifferent(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.otherCustomerNameDifferent()'><b>otherCustomerNameDifferent</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherCustomerNameDifferent(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.otherDateTimeDifferent()'><b>otherDateTimeDifferent</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>otherDateTimeDifferent(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.otherDateTimeDifferent()'><b>otherDateTimeDifferent</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherDateTimeDifferent(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ResponseTest.otherDetailsDifferent()'><b>otherDetailsDifferent</b><br>Test class: com.qa.test.domain.ResponseTest</td>
+<td></td>
+<td>0</td>
+<td>otherDetailsDifferent(com.qa.test.domain.ResponseTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.otherEmailAddressDifferent()'><b>otherEmailAddressDifferent</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherEmailAddressDifferent(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.otherEmailDifferent()'><b>otherEmailDifferent</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>otherEmailDifferent(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.otherEmailDifferent()'><b>otherEmailDifferent</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>otherEmailDifferent(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.otherEmailDifferent()'><b>otherEmailDifferent</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherEmailDifferent(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.MovieDTOTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.test.dto.MovieDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.test.dto.MovieDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.ShowTimeDTOTest.otherIdDifferent()'><b>otherIdDifferent</b><br>Test class: com.qa.test.dto.ShowTimeDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherIdDifferent(com.qa.test.dto.ShowTimeDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.otherMovieDifferent()'><b>otherMovieDifferent</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>otherMovieDifferent(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.otherMovieNameDifferent()'><b>otherMovieNameDifferent</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>otherMovieNameDifferent(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.otherMovieNameDifferent()'><b>otherMovieNameDifferent</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherMovieNameDifferent(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.otherMovieTitleDifferent()'><b>otherMovieTitleDifferent</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>otherMovieTitleDifferent(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.otherPhoneNumberDifferent()'><b>otherPhoneNumberDifferent</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>otherPhoneNumberDifferent(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.otherPhoneNumberDifferent()'><b>otherPhoneNumberDifferent</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherPhoneNumberDifferent(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.otherRatingDifferent()'><b>otherRatingDifferent</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>otherRatingDifferent(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.otherRatingDifferent()'><b>otherRatingDifferent</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>otherRatingDifferent(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.otherStatusDifferent()'><b>otherStatusDifferent</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>otherStatusDifferent(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ResponseTest.otherStatusDifferent()'><b>otherStatusDifferent</b><br>Test class: com.qa.test.domain.ResponseTest</td>
+<td></td>
+<td>0</td>
+<td>otherStatusDifferent(com.qa.test.domain.ResponseTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.otherStudentNrDifferent()'><b>otherStudentNrDifferent</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>otherStudentNrDifferent(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.otherStudentNrDifferent()'><b>otherStudentNrDifferent</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherStudentNrDifferent(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.otherSubjectDifferent()'><b>otherSubjectDifferent</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>otherSubjectDifferent(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.otherSubjectDifferent()'><b>otherSubjectDifferent</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherSubjectDifferent(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.otherTimeDifferent()'><b>otherTimeDifferent</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>otherTimeDifferent(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.otherTotalPriceDifferent()'><b>otherTotalPriceDifferent</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>otherTotalPriceDifferent(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.otherTotalPriceDifferent()'><b>otherTotalPriceDifferent</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherTotalPriceDifferent(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.otherUsernameDifferent()'><b>otherUsernameDifferent</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>otherUsernameDifferent(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.otherUsernameDifferent()'><b>otherUsernameDifferent</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>otherUsernameDifferent(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.ForumPageTest.postComment()'><b>postComment</b><br>Test class: com.qa.test.selenium.tests.ForumPageTest</td>
+<td></td>
+<td>19</td>
+<td>postComment(com.qa.test.selenium.tests.ForumPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.BookingServiceIntegrationTest.readBookingsTest()'><b>readBookingsTest</b><br>Test class: com.qa.test.service.BookingServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>readBookingsTest(com.qa.test.service.BookingServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.BookingServiceUnitTest.readBookingsTest()'><b>readBookingsTest</b><br>Test class: com.qa.test.service.BookingServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>readBookingsTest(com.qa.test.service.BookingServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.ForumPageTest.readCommentAfterPost()'><b>readCommentAfterPost</b><br>Test class: com.qa.test.selenium.tests.ForumPageTest</td>
+<td></td>
+<td>25</td>
+<td>readCommentAfterPost(com.qa.test.selenium.tests.ForumPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.CommentServiceUnitTest.readCommentsTest()'><b>readCommentsTest</b><br>Test class: com.qa.test.service.CommentServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>readCommentsTest(com.qa.test.service.CommentServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.MovieServiceUnitTest.readMoviesTest()'><b>readMoviesTest</b><br>Test class: com.qa.test.service.MovieServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>readMoviesTest(com.qa.test.service.MovieServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.ShowTimeServiceUnitTest.readShowTimesTest()'><b>readShowTimesTest</b><br>Test class: com.qa.test.service.ShowTimeServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>readShowTimesTest(com.qa.test.service.ShowTimeServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.BookingTest.settersTest()'><b>settersTest</b><br>Test class: com.qa.test.domain.BookingTest</td>
+<td></td>
+<td>0</td>
+<td>settersTest(com.qa.test.domain.BookingTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.CommentTest.settersTest()'><b>settersTest</b><br>Test class: com.qa.test.domain.CommentTest</td>
+<td></td>
+<td>0</td>
+<td>settersTest(com.qa.test.domain.CommentTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.EmailTest.settersTest()'><b>settersTest</b><br>Test class: com.qa.test.domain.EmailTest</td>
+<td></td>
+<td>0</td>
+<td>settersTest(com.qa.test.domain.EmailTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.MovieTest.settersTest()'><b>settersTest</b><br>Test class: com.qa.test.domain.MovieTest</td>
+<td></td>
+<td>0</td>
+<td>settersTest(com.qa.test.domain.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ResponseTest.settersTest()'><b>settersTest</b><br>Test class: com.qa.test.domain.ResponseTest</td>
+<td></td>
+<td>0</td>
+<td>settersTest(com.qa.test.domain.ResponseTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.settersTest()'><b>settersTest</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>settersTest(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.BookingDTOTest.settersTest()'><b>settersTest</b><br>Test class: com.qa.test.dto.BookingDTOTest</td>
+<td></td>
+<td>0</td>
+<td>settersTest(com.qa.test.dto.BookingDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.EmailDTOTest.settersTest()'><b>settersTest</b><br>Test class: com.qa.test.dto.EmailDTOTest</td>
+<td></td>
+<td>0</td>
+<td>settersTest(com.qa.test.dto.EmailDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.MovieDTOTest.settersTest()'><b>settersTest</b><br>Test class: com.qa.test.dto.MovieDTOTest</td>
+<td></td>
+<td>0</td>
+<td>settersTest(com.qa.test.dto.MovieDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.ShowTimeDTOTest.settersTest()'><b>settersTest</b><br>Test class: com.qa.test.dto.ShowTimeDTOTest</td>
+<td></td>
+<td>0</td>
+<td>settersTest(com.qa.test.dto.ShowTimeDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.MovieTest.showMoreClickTest()'><b>showMoreClickTest</b><br>Test class: com.qa.test.selenium.tests.MovieTest</td>
+<td></td>
+<td>10</td>
+<td>showMoreClickTest(com.qa.test.selenium.tests.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.ShowTimeDTOTest.showTimeDTOTimeNullButOtherNameNotNull()'><b>showTimeDTOTimeNullButOtherNameNotNull</b><br>Test class: com.qa.test.dto.ShowTimeDTOTest</td>
+<td></td>
+<td>0</td>
+<td>showTimeDTOTimeNullButOtherNameNotNull(com.qa.test.dto.ShowTimeDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.dto.ShowTimeDTOTest.showTimeDTOTimesNotEqual()'><b>showTimeDTOTimesNotEqual</b><br>Test class: com.qa.test.dto.ShowTimeDTOTest</td>
+<td></td>
+<td>0</td>
+<td>showTimeDTOTimesNotEqual(com.qa.test.dto.ShowTimeDTOTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.showTimeTimeNullButOtherNameNotNull()'><b>showTimeTimeNullButOtherNameNotNull</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>showTimeTimeNullButOtherNameNotNull(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.domain.ShowTimeTest.showTimeTimesNotEqual()'><b>showTimeTimesNotEqual</b><br>Test class: com.qa.test.domain.ShowTimeTest</td>
+<td></td>
+<td>0</td>
+<td>showTimeTimesNotEqual(com.qa.test.domain.ShowTimeTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.MovieTest.showingCertififClick()'><b>showingCertififClick</b><br>Test class: com.qa.test.selenium.tests.MovieTest</td>
+<td></td>
+<td>59</td>
+<td>showingCertififClick(com.qa.test.selenium.tests.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.MovieTest.showingPlayClick()'><b>showingPlayClick</b><br>Test class: com.qa.test.selenium.tests.MovieTest</td>
+<td></td>
+<td>32</td>
+<td>showingPlayClick(com.qa.test.selenium.tests.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.MovieTest.showingTitleClick()'><b>showingTitleClick</b><br>Test class: com.qa.test.selenium.tests.MovieTest</td>
+<td></td>
+<td>26</td>
+<td>showingTitleClick(com.qa.test.selenium.tests.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.NavBarPageTest.testAboutNav()'><b>testAboutNav</b><br>Test class: com.qa.test.selenium.tests.NavBarPageTest</td>
+<td></td>
+<td>7</td>
+<td>testAboutNav(com.qa.test.selenium.tests.NavBarPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.ClassificationPageTest.testClassificationTitle()'><b>testClassificationTitle</b><br>Test class: com.qa.test.selenium.tests.ClassificationPageTest</td>
+<td></td>
+<td>22</td>
+<td>testClassificationTitle(com.qa.test.selenium.tests.ClassificationPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.BookingControllerIntegrationTest.testCreateBooking()'><b>testCreateBooking</b><br>Test class: com.qa.test.controller.BookingControllerIntegrationTest</td>
+<td></td>
+<td>7</td>
+<td>testCreateBooking(com.qa.test.controller.BookingControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.CommentControllerIntegrationTest.testCreateComment()'><b>testCreateComment</b><br>Test class: com.qa.test.controller.CommentControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testCreateComment(com.qa.test.controller.CommentControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.CommentServiceIntegrationTest.testCreateComment()'><b>testCreateComment</b><br>Test class: com.qa.test.service.CommentServiceIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>testCreateComment(com.qa.test.service.CommentServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.MovieControllerIntegrationTest.testCreateMovie()'><b>testCreateMovie</b><br>Test class: com.qa.test.controller.MovieControllerIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>testCreateMovie(com.qa.test.controller.MovieControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.MovieServiceIntegrationTest.testCreateMovie()'><b>testCreateMovie</b><br>Test class: com.qa.test.service.MovieServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testCreateMovie(com.qa.test.service.MovieServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.ShowTimeControllerIntegrationTest.testCreateShowTime()'><b>testCreateShowTime</b><br>Test class: com.qa.test.controller.ShowTimeControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testCreateShowTime(com.qa.test.controller.ShowTimeControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.ShowTimeServiceIntegrationTest.testCreateShowTime()'><b>testCreateShowTime</b><br>Test class: com.qa.test.service.ShowTimeServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testCreateShowTime(com.qa.test.service.ShowTimeServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.BookingControllerIntegrationTest.testDeleteBooking()'><b>testDeleteBooking</b><br>Test class: com.qa.test.controller.BookingControllerIntegrationTest</td>
+<td></td>
+<td>7</td>
+<td>testDeleteBooking(com.qa.test.controller.BookingControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.CommentControllerIntegrationTest.testDeleteComment()'><b>testDeleteComment</b><br>Test class: com.qa.test.controller.CommentControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testDeleteComment(com.qa.test.controller.CommentControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.CommentServiceIntegrationTest.testDeleteComment()'><b>testDeleteComment</b><br>Test class: com.qa.test.service.CommentServiceIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>testDeleteComment(com.qa.test.service.CommentServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.MovieControllerIntegrationTest.testDeleteMovie()'><b>testDeleteMovie</b><br>Test class: com.qa.test.controller.MovieControllerIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>testDeleteMovie(com.qa.test.controller.MovieControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.MovieServiceIntegrationTest.testDeleteMovie()'><b>testDeleteMovie</b><br>Test class: com.qa.test.service.MovieServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testDeleteMovie(com.qa.test.service.MovieServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.ShowTimeControllerIntegrationTest.testDeleteShowTime()'><b>testDeleteShowTime</b><br>Test class: com.qa.test.controller.ShowTimeControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testDeleteShowTime(com.qa.test.controller.ShowTimeControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.ShowTimeServiceIntegrationTest.testDeleteShowTime()'><b>testDeleteShowTime</b><br>Test class: com.qa.test.service.ShowTimeServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testDeleteShowTime(com.qa.test.service.ShowTimeServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.ClassificationPageTest.testEighteenRedirect()'><b>testEighteenRedirect</b><br>Test class: com.qa.test.selenium.tests.ClassificationPageTest</td>
+<td></td>
+<td>9</td>
+<td>testEighteenRedirect(com.qa.test.selenium.tests.ClassificationPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.NavBarPageTest.testExtendedContact()'><b>testExtendedContact</b><br>Test class: com.qa.test.selenium.tests.NavBarPageTest</td>
+<td></td>
+<td>23</td>
+<td>testExtendedContact(com.qa.test.selenium.tests.NavBarPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.SearchPageTest.testFeatureMovieGalleryTitleLink()'><b>testFeatureMovieGalleryTitleLink</b><br>Test class: com.qa.test.selenium.tests.SearchPageTest</td>
+<td></td>
+<td>44</td>
+<td>testFeatureMovieGalleryTitleLink(com.qa.test.selenium.tests.SearchPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.ClassificationPageTest.testFifteenRedirect()'><b>testFifteenRedirect</b><br>Test class: com.qa.test.selenium.tests.ClassificationPageTest</td>
+<td></td>
+<td>18</td>
+<td>testFifteenRedirect(com.qa.test.selenium.tests.ClassificationPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.MovieTest.testFilter()'><b>testFilter</b><br>Test class: com.qa.test.selenium.tests.MovieTest</td>
+<td></td>
+<td>54</td>
+<td>testFilter(com.qa.test.selenium.tests.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.SearchPageTest.testFilter()'><b>testFilter</b><br>Test class: com.qa.test.selenium.tests.SearchPageTest</td>
+<td></td>
+<td>55</td>
+<td>testFilter(com.qa.test.selenium.tests.SearchPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.CommentServiceIntegrationTest.testFindCommentByID()'><b>testFindCommentByID</b><br>Test class: com.qa.test.service.CommentServiceIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>testFindCommentByID(com.qa.test.service.CommentServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.MovieServiceIntegrationTest.testFindMovieByID()'><b>testFindMovieByID</b><br>Test class: com.qa.test.service.MovieServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testFindMovieByID(com.qa.test.service.MovieServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.ShowTimeServiceIntegrationTest.testFindShowTimeByID()'><b>testFindShowTimeByID</b><br>Test class: com.qa.test.service.ShowTimeServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testFindShowTimeByID(com.qa.test.service.ShowTimeServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.SearchPageTest.testGenre()'><b>testGenre</b><br>Test class: com.qa.test.selenium.tests.SearchPageTest</td>
+<td></td>
+<td>21</td>
+<td>testGenre(com.qa.test.selenium.tests.SearchPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.BookingControllerIntegrationTest.testGetAllBookings()'><b>testGetAllBookings</b><br>Test class: com.qa.test.controller.BookingControllerIntegrationTest</td>
+<td></td>
+<td>7</td>
+<td>testGetAllBookings(com.qa.test.controller.BookingControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.CommentControllerIntegrationTest.testGetAllComments()'><b>testGetAllComments</b><br>Test class: com.qa.test.controller.CommentControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testGetAllComments(com.qa.test.controller.CommentControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.MovieControllerIntegrationTest.testGetAllMovies()'><b>testGetAllMovies</b><br>Test class: com.qa.test.controller.MovieControllerIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>testGetAllMovies(com.qa.test.controller.MovieControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.ShowTimeControllerIntegrationTest.testGetAllShowTimes()'><b>testGetAllShowTimes</b><br>Test class: com.qa.test.controller.ShowTimeControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testGetAllShowTimes(com.qa.test.controller.ShowTimeControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.MovieControllerIntegrationTest.testGetMovie()'><b>testGetMovie</b><br>Test class: com.qa.test.controller.MovieControllerIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>testGetMovie(com.qa.test.controller.MovieControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.SearchPageTest.testMovieGalleryClassificationLink()'><b>testMovieGalleryClassificationLink</b><br>Test class: com.qa.test.selenium.tests.SearchPageTest</td>
+<td></td>
+<td>27</td>
+<td>testMovieGalleryClassificationLink(com.qa.test.selenium.tests.SearchPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.SearchPageTest.testMovieGalleryPlayButtonLink()'><b>testMovieGalleryPlayButtonLink</b><br>Test class: com.qa.test.selenium.tests.SearchPageTest</td>
+<td></td>
+<td>38</td>
+<td>testMovieGalleryPlayButtonLink(com.qa.test.selenium.tests.SearchPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.SearchPageTest.testMovieGalleryTitleLink()'><b>testMovieGalleryTitleLink</b><br>Test class: com.qa.test.selenium.tests.SearchPageTest</td>
+<td></td>
+<td>66</td>
+<td>testMovieGalleryTitleLink(com.qa.test.selenium.tests.SearchPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.NavBarPageTest.testMoviesComingNav()'><b>testMoviesComingNav</b><br>Test class: com.qa.test.selenium.tests.NavBarPageTest</td>
+<td></td>
+<td>13</td>
+<td>testMoviesComingNav(com.qa.test.selenium.tests.NavBarPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.NavBarPageTest.testMoviesShowingNav()'><b>testMoviesShowingNav</b><br>Test class: com.qa.test.selenium.tests.NavBarPageTest</td>
+<td></td>
+<td>21</td>
+<td>testMoviesShowingNav(com.qa.test.selenium.tests.NavBarPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.ClassificationPageTest.testParentalRedirect()'><b>testParentalRedirect</b><br>Test class: com.qa.test.selenium.tests.ClassificationPageTest</td>
+<td></td>
+<td>26</td>
+<td>testParentalRedirect(com.qa.test.selenium.tests.ClassificationPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.NavBarPageTest.testPlanningToDoNav()'><b>testPlanningToDoNav</b><br>Test class: com.qa.test.selenium.tests.NavBarPageTest</td>
+<td></td>
+<td>16</td>
+<td>testPlanningToDoNav(com.qa.test.selenium.tests.NavBarPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.NavBarPageTest.testPlanningTripNav()'><b>testPlanningTripNav</b><br>Test class: com.qa.test.selenium.tests.NavBarPageTest</td>
+<td></td>
+<td>19</td>
+<td>testPlanningTripNav(com.qa.test.selenium.tests.NavBarPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.MovieTest.testRating()'><b>testRating</b><br>Test class: com.qa.test.selenium.tests.MovieTest</td>
+<td></td>
+<td>65</td>
+<td>testRating(com.qa.test.selenium.tests.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.SearchPageTest.testRating()'><b>testRating</b><br>Test class: com.qa.test.selenium.tests.SearchPageTest</td>
+<td></td>
+<td>72</td>
+<td>testRating(com.qa.test.selenium.tests.SearchPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.CommentServiceIntegrationTest.testReadComments()'><b>testReadComments</b><br>Test class: com.qa.test.service.CommentServiceIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>testReadComments(com.qa.test.service.CommentServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.MovieServiceIntegrationTest.testReadMovies()'><b>testReadMovies</b><br>Test class: com.qa.test.service.MovieServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testReadMovies(com.qa.test.service.MovieServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.ShowTimeServiceIntegrationTest.testReadShowTimes()'><b>testReadShowTimes</b><br>Test class: com.qa.test.service.ShowTimeServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testReadShowTimes(com.qa.test.service.ShowTimeServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.MovieTest.testRelease()'><b>testRelease</b><br>Test class: com.qa.test.selenium.tests.MovieTest</td>
+<td></td>
+<td>38</td>
+<td>testRelease(com.qa.test.selenium.tests.MovieTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.SearchPageTest.testRelease()'><b>testRelease</b><br>Test class: com.qa.test.selenium.tests.SearchPageTest</td>
+<td></td>
+<td>50</td>
+<td>testRelease(com.qa.test.selenium.tests.SearchPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.SearchPageTest.testResetButton()'><b>testResetButton</b><br>Test class: com.qa.test.selenium.tests.SearchPageTest</td>
+<td></td>
+<td>10</td>
+<td>testResetButton(com.qa.test.selenium.tests.SearchPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.GalleryPageTest.testResetButtonPresent()'><b>testResetButtonPresent</b><br>Test class: com.qa.test.selenium.tests.GalleryPageTest</td>
+<td></td>
+<td>10</td>
+<td>testResetButtonPresent(com.qa.test.selenium.tests.GalleryPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.NavBarPageTest.testScreensNav()'><b>testScreensNav</b><br>Test class: com.qa.test.selenium.tests.NavBarPageTest</td>
+<td></td>
+<td>11</td>
+<td>testScreensNav(com.qa.test.selenium.tests.NavBarPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.SearchPageTest.testSearch1()'><b>testSearch1</b><br>Test class: com.qa.test.selenium.tests.SearchPageTest</td>
+<td></td>
+<td>61</td>
+<td>testSearch1(com.qa.test.selenium.tests.SearchPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.NavBarPageTest.testSearchNav()'><b>testSearchNav</b><br>Test class: com.qa.test.selenium.tests.NavBarPageTest</td>
+<td></td>
+<td>9</td>
+<td>testSearchNav(com.qa.test.selenium.tests.NavBarPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.SearchPageTest.testSearchNot1()'><b>testSearchNot1</b><br>Test class: com.qa.test.selenium.tests.SearchPageTest</td>
+<td></td>
+<td>16</td>
+<td>testSearchNot1(com.qa.test.selenium.tests.SearchPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.SearchPageTest.testShowMoreButton()'><b>testShowMoreButton</b><br>Test class: com.qa.test.selenium.tests.SearchPageTest</td>
+<td></td>
+<td>32</td>
+<td>testShowMoreButton(com.qa.test.selenium.tests.SearchPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.ClassificationPageTest.testTBCRedirect()'><b>testTBCRedirect</b><br>Test class: com.qa.test.selenium.tests.ClassificationPageTest</td>
+<td></td>
+<td>31</td>
+<td>testTBCRedirect(com.qa.test.selenium.tests.ClassificationPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.ClassificationPageTest.testTwelveRedirect()'><b>testTwelveRedirect</b><br>Test class: com.qa.test.selenium.tests.ClassificationPageTest</td>
+<td></td>
+<td>22</td>
+<td>testTwelveRedirect(com.qa.test.selenium.tests.ClassificationPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.selenium.tests.ClassificationPageTest.testUniversalRedirect()'><b>testUniversalRedirect</b><br>Test class: com.qa.test.selenium.tests.ClassificationPageTest</td>
+<td></td>
+<td>13</td>
+<td>testUniversalRedirect(com.qa.test.selenium.tests.ClassificationPageTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.BookingControllerIntegrationTest.testUpdateBooking()'><b>testUpdateBooking</b><br>Test class: com.qa.test.controller.BookingControllerIntegrationTest</td>
+<td></td>
+<td>7</td>
+<td>testUpdateBooking(com.qa.test.controller.BookingControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.CommentControllerIntegrationTest.testUpdateComment()'><b>testUpdateComment</b><br>Test class: com.qa.test.controller.CommentControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testUpdateComment(com.qa.test.controller.CommentControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.CommentServiceIntegrationTest.testUpdateComment()'><b>testUpdateComment</b><br>Test class: com.qa.test.service.CommentServiceIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>testUpdateComment(com.qa.test.service.CommentServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.MovieControllerIntegrationTest.testUpdateMovie()'><b>testUpdateMovie</b><br>Test class: com.qa.test.controller.MovieControllerIntegrationTest</td>
+<td></td>
+<td>1</td>
+<td>testUpdateMovie(com.qa.test.controller.MovieControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.MovieServiceIntegrationTest.testUpdateMovie()'><b>testUpdateMovie</b><br>Test class: com.qa.test.service.MovieServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testUpdateMovie(com.qa.test.service.MovieServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.ShowTimeControllerIntegrationTest.testUpdateShowTime()'><b>testUpdateShowTime</b><br>Test class: com.qa.test.controller.ShowTimeControllerIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testUpdateShowTime(com.qa.test.controller.ShowTimeControllerIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.ShowTimeServiceIntegrationTest.testUpdateShowTime()'><b>testUpdateShowTime</b><br>Test class: com.qa.test.service.ShowTimeServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>testUpdateShowTime(com.qa.test.service.ShowTimeServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.BookingControllerUnitTest.updateBookingsTest()'><b>updateBookingsTest</b><br>Test class: com.qa.test.controller.BookingControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>updateBookingsTest(com.qa.test.controller.BookingControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.BookingServiceIntegrationTest.updateBookingsTest()'><b>updateBookingsTest</b><br>Test class: com.qa.test.service.BookingServiceIntegrationTest</td>
+<td></td>
+<td>0</td>
+<td>updateBookingsTest(com.qa.test.service.BookingServiceIntegrationTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.BookingServiceUnitTest.updateBookingsTest()'><b>updateBookingsTest</b><br>Test class: com.qa.test.service.BookingServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>updateBookingsTest(com.qa.test.service.BookingServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.CommentControllerUnitTest.updateCommentsTest()'><b>updateCommentsTest</b><br>Test class: com.qa.test.controller.CommentControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>updateCommentsTest(com.qa.test.controller.CommentControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.CommentServiceUnitTest.updateCommentsTest()'><b>updateCommentsTest</b><br>Test class: com.qa.test.service.CommentServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>updateCommentsTest(com.qa.test.service.CommentServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.MovieControllerUnitTest.updateMoviesTest()'><b>updateMoviesTest</b><br>Test class: com.qa.test.controller.MovieControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>updateMoviesTest(com.qa.test.controller.MovieControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.MovieServiceUnitTest.updateMoviesTest()'><b>updateMoviesTest</b><br>Test class: com.qa.test.service.MovieServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>updateMoviesTest(com.qa.test.service.MovieServiceUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.controller.ShowTimeControllerUnitTest.updateShowTimesTest()'><b>updateShowTimesTest</b><br>Test class: com.qa.test.controller.ShowTimeControllerUnitTest</td>
+<td></td>
+<td>0</td>
+<td>updateShowTimesTest(com.qa.test.controller.ShowTimeControllerUnitTest)</td></tr>
+<tr>
+<td title='com.qa.test.service.ShowTimeServiceUnitTest.updateShowTimesTest()'><b>updateShowTimesTest</b><br>Test class: com.qa.test.service.ShowTimeServiceUnitTest</td>
+<td></td>
+<td>0</td>
+<td>updateShowTimesTest(com.qa.test.service.ShowTimeServiceUnitTest)</td></tr>
+</table><p>
+</body>
+</html>

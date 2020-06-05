@@ -1,0 +1,1581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="374" passed="374">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="380424" started-at="2020-06-05T08:11:10Z" finished-at="2020-06-05T08:17:30Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="380424" started-at="2020-06-05T08:11:10Z" finished-at="2020-06-05T08:17:30Z">
+      <class name="com.qa.test.controller.MovieControllerIntegrationTest">
+        <test-method status="PASS" signature="testGetAllMovies() throws java.lang.Exception" name="testGetAllMovies" duration-ms="1414" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllMovies -->
+        <test-method status="PASS" signature="testCreateMovie() throws java.lang.Exception" name="testCreateMovie" duration-ms="1400" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateMovie -->
+        <test-method status="PASS" signature="testUpdateMovie() throws java.lang.Exception" name="testUpdateMovie" duration-ms="1388" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateMovie -->
+        <test-method status="PASS" signature="testGetMovie() throws java.lang.Exception" name="testGetMovie" duration-ms="1371" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetMovie -->
+        <test-method status="PASS" signature="testDeleteMovie() throws java.lang.Exception" name="testDeleteMovie" duration-ms="1352" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteMovie -->
+      </class> <!-- com.qa.test.controller.MovieControllerIntegrationTest -->
+      <class name="com.qa.test.selenium.tests.FooterTest">
+        <test-method status="PASS" signature="FooterHomeTest() throws java.lang.InterruptedException" name="FooterHomeTest" duration-ms="23683" started-at="2020-06-05T08:12:20Z" finished-at="2020-06-05T08:12:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FooterHomeTest -->
+        <test-method status="PASS" signature="FooterEmailLinkTest() throws java.lang.InterruptedException" name="FooterEmailLinkTest" duration-ms="7660" started-at="2020-06-05T08:12:20Z" finished-at="2020-06-05T08:12:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FooterEmailLinkTest -->
+        <test-method status="PASS" signature="FooterPrivacyTest() throws java.lang.InterruptedException" name="FooterPrivacyTest" duration-ms="29785" started-at="2020-06-05T08:12:20Z" finished-at="2020-06-05T08:12:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FooterPrivacyTest -->
+        <test-method status="PASS" signature="FooterContactTest() throws java.lang.InterruptedException" name="FooterContactTest" duration-ms="17312" started-at="2020-06-05T08:12:20Z" finished-at="2020-06-05T08:12:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FooterContactTest -->
+        <test-method status="PASS" signature="FooterAboutTest() throws java.lang.InterruptedException" name="FooterAboutTest" duration-ms="14988" started-at="2020-06-05T08:12:20Z" finished-at="2020-06-05T08:12:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FooterAboutTest -->
+        <test-method status="PASS" signature="FooterNumberLinkTest() throws java.lang.InterruptedException" name="FooterNumberLinkTest" duration-ms="19594" started-at="2020-06-05T08:12:20Z" finished-at="2020-06-05T08:12:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FooterNumberLinkTest -->
+        <test-method status="PASS" signature="FooterTermsTest() throws java.lang.InterruptedException" name="FooterTermsTest" duration-ms="12310" started-at="2020-06-05T08:12:20Z" finished-at="2020-06-05T08:12:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FooterTermsTest -->
+        <test-method status="PASS" signature="FooterTwitterLinkTest() throws java.lang.InterruptedException" name="FooterTwitterLinkTest" duration-ms="26994" started-at="2020-06-05T08:12:20Z" finished-at="2020-06-05T08:12:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FooterTwitterLinkTest -->
+        <test-method status="PASS" signature="FooterSecurityTest() throws java.lang.InterruptedException" name="FooterSecurityTest" duration-ms="9864" started-at="2020-06-05T08:12:20Z" finished-at="2020-06-05T08:12:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FooterSecurityTest -->
+      </class> <!-- com.qa.test.selenium.tests.FooterTest -->
+      <class name="com.qa.test.controller.CommentControllerUnitTest">
+        <test-method status="PASS" signature="findCommentByIDTest()" name="findCommentByIDTest" duration-ms="27" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findCommentByIDTest -->
+        <test-method status="PASS" signature="updateCommentsTest()" name="updateCommentsTest" duration-ms="28" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateCommentsTest -->
+        <test-method status="PASS" signature="createCommentTest()" name="createCommentTest" duration-ms="25" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCommentTest -->
+        <test-method status="PASS" signature="getAllCommentsTest()" name="getAllCommentsTest" duration-ms="29" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllCommentsTest -->
+        <test-method status="PASS" signature="deleteCommentTest()" name="deleteCommentTest" duration-ms="24" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCommentTest -->
+      </class> <!-- com.qa.test.controller.CommentControllerUnitTest -->
+      <class name="com.qa.test.controller.BookingControllerIntegrationTest">
+        <test-method status="PASS" signature="testCreateBooking() throws java.lang.Exception" name="testCreateBooking" duration-ms="7355" started-at="2020-06-05T08:11:10Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateBooking -->
+        <test-method status="PASS" signature="testUpdateBooking() throws java.lang.Exception" name="testUpdateBooking" duration-ms="7443" started-at="2020-06-05T08:11:10Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateBooking -->
+        <test-method status="PASS" signature="testGetAllBookings() throws java.lang.Exception" name="testGetAllBookings" duration-ms="7392" started-at="2020-06-05T08:11:10Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllBookings -->
+        <test-method status="PASS" signature="testDeleteBooking() throws java.lang.Exception" name="testDeleteBooking" duration-ms="7502" started-at="2020-06-05T08:11:10Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteBooking -->
+      </class> <!-- com.qa.test.controller.BookingControllerIntegrationTest -->
+      <class name="com.qa.test.controller.CommentControllerIntegrationTest">
+        <test-method status="PASS" signature="testGetAllComments() throws java.lang.Exception" name="testGetAllComments" duration-ms="54" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllComments -->
+        <test-method status="PASS" signature="testDeleteComment() throws java.lang.Exception" name="testDeleteComment" duration-ms="21" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteComment -->
+        <test-method status="PASS" signature="testUpdateComment() throws java.lang.Exception" name="testUpdateComment" duration-ms="45" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateComment -->
+        <test-method status="PASS" signature="testCreateComment() throws java.lang.Exception" name="testCreateComment" duration-ms="33" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateComment -->
+      </class> <!-- com.qa.test.controller.CommentControllerIntegrationTest -->
+      <class name="com.qa.test.domain.ResponseTest">
+        <test-method status="PASS" signature="otherStatusDifferent()" name="otherStatusDifferent" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherStatusDifferent -->
+        <test-method status="PASS" signature="equalsWithDifferentObject()" name="equalsWithDifferentObject" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithDifferentObject -->
+        <test-method status="PASS" signature="checkEquality()" name="checkEquality" duration-ms="0" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method status="PASS" signature="ResponseStatusNotEqual()" name="ResponseStatusNotEqual" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ResponseStatusNotEqual -->
+        <test-method status="PASS" signature="otherDetailsDifferent()" name="otherDetailsDifferent" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherDetailsDifferent -->
+        <test-method status="PASS" signature="ResponseDetailsNullButOtherDetailsNotNull()" name="ResponseDetailsNullButOtherDetailsNotNull" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ResponseDetailsNullButOtherDetailsNotNull -->
+        <test-method status="PASS" signature="nullDetails()" name="nullDetails" duration-ms="0" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullDetails -->
+        <test-method status="PASS" signature="equalsWithNull()" name="equalsWithNull" duration-ms="0" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithNull -->
+        <test-method status="PASS" signature="settersTest()" name="settersTest" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settersTest -->
+      </class> <!-- com.qa.test.domain.ResponseTest -->
+      <class name="com.qa.test.domain.BookingTest">
+        <test-method status="PASS" signature="checkEqualityBetweenDifferentObjects()" name="checkEqualityBetweenDifferentObjects" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+        <test-method status="PASS" signature="nullPhoneNumber()" name="nullPhoneNumber" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullPhoneNumber -->
+        <test-method status="PASS" signature="createBookingWithId()" name="createBookingWithId" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBookingWithId -->
+        <test-method status="PASS" signature="nullAdultNr()" name="nullAdultNr" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullAdultNr -->
+        <test-method status="PASS" signature="otherTotalPriceDifferent()" name="otherTotalPriceDifferent" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherTotalPriceDifferent -->
+        <test-method status="PASS" signature="nullEmailOnBoth()" name="nullEmailOnBoth" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullEmailOnBoth -->
+        <test-method status="PASS" signature="nullMovieName()" name="nullMovieName" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullMovieName -->
+        <test-method status="PASS" signature="constructorWithoutId()" name="constructorWithoutId" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorWithoutId -->
+        <test-method status="PASS" signature="checkEquality()" name="checkEquality" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method status="PASS" signature="equalsWithNull()" name="equalsWithNull" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithNull -->
+        <test-method status="PASS" signature="equalsWithDifferentObject()" name="equalsWithDifferentObject" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithDifferentObject -->
+        <test-method status="PASS" signature="otherPhoneNumberDifferent()" name="otherPhoneNumberDifferent" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherPhoneNumberDifferent -->
+        <test-method status="PASS" signature="nullChildNr()" name="nullChildNr" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullChildNr -->
+        <test-method status="PASS" signature="nullIdOnBoth()" name="nullIdOnBoth" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullIdOnBoth -->
+        <test-method status="PASS" signature="nullId()" name="nullId" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method status="PASS" signature="nullStudentNr()" name="nullStudentNr" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullStudentNr -->
+        <test-method status="PASS" signature="nullAdultNrOnBoth()" name="nullAdultNrOnBoth" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullAdultNrOnBoth -->
+        <test-method status="PASS" signature="nullDateTimeOnBoth()" name="nullDateTimeOnBoth" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullDateTimeOnBoth -->
+        <test-method status="PASS" signature="otherAdultNrDifferent()" name="otherAdultNrDifferent" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherAdultNrDifferent -->
+        <test-method status="PASS" signature="nullStudentNrOnBoth()" name="nullStudentNrOnBoth" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullStudentNrOnBoth -->
+        <test-method status="PASS" signature="nullMovieOnBoth()" name="nullMovieOnBoth" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullMovieOnBoth -->
+        <test-method status="PASS" signature="otherStudentNrDifferent()" name="otherStudentNrDifferent" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherStudentNrDifferent -->
+        <test-method status="PASS" signature="nullTotalPrice()" name="nullTotalPrice" duration-ms="6" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTotalPrice -->
+        <test-method status="PASS" signature="otherMovieDifferent()" name="otherMovieDifferent" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherMovieDifferent -->
+        <test-method status="PASS" signature="settersTest()" name="settersTest" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settersTest -->
+        <test-method status="PASS" signature="otherDateTimeDifferent()" name="otherDateTimeDifferent" duration-ms="6" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherDateTimeDifferent -->
+        <test-method status="PASS" signature="hashCodeTest()" name="hashCodeTest" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTest -->
+        <test-method status="PASS" signature="hashCodeTestWithNull()" name="hashCodeTestWithNull" duration-ms="6" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+        <test-method status="PASS" signature="nullChildNrOnBoth()" name="nullChildNrOnBoth" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullChildNrOnBoth -->
+        <test-method status="PASS" signature="nullDateTime()" name="nullDateTime" duration-ms="6" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullDateTime -->
+        <test-method status="PASS" signature="nullTotalPriceOnBoth()" name="nullTotalPriceOnBoth" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTotalPriceOnBoth -->
+        <test-method status="PASS" signature="otherIdDifferent()" name="otherIdDifferent" duration-ms="6" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method status="PASS" signature="nullMovieNameOnBoth()" name="nullMovieNameOnBoth" duration-ms="6" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullMovieNameOnBoth -->
+        <test-method status="PASS" signature="nullEmail()" name="nullEmail" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullEmail -->
+        <test-method status="PASS" signature="otherMovieNameDifferent()" name="otherMovieNameDifferent" duration-ms="6" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherMovieNameDifferent -->
+        <test-method status="PASS" signature="otherChildNrDifferent()" name="otherChildNrDifferent" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherChildNrDifferent -->
+        <test-method status="PASS" signature="nullPhoneNumberOnBoth()" name="nullPhoneNumberOnBoth" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullPhoneNumberOnBoth -->
+        <test-method status="PASS" signature="otherEmailDifferent()" name="otherEmailDifferent" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherEmailDifferent -->
+        <test-method status="PASS" signature="nullMovie()" name="nullMovie" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullMovie -->
+      </class> <!-- com.qa.test.domain.BookingTest -->
+      <class name="com.qa.test.selenium.tests.DetailsPageTest">
+        <test-method status="PASS" signature="detailsBookingClick()" name="detailsBookingClick" duration-ms="6015" started-at="2020-06-05T08:12:12Z" finished-at="2020-06-05T08:12:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- detailsBookingClick -->
+        <test-method status="PASS" signature="detailsAgeRateClick()" name="detailsAgeRateClick" duration-ms="6430" started-at="2020-06-05T08:12:12Z" finished-at="2020-06-05T08:12:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- detailsAgeRateClick -->
+        <test-method status="PASS" signature="detailsHDClick()" name="detailsHDClick" duration-ms="7385" started-at="2020-06-05T08:12:12Z" finished-at="2020-06-05T08:12:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- detailsHDClick -->
+      </class> <!-- com.qa.test.selenium.tests.DetailsPageTest -->
+      <class name="com.qa.test.selenium.tests.HomePageTest">
+        <test-method status="PASS" signature="featuredClassificationClick() throws java.lang.InterruptedException" name="featuredClassificationClick" duration-ms="15793" started-at="2020-06-05T08:13:27Z" finished-at="2020-06-05T08:13:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- featuredClassificationClick -->
+        <test-method status="PASS" signature="FeaturedPlayClick() throws java.lang.InterruptedException" name="FeaturedPlayClick" duration-ms="37570" started-at="2020-06-05T08:13:27Z" finished-at="2020-06-05T08:14:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FeaturedPlayClick -->
+        <test-method status="PASS" signature="ComingTitleClick()" name="ComingTitleClick" duration-ms="43181" started-at="2020-06-05T08:13:27Z" finished-at="2020-06-05T08:14:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ComingTitleClick -->
+        <test-method status="PASS" signature="ComingSoonAppearsTest()" name="ComingSoonAppearsTest" duration-ms="48540" started-at="2020-06-05T08:13:27Z" finished-at="2020-06-05T08:14:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ComingSoonAppearsTest -->
+        <test-method status="PASS" signature="featuredTitleClick() throws java.lang.InterruptedException" name="featuredTitleClick" duration-ms="32214" started-at="2020-06-05T08:13:27Z" finished-at="2020-06-05T08:13:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- featuredTitleClick -->
+        <test-method status="PASS" signature="SoonClassificationClick() throws java.lang.InterruptedException" name="SoonClassificationClick" duration-ms="26786" started-at="2020-06-05T08:13:27Z" finished-at="2020-06-05T08:13:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SoonClassificationClick -->
+        <test-method status="PASS" signature="FeaturedMovieAppearsTest()" name="FeaturedMovieAppearsTest" duration-ms="10498" started-at="2020-06-05T08:13:27Z" finished-at="2020-06-05T08:13:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FeaturedMovieAppearsTest -->
+        <test-method status="PASS" signature="ComingSoonClickTest() throws java.lang.InterruptedException" name="ComingSoonClickTest" duration-ms="21363" started-at="2020-06-05T08:13:27Z" finished-at="2020-06-05T08:13:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ComingSoonClickTest -->
+      </class> <!-- com.qa.test.selenium.tests.HomePageTest -->
+      <class name="com.qa.test.domain.ShowTimeTest">
+        <test-method status="PASS" signature="nullTime()" name="nullTime" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTime -->
+        <test-method status="PASS" signature="checkEqualityBetweenDifferentObjects()" name="checkEqualityBetweenDifferentObjects" duration-ms="0" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+        <test-method status="PASS" signature="hashCodeTestWithNull()" name="hashCodeTestWithNull" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+        <test-method status="PASS" signature="nullTimeOnBoth()" name="nullTimeOnBoth" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTimeOnBoth -->
+        <test-method status="PASS" signature="equalsWithDifferentObject()" name="equalsWithDifferentObject" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithDifferentObject -->
+        <test-method status="PASS" signature="otherIdDifferent()" name="otherIdDifferent" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method status="PASS" signature="nullId()" name="nullId" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method status="PASS" signature="equalsWithNull()" name="equalsWithNull" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithNull -->
+        <test-method status="PASS" signature="hashCodeTest()" name="hashCodeTest" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTest -->
+        <test-method status="PASS" signature="checkEqualityBetweenDifferentObjectsNullTimes()" name="checkEqualityBetweenDifferentObjectsNullTimes" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjectsNullTimes -->
+        <test-method status="PASS" signature="settersTest()" name="settersTest" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settersTest -->
+        <test-method status="PASS" signature="checkEquality()" name="checkEquality" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method status="PASS" signature="constructorWithoutId()" name="constructorWithoutId" duration-ms="0" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorWithoutId -->
+        <test-method status="PASS" signature="otherTimeDifferent()" name="otherTimeDifferent" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherTimeDifferent -->
+        <test-method status="PASS" signature="nullIdOnBoth()" name="nullIdOnBoth" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullIdOnBoth -->
+        <test-method status="PASS" signature="showTimeTimesNotEqual()" name="showTimeTimesNotEqual" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- showTimeTimesNotEqual -->
+        <test-method status="PASS" signature="createShowTimeWithId()" name="createShowTimeWithId" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createShowTimeWithId -->
+        <test-method status="PASS" signature="showTimeTimeNullButOtherNameNotNull()" name="showTimeTimeNullButOtherNameNotNull" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- showTimeTimeNullButOtherNameNotNull -->
+      </class> <!-- com.qa.test.domain.ShowTimeTest -->
+      <class name="com.qa.test.controller.ShowTimeControllerUnitTest">
+        <test-method status="PASS" signature="updateShowTimesTest()" name="updateShowTimesTest" duration-ms="19" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateShowTimesTest -->
+        <test-method status="PASS" signature="findShowTimeByIDTest()" name="findShowTimeByIDTest" duration-ms="23" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findShowTimeByIDTest -->
+        <test-method status="PASS" signature="getAllShowTimesTest()" name="getAllShowTimesTest" duration-ms="21" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllShowTimesTest -->
+        <test-method status="PASS" signature="createShowTimeTest()" name="createShowTimeTest" duration-ms="18" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createShowTimeTest -->
+        <test-method status="PASS" signature="deleteShowTimeTest()" name="deleteShowTimeTest" duration-ms="20" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteShowTimeTest -->
+      </class> <!-- com.qa.test.controller.ShowTimeControllerUnitTest -->
+      <class name="com.qa.test.service.MovieServiceIntegrationTest">
+        <test-method status="PASS" signature="testFindMovieByID()" name="testFindMovieByID" duration-ms="52" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindMovieByID -->
+        <test-method status="PASS" signature="testReadMovies()" name="testReadMovies" duration-ms="32" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReadMovies -->
+        <test-method status="PASS" signature="testUpdateMovie()" name="testUpdateMovie" duration-ms="39" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateMovie -->
+        <test-method status="PASS" signature="testDeleteMovie()" name="testDeleteMovie" duration-ms="25" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteMovie -->
+        <test-method status="PASS" signature="testCreateMovie()" name="testCreateMovie" duration-ms="45" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateMovie -->
+      </class> <!-- com.qa.test.service.MovieServiceIntegrationTest -->
+      <class name="com.qa.test.domain.CommentTest">
+        <test-method status="PASS" signature="equalsWithNull()" name="equalsWithNull" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithNull -->
+        <test-method status="PASS" signature="createCommentWithId()" name="createCommentWithId" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCommentWithId -->
+        <test-method status="PASS" signature="constructorWithoutId()" name="constructorWithoutId" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorWithoutId -->
+        <test-method status="PASS" signature="checkEquality()" name="checkEquality" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method status="PASS" signature="nullIdOnBoth()" name="nullIdOnBoth" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullIdOnBoth -->
+        <test-method status="PASS" signature="equalsWithDifferentObject()" name="equalsWithDifferentObject" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithDifferentObject -->
+        <test-method status="PASS" signature="otherCommentDifferent()" name="otherCommentDifferent" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherCommentDifferent -->
+        <test-method status="PASS" signature="nullRatingOnBoth()" name="nullRatingOnBoth" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullRatingOnBoth -->
+        <test-method status="PASS" signature="nullComment()" name="nullComment" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullComment -->
+        <test-method status="PASS" signature="checkEqualityBetweenDifferentObjects()" name="checkEqualityBetweenDifferentObjects" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+        <test-method status="PASS" signature="checkEqualityBetweenDifferentObjectsNullName()" name="checkEqualityBetweenDifferentObjectsNullName" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjectsNullName -->
+        <test-method status="PASS" signature="commentNamesNotEqual()" name="commentNamesNotEqual" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- commentNamesNotEqual -->
+        <test-method status="PASS" signature="nullId()" name="nullId" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method status="PASS" signature="nullMovieTitleOnBoth()" name="nullMovieTitleOnBoth" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullMovieTitleOnBoth -->
+        <test-method status="PASS" signature="nullCommentOnBoth()" name="nullCommentOnBoth" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullCommentOnBoth -->
+        <test-method status="PASS" signature="hashCodeTest()" name="hashCodeTest" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTest -->
+        <test-method status="PASS" signature="nullMovieTitle()" name="nullMovieTitle" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullMovieTitle -->
+        <test-method status="PASS" signature="hashCodeTestWithNull()" name="hashCodeTestWithNull" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+        <test-method status="PASS" signature="commentNameNullButOtherNameNotNull()" name="commentNameNullButOtherNameNotNull" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- commentNameNullButOtherNameNotNull -->
+        <test-method status="PASS" signature="otherMovieTitleDifferent()" name="otherMovieTitleDifferent" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherMovieTitleDifferent -->
+        <test-method status="PASS" signature="settersTest()" name="settersTest" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settersTest -->
+        <test-method status="PASS" signature="nullRating()" name="nullRating" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullRating -->
+        <test-method status="PASS" signature="otherIdDifferent()" name="otherIdDifferent" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method status="PASS" signature="otherRatingDifferent()" name="otherRatingDifferent" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherRatingDifferent -->
+      </class> <!-- com.qa.test.domain.CommentTest -->
+      <class name="com.qa.test.selenium.tests.BookingTest">
+        <test-method status="PASS" signature="makeBooking()" name="makeBooking" duration-ms="19482" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- makeBooking -->
+      </class> <!-- com.qa.test.selenium.tests.BookingTest -->
+      <class name="com.qa.test.selenium.tests.NavBarPageTest">
+        <test-method status="PASS" signature="testPlanningToDoNav()" name="testPlanningToDoNav" duration-ms="16253" started-at="2020-06-05T08:15:52Z" finished-at="2020-06-05T08:16:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPlanningToDoNav -->
+        <test-method status="PASS" signature="testAboutNav()" name="testAboutNav" duration-ms="7668" started-at="2020-06-05T08:15:52Z" finished-at="2020-06-05T08:15:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAboutNav -->
+        <test-method status="PASS" signature="testScreensNav()" name="testScreensNav" duration-ms="11570" started-at="2020-06-05T08:15:52Z" finished-at="2020-06-05T08:16:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testScreensNav -->
+        <test-method status="PASS" signature="testSearchNav() throws java.lang.InterruptedException" name="testSearchNav" duration-ms="9058" started-at="2020-06-05T08:15:52Z" finished-at="2020-06-05T08:16:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchNav -->
+        <test-method status="PASS" signature="testMoviesComingNav()" name="testMoviesComingNav" duration-ms="13707" started-at="2020-06-05T08:15:52Z" finished-at="2020-06-05T08:16:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMoviesComingNav -->
+        <test-method status="PASS" signature="testMoviesShowingNav() throws java.lang.InterruptedException" name="testMoviesShowingNav" duration-ms="21506" started-at="2020-06-05T08:15:52Z" finished-at="2020-06-05T08:16:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMoviesShowingNav -->
+        <test-method status="PASS" signature="testPlanningTripNav()" name="testPlanningTripNav" duration-ms="19256" started-at="2020-06-05T08:15:52Z" finished-at="2020-06-05T08:16:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPlanningTripNav -->
+        <test-method status="PASS" signature="testExtendedContact()" name="testExtendedContact" duration-ms="23482" started-at="2020-06-05T08:15:52Z" finished-at="2020-06-05T08:16:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExtendedContact -->
+      </class> <!-- com.qa.test.selenium.tests.NavBarPageTest -->
+      <class name="com.qa.test.selenium.tests.SearchPageTest">
+        <test-method status="PASS" signature="testShowMoreButton()" name="testShowMoreButton" duration-ms="32695" started-at="2020-06-05T08:16:16Z" finished-at="2020-06-05T08:16:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testShowMoreButton -->
+        <test-method status="PASS" signature="testFeatureMovieGalleryTitleLink()" name="testFeatureMovieGalleryTitleLink" duration-ms="44410" started-at="2020-06-05T08:16:16Z" finished-at="2020-06-05T08:17:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFeatureMovieGalleryTitleLink -->
+        <test-method status="PASS" signature="testRating()" name="testRating" duration-ms="72336" started-at="2020-06-05T08:16:16Z" finished-at="2020-06-05T08:17:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRating -->
+        <test-method status="PASS" signature="testRelease()" name="testRelease" duration-ms="50001" started-at="2020-06-05T08:16:16Z" finished-at="2020-06-05T08:17:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRelease -->
+        <test-method status="PASS" signature="testMovieGalleryTitleLink()" name="testMovieGalleryTitleLink" duration-ms="66856" started-at="2020-06-05T08:16:16Z" finished-at="2020-06-05T08:17:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMovieGalleryTitleLink -->
+        <test-method status="PASS" signature="testResetButton() throws java.lang.InterruptedException,java.io.IOException" name="testResetButton" duration-ms="10888" started-at="2020-06-05T08:16:16Z" finished-at="2020-06-05T08:16:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResetButton -->
+        <test-method status="PASS" signature="testSearch1()" name="testSearch1" duration-ms="61366" started-at="2020-06-05T08:16:16Z" finished-at="2020-06-05T08:17:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearch1 -->
+        <test-method status="PASS" signature="testSearchNot1()" name="testSearchNot1" duration-ms="16094" started-at="2020-06-05T08:16:16Z" finished-at="2020-06-05T08:16:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchNot1 -->
+        <test-method status="PASS" signature="testMovieGalleryClassificationLink()" name="testMovieGalleryClassificationLink" duration-ms="27182" started-at="2020-06-05T08:16:16Z" finished-at="2020-06-05T08:16:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMovieGalleryClassificationLink -->
+        <test-method status="PASS" signature="testMovieGalleryPlayButtonLink()" name="testMovieGalleryPlayButtonLink" duration-ms="38751" started-at="2020-06-05T08:16:16Z" finished-at="2020-06-05T08:16:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMovieGalleryPlayButtonLink -->
+        <test-method status="PASS" signature="testFilter()" name="testFilter" duration-ms="55476" started-at="2020-06-05T08:16:16Z" finished-at="2020-06-05T08:17:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFilter -->
+        <test-method status="PASS" signature="testGenre()" name="testGenre" duration-ms="21861" started-at="2020-06-05T08:16:16Z" finished-at="2020-06-05T08:16:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGenre -->
+      </class> <!-- com.qa.test.selenium.tests.SearchPageTest -->
+      <class name="com.qa.test.selenium.tests.MovieComingTest">
+        <test-method status="PASS" signature="comingSoonClickReset()" name="comingSoonClickReset" duration-ms="18232" started-at="2020-06-05T08:14:16Z" finished-at="2020-06-05T08:14:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- comingSoonClickReset -->
+        <test-method status="PASS" signature="comingSoonClickTitleTest()" name="comingSoonClickTitleTest" duration-ms="23446" started-at="2020-06-05T08:14:16Z" finished-at="2020-06-05T08:14:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- comingSoonClickTitleTest -->
+        <test-method status="PASS" signature="ComingSoonBreadcrumbTest()" name="ComingSoonBreadcrumbTest" duration-ms="13119" started-at="2020-06-05T08:14:16Z" finished-at="2020-06-05T08:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ComingSoonBreadcrumbTest -->
+        <test-method status="PASS" signature="comingSoonClickPlay()" name="comingSoonClickPlay" duration-ms="28672" started-at="2020-06-05T08:14:16Z" finished-at="2020-06-05T08:14:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- comingSoonClickPlay -->
+      </class> <!-- com.qa.test.selenium.tests.MovieComingTest -->
+      <class name="com.qa.test.selenium.tests.ForumPageTest">
+        <test-method status="PASS" signature="inappropriateAlertUserName() throws java.lang.InterruptedException" name="inappropriateAlertUserName" duration-ms="9870" started-at="2020-06-05T08:12:50Z" finished-at="2020-06-05T08:13:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inappropriateAlertUserName -->
+        <test-method status="PASS" signature="postComment() throws java.lang.InterruptedException" name="postComment" duration-ms="19728" started-at="2020-06-05T08:12:50Z" finished-at="2020-06-05T08:13:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postComment -->
+        <test-method status="PASS" signature="readCommentAfterPost() throws java.lang.InterruptedException" name="readCommentAfterPost" duration-ms="25205" started-at="2020-06-05T08:12:50Z" finished-at="2020-06-05T08:13:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readCommentAfterPost -->
+        <test-method status="PASS" signature="inappropriateAlertComment() throws java.lang.InterruptedException" name="inappropriateAlertComment" duration-ms="14265" started-at="2020-06-05T08:12:50Z" finished-at="2020-06-05T08:13:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inappropriateAlertComment -->
+      </class> <!-- com.qa.test.selenium.tests.ForumPageTest -->
+      <class name="com.qa.test.selenium.tests.GalleryPageTest">
+        <test-method status="PASS" signature="testResetButtonPresent()" name="testResetButtonPresent" duration-ms="10617" started-at="2020-06-05T08:13:16Z" finished-at="2020-06-05T08:13:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResetButtonPresent -->
+      </class> <!-- com.qa.test.selenium.tests.GalleryPageTest -->
+      <class name="com.qa.test.dto.ShowTimeDTOTest">
+        <test-method status="PASS" signature="equalsWithDifferentObject()" name="equalsWithDifferentObject" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithDifferentObject -->
+        <test-method status="PASS" signature="checkEquality()" name="checkEquality" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method status="PASS" signature="settersTest()" name="settersTest" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settersTest -->
+        <test-method status="PASS" signature="equalsWithNull()" name="equalsWithNull" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithNull -->
+        <test-method status="PASS" signature="constructorWithoutId()" name="constructorWithoutId" duration-ms="0" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorWithoutId -->
+        <test-method status="PASS" signature="nullId()" name="nullId" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method status="PASS" signature="hashCodeTest()" name="hashCodeTest" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTest -->
+        <test-method status="PASS" signature="checkEqualityBetweenDifferentObjectsNullTimes()" name="checkEqualityBetweenDifferentObjectsNullTimes" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjectsNullTimes -->
+        <test-method status="PASS" signature="nullIdOnBoth()" name="nullIdOnBoth" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullIdOnBoth -->
+        <test-method status="PASS" signature="showTimeDTOTimeNullButOtherNameNotNull()" name="showTimeDTOTimeNullButOtherNameNotNull" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- showTimeDTOTimeNullButOtherNameNotNull -->
+        <test-method status="PASS" signature="createShowTimeDTOWithId()" name="createShowTimeDTOWithId" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createShowTimeDTOWithId -->
+        <test-method status="PASS" signature="checkEqualityBetweenDifferentObjects()" name="checkEqualityBetweenDifferentObjects" duration-ms="0" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+        <test-method status="PASS" signature="showTimeDTOTimesNotEqual()" name="showTimeDTOTimesNotEqual" duration-ms="0" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- showTimeDTOTimesNotEqual -->
+        <test-method status="PASS" signature="otherIdDifferent()" name="otherIdDifferent" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method status="PASS" signature="hashCodeTestWithNull()" name="hashCodeTestWithNull" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+      </class> <!-- com.qa.test.dto.ShowTimeDTOTest -->
+      <class name="com.qa.test.service.BookingServiceUnitTest">
+        <test-method status="PASS" signature="findBookingByIDTest()" name="findBookingByIDTest" duration-ms="4" started-at="2020-06-05T08:17:29Z" finished-at="2020-06-05T08:17:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findBookingByIDTest -->
+        <test-method status="PASS" signature="deleteBookingTest()" name="deleteBookingTest" duration-ms="7" started-at="2020-06-05T08:17:29Z" finished-at="2020-06-05T08:17:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBookingTest -->
+        <test-method status="PASS" signature="updateBookingsTest()" name="updateBookingsTest" duration-ms="14" started-at="2020-06-05T08:17:29Z" finished-at="2020-06-05T08:17:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateBookingsTest -->
+        <test-method status="PASS" signature="readBookingsTest()" name="readBookingsTest" duration-ms="10" started-at="2020-06-05T08:17:29Z" finished-at="2020-06-05T08:17:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readBookingsTest -->
+        <test-method status="PASS" signature="createBookingTest()" name="createBookingTest" duration-ms="18" started-at="2020-06-05T08:17:29Z" finished-at="2020-06-05T08:17:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBookingTest -->
+      </class> <!-- com.qa.test.service.BookingServiceUnitTest -->
+      <class name="com.qa.test.dto.EmailDTOTest">
+        <test-method status="PASS" signature="settersTest()" name="settersTest" duration-ms="17" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settersTest -->
+        <test-method status="PASS" signature="equalsWithNull()" name="equalsWithNull" duration-ms="14" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithNull -->
+        <test-method status="PASS" signature="nullBodyOnBoth()" name="nullBodyOnBoth" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullBodyOnBoth -->
+        <test-method status="PASS" signature="nullUsername()" name="nullUsername" duration-ms="16" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullUsername -->
+        <test-method status="PASS" signature="checkEqualityBetweenDifferentObjects()" name="checkEqualityBetweenDifferentObjects" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+        <test-method status="PASS" signature="nullSubjectOnBoth()" name="nullSubjectOnBoth" duration-ms="17" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullSubjectOnBoth -->
+        <test-method status="PASS" signature="nullIdOnBoth()" name="nullIdOnBoth" duration-ms="16" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullIdOnBoth -->
+        <test-method status="PASS" signature="constructorWithoutId()" name="constructorWithoutId" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorWithoutId -->
+        <test-method status="PASS" signature="nullEmailOnBoth()" name="nullEmailOnBoth" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullEmailOnBoth -->
+        <test-method status="PASS" signature="equalsWithDifferentObject()" name="equalsWithDifferentObject" duration-ms="17" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithDifferentObject -->
+        <test-method status="PASS" signature="otherUsernameDifferent()" name="otherUsernameDifferent" duration-ms="16" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherUsernameDifferent -->
+        <test-method status="PASS" signature="otherSubjectDifferent()" name="otherSubjectDifferent" duration-ms="16" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherSubjectDifferent -->
+        <test-method status="PASS" signature="nullSubject()" name="nullSubject" duration-ms="17" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullSubject -->
+        <test-method status="PASS" signature="nullBody()" name="nullBody" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullBody -->
+        <test-method status="PASS" signature="nullUsernameOnBoth()" name="nullUsernameOnBoth" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullUsernameOnBoth -->
+        <test-method status="PASS" signature="checkEquality()" name="checkEquality" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method status="PASS" signature="otherBodyDifferent()" name="otherBodyDifferent" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherBodyDifferent -->
+        <test-method status="PASS" signature="createEmailDTOWithId()" name="createEmailDTOWithId" duration-ms="16" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createEmailDTOWithId -->
+        <test-method status="PASS" signature="nullId()" name="nullId" duration-ms="14" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method status="PASS" signature="otherIdDifferent()" name="otherIdDifferent" duration-ms="16" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method status="PASS" signature="otherEmailDifferent()" name="otherEmailDifferent" duration-ms="16" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherEmailDifferent -->
+        <test-method status="PASS" signature="nullEmail()" name="nullEmail" duration-ms="16" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullEmail -->
+        <test-method status="PASS" signature="hashCodeTest()" name="hashCodeTest" duration-ms="16" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTest -->
+        <test-method status="PASS" signature="hashCodeTestWithNull()" name="hashCodeTestWithNull" duration-ms="16" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+      </class> <!-- com.qa.test.dto.EmailDTOTest -->
+      <class name="com.qa.test.dto.MovieDTOTest">
+        <test-method status="PASS" signature="checkEqualityBetweenDifferentObjects()" name="checkEqualityBetweenDifferentObjects" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+        <test-method status="PASS" signature="movieDTONameNullButOtherNameNotNull()" name="movieDTONameNullButOtherNameNotNull" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- movieDTONameNullButOtherNameNotNull -->
+        <test-method status="PASS" signature="checkEqualityBetweenDifferentObjectsNullName()" name="checkEqualityBetweenDifferentObjectsNullName" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjectsNullName -->
+        <test-method status="PASS" signature="equalsWithNull()" name="equalsWithNull" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithNull -->
+        <test-method status="PASS" signature="hashCodeTest()" name="hashCodeTest" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTest -->
+        <test-method status="PASS" signature="constructorWithoutId()" name="constructorWithoutId" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorWithoutId -->
+        <test-method status="PASS" signature="nullIdOnBoth()" name="nullIdOnBoth" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullIdOnBoth -->
+        <test-method status="PASS" signature="settersTest()" name="settersTest" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settersTest -->
+        <test-method status="PASS" signature="checkEquality()" name="checkEquality" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method status="PASS" signature="nullId()" name="nullId" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method status="PASS" signature="otherIdDifferent()" name="otherIdDifferent" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method status="PASS" signature="createMovieDTOWithId()" name="createMovieDTOWithId" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createMovieDTOWithId -->
+        <test-method status="PASS" signature="hashCodeTestWithNull()" name="hashCodeTestWithNull" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+        <test-method status="PASS" signature="equalsWithDifferentObject()" name="equalsWithDifferentObject" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithDifferentObject -->
+        <test-method status="PASS" signature="movieDTONamesNotEqual()" name="movieDTONamesNotEqual" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- movieDTONamesNotEqual -->
+      </class> <!-- com.qa.test.dto.MovieDTOTest -->
+      <class name="com.qa.test.selenium.tests.MovieTest">
+        <test-method status="PASS" signature="showingPlayClick()" name="showingPlayClick" duration-ms="32289" started-at="2020-06-05T08:14:46Z" finished-at="2020-06-05T08:15:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- showingPlayClick -->
+        <test-method status="PASS" signature="expectedPlayClick()" name="expectedPlayClick" duration-ms="21526" started-at="2020-06-05T08:14:46Z" finished-at="2020-06-05T08:15:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expectedPlayClick -->
+        <test-method status="PASS" signature="showingCertififClick()" name="showingCertififClick" duration-ms="59806" started-at="2020-06-05T08:14:46Z" finished-at="2020-06-05T08:15:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- showingCertififClick -->
+        <test-method status="PASS" signature="testFilter()" name="testFilter" duration-ms="54429" started-at="2020-06-05T08:14:46Z" finished-at="2020-06-05T08:15:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFilter -->
+        <test-method status="PASS" signature="testRating()" name="testRating" duration-ms="65364" started-at="2020-06-05T08:14:46Z" finished-at="2020-06-05T08:15:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRating -->
+        <test-method status="PASS" signature="ShowingBreadcrumbTest() throws java.lang.InterruptedException" name="ShowingBreadcrumbTest" duration-ms="16182" started-at="2020-06-05T08:14:46Z" finished-at="2020-06-05T08:15:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShowingBreadcrumbTest -->
+        <test-method status="PASS" signature="expectedCertififClick()" name="expectedCertififClick" duration-ms="48902" started-at="2020-06-05T08:14:46Z" finished-at="2020-06-05T08:15:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expectedCertififClick -->
+        <test-method status="PASS" signature="showingTitleClick()" name="showingTitleClick" duration-ms="26959" started-at="2020-06-05T08:14:46Z" finished-at="2020-06-05T08:15:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- showingTitleClick -->
+        <test-method status="PASS" signature="expectedTitleClick()" name="expectedTitleClick" duration-ms="43494" started-at="2020-06-05T08:14:46Z" finished-at="2020-06-05T08:15:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expectedTitleClick -->
+        <test-method status="PASS" signature="testRelease()" name="testRelease" duration-ms="38052" started-at="2020-06-05T08:14:46Z" finished-at="2020-06-05T08:15:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRelease -->
+        <test-method status="PASS" signature="showMoreClickTest()" name="showMoreClickTest" duration-ms="10764" started-at="2020-06-05T08:14:46Z" finished-at="2020-06-05T08:14:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- showMoreClickTest -->
+      </class> <!-- com.qa.test.selenium.tests.MovieTest -->
+      <class name="com.qa.test.domain.MovieTest">
+        <test-method status="PASS" signature="checkEquality()" name="checkEquality" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method status="PASS" signature="nullIdOnBoth()" name="nullIdOnBoth" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullIdOnBoth -->
+        <test-method status="PASS" signature="otherStatusDifferent()" name="otherStatusDifferent" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherStatusDifferent -->
+        <test-method status="PASS" signature="NullStatus()" name="NullStatus" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NullStatus -->
+        <test-method status="PASS" signature="nullRatingOnBoth()" name="nullRatingOnBoth" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullRatingOnBoth -->
+        <test-method status="PASS" signature="createMovieWithId()" name="createMovieWithId" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createMovieWithId -->
+        <test-method status="PASS" signature="NullApiID()" name="NullApiID" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NullApiID -->
+        <test-method status="PASS" signature="constructorWithoutId()" name="constructorWithoutId" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorWithoutId -->
+        <test-method status="PASS" signature="NullRating()" name="NullRating" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NullRating -->
+        <test-method status="PASS" signature="checkEqualityBetweenDifferentObjects()" name="checkEqualityBetweenDifferentObjects" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+        <test-method status="PASS" signature="nullId()" name="nullId" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method status="PASS" signature="equalsWithNull()" name="equalsWithNull" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithNull -->
+        <test-method status="PASS" signature="checkEqualityBetweenDifferentObjectsNullName()" name="checkEqualityBetweenDifferentObjectsNullName" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjectsNullName -->
+        <test-method status="PASS" signature="otherRatingDifferent()" name="otherRatingDifferent" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherRatingDifferent -->
+        <test-method status="PASS" signature="nullStatusOnBoth()" name="nullStatusOnBoth" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullStatusOnBoth -->
+        <test-method status="PASS" signature="hashCodeTestWithNull()" name="hashCodeTestWithNull" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+        <test-method status="PASS" signature="otherApiIDDifferent()" name="otherApiIDDifferent" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherApiIDDifferent -->
+        <test-method status="PASS" signature="otherIdDifferent()" name="otherIdDifferent" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method status="PASS" signature="movieNamesNotEqual()" name="movieNamesNotEqual" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- movieNamesNotEqual -->
+        <test-method status="PASS" signature="equalsWithDifferentObject()" name="equalsWithDifferentObject" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithDifferentObject -->
+        <test-method status="PASS" signature="nullApiIDOnBoth()" name="nullApiIDOnBoth" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullApiIDOnBoth -->
+        <test-method status="PASS" signature="hashCodeTest()" name="hashCodeTest" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTest -->
+        <test-method status="PASS" signature="settersTest()" name="settersTest" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settersTest -->
+      </class> <!-- com.qa.test.domain.MovieTest -->
+      <class name="com.qa.test.controller.BookingControllerUnitTest">
+        <test-method status="PASS" signature="findBookingByIDTest()" name="findBookingByIDTest" duration-ms="145" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findBookingByIDTest -->
+        <test-method status="PASS" signature="createBookingTest()" name="createBookingTest" duration-ms="156" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBookingTest -->
+        <test-method status="PASS" signature="deleteBookingTest()" name="deleteBookingTest" duration-ms="149" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBookingTest -->
+        <test-method status="PASS" signature="updateBookingsTest()" name="updateBookingsTest" duration-ms="152" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateBookingsTest -->
+        <test-method status="PASS" signature="getAllBookingsTest()" name="getAllBookingsTest" duration-ms="160" started-at="2020-06-05T08:11:18Z" finished-at="2020-06-05T08:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllBookingsTest -->
+      </class> <!-- com.qa.test.controller.BookingControllerUnitTest -->
+      <class name="com.qa.test.domain.EmailTest">
+        <test-method status="PASS" signature="otherBodyDifferent()" name="otherBodyDifferent" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherBodyDifferent -->
+        <test-method status="PASS" signature="nullUsernameOnBoth()" name="nullUsernameOnBoth" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullUsernameOnBoth -->
+        <test-method status="PASS" signature="nullBodyOnBoth()" name="nullBodyOnBoth" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullBodyOnBoth -->
+        <test-method status="PASS" signature="constructorWithoutId()" name="constructorWithoutId" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorWithoutId -->
+        <test-method status="PASS" signature="nullBody()" name="nullBody" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullBody -->
+        <test-method status="PASS" signature="createEmailWithId()" name="createEmailWithId" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createEmailWithId -->
+        <test-method status="PASS" signature="checkEqualityBetweenDifferentObjects()" name="checkEqualityBetweenDifferentObjects" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+        <test-method status="PASS" signature="otherSubjectDifferent()" name="otherSubjectDifferent" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherSubjectDifferent -->
+        <test-method status="PASS" signature="hashCodeTest()" name="hashCodeTest" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTest -->
+        <test-method status="PASS" signature="nullSubject()" name="nullSubject" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullSubject -->
+        <test-method status="PASS" signature="nullUsername()" name="nullUsername" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullUsername -->
+        <test-method status="PASS" signature="hashCodeTestWithNull()" name="hashCodeTestWithNull" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+        <test-method status="PASS" signature="nullEmail()" name="nullEmail" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullEmail -->
+        <test-method status="PASS" signature="settersTest()" name="settersTest" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settersTest -->
+        <test-method status="PASS" signature="nullSubjectOnBoth()" name="nullSubjectOnBoth" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullSubjectOnBoth -->
+        <test-method status="PASS" signature="equalsWithDifferentObject()" name="equalsWithDifferentObject" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithDifferentObject -->
+        <test-method status="PASS" signature="nullId()" name="nullId" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method status="PASS" signature="otherEmailDifferent()" name="otherEmailDifferent" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherEmailDifferent -->
+        <test-method status="PASS" signature="otherIdDifferent()" name="otherIdDifferent" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method status="PASS" signature="nullIdOnBoth()" name="nullIdOnBoth" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullIdOnBoth -->
+        <test-method status="PASS" signature="otherUsernameDifferent()" name="otherUsernameDifferent" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherUsernameDifferent -->
+        <test-method status="PASS" signature="checkEquality()" name="checkEquality" duration-ms="1" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method status="PASS" signature="nulEmailOnBoth()" name="nulEmailOnBoth" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nulEmailOnBoth -->
+      </class> <!-- com.qa.test.domain.EmailTest -->
+      <class name="com.qa.test.dto.BookingDTOTest">
+        <test-method status="PASS" signature="nullChildNr()" name="nullChildNr" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullChildNr -->
+        <test-method status="PASS" signature="otherPhoneNumberDifferent()" name="otherPhoneNumberDifferent" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherPhoneNumberDifferent -->
+        <test-method status="PASS" signature="nullStudentNrOnBoth()" name="nullStudentNrOnBoth" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullStudentNrOnBoth -->
+        <test-method status="PASS" signature="checkEqualityBetweenDifferentObjects()" name="checkEqualityBetweenDifferentObjects" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEqualityBetweenDifferentObjects -->
+        <test-method status="PASS" signature="otherEmailAddressDifferent()" name="otherEmailAddressDifferent" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherEmailAddressDifferent -->
+        <test-method status="PASS" signature="nullAdultNrOnBoth()" name="nullAdultNrOnBoth" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullAdultNrOnBoth -->
+        <test-method status="PASS" signature="equalsWithNull()" name="equalsWithNull" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithNull -->
+        <test-method status="PASS" signature="constructorWithoutId()" name="constructorWithoutId" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constructorWithoutId -->
+        <test-method status="PASS" signature="nullPhoneNumber()" name="nullPhoneNumber" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullPhoneNumber -->
+        <test-method status="PASS" signature="nullStudentNr()" name="nullStudentNr" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullStudentNr -->
+        <test-method status="PASS" signature="nullEmailAddressOnBoth()" name="nullEmailAddressOnBoth" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullEmailAddressOnBoth -->
+        <test-method status="PASS" signature="otherStudentNrDifferent()" name="otherStudentNrDifferent" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherStudentNrDifferent -->
+        <test-method status="PASS" signature="nullMovieName()" name="nullMovieName" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullMovieName -->
+        <test-method status="PASS" signature="nullIdOnBoth()" name="nullIdOnBoth" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullIdOnBoth -->
+        <test-method status="PASS" signature="nullEmailAddress()" name="nullEmailAddress" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullEmailAddress -->
+        <test-method status="PASS" signature="otherTotalPriceDifferent()" name="otherTotalPriceDifferent" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherTotalPriceDifferent -->
+        <test-method status="PASS" signature="checkEquality()" name="checkEquality" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEquality -->
+        <test-method status="PASS" signature="otherAdultNrDifferent()" name="otherAdultNrDifferent" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherAdultNrDifferent -->
+        <test-method status="PASS" signature="equalsWithDifferentObject()" name="equalsWithDifferentObject" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equalsWithDifferentObject -->
+        <test-method status="PASS" signature="nullDateTimeOnBoth()" name="nullDateTimeOnBoth" duration-ms="2" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullDateTimeOnBoth -->
+        <test-method status="PASS" signature="nullId()" name="nullId" duration-ms="3" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullId -->
+        <test-method status="PASS" signature="otherCustomerNameDifferent()" name="otherCustomerNameDifferent" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherCustomerNameDifferent -->
+        <test-method status="PASS" signature="nullTotalPriceOnBoth()" name="nullTotalPriceOnBoth" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTotalPriceOnBoth -->
+        <test-method status="PASS" signature="nullAdultNr()" name="nullAdultNr" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullAdultNr -->
+        <test-method status="PASS" signature="nullCustomerNameOnBoth()" name="nullCustomerNameOnBoth" duration-ms="6" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullCustomerNameOnBoth -->
+        <test-method status="PASS" signature="hashCodeTestWithNull()" name="hashCodeTestWithNull" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTestWithNull -->
+        <test-method status="PASS" signature="createBookingDTOWithId()" name="createBookingDTOWithId" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBookingDTOWithId -->
+        <test-method status="PASS" signature="nullMovieNameOnBoth()" name="nullMovieNameOnBoth" duration-ms="6" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullMovieNameOnBoth -->
+        <test-method status="PASS" signature="hashCodeTest()" name="hashCodeTest" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashCodeTest -->
+        <test-method status="PASS" signature="settersTest()" name="settersTest" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settersTest -->
+        <test-method status="PASS" signature="nullTotalPrice()" name="nullTotalPrice" duration-ms="6" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullTotalPrice -->
+        <test-method status="PASS" signature="otherIdDifferent()" name="otherIdDifferent" duration-ms="6" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherIdDifferent -->
+        <test-method status="PASS" signature="nullDateTime()" name="nullDateTime" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullDateTime -->
+        <test-method status="PASS" signature="otherDateTimeDifferent()" name="otherDateTimeDifferent" duration-ms="6" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherDateTimeDifferent -->
+        <test-method status="PASS" signature="nullPhoneNumberOnBoth()" name="nullPhoneNumberOnBoth" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullPhoneNumberOnBoth -->
+        <test-method status="PASS" signature="nullCustomerName()" name="nullCustomerName" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullCustomerName -->
+        <test-method status="PASS" signature="otherChildNrDifferent()" name="otherChildNrDifferent" duration-ms="4" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherChildNrDifferent -->
+        <test-method status="PASS" signature="otherMovieNameDifferent()" name="otherMovieNameDifferent" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- otherMovieNameDifferent -->
+        <test-method status="PASS" signature="nullChildNrOnBoth()" name="nullChildNrOnBoth" duration-ms="5" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nullChildNrOnBoth -->
+      </class> <!-- com.qa.test.dto.BookingDTOTest -->
+      <class name="com.qa.test.service.CommentServiceIntegrationTest">
+        <test-method status="PASS" signature="testCreateComment()" name="testCreateComment" duration-ms="1134" started-at="2020-06-05T08:17:29Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateComment -->
+        <test-method status="PASS" signature="testFindCommentByID()" name="testFindCommentByID" duration-ms="1127" started-at="2020-06-05T08:17:29Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindCommentByID -->
+        <test-method status="PASS" signature="testReadComments()" name="testReadComments" duration-ms="1119" started-at="2020-06-05T08:17:29Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReadComments -->
+        <test-method status="PASS" signature="testDeleteComment()" name="testDeleteComment" duration-ms="1102" started-at="2020-06-05T08:17:29Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteComment -->
+        <test-method status="PASS" signature="testUpdateComment()" name="testUpdateComment" duration-ms="1140" started-at="2020-06-05T08:17:29Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateComment -->
+      </class> <!-- com.qa.test.service.CommentServiceIntegrationTest -->
+      <class name="com.qa.test.controller.ShowTimeControllerIntegrationTest">
+        <test-method status="PASS" signature="testGetAllShowTimes() throws java.lang.Exception" name="testGetAllShowTimes" duration-ms="82" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllShowTimes -->
+        <test-method status="PASS" signature="testCreateShowTime() throws java.lang.Exception" name="testCreateShowTime" duration-ms="72" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateShowTime -->
+        <test-method status="PASS" signature="testDeleteShowTime() throws java.lang.Exception" name="testDeleteShowTime" duration-ms="95" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteShowTime -->
+        <test-method status="PASS" signature="testUpdateShowTime() throws java.lang.Exception" name="testUpdateShowTime" duration-ms="61" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateShowTime -->
+      </class> <!-- com.qa.test.controller.ShowTimeControllerIntegrationTest -->
+      <class name="com.qa.test.service.ShowTimeServiceIntegrationTest">
+        <test-method status="PASS" signature="testCreateShowTime()" name="testCreateShowTime" duration-ms="44" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateShowTime -->
+        <test-method status="PASS" signature="testDeleteShowTime()" name="testDeleteShowTime" duration-ms="60" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteShowTime -->
+        <test-method status="PASS" signature="testReadShowTimes()" name="testReadShowTimes" duration-ms="30" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReadShowTimes -->
+        <test-method status="PASS" signature="testFindShowTimeByID()" name="testFindShowTimeByID" duration-ms="49" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindShowTimeByID -->
+        <test-method status="PASS" signature="testUpdateShowTime()" name="testUpdateShowTime" duration-ms="40" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateShowTime -->
+      </class> <!-- com.qa.test.service.ShowTimeServiceIntegrationTest -->
+      <class name="com.qa.test.service.ShowTimeServiceUnitTest">
+        <test-method status="PASS" signature="readShowTimesTest()" name="readShowTimesTest" duration-ms="49" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readShowTimesTest -->
+        <test-method status="PASS" signature="createShowTimeTest()" name="createShowTimeTest" duration-ms="35" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createShowTimeTest -->
+        <test-method status="PASS" signature="findShowTimeByIDTest()" name="findShowTimeByIDTest" duration-ms="54" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findShowTimeByIDTest -->
+        <test-method status="PASS" signature="deleteShowTimeTest()" name="deleteShowTimeTest" duration-ms="43" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteShowTimeTest -->
+        <test-method status="PASS" signature="updateShowTimesTest()" name="updateShowTimesTest" duration-ms="39" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateShowTimesTest -->
+      </class> <!-- com.qa.test.service.ShowTimeServiceUnitTest -->
+      <class name="com.qa.test.service.BookingServiceIntegrationTest">
+        <test-method status="PASS" signature="createBookingTest()" name="createBookingTest" duration-ms="180" started-at="2020-06-05T08:17:28Z" finished-at="2020-06-05T08:17:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBookingTest -->
+        <test-method status="PASS" signature="updateBookingsTest()" name="updateBookingsTest" duration-ms="177" started-at="2020-06-05T08:17:28Z" finished-at="2020-06-05T08:17:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateBookingsTest -->
+        <test-method status="PASS" signature="findBookingByIDTest()" name="findBookingByIDTest" duration-ms="167" started-at="2020-06-05T08:17:28Z" finished-at="2020-06-05T08:17:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findBookingByIDTest -->
+        <test-method status="PASS" signature="deleteBookingTest()" name="deleteBookingTest" duration-ms="170" started-at="2020-06-05T08:17:28Z" finished-at="2020-06-05T08:17:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBookingTest -->
+        <test-method status="PASS" signature="readBookingsTest()" name="readBookingsTest" duration-ms="173" started-at="2020-06-05T08:17:28Z" finished-at="2020-06-05T08:17:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readBookingsTest -->
+      </class> <!-- com.qa.test.service.BookingServiceIntegrationTest -->
+      <class name="com.qa.test.service.MovieServiceUnitTest">
+        <test-method status="PASS" signature="readMoviesTest()" name="readMoviesTest" duration-ms="29" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readMoviesTest -->
+        <test-method status="PASS" signature="deleteMovieTest()" name="deleteMovieTest" duration-ms="42" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteMovieTest -->
+        <test-method status="PASS" signature="createMovieTest()" name="createMovieTest" duration-ms="32" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createMovieTest -->
+        <test-method status="PASS" signature="updateMoviesTest()" name="updateMoviesTest" duration-ms="38" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateMoviesTest -->
+        <test-method status="PASS" signature="findMovieByIDTest()" name="findMovieByIDTest" duration-ms="35" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findMovieByIDTest -->
+      </class> <!-- com.qa.test.service.MovieServiceUnitTest -->
+      <class name="com.qa.test.service.CommentServiceUnitTest">
+        <test-method status="PASS" signature="findCommentByIDTest()" name="findCommentByIDTest" duration-ms="37" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findCommentByIDTest -->
+        <test-method status="PASS" signature="readCommentsTest()" name="readCommentsTest" duration-ms="39" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readCommentsTest -->
+        <test-method status="PASS" signature="deleteCommentTest()" name="deleteCommentTest" duration-ms="33" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCommentTest -->
+        <test-method status="PASS" signature="createCommentTest()" name="createCommentTest" duration-ms="35" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCommentTest -->
+        <test-method status="PASS" signature="updateCommentsTest()" name="updateCommentsTest" duration-ms="42" started-at="2020-06-05T08:17:30Z" finished-at="2020-06-05T08:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateCommentsTest -->
+      </class> <!-- com.qa.test.service.CommentServiceUnitTest -->
+      <class name="com.qa.test.controller.MovieControllerUnitTest">
+        <test-method status="PASS" signature="getAllMoviesTest()" name="getAllMoviesTest" duration-ms="27" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllMoviesTest -->
+        <test-method status="PASS" signature="deleteMovieTest()" name="deleteMovieTest" duration-ms="31" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteMovieTest -->
+        <test-method status="PASS" signature="updateMoviesTest()" name="updateMoviesTest" duration-ms="29" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateMoviesTest -->
+        <test-method status="PASS" signature="createMovieTest()" name="createMovieTest" duration-ms="23" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createMovieTest -->
+        <test-method status="PASS" signature="findMovieByIDTest()" name="findMovieByIDTest" duration-ms="25" started-at="2020-06-05T08:11:20Z" finished-at="2020-06-05T08:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findMovieByIDTest -->
+      </class> <!-- com.qa.test.controller.MovieControllerUnitTest -->
+      <class name="com.qa.test.selenium.tests.ClassificationPageTest">
+        <test-method status="PASS" signature="testUniversalRedirect() throws java.lang.InterruptedException" name="testUniversalRedirect" duration-ms="13880" started-at="2020-06-05T08:11:40Z" finished-at="2020-06-05T08:11:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUniversalRedirect -->
+        <test-method status="PASS" signature="testEighteenRedirect() throws java.lang.InterruptedException" name="testEighteenRedirect" duration-ms="9540" started-at="2020-06-05T08:11:40Z" finished-at="2020-06-05T08:11:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEighteenRedirect -->
+        <test-method status="PASS" signature="testTwelveRedirect() throws java.lang.InterruptedException" name="testTwelveRedirect" duration-ms="22559" started-at="2020-06-05T08:11:40Z" finished-at="2020-06-05T08:12:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTwelveRedirect -->
+        <test-method status="PASS" signature="testFifteenRedirect() throws java.lang.InterruptedException" name="testFifteenRedirect" duration-ms="18255" started-at="2020-06-05T08:11:40Z" finished-at="2020-06-05T08:11:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFifteenRedirect -->
+        <test-method status="PASS" signature="testClassificationTitle()" name="testClassificationTitle" duration-ms="22836" started-at="2020-06-05T08:11:40Z" finished-at="2020-06-05T08:12:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClassificationTitle -->
+        <test-method status="PASS" signature="testTBCRedirect() throws java.lang.InterruptedException" name="testTBCRedirect" duration-ms="31272" started-at="2020-06-05T08:11:40Z" finished-at="2020-06-05T08:12:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTBCRedirect -->
+        <test-method status="PASS" signature="testParentalRedirect() throws java.lang.InterruptedException" name="testParentalRedirect" duration-ms="26980" started-at="2020-06-05T08:11:40Z" finished-at="2020-06-05T08:12:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParentalRedirect -->
+      </class> <!-- com.qa.test.selenium.tests.ClassificationPageTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
