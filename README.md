@@ -135,18 +135,33 @@ git clone https://github.com/Ashillqa/QACinema
 
 ## Features
 
+### Home Page
+
 <details>
-<summary>Home Page</summary>
-#### Requirements
+<summary>Requirements</summary>
 The QA Cinemas site home page:
 * is generally attractive.
 * is the default for the entire site.
 * allows users to navigate to other areas of the site
 * is a good first impression and allows users to access the resources they require.
-#### Product:
-<img src = "src/main/resources/static/img/QA-cinema-logo2.png" width ="300">
-#### Description
+</details>
+
+<details>
+<summary>Screenshot</summary>
+<img src = "src/main/resources/static/img/QA-cinema-logo2.png">
+</details>
+
+<details>
+<summary>Description</summary>
 The homepage features a visually appealing banner, as well as a section of tabs which the user can navigate to learn about the cinema. Featured movies are displayed in a gallery at the top, and coming movies are displayed at the bottom of the body of the page. It is the default for the site, and the user can navigate to other pages using the links present in the header or footer navigation bars, age-restriction icons or by clicking on a movie or its title itself.
+</details>
+
+<details>
+<summary>Authors</summary>
+* General Layout: **[Tawanda Siyamachira](https://github.com/TSiyamachiraQA)**,**[David Williams](https://github.com/DavidWilliamsQA)**
+* Header: **[David Williams](https://github.com/DavidWilliamsQA)**
+* Footer: **[Ashill Pathak](https://github.com/Ashillqa)**
+* Movie tiles & links: **[Korbinian Ring](https://github.com/KMRRingQA)**
 </details>
 
 #### Listings Gallery
