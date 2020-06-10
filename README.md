@@ -74,16 +74,46 @@ Kanban Board for Project: [Jira](https://hobby-site.atlassian.net/secure/RapidBo
 Presentation on the project: [on google slides](???)
 
 
-**[Back to top](#table-of-contents)**
+## Testing
 
-## Test Coverage 
+#### Test Coverage
+A total of 374 tests were written (68 Selenium, 37 Integration (Mockito), 269 Unit (JUnit), resulting in 86.2% coverage.
 
-#### Unit & Integration Tests
-* For src/main/java: 87.4% 
-* Sonarqube: 86.2%
+#### Unit Tests 
+A total of 269 Unit tests were written for domains, DTOs, services and controllers.
+JUnit is used for unit tests. A unit test will test individual methods within a class for functionality.
 
+#### Integration Tests 
+A total of 37 Integration tests were written for both controllers & Integration tests.
+Mockito is used for intergration testing, to test how different classes interact with each other. Using 'mocking', methods & classes can be tested for inegration by assuming the methods & classes it relies on are fully functional.
+Controllers and Services have associated Integration Tests.
 
-**[Back to top](#table-of-contents)**
+#### User acceptance Tests (with Selenium)
+68 Selenium tests were written, covering a large range of stories, excluding the payment (As the Swipe plugin was programmed to be exceptionally difficult to interact with using Selenium). Initially fluid waits and the page object model were used exclusively, working at fast pace. Due to this, API calls would be overwhelmed & blocked, requiring implementation of an extrinsic wait between test methods, slowing down testing drastically.
+
+Extentreports were set up for each test, however most are currently unfinished.
+
+The selenium tests can be found in `src/test/java/com/qa/test/selenium` within the project repository.
+
+#### CI Pipeline & Static Analysis
+Jenkins was used as server for the CI Pipeline, linking up to SonarQube for static analysis. Ensuring all Selenium tests would function headless for the use with Jenkins was challenging but ultimately successful.
+<details>
+<summary>SonarQube</summary>
+<img src = "https://i.imgur.com/PoXvP3k.png">
+</details>
+<summary>Jenkins Testing</summary>
+<img src = "https://i.imgur.com/gKp0yAT.png">
+</details>
+
+```
+mvn clean package
+sonar:sonar -Dsonar.host.url=http://YourVMForSonarQubeIP:PORT/ -Dsonar.login.admin=admin -Dsonar.password=admin
+```
+
+#### Testing Authors
+* Unit & Integration tests: **[Korbinian Ring](https://github.com/KMRRingQA)**
+* CI Pipeline: **[Korbinian Ring](https://github.com/KMRRingQA)**
+* Selenium tests: **[Ashill Pathak](https://github.com/Ashillqa)**, **[Korbinian Ring](https://github.com/KMRRingQA)**
 
 ## Getting Started
 
@@ -417,39 +447,6 @@ Note: When you run the second command the program will run, launching the Spring
 * [The Movie Database](https://developers.themoviedb.org/4/getting-started/authorization) - this database was used to make API(s) calls for all the movie information, throught the movie listing pages.
 * [Seats.io](https://www.seats.io/) - this database was used to make API(s) calls for the seats GUI on the "screens.html" page.
 
-## Testing
-
-#### Unit Tests 
-JUnit is used for unit tests. A unit test will test individual methods within a class for functionality. Below is a simple Unit Test for my UserDTO class:
-
-
-#### Integration Tests 
-Mockito is used for intergration testing, to test how different classes interact with each other. Using 'mocking', methods & classes can be tested for inegration by assuming the methods & classes it relies on are fully functional.
-
-#### User acceptance Tests (with Selenium)
-68 Selenium tests were written, covering a large range of stories, excluding the payment (As the Swipe plugin was programmed to be exceptionally difficult to interact with using Selenium). Initially fluid waits and the page object model were used exclusively, working at fast pace. Due to this, API calls would be overwhelmed & blocked, requiring implementation of an extrinsic wait between test methods, slowing down testing drastically.
-
-The selenium tests can be found in `src/test/java/com/qa/test/selenium` within the project repository.
-
-#### CI Pipeline & Static Analysis
-Jenkins was used as server for the CI Pipeline, linking up to SonarQube for static analysis. Ensuring all Selenium tests would function headless for the use with Jenkins was challenging but ultimately successful.
-<details>
-<summary>SonarQube</summary>
-<img src = "https://i.imgur.com/PoXvP3k.png">
-</details>
-<summary>Jenkins Testing</summary>
-<img src = "https://i.imgur.com/gKp0yAT.png">
-</details>
-
-```
-mvn clean package
-sonar:sonar -Dsonar.host.url=http://YourVMForSonarQubeIP:PORT/ -Dsonar.login.admin=admin -Dsonar.password=admin
-```
-
-#### Testing Authors
-* Unit & Integration tests: **[Korbinian Ring](https://github.com/KMRRingQA)**
-* CI Pipeline: **[Korbinian Ring](https://github.com/KMRRingQA)**
-* Selenium tests: **[Ashill Pathak](https://github.com/Ashillqa)**, **[Korbinian Ring](https://github.com/KMRRingQA)**
 
 ## Usage
 
