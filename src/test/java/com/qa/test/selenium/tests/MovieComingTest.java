@@ -6,6 +6,9 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.junit.*;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
@@ -30,6 +33,9 @@ public class MovieComingTest {
 	public static WebDriver driver;
 	private WebDriverWait wait = new WebDriverWait(driver, 10);
 	ComingSoon movieComing = PageFactory.initElements(driver, ComingSoon.class);
+	public static ExtentHtmlReporter reporter = new ExtentHtmlReporter("Reports/comingMovies.html");
+	public static ExtentReports extent = new ExtentReports();
+	ExtentTest logger;
 	
 	@LocalServerPort
     private int port;
@@ -42,23 +48,25 @@ public class MovieComingTest {
         driver = new ChromeDriver(opts);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
+		extent.attachReporter(reporter);
 
         
     }
 
 	@Before
 	public void apiBreaker() throws InterruptedException {
-		sleep(5000);
+		sleep(8000);
 	}
 	
 	@AfterClass
 	 public static void teardown() {
 		 driver.quit();
+		extent.flush();
 	 }
 	
 	@Test
 	public void ComingSoonBreadcrumbTest() {
-		
+		logger=extent.createTest("BreadCrumb Link");
 		 driver.get("http://localhost:" + port +"/comingSoon.html");
 		 assertEquals("Home",movieComing.getBreadcrumbHome().getText());
 //		 wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.id("homeBread")), "Home"));
@@ -69,6 +77,7 @@ public class MovieComingTest {
 	
 	@Test
 	public void comingSoonClickTitleTest() {
+		logger=extent.createTest("Title Link");
 		driver.get("http://localhost:" + port +"/comingSoon.html");
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title130"))).click();
 //		movieComing.getComingTitle().click();
@@ -77,6 +86,7 @@ public class MovieComingTest {
 	
 	@Test
 	public void comingSoonClickPlay() {
+		logger=extent.createTest("Play Link");
 		driver.get("http://localhost:" + port +"/comingSoon.html");
 //		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("play130"))).click();
 		movieComing.getComingPlay().click();
@@ -87,6 +97,7 @@ public class MovieComingTest {
 
 	@Test
 	public void comingSoonClickReset() {
+		logger=extent.createTest("Reset Link");
 		driver.get("http://localhost:" + port +"/comingSoon.html");
 		assertEquals("reset".toUpperCase(),movieComing.getResetButton().getText());
 	}

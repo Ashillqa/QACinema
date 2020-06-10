@@ -35,8 +35,9 @@ public class SearchPageTest {
     JavascriptExecutor js = (JavascriptExecutor) driver;
     public static ExtentHtmlReporter reporter = new ExtentHtmlReporter("Reports/SearchPage.html");
     public static ExtentReports extent = new ExtentReports();
-    WebDriverWait wait = new WebDriverWait(driver, 5);
     ExtentTest logger;
+    WebDriverWait wait = new WebDriverWait(driver, 5);
+
 
     @LocalServerPort
     private int port;
@@ -66,7 +67,7 @@ public class SearchPageTest {
 
     @Test
     public void testResetButton () throws InterruptedException, IOException {
-        logger=extent.createTest("Reset Button Test");
+        logger=extent.createTest("Reset Button");
         driver.get("http://localhost:" + port +"/search.html");
         logger.log(Status.INFO, "navigating to site");
         GalleryPage gallery = PageFactory.initElements(driver, GalleryPage.class);
@@ -80,7 +81,7 @@ public class SearchPageTest {
 
     @Test
     public void testMovieGalleryPlayButtonLink() {
-        logger=extent.createTest("test2");
+        logger=extent.createTest("Play Button Link");
         driver.get("http://localhost:" + port +"/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
         String title = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title124"))).getText();
@@ -95,11 +96,10 @@ public class SearchPageTest {
 
     @Test
     public void testMovieGalleryTitleLink() {
-        logger=extent.createTest("test3");
+        logger=extent.createTest("Title Link");
         driver.get("http://localhost:" + port +"/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
 
-        logger.log(Status.FAIL, "asdf");
 
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title124")));
         String title = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("title124"))).getText();
@@ -113,6 +113,7 @@ public class SearchPageTest {
 
     @Test
     public void testMovieGalleryClassificationLink() {
+        logger=extent.createTest("Classification Link");
         driver.get("http://localhost:" + port +"/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
 
@@ -128,6 +129,7 @@ public class SearchPageTest {
 
     @Test
     public void testFeatureMovieGalleryTitleLink() {
+        logger=extent.createTest("Featured Movie Title Link");
         driver.get("http://localhost:" + port +"/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
 
@@ -144,6 +146,7 @@ public class SearchPageTest {
 
     @Test
     public void testShowMoreButton() {
+        logger=extent.createTest("Show More Button");
         driver.get("http://localhost:" + port + "/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
 
@@ -154,6 +157,7 @@ public class SearchPageTest {
 
     @Test
     public void testSearch1() {
+        logger=extent.createTest("Search Presence");
         driver.get("http://localhost:" + port + "/search.html?term=joker");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
 
@@ -172,6 +176,7 @@ public class SearchPageTest {
 
     @Test
     public void testSearchNot1() {
+        logger=extent.createTest("Search Elimination");
         driver.get("http://localhost:" + port + "/search.html?term=y");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
 
@@ -184,6 +189,7 @@ public class SearchPageTest {
 
     @Test
     public void testGenre() {
+        logger=extent.createTest("Genre Filter");
         driver.get("http://localhost:" + port + "/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
 
@@ -196,6 +202,7 @@ public class SearchPageTest {
 
     @Test
     public void testRating() {
+        logger=extent.createTest("Rating Filter");
         driver.get("http://localhost:" + port + "/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
 
@@ -219,6 +226,7 @@ public class SearchPageTest {
 
     @Test
     public void testFilter() {
+        logger=extent.createTest("Word Filter");
         driver.get("http://localhost:" + port + "/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
 
@@ -238,6 +246,7 @@ public class SearchPageTest {
 
     @Test
     public void testRelease() {
+        logger=extent.createTest("Release Filter");
         driver.get("http://localhost:" + port + "/search.html");
         SearchPage search = PageFactory.initElements(driver, SearchPage.class);
 

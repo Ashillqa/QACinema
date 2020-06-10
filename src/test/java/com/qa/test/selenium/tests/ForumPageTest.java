@@ -7,6 +7,9 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -32,6 +35,9 @@ public class ForumPageTest {
 	public static WebDriver driver;
 	ForumPage forum = PageFactory.initElements(driver, ForumPage.class);
 	WebDriverWait wait = new WebDriverWait(driver, 5);
+	public static ExtentHtmlReporter reporter = new ExtentHtmlReporter("Reports/Forum.html");
+	public static ExtentReports extent = new ExtentReports();
+	ExtentTest logger;
 	
 	@LocalServerPort
     private int port;
@@ -44,6 +50,7 @@ public class ForumPageTest {
         driver = new ChromeDriver(opts);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
+		extent.attachReporter(reporter);
 
     }
 	
@@ -55,10 +62,12 @@ public class ForumPageTest {
 	@AfterClass
 	 public static void teardown() {
 		 driver.quit();
+		extent.flush();
 	 }
 	
 	@Test
 	public void postComment() throws InterruptedException {
+		logger=extent.createTest("Post Comment");
 		driver.get("http://localhost:" + port +"/forum.html");
 		assertEquals("Name",forum.getUsername().getAttribute("placeholder"));
 		forum.getTitleOption().click();
@@ -78,6 +87,7 @@ public class ForumPageTest {
 	
 	@Test
 	public void readCommentAfterPost() throws InterruptedException {
+		logger=extent.createTest("Read Comment");
 		driver.get("http://localhost:" + port +"/forum.html");
 		assertEquals("Name",forum.getUsername().getAttribute("placeholder"));
 		forum.getTitleOption().click();
@@ -97,6 +107,7 @@ public class ForumPageTest {
 	
 	@Test
 	public void inappropriateAlertUserName() throws InterruptedException {
+		logger=extent.createTest("Swearword catch");
 		driver.get("http://localhost:" + port +"/forum.html");
 		assertEquals("Name",forum.getUsername().getAttribute("placeholder"));
 		forum.getTitleOption().click();
@@ -118,6 +129,7 @@ public class ForumPageTest {
 	
 	@Test
 	public void inappropriateAlertComment() throws InterruptedException {
+		logger=extent.createTest("Swearword Alert");
 		driver.get("http://localhost:" + port +"/forum.html");
 		assertEquals("Name",forum.getUsername().getAttribute("placeholder"));
 		forum.getTitleOption().click();

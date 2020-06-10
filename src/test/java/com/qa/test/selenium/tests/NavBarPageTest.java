@@ -41,6 +41,9 @@ public class NavBarPageTest {
 	  public static WebDriver driver;
 	  private final WebDriverWait wait = new WebDriverWait(driver, 4);
 	  JavascriptExecutor js = (JavascriptExecutor) driver;
+	  public static ExtentHtmlReporter reporter = new ExtentHtmlReporter("Reports/NavBar.html");
+	  public static ExtentReports extent = new ExtentReports();
+	  ExtentTest logger;
 
 	    @LocalServerPort
 	    private int port;
@@ -53,6 +56,7 @@ public class NavBarPageTest {
 	        driver = new ChromeDriver(opts);
 			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 	        driver.manage().window().maximize();
+			extent.attachReporter(reporter);
 
 	    }
 
@@ -64,11 +68,13 @@ public class NavBarPageTest {
 	    @AfterClass
 	    public static void teardown() {
 	        driver.quit();
+	        extent.flush();
 	    }
 
 
 	    @Test
 	    public void testMoviesShowingNav() throws InterruptedException {
+			logger=extent.createTest("Showing Movies Link");
 	        driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
 			navigation.getMenu().click();
@@ -83,6 +89,7 @@ public class NavBarPageTest {
 
 	    @Test
 	    public void testSearchNav() throws InterruptedException {
+			logger=extent.createTest("Search Bar Link");
 	    	driver.get("http://localhost:" + port +"/index.html");
 	    	NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.id("search")));
@@ -95,6 +102,7 @@ public class NavBarPageTest {
 
 	    @Test
 	    public void testMoviesComingNav() {
+			logger=extent.createTest("Coming Movies Link");
 	        driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
 			navigation.getMenu().click();
@@ -109,6 +117,7 @@ public class NavBarPageTest {
 
 	    @Test
 	    public void testScreensNav() {
+			logger=extent.createTest("Screens Link");
 	        driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
 			navigation.getMenu().click();
@@ -121,6 +130,7 @@ public class NavBarPageTest {
 
 	    @Test
 	    public void testPlanningTripNav() {
+			logger=extent.createTest("Planning Trip Link");
 	    	driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
 			navigation.getMenu().click();
@@ -134,6 +144,7 @@ public class NavBarPageTest {
 
 	    @Test
 	    public void testPlanningToDoNav() {
+			logger=extent.createTest("Things to do Link");
 	    	driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
 			navigation.getMenu().click();
@@ -147,6 +158,7 @@ public class NavBarPageTest {
 
 	    @Test
 	    public void testAboutNav() {
+			logger=extent.createTest("About Page Link");
 	    	driver.manage().window().maximize();
 	    	driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
@@ -159,6 +171,7 @@ public class NavBarPageTest {
 
 	    @Test
 	    public void testExtendedContact() {
+			logger=extent.createTest("Contact Link");
 	    	driver.get("http://localhost:" + port +"/index.html");
 	        NavBarPage navigation = PageFactory.initElements(driver, NavBarPage.class);
 			navigation.getMenu().click();

@@ -6,6 +6,9 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.qa.test.selenium.pages.BookingPage;
 import com.qa.test.selenium.pages.PaymentPage;
 import org.junit.AfterClass;
@@ -42,6 +45,9 @@ public class BookingTest {
     private final WebDriverWait wait = new WebDriverWait(driver, 2);
     BookingPage booking = PageFactory.initElements(driver, BookingPage.class);
     PaymentPage payment = PageFactory.initElements(driver, PaymentPage.class);
+    public static ExtentHtmlReporter reporter = new ExtentHtmlReporter("Reports/Booking.html");
+    public static ExtentReports extent = new ExtentReports();
+    ExtentTest logger;
 
     JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -57,17 +63,20 @@ public class BookingTest {
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         sleep(8000);
+        extent.attachReporter(reporter);
     }
 
     @AfterClass
     public static void teardown() {
         driver.quit();
+        extent.flush();
     }
 
     @Test
     public void makeBooking() {
+        logger=extent.createTest("Create Booking");
         driver.get("http://localhost:" + port +"/details2.html?title=Onward&id=133");
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"collapse0\"]/div/table/tbody/tr/th/a"))).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#collapse0 > div > table > tbody > tr > th > a"))).click();
         wait.until(ExpectedConditions.urlContains("bookings"));
         assertTrue(driver.getCurrentUrl().contains("bookings2.html"));
         booking.getName().sendKeys("Tester");

@@ -5,6 +5,9 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.junit.*;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
@@ -31,6 +34,9 @@ public class HomePageTest {
 	public static WebDriver driver;
 	HomePage home = PageFactory.initElements(driver, HomePage.class);
 	WebDriverWait wait = new WebDriverWait(driver, 5);
+	public static ExtentHtmlReporter reporter = new ExtentHtmlReporter("Reports/Home.html");
+	public static ExtentReports extent = new ExtentReports();
+	ExtentTest logger;
 	
 	
 	 @LocalServerPort
@@ -44,6 +50,7 @@ public class HomePageTest {
 	        driver = new ChromeDriver(opts);
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	        driver.manage().window().maximize();
+		 	extent.attachReporter(reporter);
 
 	    }
 
@@ -56,23 +63,26 @@ public class HomePageTest {
 	 @AfterClass
 	 public static void teardown() {
 		 driver.quit();
+		 extent.flush();
 	 }
 	 
 	 @Test
 	 public void FeaturedMovieAppearsTest() {
+		 logger=extent.createTest("Featured Movie Appears");
 		 driver.get("http://localhost:" + port +"/index.html");
 		 assertEquals("featured movies".toUpperCase(),home.getFeatureFilm().getText());
-		 
 	 }
 	 
 	 @Test
 	 public void ComingSoonAppearsTest() {
+		 logger=extent.createTest("Coming Soon Appears");
 		 driver.get("http://localhost:" + port +"/index.html");
 		 assertEquals("coming soon".toUpperCase(),home.getComingSoon().getText());
 	 }
 	 
 	 @Test 
 	 public void FeaturedPlayClick() throws InterruptedException{
+		 logger=extent.createTest("Featured Play Link");
 		 driver.get("http://localhost:" + port +"/index.html");
 		 wait.until(ExpectedConditions.presenceOfElementLocated(By.id("play124"))).click();
 		 assertTrue(driver.getCurrentUrl().contains("details2.html")); 
@@ -80,6 +90,7 @@ public class HomePageTest {
 	 
 	 @Test
 	 public void ComingSoonClickTest() throws InterruptedException {
+		 logger=extent.createTest("Coming Play Link");
 		 driver.get("http://localhost:" + port +"/index.html");
 		 wait.until(ExpectedConditions.presenceOfElementLocated(By.id("play130"))).click();
 		 assertTrue(driver.getCurrentUrl().contains("details2.html"));
@@ -87,6 +98,7 @@ public class HomePageTest {
 	 
 	 @Test
 	 public void featuredTitleClick() throws InterruptedException {
+		 logger=extent.createTest("Featured Title Link");
 		 driver.get("http://localhost:" + port +"/index.html");
 		 home.getFeatureTitle().click();
 		 assertTrue(driver.getCurrentUrl().contains("details2.html"));
@@ -94,6 +106,7 @@ public class HomePageTest {
 	 
 	 @Test
 	 public void ComingTitleClick() {
+		 logger=extent.createTest("Coming Title Link");
 		 driver.get("http://localhost:" + port +"/index.html");
 		 home.getSoonTitle().click();
 		 assertTrue(driver.getCurrentUrl().contains("details2.html"));
@@ -101,6 +114,7 @@ public class HomePageTest {
 	    
 	 @Test
 	 public void featuredClassificationClick() throws InterruptedException {
+		 logger=extent.createTest("Featured Classif Link");
 		 driver.get("http://localhost:" + port +"/index.html");
 		 wait.until(ExpectedConditions.elementToBeClickable(home.getFeatureClassif())).click();
 		 assertEquals("http://localhost:" + port +"/classifications.html", driver.getCurrentUrl());
@@ -108,6 +122,7 @@ public class HomePageTest {
 	 
 	 @Test
 	 public void SoonClassificationClick() throws InterruptedException {
+		 logger=extent.createTest("Coming Classif Link");
 		 driver.get("http://localhost:" + port +"/index.html");
 		 wait.until(ExpectedConditions.elementToBeClickable(home.getSoonClassif())).click();
 		 assertEquals("http://localhost:" + port +"/classifications.html", driver.getCurrentUrl());
