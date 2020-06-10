@@ -2,17 +2,17 @@
 
 # Cinema Web App: QA Cinemas
 This project set out to create a new website for QA Cinemas, a well known cinema chain. The aim of this project was to be achieved in a team of 5 by satifying all the "essential" requirements alogn with the "desirable" requirements. These requirements include presenting information about the movies, listings, upcoming releases, screen rooms, about us, movie comments amongst various other functions of a cinema site. This task was to be completed in the course of tow 4-day Sprints before it is scheduled to 'go live'. The technologies used in this project include:
-•	Version Control System: Git
-•	Source Code Management: GitHub
-•	Kanban Board: Jira
-•	Back-End Programming Language: Java
-•	API Development Platform: Spring 
-•	Front-End Web Technologies: HTML, CSS, JavaScript
-•	Build Tool: Maven
-•	Testing: JUnit, Mockito, Selenium
-•	Test Reporting: Surefire & ExtentReports
-•	CI Server: Jenkins
-•	Static Analysis: SonarQube
+*	Version Control System: Git
+*	Source Code Management: GitHub
+*	Kanban Board: Jira
+*	Back-End Programming Language: Java
+*	API Development Platform: Spring 
+*	Front-End Web Technologies: HTML, CSS, JavaScript
+*	Build Tool: Maven
+*	Testing: JUnit, Mockito, Selenium
+*	Test Reporting: Surefire & ExtentReports
+*	CI Server: Jenkins
+*	Static Analysis: SonarQube
 
 ## Table of Contents
 
