@@ -393,8 +393,6 @@ The about page:
 The contact us page:
 * provides a way for a site visitor to contact the site owner electronically & physically. 
 * is part of the overall site navigation 
- 
-
 
 ## Building
 
@@ -419,90 +417,39 @@ Note: When you run the second command the program will run, launching the Spring
 * [The Movie Database](https://developers.themoviedb.org/4/getting-started/authorization) - this database was used to make API(s) calls for all the movie information, throught the movie listing pages.
 * [Seats.io](https://www.seats.io/) - this database was used to make API(s) calls for the seats GUI on the "screens.html" page.
 
+## Testing
 
-### Running Tests
-
-The easiest way to run all my existing tests is to right click on `src/test/java/com/qa/test` in your IDE and select `Run tests in 'src/test/java/com/qa/test'` or `Run tests in 'src/test/java/com/qa/test' with Coverage`
-
-
-
-**[Back to top](#table-of-contents)**
 #### Unit Tests 
 JUnit is used for unit tests. A unit test will test individual methods within a class for functionality. Below is a simple Unit Test for my UserDTO class:
 
-```
-@Before
-    public void init() {
-        this.bookingList = new ArrayList<>();
-        this.testBooking = new Booking(1L, "Shrek 3", "27/05/2020 15:30", BigDecimal.valueOf(13.99),"email@email.com","0044 771234123","Jeff Tester",1,1,0);
-        this.bookingList.add(testBooking);
-        this.testBookingWithID = new Booking(testBooking.getMovieName(),testBooking.getDateTime(),testBooking.getTotalPrice(),testBooking.getEmailAddress(),testBooking.getPhoneNumber(),testBooking.getCustomerName(),testBooking.getAdultNr(),testBooking.getChildNr(),testBooking.getStudentNr());
-        this.testBookingWithID.setId(id);
-        this.bookingDTO = this.mapToDTO(testBookingWithID);
-    }
 
-    @Test
-    public void createBookingTest() {
-        when(this.service.createBooking(testBooking)).thenReturn(this.bookingDTO);
-
-        assertEquals(new ResponseEntity<BookingDTO>(this.bookingDTO, HttpStatus.CREATED), this.controller.createBooking(testBooking));
-
-        verify(this.service, times(1)).createBooking(this.testBooking);
-    }
-
-```
-
-In IntelliJ, when you click the @Test annotation, it gives you the option to run tests in a class, or individual Tests. Indicated by the green arrows in the margins.
-
-
-**[Back to top](#table-of-contents)**
 #### Integration Tests 
 Mockito is used for intergration testing, to test how different classes interact with each other. Using 'mocking', methods & classes can be tested for inegration by assuming the methods & classes it relies on are fully functional.
 
-```
- @Before
-    public void init() {
-        this.repo.deleteAll();
-        this.testBooking = new Booking(1L, "Shrek 3", "27/05/2020 15:30", BigDecimal.valueOf(13.99),"email@email.com","0044 771234123","Jeff Tester",1,1,0);
-        this.testBookingWithID = this.repo.save(this.testBooking);
-        this.id = this.testBookingWithID.getId();
-        this.bookingDTO = this.mapToDTO(testBookingWithID);
-    }
-
-    @Test
-    public void testCreateBooking() throws Exception {
-        MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders.request(HttpMethod.POST, "/booking/createBooking");
-        mockRequest.contentType(MediaType.APPLICATION_JSON);
-        mockRequest.content(this.mapper.writeValueAsString(testBooking));
-        mockRequest.accept(MediaType.APPLICATION_JSON);
-
-        ResultMatcher matchStatus = MockMvcResultMatchers.status().isCreated();
-        ResultMatcher matchContent = MockMvcResultMatchers.content().json(this.mapper.writeValueAsString(bookingDTO));
-        this.mock.perform(mockRequest)
-                .andExpect(matchStatus).andExpect(matchContent);
-
-    }
-```
-In IntelliJ, when you click the @Test annotation, it gives you the option to run tests in a class, or individual Tests. Indicated by the green arrows in the margins.
-
-
-**[Back to top](#table-of-contents)**
-
 #### User acceptance Tests (with Selenium)
-Selenium uses the `chromedriver.exe` included in this repository to run automated tests mocking use of the front-end. The `extent-report.xml` and dependencies required to get easy to read test reports in the form of html files are included in project folder.
-
+68 Selenium tests were written, covering a large range of stories, excluding the payment (As the Swipe plugin was programmed to be exceptionally difficult to interact with using Selenium). Initially fluid waits and the page object model were used exclusively, working at fast pace. Due to this, API calls would be overwhelmed & blocked, requiring implementation of an extrinsic wait between test methods, slowing down testing drastically.
 
 The selenium tests can be found in `src/test/java/com/qa/test/selenium` within the project repository.
 
-#### Static analysis
-Sonarqube is used for static analysis. This is a good indication of adherence to the industry's standard, test coverage, highlighting bugs and security warnings within the code.
+#### CI Pipeline & Static Analysis
+Jenkins was used as server for the CI Pipeline, linking up to SonarQube for static analysis. Ensuring all Selenium tests would function headless for the use with Jenkins was challenging but ultimately successful.
+<details>
+<summary>SonarQube</summary>
+<img src = "https://i.imgur.com/PoXvP3k.png">
+</details>
+<summary>Jenkins Testing</summary>
+<img src = "https://i.imgur.com/gKp0yAT.png">
+</details>
 
 ```
 mvn clean package
 sonar:sonar -Dsonar.host.url=http://YourVMForSonarQubeIP:PORT/ -Dsonar.login.admin=admin -Dsonar.password=admin
 ```
 
-**[Back to top](#table-of-contents)**
+#### Testing Authors
+* Unit & Integration tests: **[Korbinian Ring](https://github.com/KMRRingQA)**
+* CI Pipeline: **[Korbinian Ring](https://github.com/KMRRingQA)**
+* Selenium tests: **[Ashill Pathak](https://github.com/Ashillqa)**, **[Korbinian Ring](https://github.com/KMRRingQA)**
 
 ## Usage
 
