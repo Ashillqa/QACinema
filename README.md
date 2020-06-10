@@ -96,19 +96,16 @@ Extentreports were set up for each test, however most are currently unfinished.
 The selenium tests can be found in `src/test/java/com/qa/test/selenium` within the project repository.
 
 #### CI Pipeline & Static Analysis
+
 Jenkins was used as server for the CI Pipeline, linking up to SonarQube for static analysis. Ensuring all Selenium tests would function headless for the use with Jenkins was challenging but ultimately successful.
 <details>
 <summary>SonarQube</summary>
 <img src = "https://i.imgur.com/PoXvP3k.png">
 </details>
+<details>
 <summary>Jenkins Testing</summary>
 <img src = "https://i.imgur.com/gKp0yAT.png">
 </details>
-
-```
-mvn clean package
-sonar:sonar -Dsonar.host.url=http://YourVMForSonarQubeIP:PORT/ -Dsonar.login.admin=admin -Dsonar.password=admin
-```
 
 #### Testing Authors
 * Unit & Integration tests: **[Korbinian Ring](https://github.com/KMRRingQA)**
