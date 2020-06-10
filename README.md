@@ -159,10 +159,12 @@ The homepage features a visually appealing banner, as well as a section of tabs 
 
 <details>
 <summary>Authors</summary>
+    
 * General Layout: **[Tawanda Siyamachira](https://github.com/TSiyamachiraQA)**,**[David Williams](https://github.com/DavidWilliamsQA)**
 * Header: **[David Williams](https://github.com/DavidWilliamsQA)**
 * Footer: **[Ashill Pathak](https://github.com/Ashillqa)**
 * Movie tiles & links: **[Korbinian Ring](https://github.com/KMRRingQA)**
+    
 </details>
 
 #### Listings Gallery
