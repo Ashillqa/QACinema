@@ -494,5 +494,7 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 for his help and guidance during the project.
 * Nick [[nickstewarttds](https://github.com/nickrstewarttds)]
 for his help and guidance during the project.
+* Caroline Strasenburgh [[CarolineS-QA](https://github.com/CarolineS-QA)]
+for her help with documentation & GitHub markup
 
 **[Back to top](#table-of-contents)**
