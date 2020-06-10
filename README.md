@@ -139,11 +139,12 @@ git clone https://github.com/Ashillqa/QACinema
 
 <details>
 <summary>Requirements</summary>
-The QA Cinemas site home page:
+    
 * is generally attractive.
 * is the default for the entire site.
 * allows users to navigate to other areas of the site
 * is a good first impression and allows users to access the resources they require.
+
 </details>
 
 <details>
