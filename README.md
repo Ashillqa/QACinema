@@ -149,7 +149,7 @@ git clone https://github.com/Ashillqa/QACinema
 
 <details>
 <summary>Screenshot</summary>
-<img src = "src/main/resources/static/img/QA-cinema-logo2.png">
+<img src = "https://i.imgur.com/mLGOaJF.jpg">
 </details>
 
 <details>
