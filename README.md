@@ -167,25 +167,142 @@ The homepage features a visually appealing banner, as well as a section of tabs 
     
 </details>
 
-#### Listings Gallery
+### Movie Gallery
+
+<details>
+<summary>Requirements</summary>
+    
 The listings gallery page:
 * includes image gallery posters for the movies currently showing.
 * is part of the overall site navigation.
 * shows ensures each image appears on its own page.
 * shows supporting text including Title, actors, director and showing times for each movie.
 
-#### Opening Times
-The opening times page:
-* has a dedicated page to list the opening times. 
-* is part of the overall site navigation
-* has details about the opening times of the cinema.
+</details>
 
-#### New Releases Gallery
+<details>
+<summary>Screenshot</summary>
+<img src = "https://i.imgur.com/xJbEAJD.jpg">
+</details>
+
+<details>
+<summary>Description</summary>
+The movie gallery retreives the list of movies with status "showing" and "featured" from the locally hosted (H2) database, and uses the stored API-IDs to retreive respective information from developers.themoviedb.org. Filters are functioning as well, allowing you to filter by genre, viewer rating, release year or a search term (which must be present in either description or title of the movie). A link to coming soon movies is at the bottom of the body, with similarly generated image tiles (status="coming" in this case). Clicking on the age-rating-icon links to the classifications page. Clicking an image or title redirects to the details page of the movie, which includes further movie details. Breadcrumbs can be used to navigate & reset canbe used to reset the filters.
+</details>
+
+<details>
+<summary>Authors</summary>
+    
+*  **[Korbinian Ring](https://github.com/KMRRingQA)**
+    
+</details>
+
+### New Releases Gallery
+
+<details>
+<summary>Requirements</summary>
+    
 The new releases gallery page: 
 * includes an image gallery posters for forthcoming movies.
 * is part of the overall site navigation
 * Each movie appears on its own page
 * Each movie has it's respective supporting text including Title, actors and director
+
+</details>
+
+<details>
+<summary>Screenshot</summary>
+<img src = "https://i.imgur.com/quX0ayq.jpg">
+</details>
+
+<details>
+<summary>Description</summary>
+The coming movies gallery possesses a similar set of features to the movie gallery. Filter terms are more limited as user ratings and release year are not required. The movies displayed here are status="coming".
+</details>
+
+<details>
+<summary>Authors</summary>
+    
+*  **[Korbinian Ring](https://github.com/KMRRingQA)**
+*  **[David Williams](https://github.com/DavidWilliamsQA)**
+    
+</details>
+
+### Search bar
+
+<details>
+<summary>Requirements</summary>
+    
+The search bar:
+* allows user to search by keyword (with the implementation of a placeholder)
+
+</details>
+
+<details>
+<summary>Screenshot</summary>
+<img src = "https://i.imgur.com/LuAWnwM.png">
+<img src = "https://i.imgur.com/X7uJHBn.jpg">
+</details>
+
+<details>
+<summary>Description</summary>
+clicking the search icon on any page (in the header) will cause the search bar to appear. upon entering a search term and pressing "enter" or the search button, one will be forwareed to the search page with the term passed into the params. Additionaly, titles containing the search word will be displayed on the page. Filters function as intended, identically to the movie gallery. Pressit "reset" will clear all params and filters, displaying all movies currently in the databse. When no movies are returned in thes earch, the user will be informed. Below the search body, the user may redirect themselves to the movie gallery.
+</details>
+
+<details>
+<summary>Authors</summary>
+    
+*  **[Korbinian Ring](https://github.com/KMRRingQA)**
+    
+</details>
+
+### Movie Page
+
+<details>
+<summary>Requirements</summary>
+    
+Movies should:
+* appear on their own page.
+* show supporting text including Title, actors, director and showing times.
+
+</details>
+
+<details>
+<summary>Screenshot</summary>
+<img src = "https://i.imgur.com/LZ1SrWM.jpg">
+</details>
+
+<details>
+<summary>Description</summary>
+
+pressing on a movie tile or the appearing play button when hovering over a movie tile anywhere on the web page will redirect to the details page, including all required information, drawn from two api calls.
+This includes
+* a link to a youtube trailer
+* directors, actors
+* a highly interactive display for showing times (showing times are stored and retreived from the local database)
+* production country
+* genre(s)
+* release date
+* age requirement
+* viewer rating (if prsent)
+* movie description
+* poster image
+pressing on the age classification icon will take you to the classification page. Pressing "book now" for a time will take you to the booking site for that time/movie. 
+
+</details>
+
+<details>
+<summary>Authors</summary>
+    
+*  **[Korbinian Ring](https://github.com/KMRRingQA)**
+    
+</details>
+
+#### Opening Times
+The opening times page:
+* has a dedicated page to list the opening times. 
+* is part of the overall site navigation
+* has details about the opening times of the cinema.
 
 #### Classifications
 The classifications page:
@@ -256,10 +373,6 @@ The site navigation:
 * allows users to easily navigate to various areas of the site in a uniform and predictable manner
 * is available on all pages of the site.
 * appears identically on all pages that include it
-
-#### Search
-The search bar:
-* allows user to search by keyword (with the implementation of a placeholder)
 
 #### Email Form
 The email form: 
